@@ -44,9 +44,17 @@ git config --global user.email "email@example.com"
 
 ### 5. Tambahkan Remote GitHub
 
+**Opsi A: Menggunakan SSH (DISARANKAN)**
+```powershell
+git remote add origin git@github.com:bos-andi/nuris.git
+```
+
+**Opsi B: Menggunakan HTTPS**
 ```powershell
 git remote add origin https://github.com/bos-andi/nuris.git
 ```
+
+**Catatan:** SSH lebih aman dan tidak perlu input password setiap kali. Lihat `CHANGE_GIT_REMOTE_TO_SSH.md` untuk setup SSH key.
 
 Verifikasi:
 ```powershell

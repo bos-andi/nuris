@@ -175,6 +175,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         // System Update (Superadmin only)
         Route::get('/system-update', [\App\Http\Controllers\Admin\SystemUpdateController::class, 'index'])->name('system-update.index');
         Route::post('/system-update', [\App\Http\Controllers\Admin\SystemUpdateController::class, 'update'])->name('system-update.update');
+        Route::get('/system-update/{id}/detail', [\App\Http\Controllers\Admin\SystemUpdateController::class, 'detail'])->name('system-update.detail');
         
         // Gallery management
         Route::get('/galleries', [AdminGalleryController::class, 'index'])->name('galleries.index');

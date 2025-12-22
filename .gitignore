@@ -22,3 +22,10 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# Deployment files (keep in repo)
+!.env.production.example
+!deploy-vps.sh
+!setup-vps-ubuntu.sh
+!nginx-nuris.conf
+!supervisor-nuris-worker.conf

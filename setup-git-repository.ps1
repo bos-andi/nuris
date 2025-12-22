@@ -57,19 +57,30 @@ if (-not $gitEmail) {
 
 # Setup remote origin
 Write-Host "[5/7] Setup remote GitHub..." -ForegroundColor Yellow
-$remoteUrl = "https://github.com/bos-andi/nuris.git"
+# Default to SSH, fallback to HTTPS
+$remoteUrl = "git@github.com:bos-andi/nuris.git"
+$remoteUrlHttps = "https://github.com/bos-andi/nuris.git"
 $existingRemote = git remote get-url origin 2>&1
 
 if ($LASTEXITCODE -eq 0) {
     Write-Host "✓ Remote origin sudah ada: $existingRemote" -ForegroundColor Green
-    $changeRemote = Read-Host "  Apakah ingin mengubah remote ke $remoteUrl? (y/n)"
+    $changeRemote = Read-Host "  Apakah ingin mengubah remote ke SSH ($remoteUrl)? (y/n)"
     if ($changeRemote -eq "y" -or $changeRemote -eq "Y") {
         git remote set-url origin $remoteUrl
-        Write-Host "✓ Remote origin diupdate" -ForegroundColor Green
+        Write-Host "✓ Remote origin diupdate ke SSH" -ForegroundColor Green
     }
 } else {
-    git remote add origin $remoteUrl
-    Write-Host "✓ Remote origin ditambahkan: $remoteUrl" -ForegroundColor Green
+    # Try SSH first, if fails use HTTPS
+    Write-Host "  Mencoba setup dengan SSH..." -ForegroundColor Cyan
+    git remote add origin $remoteUrl 2>&1 | Out-Null
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "✓ Remote origin ditambahkan (SSH): $remoteUrl" -ForegroundColor Green
+    } else {
+        Write-Host "  SSH gagal, menggunakan HTTPS..." -ForegroundColor Yellow
+        git remote add origin $remoteUrlHttps
+        Write-Host "✓ Remote origin ditambahkan (HTTPS): $remoteUrlHttps" -ForegroundColor Green
+        Write-Host "  Catatan: Untuk menggunakan SSH, setup SSH key terlebih dahulu" -ForegroundColor Yellow
+    }
 }
 
 # Verifikasi remote
