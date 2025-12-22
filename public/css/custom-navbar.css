@@ -1,0 +1,745 @@
+/* Custom CSS untuk navbar dinamis dan sub-menu level terpisah */
+
+/* Container dinamis sesuai isi navbar */
+.navbar-dynamic-container {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 100%;
+}
+
+@media (min-width: 1200px) {
+    .navbar-dynamic-container {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .navbar-dynamic-container {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+
+/* ========== OVERRIDE CSS TEMPLATE ASLI ========== */
+/* Override styling template asli untuk level 1 submenu - HANYA level 1, bukan level 2 */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li:hover ul.dropdown-padding.level-1-submenu {
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 9 !important;
+    top: 100% !important;
+    left: 0 !important;
+    position: absolute !important;
+    transition: all 0.5s ease-in-out !important;
+}
+
+/* ========== LEVEL 1 SUBMENU (Dropdown pertama dari menu utama) ========== */
+/* Level 1 submenu muncul di bawah menu utama */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    position: absolute !important;
+    background: var(--ztc-text-text-1);
+    top: 100% !important;
+    left: 0 !important;
+    width: 225px;
+    z-index: 9;
+    transition: all 0.4s;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 0;
+}
+
+/* Tampilkan level 1 submenu saat hover menu utama */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li:hover > ul.dropdown-padding.level-1-submenu {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out !important;
+}
+
+/* ========== LEVEL 2 SUBMENU - HIDDEN BY DEFAULT ========== */
+/* Semua level 2 submenu HIDDEN secara default - rule ini harus paling kuat */
+/* Override semua kemungkinan selector dari template asli */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li.has-level-2-menu > ul.dropdown-padding.level-2-submenu,
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li ul.dropdown-padding.level-2-submenu,
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li:hover ul.dropdown-padding.level-2-submenu,
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu:hover ul.dropdown-padding.level-2-submenu,
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li.has-level-2-menu:not(:hover) > ul.dropdown-padding.level-2-submenu,
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding li.main-small-menu > ul.dropdown-padding.level-2-submenu,
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li.main-small-menu > ul.dropdown-padding {
+    position: absolute !important;
+    left: 100% !important;
+    top: 0 !important;
+    margin-left: 5px;
+    margin-top: 0 !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    display: none !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    background: var(--ztc-text-text-1);
+    width: 225px;
+    z-index: 10;
+    transition: all 0.4s;
+    border-radius: 5px;
+    padding: 15px;
+    pointer-events: none !important;
+}
+
+/* Tampilkan level 2 submenu HANYA saat hover pada item level 1 yang memiliki submenu */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li.has-level-2-menu:hover > ul.dropdown-padding.level-2-submenu {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+    transition: all 0.5s ease-in-out !important;
+    pointer-events: auto !important;
+}
+
+/* Pastikan level 2 submenu tetap muncul saat hover ke level 2 itu sendiri */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li.has-level-2-menu > ul.dropdown-padding.level-2-submenu:hover {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+    pointer-events: auto !important;
+}
+
+/* Tambahkan gap kecil untuk mencegah hilang saat hover dari level 1 ke level 2 */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li.has-level-2-menu > ul.dropdown-padding.level-2-submenu {
+    margin-left: 2px !important;
+    left: calc(100% + 2px) !important;
+}
+
+/* Pastikan level 2 tetap muncul saat hover pada parent li ATAU saat hover level 2 itu sendiri */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li.has-level-2-menu:hover > ul.dropdown-padding.level-2-submenu,
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li.has-level-2-menu > ul.dropdown-padding.level-2-submenu:hover,
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li.has-level-2-menu:hover ul.dropdown-padding.level-2-submenu {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+    pointer-events: auto !important;
+}
+
+/* Buat area hover yang lebih luas untuk item level 1 yang punya submenu */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li.has-level-2-menu {
+    padding-right: 10px;
+}
+
+/* Pastikan level 1 submenu tidak terpotong saat level 2 muncul */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu {
+    overflow: visible !important;
+}
+
+/* Pastikan item level 1 yang punya submenu memiliki position relative */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li.has-level-2-menu {
+    position: relative;
+}
+
+/* ========== STYLING UNTUK LEVEL 1 SUBMENU ========== */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li {
+    display: block;
+}
+
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li a {
+    font-family: var(--ztc-family-font1);
+    font-weight: var(--ztc-weight-medium);
+    transition: all 0.4s;
+    padding: 8px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    border-radius: 4px;
+    color: var(--ztc-text-text-2);
+    width: 100%;
+}
+
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li a::after {
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 3px;
+    transition: all 0.4s;
+    z-index: -1;
+    left: -10px;
+    top: 20%;
+    border-radius: 4px;
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
+    background: var(--ztc-text-text-4);
+}
+
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li a:hover {
+    padding-left: 25px;
+    color: var(--ztc-text-text-3) !important;
+}
+
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li a:hover::after {
+    border-radius: 4px;
+    visibility: visible;
+    transition: all 0.4s;
+    opacity: 1;
+    left: 0;
+}
+
+/* Hover effect untuk item level 1 yang punya submenu */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li.has-level-2-menu:hover > a {
+    transition: all 0.4s;
+    padding-left: 25px;
+    color: var(--ztc-text-text-4);
+}
+
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li.has-level-2-menu:hover > a::after {
+    background: var(--ztc-text-text-4);
+    transition: all 0.4s;
+    visibility: visible;
+    opacity: 1;
+    color: var(--ztc-text-text-4);
+}
+
+/* ========== STYLING UNTUK LEVEL 2 SUBMENU ========== */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li.has-level-2-menu > ul.dropdown-padding.level-2-submenu li {
+    display: block;
+}
+
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li.has-level-2-menu > ul.dropdown-padding.level-2-submenu li a {
+    font-family: var(--ztc-family-font1);
+    font-weight: var(--ztc-weight-medium);
+    transition: all 0.4s;
+    padding: 8px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    border-radius: 4px;
+    color: var(--ztc-text-text-2);
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li.has-level-2-menu > ul.dropdown-padding.level-2-submenu li a::after {
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 3px;
+    transition: all 0.4s;
+    z-index: -1;
+    left: -10px;
+    top: 20%;
+    border-radius: 4px;
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
+    background: var(--ztc-text-text-4);
+}
+
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li.has-level-2-menu > ul.dropdown-padding.level-2-submenu li a:hover {
+    padding-left: 25px;
+    color: var(--ztc-text-text-3) !important;
+}
+
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li.has-level-2-menu > ul.dropdown-padding.level-2-submenu li a:hover::after {
+    border-radius: 4px;
+    visibility: visible;
+    transition: all 0.4s;
+    opacity: 1;
+    left: 0;
+}
+
+/* Icon arrow untuk level 2 menu */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li.has-level-2-menu > a i.fa-angle-right {
+    float: right;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* Pastikan z-index navbar utama lebih tinggi */
+.homepage1-body .header-area.homepage1 {
+    z-index: 1000 !important;
+}
+
+/* ========== STICKY NAVBAR COLOR OVERRIDE ========== */
+/* Ubah warna navbar saat sticky dari hitam menjadi #01715d */
+.header-area.homepage1.sticky {
+    background: #01715d !important;
+}
+
+.header-area.homepage1.sticky.header-area2 {
+    background: #01715d !important;
+}
+
+/* ========== PAGE HEADER STYLING ========== */
+.vl-page-header {
+    position: relative;
+    padding: 120px 0 80px;
+    background-color: #1a4d2e;
+    background-blend-mode: overlay;
+    overflow: hidden;
+}
+
+.vl-page-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(26, 77, 46, 0.8);
+    z-index: 1;
+}
+
+.vl-page-header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.vl-page-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+    .vl-page-title {
+        font-size: 32px;
+    }
+}
+
+.vl-page-header .breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.vl-page-header .breadcrumb-item {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+}
+
+.vl-page-header .breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.vl-page-header .breadcrumb-item a:hover {
+    color: #ffffff;
+}
+
+.vl-page-header .breadcrumb-item.active {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.vl-page-header .breadcrumb-item + .breadcrumb-item::before {
+    content: "/";
+    color: rgba(255, 255, 255, 0.6);
+    padding: 0 10px;
+}
+
+/* ========== PENGASUH PHOTO STYLING ========== */
+.pengasuh-photo-wrapper {
+    position: relative;
+    background: linear-gradient(135deg, #1a4d2e 0%, #2d7a4f 50%, #1a4d2e 100%);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(26, 77, 46, 0.3);
+    overflow: hidden;
+}
+
+.pengasuh-photo-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    animation: pengasuh-rotate 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes pengasuh-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.pengasuh-photo {
+    position: relative;
+    z-index: 2;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.pengasuh-photo:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .pengasuh-photo-wrapper {
+        padding: 20px;
+        border-radius: 15px;
+    }
+    
+    .pengasuh-photo {
+        border-radius: 10px;
+    }
+}
+
+/* ========== PROFIL PENGASUH HOMEPAGE LAYOUT ========== */
+/* Pastikan foto pengasuh tidak tumpang tindih dengan teks */
+.vl-about-section .row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.vl-about-section .row > [class*="col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.vl-about-large-thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.vl-about-large-thumb img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.vl-about-large-thumb:hover img {
+    transform: scale(1.02);
+}
+
+/* Pastikan konten tidak overflow */
+.vl-about-content {
+    padding-right: 20px;
+}
+
+@media (max-width: 991px) {
+    .vl-about-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .vl-about-large-thumb {
+        margin-bottom: 30px;
+    }
+}
+
+/* Alignment untuk mobile */
+@media (max-width: 768px) {
+    .vl-about-section .row {
+        align-items: flex-start !important;
+    }
+}
+
+/* ========== FOOTER STYLING ========== */
+/* Footer Background Override */
+.vl-footer-bg-1 {
+    background: linear-gradient(135deg, #01715d 0%, #014d3f 100%) !important;
+    padding: 0;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    margin-top: 0 !important;
+}
+
+/* Pastikan CTA tidak tumpang tindih dengan footer */
+.vl-cta {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0 !important;
+}
+
+.vl-cta-bg {
+    position: relative;
+    z-index: 1;
+    overflow: visible !important;
+}
+
+.vl-cta-form {
+    position: relative;
+    z-index: 3;
+}
+
+.vl-cta-form input {
+    position: relative;
+    z-index: 4;
+}
+
+/* Footer Widget Styling */
+.vl-footer-widget-1,
+.vl-footer-widget-2,
+.vl-footer-widget-3 {
+    margin-bottom: 20px;
+}
+
+/* Footer Logo Styling */
+.vl-footer-logo {
+    display: block !important;
+}
+
+.vl-footer-logo img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Footer Title Styling */
+.vl-footer-widget-1 .title,
+.vl-footer-widget-2 .title,
+.vl-footer-widget-3 .title {
+    color: #fff !important;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Footer Menu Links - Override main.css */
+.vl-footer-widget-2 .vl-footer-menu ul li,
+.vl-footer-widget-3 .vl-footer-menu ul li {
+    margin-bottom: 4px !important;
+    list-style: none !important;
+}
+
+.vl-footer-widget-2 .vl-footer-menu ul li a,
+.vl-footer-widget-3 .vl-footer-menu ul li a {
+    color: rgba(255, 255, 255, 0.85) !important;
+    transition: all 0.3s !important;
+    font-size: 13px !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    line-height: 1.4 !important;
+    display: inline-block !important;
+}
+
+.vl-footer-widget-2 .vl-footer-menu ul li a:hover,
+.vl-footer-widget-3 .vl-footer-menu ul li a:hover {
+    color: #fff !important;
+    padding-left: 4px !important;
+}
+
+/* Footer Icon List Spacing */
+.vl-footer-icon-list {
+    margin-bottom: 8px !important;
+}
+
+.vl-footer-icon-list:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Footer Content */
+.vl-footer-content p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* Footer Social Icons */
+.vl-footer-social-1 ul {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vl-footer-social-1 ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.vl-footer-social-1 ul li a:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+}
+
+/* Footer Icon List */
+.vl-footer-icon-list {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.vl-footer-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+}
+
+.vl-footer-text a {
+    color: rgba(255, 255, 255, 0.85) !important;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 15px;
+    line-height: 1.6;
+    display: block;
+}
+
+.vl-footer-text a:hover {
+    color: #fff !important;
+}
+
+/* Copyright Section */
+.vl-copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 25px 0 !important;
+    margin-top: 40px !important;
+}
+
+.vl-copyright-text {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 14px;
+    margin: 0;
+}
+
+.vl-copyright-text strong {
+    color: #fff !important;
+}
+
+/* Responsive Footer */
+@media (max-width: 991px) {
+    .vl-footer-widget-2.pl-90,
+    .vl-footer-widget-2.pl-30 {
+        padding-left: 0 !important;
+    }
+    
+    .vl-footer-bg-1 {
+        padding: 50px 0 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .vl-footer-bg-1 {
+        padding: 0 !important;
+    }
+    
+    .vl-footer-bg-1 .container {
+        padding-top: 30px !important;
+        padding-bottom: 20px !important;
+    }
+    
+    .vl-footer-widget-1,
+    .vl-footer-widget-2,
+    .vl-footer-widget-3 {
+        margin-bottom: 30px !important;
+        text-align: left !important;
+    }
+    
+    .vl-footer-logo {
+        text-align: center !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .vl-footer-logo img {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    
+    .vl-footer-content {
+        text-align: center !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .vl-footer-content p {
+        font-size: 12px !important;
+        line-height: 1.6 !important;
+    }
+    
+    .vl-footer-social-1 ul {
+        justify-content: center !important;
+        margin-bottom: 0 !important;
+    }
+    
+    .vl-footer-widget-2 .title,
+    .vl-footer-widget-3 .title {
+        font-size: 16px !important;
+        margin-bottom: 15px !important;
+        text-align: left !important;
+        padding-bottom: 8px !important;
+    }
+    
+    .vl-footer-menu ul {
+        text-align: left !important;
+    }
+    
+    .vl-footer-menu ul li {
+        margin-bottom: 6px !important;
+    }
+    
+    .vl-footer-menu ul li a {
+        font-size: 13px !important;
+        padding-bottom: 0 !important;
+    }
+    
+    .vl-footer-icon-list {
+        justify-content: flex-start !important;
+        text-align: left !important;
+        margin-bottom: 12px !important;
+    }
+    
+    .vl-footer-text {
+        text-align: left !important;
+    }
+    
+    .vl-footer-text a {
+        font-size: 12px !important;
+        line-height: 1.5 !important;
+    }
+    
+    .vl-copyright {
+        padding: 15px 0 !important;
+        margin-top: 20px !important;
+    }
+    
+    .vl-copyright-text {
+        font-size: 11px !important;
+        text-align: center !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .vl-copyright-menu {
+        text-align: center !important;
+    }
+    
+    .vl-copyright-menu p {
+        font-size: 11px !important;
+    }
+}

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <?= $this->element('title_meta', array('title' => 'Event Right')) ?>
+
+    <?= $this->element('head_css') ?>
+</head>
+
+<body class="homepage1-body">
+
+    <?= $this->element('loader') ?>
+
+    <?= $this->element('header/navbar') ?>
+
+    <?= $this->element('header/mobile_nav') ?>
+
+    <!--===== BREADCRUMB AREA STARTS =======-->
+    <section class="vl-breadcrumb" style="background-image: url(/img/breadcrumb/vl-event-details.png);">
+        <div class="shape1"><img src="/img/breadcrumb/breadcrumb-shape-1.1.png" alt=""></div>
+        <div class="shape2"><img src="/img/breadcrumb/breadcrumb-shape-1.2.png" alt=""></div>
+        <div class="shape2"><img src="/img/breadcrumb/breadcrumb-shape-1.3.png" alt=""></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="vl-breadcrumb-title">
+                        <h2 class="heading">Events Details</h2>
+                        <div class="vl-breadcrumb-list">
+                            <span><a href="index">Home</a></span>
+                            <span class="dvir"><i class="fa-solid fa-angle-right"></i></span>
+                            <span><a class="active" href="#">Events</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--===== BREADCRUMB AREA ENDS =======-->
+
+    <!-- sidebar area start -->
+    <div class="vl-sidebar-area sp2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="vl-event-content-area mr-50">
+                        <div class="vl-large-thumb">
+                            <img class="w-100" src="/img/event/vl-learg-thumb-enent.png" alt="">
+                        </div>
+                        <div class="vl-event-content">
+                            <h2 class="title">Unity Giving Community Charity Event</h2>
+                            <p class="para pb-16">Our events bring people together to make a difference, uniting communities in support of meaningful causes. Each event—whether a fundraiser, awareness campaign, or volunteer day—serves as an opportunity to create real impact. </p>
+                            <p class="para pb-32">Through activities, guest speakers, and interactive sessions, we provide a platform for supporters to learn, connect, and contribute. Every event is designed not only to raise.</p>
+                        </div>
+
+                        <div class="vl-event-box-bg">
+                            <div class="row">
+                                <!-- single icon box -->
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="icon-box mb-30">
+                                        <div class="icon">
+                                            <span><img src="/img/icons/vl-event-date1.1.svg" alt=""></span>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title">Events Date</h4>
+                                            <p class="para">January 1, 2025 <br> 5:00 pm</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single icon box -->
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="icon-box mb-30">
+                                        <div class="icon">
+                                            <span><img src="/img/icons/vl-event-loca1.1.svg" alt=""></span>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title">Events Location</h4>
+                                            <p class="para">Vineyard Venues 5396 <br> North Reese Avenue</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- btn -->
+                                <div class="btn-area pb-32">
+                                    <a href="contact" class="header-btn1">Join This Event <span><i class="fa-solid fa-arrow-right"></i></span></a>
+                                </div>
+
+                                <div class="amot">
+                                    <div class="display-amount" id="displayAmount">$10</div>
+                                </div>
+                                <div class="amount-selector">
+                                    <button class="button selected" onclick="selectAmount(this, 10)"><span><img src="/img/icons/dollar.svg" alt=""></span>10</button>
+                                    <button class="button" onclick="selectAmount(this, 20)"><span><img src="/img/icons/dollar.svg" alt=""></span>20</button>
+                                    <button class="button" onclick="selectAmount(this, 30)"><span><img src="/img/icons/dollar.svg" alt=""></span>30</button>
+                                    <button class="button" onclick="selectAmount(this, 40)"><span><img src="/img/icons/dollar.svg" alt=""></span>40</button>
+                                    <button class="button" onclick="selectAmount(this, 50)"><span><img src="/img/icons/dollar.svg" alt=""></span>50</button>
+                                    <div class="custom-button" onclick="customAmount()">
+                                        Custom Amount <span><img src="/img/icons/custom-amou.svg" alt=""></span>
+                                    </div>
+                                </div>
+
+                                <!-- select method -->
+                                <div class="space-div">
+                                    <div class="select-method">
+                                        <h4 class="title pb-32">Select Payment Method</h4>
+
+                                        <!-- btn -->
+                                        <div class="select-meth">
+                                            <div class="online">
+                                                <input type="radio" id="Online" name="fav_language" value="Online">
+                                                <label for="Online">Online Donation</label><br>
+                                            </div>
+                                            <div class="ofline">
+                                                <input type="radio" id="Offline" name="fav_language" value="Offline">
+                                                <label for="Offline">Offline Donation</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- input field -->
+                                <div class="donate-form">
+                                    <form action="#">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-6 mb-20">
+                                                <input type="text" placeholder="First Name">
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 mb-20">
+                                                <input type="text" placeholder="Last Name">
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 mb-20">
+                                                <input type="email" placeholder="Email Address">
+                                            </div>
+                                        </div>
+
+
+                                    </form>
+                                    <div class="total-anoumt">
+                                        <div class="toal">
+                                            <div class="btn-area">
+                                                <button class="header-btn1">Donate <span><i class="fa-solid fa-arrow-right"></i></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <h2 class="title">Donation Total: $10</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="event-content-area">
+                            <h2 class="title">Join Us in Making a Difference</h2>
+                            <p class="para">We invite you to join us, meet like-minded individuals, and become part of a movement that makes real, lasting change. Whether you attend, volunteer, or help spread the word, your involvement is invaluable. Explore our upcoming events.</p>
+
+                            <h2 class="title">Event Highlights & Details</h2>
+                            <p class="para">Our events are designed to unite passionate individuals, raise critical funds, & increase awareness for the causes we serve. Each event offers a unique opportunity to connect, contribute, and witness the power of community in action.</p>
+                            <p class="para">Our events are opportunities to bring people together for meaningful causes, creating moments of connection and impact that extend far beyond the day itself.</p>
+
+
+                            <h2 class="title">Upcoming Fundraisers and Community Events</h2>
+                            <p class="para">From heartwarming charity dinners to hands-on volunteer days, these gatherings allow us to celebrate milestones, share stories of impact, and inspire further action. By joining us at our upcoming events, you’re not just attending you’re becoming part movement.</p>
+                            <p class="para">Each event, whether a fundraiser, awareness campaign, volunteer drive, or community gathering, plays a vital role in supporting our mission and raising essential resources.</p>
+
+                            <h2 class="title">Event Details and How to Participate</h2>
+                            <p class="para">Whether you attend, volunteer, or help spread the word, your involvement is invaluable. Explore our upcoming events, find ways to get involved, and help us create brighter futures for those in need. Together, we can make an extraordinary impact!</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="vl-widget-area">
+                        <!-- single widget -->
+                        <div class="vl-search-widget mb-30">
+                            <h3 class="title">Search</h3>
+                            <div class="search p-relative">
+                                <input type="text" placeholder="Search...">
+                                <span>
+                                    <img src="/img/icons/vl-search-icon.svg" alt="">
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- single widget -->
+                        <div class="vl-search-widget mb-30">
+                            <h3 class="title">Our Services</h3>
+
+                            <div class="vl-single-service">
+                                <a href="#">Supply Chain Management</a>
+                                <span><img src="/img/icons/vl-arrow-down.svg" alt=""></span>
+                            </div>
+
+                            <div class="vl-single-service">
+                                <a href="#">Mergers And Acquisitions</a>
+                                <span><img src="/img/icons/vl-arrow-down.svg" alt=""></span>
+                            </div>
+
+                            <div class="vl-single-service">
+                                <a href="#">Investment Strategies</a>
+                                <span><img src="/img/icons/vl-arrow-down.svg" alt=""></span>
+                            </div>
+
+                            <div class="vl-single-service">
+                                <a href="#">Wealth Management</a>
+                                <span><img src="/img/icons/vl-arrow-down.svg" alt=""></span>
+                            </div>
+
+                            <div class="vl-single-service">
+                                <a href="#">Transformation in Finance</a>
+                                <span><img src="/img/icons/vl-arrow-down.svg" alt=""></span>
+                            </div>
+
+
+
+                        </div>
+
+                        <!-- single widget -->
+                        <div class="vl-phone-widget mb-30">
+                            <h3 class="title">If You Need Any Help <br> Contact With Us</h3>
+                            <a href="#" class="phone"> <span><img src="/img/icons/vl-phone-event.svg" alt=""></span>+123 456 7890</a>
+                        </div>
+
+                        <!-- single widget -->
+                        <div class="vl-social-widget mb-30">
+                            <h3 class="title">Follow Us</h3>
+                            <div class="social-icon">
+                                <ul>
+                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sidebar area end -->
+
+    <section class="vl-singlevent-iner pb-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mx-auto">
+                    <div class="more-title text-center mb-60">
+                        <h2 class="title">More Events</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- single event item -->
+                <div class="col-lg-12 mb-50">
+                    <div class="event-bg-flex active">
+                        <div class="event-date">
+                            <h3 class="title">01</h3>
+                            <p class="year">JAN <br> 2025</p>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-meta">
+                                <p class="para">April 3, 2025 @ 8:00 am - January 9, 2025 @ 5:00 pm</p>
+                            </div>
+                            <a href="event-single" class="title">Unity Giving Community Charity Event</a>
+                            <p class="para">Vineyard Venues 5396 North Reese Avenue, Fresno <br> CA 93722, Fresno CA, CA, United States</p>
+                            <a href="event-single" class="details">Event Details <span><i class="fa-solid fa-arrow-right"></i></span></a>
+                        </div>
+                        <div class="event-thumb">
+                            <img class="w-100" src="/img/event/vl-event-thumb-1.1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- single event item -->
+                <div class="col-lg-12 mb-50">
+                    <div class="event-bg-flex">
+                        <div class="event-date">
+                            <h3 class="title">08</h3>
+                            <p class="year">JAN <br> 2025</p>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-meta">
+                                <p class="para">April 3, 2025 @ 8:00 am - January 9, 2025 @ 5:00 pm</p>
+                            </div>
+                            <a href="event-single" class="title">Harmony of Hearts Charity Concert content</a>
+                            <p class="para">Vineyard Venues 5396 North Reese Avenue, Fresno <br> CA 93722, Fresno CA, CA, United States</p>
+                            <a href="event-single" class="details">Event Details <span><i class="fa-solid fa-arrow-right"></i></span></a>
+                        </div>
+                        <div class="event-thumb">
+                            <img class="w-100" src="/img/event/vl-event-thumb-1.2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <?= $this->element('cta') ?>
+
+    <?= $this->element('footer') ?>
+
+    <?= $this->element('footer_scripts') ?>
+
+</body>
+
+</html>
+
+</html>

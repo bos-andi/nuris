@@ -1,0 +1,872 @@
+/* Nuris Admin Theme - Modern Green Theme with Rounded Design */
+
+:root {
+    /* Primary Green Colors - Modern & Harmonious */
+    --nuris-primary: #16a34a;
+    --nuris-primary-dark: #15803d;
+    --nuris-primary-light: #22c55e;
+    --nuris-primary-lighter: #4ade80;
+    --nuris-primary-lightest: #dcfce7;
+    --nuris-primary-gradient: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+    
+    /* Secondary Colors - Complementary */
+    --nuris-secondary: #f0fdf4;
+    --nuris-accent: #fbbf24;
+    --nuris-accent-light: #fde68a;
+    
+    /* Neutral Colors */
+    --nuris-bg: #ffffff;
+    --nuris-bg-light: #f9fafb;
+    --nuris-border: #e5e7eb;
+    --nuris-border-light: #f3f4f6;
+    
+    /* Text Colors */
+    --nuris-text-dark: #111827;
+    --nuris-text-gray: #6b7280;
+    --nuris-text-light: #9ca3af;
+    --nuris-text-white: #ffffff;
+    
+    /* Shadow */
+    --nuris-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --nuris-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --nuris-shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --nuris-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --nuris-shadow-green: 0 10px 25px -5px rgba(22, 163, 74, 0.3);
+}
+
+/* Override Primary Color */
+.bg-primary {
+    background: var(--nuris-primary-gradient) !important;
+}
+
+.text-primary {
+    color: var(--nuris-primary) !important;
+}
+
+.border-primary {
+    border-color: var(--nuris-primary) !important;
+}
+
+.btn.bg-primary {
+    background: var(--nuris-primary-gradient) !important;
+    border: none !important;
+    border-radius: 12px !important;
+    box-shadow: var(--nuris-shadow-green) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.btn.bg-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 15px 30px -5px rgba(22, 163, 74, 0.4) !important;
+    filter: brightness(1.05);
+}
+
+/* Sidebar Styling - Modern Rounded Design */
+.app-menu {
+    background: linear-gradient(180deg, #0f5132 0%, #16a34a 100%);
+    border-right: none;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.app-menu .logo-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 14px 16px;
+    margin: 16px 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.app-menu .logo-box:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.app-menu .logo-box span {
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* Menu Items - Rounded & Modern */
+.app-menu .menu-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 14px;
+    margin: 6px 12px;
+    padding: 12px 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+}
+
+.app-menu .menu-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: rgba(255, 255, 255, 0.5);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+    border-radius: 0 4px 4px 0;
+}
+
+.app-menu .menu-link:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    transform: translateX(6px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.app-menu .menu-link:hover::before {
+    transform: scaleY(1);
+}
+
+.app-menu .menu-link.active {
+    background: rgba(255, 255, 255, 0.25) !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.app-menu .menu-link.active::before {
+    transform: scaleY(1);
+    background: #ffffff;
+    width: 4px;
+}
+
+.app-menu .menu-link.active .menu-icon {
+    color: #ffffff !important;
+}
+
+.app-menu .menu-icon {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 20px;
+    margin-right: 12px;
+}
+
+.app-menu .menu-title {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    padding: 0 20px;
+}
+
+/* Topbar Styling - Modern Rounded */
+.app-header {
+    background: #ffffff;
+    border-bottom: 1px solid var(--nuris-border-light);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    padding: 12px 20px;
+    border-radius: 0 0 20px 20px;
+}
+
+.dark .app-header {
+    background: #1f2937;
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.app-header .logo-box {
+    border-radius: 12px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+.app-header .logo-box:hover {
+    background: var(--nuris-primary-lightest);
+}
+
+.app-header .logo-box span {
+    color: var(--nuris-primary) !important;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.dark .app-header .logo-box span {
+    color: #ffffff !important;
+}
+
+/* Cards - Modern Rounded Design */
+.card {
+    border: 1px solid var(--nuris-border-light);
+    border-radius: 20px !important;
+    box-shadow: var(--nuris-shadow);
+    background: #ffffff;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--nuris-primary-gradient);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.card:hover {
+    box-shadow: var(--nuris-shadow-lg);
+    border-color: var(--nuris-primary-light);
+    transform: translateY(-4px);
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+.card .p-6 {
+    padding: 24px;
+}
+
+/* Buttons - Rounded & Modern */
+.btn {
+    border-radius: 12px !important;
+    font-weight: 600;
+    padding: 10px 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+.btn.bg-primary {
+    background: var(--nuris-primary-gradient) !important;
+    box-shadow: var(--nuris-shadow-green) !important;
+    color: #ffffff !important;
+}
+
+.btn.bg-primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 35px -5px rgba(22, 163, 74, 0.5) !important;
+    filter: brightness(1.1);
+}
+
+.btn.bg-success {
+    background: linear-gradient(135deg, #10b981 0%, #34d399 100%) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3) !important;
+}
+
+.btn.bg-info {
+    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
+}
+
+.btn.bg-warning {
+    background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3) !important;
+}
+
+.btn.bg-danger {
+    background: linear-gradient(135deg, #ef4444 0%, #f87171 100%) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3) !important;
+}
+
+.btn-sm {
+    border-radius: 10px !important;
+    padding: 6px 14px;
+    font-size: 13px;
+}
+
+/* Form Inputs - Rounded & Modern */
+.form-input {
+    border-radius: 12px !important;
+    border: 2px solid var(--nuris-border) !important;
+    padding: 12px 16px !important;
+    transition: all 0.3s ease !important;
+    font-size: 14px;
+}
+
+.form-input:focus {
+    border-color: var(--nuris-primary) !important;
+    box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.1) !important;
+    outline: none !important;
+}
+
+.form-input:hover {
+    border-color: var(--nuris-primary-light) !important;
+}
+
+.form-checkbox {
+    border-radius: 6px !important;
+    width: 20px !important;
+    height: 20px !important;
+    border: 2px solid var(--nuris-border) !important;
+    transition: all 0.3s ease !important;
+}
+
+.form-checkbox:checked {
+    background: var(--nuris-primary-gradient) !important;
+    border-color: var(--nuris-primary) !important;
+    box-shadow: 0 2px 8px rgba(22, 163, 74, 0.3) !important;
+}
+
+textarea.form-input {
+    border-radius: 12px !important;
+    min-height: 120px;
+}
+
+/* Badge - Rounded */
+.bg-primary\/10 {
+    background: var(--nuris-primary-lightest) !important;
+    border-radius: 12px !important;
+}
+
+.text-primary {
+    color: var(--nuris-primary) !important;
+}
+
+/* Dashboard Cards - Icon Circles */
+.card .bg-primary\/10 {
+    background: var(--nuris-primary-lightest) !important;
+    border-radius: 16px !important;
+    border: 2px solid rgba(22, 163, 74, 0.1) !important;
+    transition: all 0.3s ease;
+}
+
+.card:hover .bg-primary\/10 {
+    background: linear-gradient(135deg, var(--nuris-primary-lightest) 0%, rgba(22, 163, 74, 0.1) 100%) !important;
+    border-color: var(--nuris-primary-light) !important;
+    transform: scale(1.05);
+}
+
+.card .h-12.w-12.rounded-full {
+    border-radius: 16px !important;
+    transition: all 0.3s ease;
+}
+
+/* Table - Rounded & Modern */
+table {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+table thead {
+    background: var(--nuris-primary-gradient);
+    border-radius: 16px 16px 0 0;
+}
+
+table thead th {
+    color: #ffffff !important;
+    font-weight: 700;
+    padding: 16px 20px !important;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    border: none !important;
+}
+
+table tbody tr {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid var(--nuris-border-light);
+}
+
+table tbody tr:hover {
+    background: var(--nuris-primary-lightest) !important;
+    transform: scale(1.01);
+    box-shadow: 0 2px 8px rgba(22, 163, 74, 0.1);
+}
+
+table tbody td {
+    padding: 16px 20px !important;
+    border: none !important;
+}
+
+table tbody tr:last-child {
+    border-bottom: none;
+}
+
+/* Alert Messages - Rounded */
+.alert-success {
+    background: var(--nuris-primary-lightest) !important;
+    border: 2px solid var(--nuris-primary) !important;
+    border-radius: 16px !important;
+    color: var(--nuris-primary-dark) !important;
+    padding: 16px 20px !important;
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.15) !important;
+    font-weight: 500;
+}
+
+.alert-danger {
+    background: #fef2f2 !important;
+    border: 2px solid #ef4444 !important;
+    border-radius: 16px !important;
+    color: #991b1b !important;
+    padding: 16px 20px !important;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.15) !important;
+}
+
+/* Login Page - Modern Design */
+.bg-gradient-to-r {
+    background: linear-gradient(135deg, #dcfce7 0%, #ffffff 30%, #f0fdf4 70%, #dcfce7 100%) !important;
+}
+
+.login-card {
+    border-radius: 24px !important;
+    box-shadow: 0 20px 60px rgba(22, 163, 74, 0.2) !important;
+    border: 1px solid rgba(22, 163, 74, 0.1) !important;
+    backdrop-filter: blur(10px);
+}
+
+/* Dark Mode Adjustments - Modern */
+.dark .app-menu {
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark .app-menu .menu-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.dark .app-menu .menu-link:hover {
+    background: rgba(22, 163, 74, 0.2) !important;
+    color: #ffffff !important;
+}
+
+.dark .app-menu .menu-link.active {
+    background: rgba(22, 163, 74, 0.4) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(22, 163, 74, 0.5) !important;
+}
+
+.dark .card {
+    background: #1e293b;
+    border-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px !important;
+}
+
+.dark .card:hover {
+    border-color: rgba(22, 163, 74, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.dark table thead {
+    background: linear-gradient(135deg, rgba(22, 163, 74, 0.3) 0%, rgba(34, 197, 94, 0.2) 100%);
+}
+
+.dark table thead th {
+    color: #ffffff !important;
+}
+
+.dark table tbody tr:hover {
+    background: rgba(22, 163, 74, 0.15) !important;
+}
+
+/* Scrollbar Styling - Rounded */
+.srcollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.srcollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.srcollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.srcollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.6);
+    background-clip: padding-box;
+}
+
+/* Animation - Smooth */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.card {
+    animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Page Content Styling */
+.page-content {
+    background: var(--nuris-bg-light);
+    min-height: 100vh;
+}
+
+main {
+    background: var(--nuris-bg-light);
+}
+
+/* Nav Link Styling */
+.nav-link {
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: var(--nuris-primary-lightest);
+}
+
+/* Dropdown Styling */
+.fc-dropdown {
+    border-radius: 16px !important;
+    box-shadow: var(--nuris-shadow-lg) !important;
+    border: 1px solid var(--nuris-border-light) !important;
+    overflow: hidden;
+}
+
+/* Quick Action Buttons */
+.text-xs.px-3.py-1.rounded-full {
+    border-radius: 20px !important;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.text-xs.px-3.py-1.rounded-full:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+}
+
+/* Badge Styling - Rounded */
+.px-2.py-1.text-xs.rounded {
+    border-radius: 12px !important;
+    font-weight: 600;
+    padding: 6px 12px !important;
+    font-size: 11px;
+    letter-spacing: 0.3px;
+}
+
+.bg-success\/10 {
+    background: #dcfce7 !important;
+    color: #166534 !important;
+    border: 1px solid #bbf7d0;
+}
+
+.bg-danger\/10 {
+    background: #fef2f2 !important;
+    color: #991b1b !important;
+    border: 1px solid #fecaca;
+}
+
+.bg-warning\/10 {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border: 1px solid #fde68a;
+}
+
+.bg-info\/10 {
+    background: #dbeafe !important;
+    color: #1e40af !important;
+    border: 1px solid #bfdbfe;
+}
+
+/* Code Styling */
+code {
+    border-radius: 8px !important;
+    padding: 4px 8px !important;
+    font-size: 11px;
+    font-weight: 600;
+    background: var(--nuris-primary-lightest) !important;
+    color: var(--nuris-primary-dark) !important;
+    border: 1px solid rgba(22, 163, 74, 0.2);
+}
+
+/* Section Headers */
+h4.text-lg.font-semibold,
+h4.text-2xl.font-bold {
+    color: var(--nuris-text-dark);
+    letter-spacing: -0.3px;
+}
+
+/* Page Header Styling */
+.flex.justify-between.items-center {
+    padding: 20px 0;
+    margin-bottom: 24px;
+    border-bottom: 2px solid var(--nuris-border-light);
+    border-radius: 0 0 16px 16px;
+    padding-bottom: 24px;
+}
+
+/* Icon Circles Enhancement */
+.h-12.w-12.rounded-full,
+.h-10.w-10.rounded-full {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.h-12.w-12.rounded-full:hover,
+.h-10.w-10.rounded-full:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Empty State */
+.text-center.text-gray-500 {
+    padding: 48px 24px;
+    border-radius: 16px;
+    background: var(--nuris-primary-lightest);
+    border: 2px dashed var(--nuris-primary-light);
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 1140px) {
+    /* Mobile Menu Styling */
+    .app-menu {
+        position: fixed !important;
+        left: -100% !important;
+        top: 0 !important;
+        height: 100vh !important;
+        z-index: 50 !important;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        width: 280px !important;
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3) !important;
+        overflow-y: auto !important;
+    }
+
+    .app-menu.menu-open {
+        left: 0 !important;
+    }
+
+    /* Mobile Menu Logo */
+    .app-menu .logo-box {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 10 !important;
+        background: rgba(15, 81, 50, 0.95) !important;
+        backdrop-filter: blur(10px) !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        padding: 16px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* Mobile Topbar */
+    .app-header {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 40 !important;
+        background: #ffffff !important;
+        border-radius: 0 !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .dark .app-header {
+        background: #1f2937 !important;
+    }
+
+    /* Mobile Page Content */
+    .page-content {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    /* Mobile Cards */
+    .card {
+        border-radius: 16px !important;
+        margin-bottom: 16px;
+    }
+
+    /* Mobile Buttons */
+    .btn {
+        border-radius: 10px !important;
+        padding: 10px 16px !important;
+        font-size: 14px !important;
+    }
+
+    /* Mobile Table */
+    table {
+        font-size: 13px;
+    }
+
+    table thead th {
+        padding: 12px 8px !important;
+        font-size: 11px !important;
+    }
+
+    table tbody td {
+        padding: 12px 8px !important;
+    }
+
+    /* Mobile Form Inputs */
+    .form-input {
+        border-radius: 10px !important;
+        padding: 10px 14px !important;
+    }
+
+    /* Mobile Dashboard Grid */
+    .grid {
+        gap: 12px !important;
+    }
+
+    /* Mobile Main Content */
+    main {
+        padding: 16px !important;
+    }
+
+    /* Mobile Logo Box in Menu */
+    .app-menu .logo-box {
+        margin: 12px !important;
+        padding: 12px !important;
+    }
+
+    /* Mobile Menu Items */
+    .app-menu .menu-link {
+        margin: 4px 8px !important;
+        padding: 10px 14px !important;
+        border-radius: 12px !important;
+    }
+
+    /* Mobile Header Actions */
+    .app-header .flex.items-center.gap-2 {
+        gap: 8px !important;
+    }
+
+    .nav-link {
+        padding: 8px !important;
+        border-radius: 10px !important;
+    }
+
+    /* Mobile Menu Toggle Button */
+    #button-toggle-menu {
+        background: var(--nuris-primary-lightest) !important;
+        border-radius: 12px !important;
+        transition: all 0.3s ease !important;
+    }
+
+    #button-toggle-menu:hover {
+        background: var(--nuris-primary-light) !important;
+        transform: scale(1.05);
+    }
+
+    #button-toggle-menu i {
+        color: var(--nuris-primary) !important;
+    }
+
+    /* Mobile Menu Close Button */
+    #button-close-menu {
+        position: fixed !important;
+        top: 16px !important;
+        right: 16px !important;
+        z-index: 60 !important;
+        background: rgba(255, 255, 255, 0.2) !important;
+        backdrop-filter: blur(10px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    #button-close-menu:hover {
+        background: rgba(255, 255, 255, 0.3) !important;
+        transform: scale(1.1) rotate(90deg);
+    }
+
+    .app-menu.menu-open #button-close-menu {
+        display: block !important;
+    }
+
+    /* Mobile Backdrop */
+    #menu-backdrop {
+        z-index: 45 !important;
+    }
+
+    /* Mobile Page Title */
+    .mb-6 h4 {
+        font-size: 18px !important;
+    }
+
+    .mb-6 p {
+        font-size: 13px !important;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 640px) {
+    .app-menu {
+        width: 260px !important;
+    }
+
+    .card .p-6 {
+        padding: 16px !important;
+    }
+
+    h4.text-2xl.font-bold {
+        font-size: 20px !important;
+    }
+
+    .grid.xl\:grid-cols-4 {
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    }
+
+    .grid.xl\:grid-cols-3 {
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    }
+
+    .grid.md\:grid-cols-2 {
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    }
+
+    /* Mobile Table Scroll */
+    .overflow-x-auto {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        min-width: 600px;
+    }
+}
+
+/* Backdrop Styling */
+#menu-backdrop {
+    transition: opacity 0.3s ease;
+}
+
+#menu-backdrop:not(.hidden) {
+    opacity: 1;
+}
+
+/* Prevent body scroll when menu is open */
+body.overflow-hidden {
+    overflow: hidden !important;
+}
+
+/* Mobile Menu Animation */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.app-menu.menu-open {
+    animation: slideInLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
