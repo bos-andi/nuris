@@ -36,14 +36,14 @@
                             <span><img src="{{ asset('img/icons/vl-sub-title-icon.svg') }}" alt=""></span> {{ $program->subtitle }}
                         </h5>
                         @endif
-                        <h2 class="title text-anime-style-3 mb-30" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300" style="font-size: 42px; font-weight: 800; color: #1a1a1a;">{{ $program->title }}</h2>
+                        <h2 class="title text-anime-style-3 mb-30" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300" style="font-size: clamp(1.75rem, 4vw, 2.625rem); font-weight: 800; color: #1a1a1a;">{{ $program->title }}</h2>
                         @if($program->intro_text)
-                        <div class="pb-32" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400" style="font-size: 18px; line-height: 1.8; color: #555;">
+                        <div class="pb-32" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400" style="font-size: clamp(0.875rem, 1.8vw, 1.125rem); line-height: 1.8; color: #555;">
                             {!! nl2br(e($program->intro_text)) !!}
                         </div>
                         @endif
                         @if($program->description)
-                        <div class="pb-32" data-aos="fade-right" data-aos-duration="800" data-aos-delay="500" style="font-size: 16px; line-height: 1.8; color: #666;">
+                        <div class="pb-32" data-aos="fade-right" data-aos-duration="800" data-aos-delay="500" style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8; color: #666;">
                             {!! nl2br(e($program->description)) !!}
                         </div>
                         @endif
@@ -53,9 +53,9 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-large-thumb reveal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
                     @if($program->image)
-                        <img class="w-100" src="{{ asset('storage/' . $program->image) }}" alt="{{ $program->title }}" style="border-radius: 15px; width: 100%; height: auto; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                        <img class="w-100" src="{{ asset('storage/' . $program->image) }}" alt="{{ $program->title }}" style="border-radius: 15px; width: 100%; height: auto; object-fit: cover; box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.15);">
                     @else
-                        <img class="w-100" src="{{ asset('img/about/vl-about-1.1.png') }}" alt="{{ $program->title }}" style="border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                        <img class="w-100" src="{{ asset('img/about/vl-about-1.1.png') }}" alt="{{ $program->title }}" style="border-radius: 15px; box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.15);">
                     @endif
                 </div>
             </div>
@@ -120,11 +120,11 @@
             @if($program->tujuan)
             <div class="col-lg-6 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                 <div class="program-info-card" style="background: white; padding: 35px; border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.08); height: 100%; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <div class="program-icon mb-20" style="width: 70px; height: 70px; background: linear-gradient(135deg, #01715d 0%, #00a085 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <i class="fa-solid fa-bullseye" style="font-size: 32px; color: white;"></i>
+                    <div class="program-icon mb-20" style="width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); background: linear-gradient(135deg, #01715d 0%, #00a085 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+                        <i class="fa-solid fa-bullseye" style="font-size: clamp(1.75rem, 3.5vw, 2rem); color: white;"></i>
                     </div>
-                    <h3 class="title mb-20" style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 15px;">Tujuan Program</h3>
-                    <p style="font-size: 16px; line-height: 1.8; color: #666; margin: 0;">{!! nl2br(e($program->tujuan)) !!}</p>
+                    <h3 class="title mb-20" style="font-size: clamp(1.125rem, 2.5vw, 1.5rem); font-weight: 700; color: #1a1a1a; margin-bottom: 0.9375rem;">Tujuan Program</h3>
+                    <p style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8; color: #666; margin: 0;">{!! nl2br(e($program->tujuan)) !!}</p>
                 </div>
             </div>
             @endif
@@ -132,11 +132,11 @@
             @if($program->materi)
             <div class="col-lg-6 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                 <div class="program-info-card" style="background: white; padding: 35px; border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.08); height: 100%; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <div class="program-icon mb-20" style="width: 70px; height: 70px; background: linear-gradient(135deg, #01715d 0%, #00a085 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <i class="fa-solid fa-book-open" style="font-size: 32px; color: white;"></i>
+                    <div class="program-icon mb-20" style="width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); background: linear-gradient(135deg, #01715d 0%, #00a085 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+                        <i class="fa-solid fa-book-open" style="font-size: clamp(1.75rem, 3.5vw, 2rem); color: white;"></i>
                     </div>
-                    <h3 class="title mb-20" style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 15px;">Materi Pembelajaran</h3>
-                    <p style="font-size: 16px; line-height: 1.8; color: #666; margin: 0;">{!! nl2br(e($program->materi)) !!}</p>
+                    <h3 class="title mb-20" style="font-size: clamp(1.125rem, 2.5vw, 1.5rem); font-weight: 700; color: #1a1a1a; margin-bottom: 0.9375rem;">Materi Pembelajaran</h3>
+                    <p style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8; color: #666; margin: 0;">{!! nl2br(e($program->materi)) !!}</p>
                 </div>
             </div>
             @endif
@@ -144,10 +144,10 @@
             @if($program->durasi || $program->sasaran)
             <div class="col-lg-6 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                 <div class="program-info-card" style="background: white; padding: 35px; border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.08); height: 100%; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <div class="program-icon mb-20" style="width: 70px; height: 70px; background: linear-gradient(135deg, #01715d 0%, #00a085 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <i class="fa-solid fa-clock" style="font-size: 32px; color: white;"></i>
+                    <div class="program-icon mb-20" style="width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); background: linear-gradient(135deg, #01715d 0%, #00a085 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+                        <i class="fa-solid fa-clock" style="font-size: clamp(1.75rem, 3.5vw, 2rem); color: white;"></i>
                     </div>
-                    <h3 class="title mb-20" style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 15px;">Informasi Program</h3>
+                    <h3 class="title mb-20" style="font-size: clamp(1.125rem, 2.5vw, 1.5rem); font-weight: 700; color: #1a1a1a; margin-bottom: 0.9375rem;">Informasi Program</h3>
                     @if($program->durasi)
                     <div class="mb-15">
                         <strong style="color: #01715d;">Durasi:</strong> <span style="color: #666;">{{ $program->durasi }}</span>
@@ -165,11 +165,11 @@
             @if($program->benefit)
             <div class="col-lg-6 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                 <div class="program-info-card" style="background: white; padding: 35px; border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.08); height: 100%; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <div class="program-icon mb-20" style="width: 70px; height: 70px; background: linear-gradient(135deg, #01715d 0%, #00a085 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <i class="fa-solid fa-star" style="font-size: 32px; color: white;"></i>
+                    <div class="program-icon mb-20" style="width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); background: linear-gradient(135deg, #01715d 0%, #00a085 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+                        <i class="fa-solid fa-star" style="font-size: clamp(1.75rem, 3.5vw, 2rem); color: white;"></i>
                     </div>
-                    <h3 class="title mb-20" style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 15px;">Manfaat Program</h3>
-                    <p style="font-size: 16px; line-height: 1.8; color: #666; margin: 0;">{!! nl2br(e($program->benefit)) !!}</p>
+                    <h3 class="title mb-20" style="font-size: clamp(1.125rem, 2.5vw, 1.5rem); font-weight: 700; color: #1a1a1a; margin-bottom: 0.9375rem;">Manfaat Program</h3>
+                    <p style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8; color: #666; margin: 0;">{!! nl2br(e($program->benefit)) !!}</p>
                 </div>
             </div>
             @endif
@@ -185,11 +185,11 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10 col-md-12">
-                <div class="content-wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="background: white; padding: 50px; border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.08);">
+                <div class="content-wrapper" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="background: white; padding: clamp(2.5rem, 5vw, 3.125rem); border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.08);">
                     <div class="vl-section-title-1 text-center mb-40">
                         <h2 class="title text-anime-style-3" style="font-size: 36px; font-weight: 800; color: #1a1a1a; margin-bottom: 30px;">Tentang Program</h2>
                     </div>
-                    <div class="content-text" style="font-size: 18px; line-height: 1.9; color: #555; text-align: justify;">
+                    <div class="content-text" style="font-size: clamp(0.875rem, 1.8vw, 1.125rem); line-height: 1.9; color: #555; text-align: justify;">
                         {!! nl2br(e($program->content)) !!}
                     </div>
                 </div>
@@ -216,9 +216,9 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <div class="pendaftaran-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300" style="background: linear-gradient(135deg, #01715d 0%, #00a085 100%); padding: 50px; border-radius: 20px; box-shadow: 0 15px 40px rgba(1,113,93,0.3); color: white; text-align: center;">
+                <div class="pendaftaran-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300" style="background: linear-gradient(135deg, #01715d 0%, #00a085 100%); padding: clamp(2.5rem, 5vw, 3.125rem); border-radius: clamp(1rem, 2vw, 1.25rem); box-shadow: 0 15px 40px rgba(1,113,93,0.3); color: white; text-align: center;">
                     @if($program->pendaftaran_info)
-                    <div class="mb-30" style="font-size: 18px; line-height: 1.8; margin-bottom: 30px;">
+                    <div class="mb-30" style="font-size: clamp(0.875rem, 1.8vw, 1.125rem); line-height: 1.8; margin-bottom: 30px;">
                         {!! nl2br(e($program->pendaftaran_info)) !!}
                     </div>
                     @endif

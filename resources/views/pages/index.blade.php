@@ -128,26 +128,43 @@
     <!--===== PROFIL PENGASUH AREA STARTS =======-->
     <section class="vl-about-section sp2">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+            <div class="row" style="align-items: flex-start;">
+                <div class="col-lg-4 col-md-6 mb-30" style="padding-left: 0.9375rem; padding-right: 1.875rem;">
+                    <div class="vl-about-large-thumb reveal pengasuh-photo-wrapper" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300" style="height: 100%;">
+                        @php
+                            $baseUrl = request()->getSchemeAndHttpHost();
+                            $photoPath = public_path('img/team/abah-yai.jpg');
+                            $fallbackPath = public_path('img/team/abah-yai.png');
+                            $defaultPath = 'img/team/vl-team-inner-1.1.png';
+                            
+                            if (file_exists($photoPath)) {
+                                $finalPath = 'img/team/abah-yai.jpg';
+                            } elseif (file_exists($fallbackPath)) {
+                                $finalPath = 'img/team/abah-yai.png';
+                            } else {
+                                $finalPath = $defaultPath;
+                            }
+                        @endphp
+                        <img class="w-100 pengasuh-photo" src="{{ $baseUrl }}/{{ $finalPath }}" alt="Profil Pengasuh PP. Nurul Islam" onerror="this.onerror=null; this.src='{{ $baseUrl }}/img/team/vl-team-inner-1.1.png';">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6" style="padding-left: 1.875rem; padding-right: 0.9375rem;">
                     <div class="vl-about-content">
                         <div class="vl-section-title-1">
-                            <h5 class="subtitle" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
-                                <span><img src="{{ asset('img/icons/vl-sub-title-icon.svg') }}" alt=""></span> Profil Pengasuh
-                            </h5>
-                            <h2 class="title text-anime-style-3" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">Dr. KH. Ahmad Siddiq, S.E., M.M.</h2>
-                            <p class="pb-20" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300" style="font-size: 18px; color: var(--ztc-text-text-4); font-weight: 600;">
+                            <h5 class="subtitle" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">Profil Pengasuh</h5>
+                            <h2 class="title text-anime-style-3" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">Dr. KH. Ahmad Siddiq, S.E., M.M.</h2>
+                            <p class="pb-20" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300" style="font-size: clamp(0.875rem, 1.8vw, 1.125rem); color: var(--ztc-text-text-4); font-weight: 600;">
                                 Pengasuh Pondok Pesantren Nurul Islam
                             </p>
-                            <p class="pb-32" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
+                            <p class="pb-32" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
                                 Dr. KH. Ahmad Siddiq, S.E., M.M. adalah pengasuh Pondok Pesantren Nurul Islam yang memiliki dedikasi tinggi dalam mendidik generasi muda dengan nilai-nilai Islam yang rahmatan lil alamin. Dengan latar belakang pendidikan pesantren yang kuat dan pengalaman bertahun-tahun, beliau berperan penting dalam membimbing dan mengarahkan santri-santri untuk menjadi generasi yang unggul, berakhlak mulia, dan bermanfaat bagi umat.
                             </p>
                         </div>
                         <div class="vl-about-grid">
                             <!-- single icon box -->
-                            <div class="vl-about-icon-box mb-30" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400">
+                            <div class="vl-about-icon-box mb-30" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
                                 <div class="vl-about-icon">
-                                    <span><i class="fa-solid fa-graduation-cap" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                                    <span><i class="fa-solid fa-graduation-cap" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                                 </div>
                                 <div class="vl-icon-content">
                                     <h3 class="title">Pendidikan & Pengalaman</h3>
@@ -155,9 +172,9 @@
                                 </div>
                             </div>
                             <!-- single icon box -->
-                            <div class="vl-about-icon-box mb-30" data-aos="fade-right" data-aos-duration="800" data-aos-delay="500">
+                            <div class="vl-about-icon-box mb-30" data-aos="fade-left" data-aos-duration="800" data-aos-delay="500">
                                 <div class="vl-about-icon">
-                                    <span><i class="fa-solid fa-heart" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                                    <span><i class="fa-solid fa-heart" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                                 </div>
                                 <div class="vl-icon-content">
                                     <h3 class="title">Dedikasi & Komitmen</h3>
@@ -165,49 +182,30 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="btn-area mt-4" data-aos="fade-right" data-aos-duration="800" data-aos-delay="600">
+                        <div class="btn-area mt-4" data-aos="fade-left" data-aos-duration="800" data-aos-delay="600">
                             <a href="{{ route('pages.display', 'profil-pengasuh') }}" class="header-btn1">Selengkapnya <span><i class="fa-solid fa-arrow-right"></i></span></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
-                    <div class="vl-about-large-thumb reveal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300" style="position: relative; padding: 20px; background: linear-gradient(135deg, rgba(1, 113, 93, 0.05) 0%, rgba(1, 113, 93, 0.1) 100%); border-radius: 20px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);">
-                        @php
-                            $photoPath = public_path('img/team/pengasuh-nuris.jpg');
-                            $fallbackPath = public_path('img/team/pengasuh-nuris.png');
-                            $defaultPath = 'img/team/vl-team-inner-1.1.png';
-                            
-                            if (file_exists($photoPath)) {
-                                $finalPath = 'img/team/pengasuh-nuris.jpg';
-                            } elseif (file_exists($fallbackPath)) {
-                                $finalPath = 'img/team/pengasuh-nuris.png';
-                            } else {
-                                $finalPath = $defaultPath;
-                            }
-                        @endphp
-                        <img class="w-100" src="{{ asset($finalPath) }}" alt="Profil Pengasuh PP. Nurul Islam" style="border-radius: 15px; object-fit: cover; width: 100%; height: auto; display: block;" onerror="this.onerror=null; this.src='{{ asset('img/team/vl-team-inner-1.1.png') }}';">
-                    </div>
-                </div>
-                <div class="col-lg-1 d-none d-lg-block"></div>
             </div>
         </div>
     </section>
     <!--===== PROFIL PENGASUH AREA ENDS =======-->
 
     <!--===== KETERANGAN & VIDEO PROFIL AREA STARTS =======-->
-    <section class="vl-about-section sp2" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); position: relative; overflow: hidden;">
+    <section class="vl-about-section sp2" style="background-color: #01715d; position: relative; overflow: hidden;">
         <!-- Background Decoration -->
-        <div style="position: absolute; top: -50px; right: -50px; width: 300px; height: 300px; background: rgba(251, 212, 89, 0.1); border-radius: 50%; z-index: 0;"></div>
-        <div style="position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px; background: rgba(26, 188, 156, 0.05); border-radius: 50%; z-index: 0;"></div>
+        <div style="position: absolute; top: -3.125rem; right: -3.125rem; width: clamp(15vw, 25vw, 18.75rem); height: clamp(15vw, 25vw, 18.75rem); background: rgba(255, 255, 255, 0.05); border-radius: 50%; z-index: 0;"></div>
+        <div style="position: absolute; bottom: -6.25rem; left: -6.25rem; width: clamp(20vw, 30vw, 25rem); height: clamp(20vw, 30vw, 25rem); background: rgba(255, 255, 255, 0.02); border-radius: 50%; z-index: 0;"></div>
         
         <div class="container" style="position: relative; z-index: 1;">
             <!-- Section Header -->
             <div class="vl-section-title-1 mb-60 text-center">
-                <h5 class="subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                    <span><img src="{{ asset('img/icons/vl-sub-title-icon.svg') }}" alt=""></span> Tentang Kami
+                <h5 class="subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="color: rgba(255, 255, 255, 0.9);">
+                    <span><img src="{{ asset('img/icons/vl-sub-title-icon.svg') }}" alt="" style="filter: brightness(0) invert(1);"></span> Tentang Kami
                 </h5>
-                <h2 class="title text-anime-style-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">Pondok Pesantren Nurul Islam</h2>
-                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="500" style="max-width: 700px; margin: 0 auto;">
+                <h2 class="title text-anime-style-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="color: #ffffff;">Pondok Pesantren Nurul Islam</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="500" style="max-width: 90%; margin: 0 auto; color: rgba(255, 255, 255, 0.9);">
                     Lembaga pendidikan Islam yang berkomitmen untuk mendidik generasi unggul dengan nilai-nilai Islam yang rahmatan lil alamin
                 </p>
             </div>
@@ -215,14 +213,14 @@
             <!-- Video Profil Section -->
             <div class="row mb-60">
                 <div class="col-lg-10 mx-auto">
-                    <div class="video-profile-wrapper" id="video-profile-section" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); background: #000; transition: all 0.3s ease;">
+                    <div class="video-profile-wrapper" id="video-profile-section" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: clamp(0.9375rem, 2vw, 1rem); box-shadow: 0 1.25rem 3.75rem rgba(0,0,0,0.15); background: #000; transition: all 0.3s ease;">
                         <div id="youtube-player-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;"></div>
                         <!-- Play Button Overlay (optional) -->
-                        <div class="video-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%); z-index: 1; pointer-events: none; border-radius: 16px;"></div>
+                        <div class="video-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%); z-index: 1; pointer-events: none; border-radius: clamp(0.9375rem, 2vw, 1rem);"></div>
                     </div>
                     <div class="text-center mt-4">
-                        <h4 style="color: var(--ztc-text-text-3); font-weight: 700; font-size: 24px; margin-bottom: 8px;">Video Profil Pesantren</h4>
-                        <p style="color: var(--ztc-text-text-2); font-size: 16px;">Kenali lebih dekat tentang Pondok Pesantren Nurul Islam</p>
+                        <h4 style="color: #ffffff; font-weight: 700; font-size: clamp(1.125rem, 2.5vw, 1.5rem); margin-bottom: 0.5rem;">Video Profil Pesantren</h4>
+                        <p style="color: rgba(255, 255, 255, 0.9); font-size: clamp(0.875rem, 1.6vw, 1rem);">Kenali lebih dekat tentang Pondok Pesantren Nurul Islam</p>
                     </div>
                 </div>
             </div>
@@ -233,14 +231,14 @@
                     <div class="row">
                         <!-- Keterangan Utama -->
                         <div class="col-lg-6 mb-30">
-                            <div class="keterangan-content" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300" style="background: #fff; padding: 40px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); height: 100%;">
-                                <h3 style="color: var(--ztc-text-text-3); font-weight: 700; font-size: 28px; margin-bottom: 20px; line-height: 1.3;">
+                            <div class="keterangan-content" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300" style="background: #fff; padding: clamp(2rem, 4vw, 2.5rem); border-radius: clamp(0.9375rem, 2vw, 1rem); box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.08); height: 100%;">
+                                <h3 style="color: var(--ztc-text-text-3); font-weight: 700; font-size: clamp(1.25rem, 3vw, 1.75rem); margin-bottom: 1.25rem; line-height: 1.3;">
                                     Visi & Misi Kami
                                 </h3>
-                                <p style="color: var(--ztc-text-text-2); font-size: 16px; line-height: 1.8; margin-bottom: 20px;">
+                                <p style="color: var(--ztc-text-text-2); font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8; margin-bottom: 1.25rem;">
                                     Pondok Pesantren Nurul Islam (Nuris) Mojokerto adalah lembaga pendidikan Islam yang berkomitmen untuk mendidik generasi unggul dengan nilai-nilai Islam yang rahmatan lil alamin. Kami menyelenggarakan pendidikan terpadu yang mengintegrasikan ilmu agama dan ilmu umum untuk membentuk santri yang berakhlak mulia, berprestasi, dan bermanfaat bagi masyarakat.
                                 </p>
-                                <p style="color: var(--ztc-text-text-2); font-size: 16px; line-height: 1.8;">
+                                <p style="color: var(--ztc-text-text-2); font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8;">
                                     Dengan berbagai program unggulan dan fasilitas yang memadai, kami berusaha memberikan pendidikan terbaik untuk mengembangkan potensi santri dalam berbagai bidang, baik akademik, keagamaan, maupun keterampilan hidup.
                                 </p>
                             </div>
@@ -250,14 +248,14 @@
                         <div class="col-lg-6 mb-30">
                             <div class="program-cards" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
                                 <!-- Card 1 -->
-                                <div class="program-card mb-20" style="background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); padding: 30px; border-radius: 16px; box-shadow: 0 10px 30px rgba(26, 188, 156, 0.2); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 40px rgba(26, 188, 156, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(26, 188, 156, 0.2)';">
+                                <div class="program-card mb-20" style="background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); padding: clamp(1.5rem, 3vw, 1.875rem); border-radius: clamp(0.9375rem, 2vw, 1rem); box-shadow: 0 0.625rem 1.875rem rgba(26, 188, 156, 0.2); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-0.3125rem)'; this.style.boxShadow='0 0.9375rem 2.5rem rgba(26, 188, 156, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0.625rem 1.875rem rgba(26, 188, 156, 0.2)';">
                                     <div style="display: flex; align-items: flex-start;">
-                                        <div style="background: rgba(255,255,255,0.2); width: 70px; height: 70px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; flex-shrink: 0;">
-                                            <i class="fa-solid fa-mosque" style="font-size: 32px; color: #fff;"></i>
+                                        <div style="background: rgba(255,255,255,0.2); width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-right: 1.25rem; flex-shrink: 0;">
+                                            <i class="fa-solid fa-mosque" style="font-size: clamp(1.75rem, 3.5vw, 2rem); color: #fff;"></i>
                                         </div>
                                         <div style="flex: 1;">
-                                            <h4 style="color: #fff; font-weight: 700; font-size: 22px; margin-bottom: 8px;">Pendidikan Agama</h4>
-                                            <p style="color: rgba(255,255,255,0.9); font-size: 15px; line-height: 1.6; margin: 0;">
+                                            <h4 style="color: #fff; font-weight: 700; font-size: clamp(1.125rem, 2.3vw, 1.375rem); margin-bottom: 0.5rem;">Pendidikan Agama</h4>
+                                            <p style="color: rgba(255,255,255,0.9); font-size: clamp(0.8125rem, 1.6vw, 0.9375rem); line-height: 1.6; margin: 0;">
                                                 Pembelajaran Al-Qur'an, Hadits, Fiqih, dan ilmu-ilmu keislaman lainnya dengan metode yang modern dan efektif
                                             </p>
                                         </div>
@@ -265,14 +263,14 @@
                                 </div>
 
                                 <!-- Card 2 -->
-                                <div class="program-card mb-20" style="background: linear-gradient(135deg, #FBD459 0%, #F39C12 100%); padding: 30px; border-radius: 16px; box-shadow: 0 10px 30px rgba(251, 212, 89, 0.2); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 40px rgba(251, 212, 89, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(251, 212, 89, 0.2)';">
+                                <div class="program-card mb-20" style="background: linear-gradient(135deg, #FBD459 0%, #F39C12 100%); padding: clamp(1.5rem, 3vw, 1.875rem); border-radius: clamp(0.9375rem, 2vw, 1rem); box-shadow: 0 0.625rem 1.875rem rgba(251, 212, 89, 0.2); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-0.3125rem)'; this.style.boxShadow='0 0.9375rem 2.5rem rgba(251, 212, 89, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0.625rem 1.875rem rgba(251, 212, 89, 0.2)';">
                                     <div style="display: flex; align-items: flex-start;">
-                                        <div style="background: rgba(255,255,255,0.2); width: 70px; height: 70px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; flex-shrink: 0;">
-                                            <i class="fa-solid fa-book" style="font-size: 32px; color: #fff;"></i>
+                                        <div style="background: rgba(255,255,255,0.2); width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-right: 1.25rem; flex-shrink: 0;">
+                                            <i class="fa-solid fa-book" style="font-size: clamp(1.75rem, 3.5vw, 2rem); color: #fff;"></i>
                                         </div>
                                         <div style="flex: 1;">
-                                            <h4 style="color: #fff; font-weight: 700; font-size: 22px; margin-bottom: 8px;">Pendidikan Umum</h4>
-                                            <p style="color: rgba(255,255,255,0.9); font-size: 15px; line-height: 1.6; margin: 0;">
+                                            <h4 style="color: #fff; font-weight: 700; font-size: clamp(1.125rem, 2.3vw, 1.375rem); margin-bottom: 0.5rem;">Pendidikan Umum</h4>
+                                            <p style="color: rgba(255,255,255,0.9); font-size: clamp(0.8125rem, 1.6vw, 0.9375rem); line-height: 1.6; margin: 0;">
                                                 Kurikulum terpadu yang mengintegrasikan ilmu agama dan ilmu umum untuk membentuk generasi yang berprestasi
                                             </p>
                                         </div>
@@ -280,14 +278,14 @@
                                 </div>
 
                                 <!-- Card 3 -->
-                                <div class="program-card" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%); padding: 30px; border-radius: 16px; box-shadow: 0 10px 30px rgba(52, 152, 219, 0.2); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 40px rgba(52, 152, 219, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(52, 152, 219, 0.2)';">
+                                <div class="program-card" style="background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%); padding: clamp(1.5rem, 3vw, 1.875rem); border-radius: clamp(0.9375rem, 2vw, 1rem); box-shadow: 0 0.625rem 1.875rem rgba(52, 152, 219, 0.2); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-0.3125rem)'; this.style.boxShadow='0 0.9375rem 2.5rem rgba(52, 152, 219, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0.625rem 1.875rem rgba(52, 152, 219, 0.2)';">
                                     <div style="display: flex; align-items: flex-start;">
-                                        <div style="background: rgba(255,255,255,0.2); width: 70px; height: 70px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; flex-shrink: 0;">
-                                            <i class="fa-solid fa-users" style="font-size: 32px; color: #fff;"></i>
+                                        <div style="background: rgba(255,255,255,0.2); width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-right: 1.25rem; flex-shrink: 0;">
+                                            <i class="fa-solid fa-users" style="font-size: clamp(1.75rem, 3.5vw, 2rem); color: #fff;"></i>
                                         </div>
                                         <div style="flex: 1;">
-                                            <h4 style="color: #fff; font-weight: 700; font-size: 22px; margin-bottom: 8px;">Pengembangan Karakter</h4>
-                                            <p style="color: rgba(255,255,255,0.9); font-size: 15px; line-height: 1.6; margin: 0;">
+                                            <h4 style="color: #fff; font-weight: 700; font-size: clamp(1.125rem, 2.3vw, 1.375rem); margin-bottom: 0.5rem;">Pengembangan Karakter</h4>
+                                            <p style="color: rgba(255,255,255,0.9); font-size: clamp(0.8125rem, 1.6vw, 0.9375rem); line-height: 1.6; margin: 0;">
                                                 Program pembentukan karakter dan akhlak mulia melalui berbagai kegiatan yang menunjang perkembangan santri
                                             </p>
                                         </div>
@@ -303,21 +301,21 @@
     <!--===== KETERANGAN & VIDEO PROFIL AREA ENDS =======-->
 
     <!--===== PENGURUS YAYASAN AREA STARTS =======-->
-    <section class="vl-team-bg-1 sp1" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%); padding: 100px 0; position: relative; overflow: hidden;">
+    <section class="vl-team-bg-1 sp1" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%); padding: clamp(5rem, 8vw, 6.25rem) 0; position: relative; overflow: hidden;">
         <!-- Background Decoration -->
-        <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: rgba(255,255,255,0.05); border-radius: 50%; z-index: 0;"></div>
-        <div style="position: absolute; bottom: -150px; left: -150px; width: 500px; height: 500px; background: rgba(255,255,255,0.03); border-radius: 50%; z-index: 0;"></div>
+        <div style="position: absolute; top: -6.25rem; right: -6.25rem; width: clamp(20vw, 30vw, 25rem); height: clamp(20vw, 30vw, 25rem); background: rgba(255,255,255,0.05); border-radius: 50%; z-index: 0;"></div>
+        <div style="position: absolute; bottom: -9.375rem; left: -9.375rem; width: clamp(25vw, 35vw, 31.25rem); height: clamp(25vw, 35vw, 31.25rem); background: rgba(255,255,255,0.03); border-radius: 50%; z-index: 0;"></div>
         
         <div class="container" style="position: relative; z-index: 1;">
             <div class="vl-team-section-title mb-60 text-center">
                 <div class="vl-section-title-1">
-                    <h5 class="subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="color: #ffffff; font-weight: 700; letter-spacing: 2px; margin-bottom: 15px; text-shadow: 0 2px 8px rgba(0,0,0,0.3); background: rgba(255,255,255,0.15); padding: 12px 24px; border-radius: 50px; display: inline-block; backdrop-filter: blur(10px);">
-                        <i class="fa-solid fa-sitemap" style="margin-right: 8px;"></i>Struktur Organisasi
+                    <h5 class="subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="color: #ffffff; font-weight: 700; letter-spacing: 0.125rem; margin-bottom: 0.9375rem; text-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.3); background: rgba(255,255,255,0.15); padding: 0.75rem 1.5rem; border-radius: clamp(2rem, 4vw, 3.125rem); display: inline-block; backdrop-filter: blur(0.625rem);">
+                        <i class="fa-solid fa-sitemap" style="margin-right: 0.5rem;"></i>Struktur Organisasi
                     </h5>
-                    <h2 class="title text-anime-style-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="font-size: 42px; font-weight: 700; color: white; margin-bottom: 20px; text-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <h2 class="title text-anime-style-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="font-size: clamp(1.75rem, 4vw, 2.625rem); font-weight: 700; color: white; margin-bottom: 1.25rem; text-shadow: 0 0.125rem 0.625rem rgba(0,0,0,0.1);">
                         Pengurus Yayasan PP. Nurul Islam
                     </h2>
-                    <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="max-width: 800px; margin: 0 auto; font-size: 16px; color: rgba(255,255,255,0.9); line-height: 1.8;">
+                    <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="max-width: 90%; margin: 0 auto; font-size: clamp(0.875rem, 1.6vw, 1rem); color: rgba(255,255,255,0.9); line-height: 1.8;">
                         Pengurus Yayasan adalah badan yang bertanggung jawab atas pengelolaan dan pengembangan Pondok Pesantren Nurul Islam secara keseluruhan. Tahun Akademik 2025-2026.
                     </p>
                 </div>
@@ -325,54 +323,54 @@
             <div class="row">
                 <div id="team1" class="owl-carousel owl-theme">
                     @forelse($pengurusYayasan as $pengurus)
-                    <div class="vl-team-parent" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.2); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 60px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0,0,0,0.2)'">
-                        <div class="vl-team-thumb" style="position: relative; overflow: hidden; height: 300px;">
+                    <div class="vl-team-parent" style="background: white; border-radius: clamp(1rem, 2vw, 1.25rem); overflow: hidden; box-shadow: 0 0.625rem 2.5rem rgba(0,0,0,0.2); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);" onmouseover="this.style.transform='translateY(-0.625rem)'; this.style.boxShadow='0 1.25rem 3.75rem rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0.625rem 2.5rem rgba(0,0,0,0.2)'">
+                        <div class="vl-team-thumb" style="position: relative; overflow: hidden; height: clamp(15rem, 25vw, 18.75rem);">
                             <img class="w-100" src="{{ $pengurus->foto ? asset('storage/' . $pengurus->foto) : asset('img/team/vl-team-inner-1.1.png') }}" alt="{{ $pengurus->nama }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
                             <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, transparent 0%, rgba(102, 126, 234, 0.1) 100%);"></div>
                         </div>
-                        <div class="vl-team-social" style="position: absolute; top: 20px; right: 20px; z-index: 2;">
-                            <ul style="display: flex; gap: 10px; list-style: none; padding: 0; margin: 0;">
+                        <div class="vl-team-social" style="position: absolute; top: 1.25rem; right: 1.25rem; z-index: 2;">
+                            <ul style="display: flex; gap: 0.625rem; list-style: none; padding: 0; margin: 0;">
                                 <li>
-                                    <a href="#" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,255,255,0.95); color: #1877f2; border-radius: 50%; text-decoration: none; transition: all 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" onmouseover="this.style.background='#1877f2'; this.style.color='white'; this.style.transform='scale(1.1)'" onmouseout="this.style.background='rgba(255,255,255,0.95)'; this.style.color='#1877f2'; this.style.transform='scale(1)'">
+                                    <a href="#" style="display: flex; align-items: center; justify-content: center; width: clamp(2rem, 3vw, 2.5rem); height: clamp(2rem, 3vw, 2.5rem); background: rgba(255,255,255,0.95); color: #1877f2; border-radius: 50%; text-decoration: none; transition: all 0.3s; box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.15);" onmouseover="this.style.background='#1877f2'; this.style.color='white'; this.style.transform='scale(1.1)'" onmouseout="this.style.background='rgba(255,255,255,0.95)'; this.style.color='#1877f2'; this.style.transform='scale(1)'">
                                         <i class="fa-brands fa-facebook-f"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,255,255,0.95); color: #e4405f; border-radius: 50%; text-decoration: none; transition: all 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" onmouseover="this.style.background='#e4405f'; this.style.color='white'; this.style.transform='scale(1.1)'" onmouseout="this.style.background='rgba(255,255,255,0.95)'; this.style.color='#e4405f'; this.style.transform='scale(1)'">
+                                    <a href="#" style="display: flex; align-items: center; justify-content: center; width: clamp(2rem, 3vw, 2.5rem); height: clamp(2rem, 3vw, 2.5rem); background: rgba(255,255,255,0.95); color: #e4405f; border-radius: 50%; text-decoration: none; transition: all 0.3s; box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.15);" onmouseover="this.style.background='#e4405f'; this.style.color='white'; this.style.transform='scale(1.1)'" onmouseout="this.style.background='rgba(255,255,255,0.95)'; this.style.color='#e4405f'; this.style.transform='scale(1)'">
                                         <i class="fa-brands fa-instagram"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,255,255,0.95); color: #1da1f2; border-radius: 50%; text-decoration: none; transition: all 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" onmouseover="this.style.background='#1da1f2'; this.style.color='white'; this.style.transform='scale(1.1)'" onmouseout="this.style.background='rgba(255,255,255,0.95)'; this.style.color='#1da1f2'; this.style.transform='scale(1)'">
+                                    <a href="#" style="display: flex; align-items: center; justify-content: center; width: clamp(2rem, 3vw, 2.5rem); height: clamp(2rem, 3vw, 2.5rem); background: rgba(255,255,255,0.95); color: #1da1f2; border-radius: 50%; text-decoration: none; transition: all 0.3s; box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.15);" onmouseover="this.style.background='#1da1f2'; this.style.color='white'; this.style.transform='scale(1.1)'" onmouseout="this.style.background='rgba(255,255,255,0.95)'; this.style.color='#1da1f2'; this.style.transform='scale(1)'">
                                         <i class="fa-brands fa-twitter"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,255,255,0.95); color: #0077b5; border-radius: 50%; text-decoration: none; transition: all 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" onmouseover="this.style.background='#0077b5'; this.style.color='white'; this.style.transform='scale(1.1)'" onmouseout="this.style.background='rgba(255,255,255,0.95)'; this.style.color='#0077b5'; this.style.transform='scale(1)'">
+                                    <a href="#" style="display: flex; align-items: center; justify-content: center; width: clamp(2rem, 3vw, 2.5rem); height: clamp(2rem, 3vw, 2.5rem); background: rgba(255,255,255,0.95); color: #0077b5; border-radius: 50%; text-decoration: none; transition: all 0.3s; box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.15);" onmouseover="this.style.background='#0077b5'; this.style.color='white'; this.style.transform='scale(1.1)'" onmouseout="this.style.background='rgba(255,255,255,0.95)'; this.style.color='#0077b5'; this.style.transform='scale(1)'">
                                         <i class="fa-brands fa-linkedin"></i>
                                     </a>
                                 </li>
                             </ul>
                         </div>
-                        <div class="vl-team-content text-center" style="padding: 30px 20px; background: white;">
-                            <a href="{{ route('pages.display', 'pengurus-yayasan') }}" class="title" style="color: #2c3e50; text-decoration: none; font-size: 20px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; display: block; transition: color 0.3s;" onmouseover="this.style.color='#667eea'" onmouseout="this.style.color='#2c3e50'">
+                        <div class="vl-team-content text-center" style="padding: clamp(1.5rem, 3vw, 1.875rem) 1.25rem; background: white;">
+                            <a href="{{ route('pages.display', 'pengurus-yayasan') }}" class="title" style="color: #2c3e50; text-decoration: none; font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 700; line-height: 1.4; margin-bottom: 0.5rem; display: block; transition: color 0.3s;" onmouseover="this.style.color='#667eea'" onmouseout="this.style.color='#2c3e50'">
                                 {{ $pengurus->nama }}
                             </a>
-                            <span style="color: #6c757d; font-size: 14px; font-weight: 500; display: block;">
+                            <span style="color: #6c757d; font-size: clamp(0.8125rem, 1.5vw, 0.875rem); font-weight: 500; display: block;">
                                 {{ $pengurus->jabatan_lengkap ?? $pengurus->jabatan }}
                             </span>
                         </div>
                     </div>
                     @empty
-                    <div class="vl-team-parent" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.2);">
-                        <div class="vl-team-thumb" style="position: relative; overflow: hidden; height: 300px;">
+                    <div class="vl-team-parent" style="background: white; border-radius: clamp(1rem, 2vw, 1.25rem); overflow: hidden; box-shadow: 0 0.625rem 2.5rem rgba(0,0,0,0.2);">
+                        <div class="vl-team-thumb" style="position: relative; overflow: hidden; height: clamp(15rem, 25vw, 18.75rem);">
                             <img class="w-100" src="{{ asset('img/team/vl-team-inner-1.1.png') }}" alt="Pengurus Yayasan" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <div class="vl-team-content text-center" style="padding: 30px 20px; background: white;">
-                            <a href="{{ route('pages.display', 'pengurus-yayasan') }}" class="title" style="color: #2c3e50; text-decoration: none; font-size: 20px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; display: block;">
+                        <div class="vl-team-content text-center" style="padding: clamp(1.5rem, 3vw, 1.875rem) 1.25rem; background: white;">
+                            <a href="{{ route('pages.display', 'pengurus-yayasan') }}" class="title" style="color: #2c3e50; text-decoration: none; font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 700; line-height: 1.4; margin-bottom: 0.5rem; display: block;">
                                 Belum ada data
                             </a>
-                            <span style="color: #6c757d; font-size: 14px; font-weight: 500; display: block;">
+                            <span style="color: #6c757d; font-size: clamp(0.8125rem, 1.5vw, 0.875rem); font-weight: 500; display: block;">
                                 Pengurus Yayasan
                             </span>
                         </div>
@@ -380,10 +378,10 @@
                     @endforelse
                 </div>
             </div>
-            <div class="text-center" style="margin-top: 80px; margin-bottom: 20px;">
-                <a href="{{ route('pages.display', 'pengurus-yayasan') }}" class="header-btn1" style="display: inline-flex; align-items: center; gap: 12px; background: white; color: #1e3c72; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 16px; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 30px rgba(255,255,255,0.3); position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 40px rgba(255,255,255,0.4)'; this.style.background='#1e3c72'; this.style.color='white';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(255,255,255,0.3)'; this.style.background='white'; this.style.color='#1e3c72';">
+            <div class="text-center" style="margin-top: clamp(4rem, 6vw, 5rem); margin-bottom: 1.25rem;">
+                <a href="{{ route('pages.display', 'pengurus-yayasan') }}" class="header-btn1" style="display: inline-flex; align-items: center; gap: 0.75rem; background: white; color: #1e3c72; padding: clamp(1rem, 2vw, 1.125rem) clamp(2rem, 4vw, 2.5rem); border-radius: clamp(2rem, 4vw, 3.125rem); text-decoration: none; font-weight: 700; font-size: clamp(0.875rem, 1.6vw, 1rem); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 0.5rem 1.875rem rgba(255,255,255,0.3); position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-0.1875rem)'; this.style.boxShadow='0 0.75rem 2.5rem rgba(255,255,255,0.4)'; this.style.background='#1e3c72'; this.style.color='white';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0.5rem 1.875rem rgba(255,255,255,0.3)'; this.style.background='white'; this.style.color='#1e3c72';">
                     <span style="position: relative; z-index: 1;">Lihat Semua Pengurus</span>
-                    <i class="fa-solid fa-arrow-right" style="font-size: 14px; position: relative; z-index: 1; transition: transform 0.3s;"></i>
+                    <i class="fa-solid fa-arrow-right" style="font-size: clamp(0.8125rem, 1.5vw, 0.875rem); position: relative; z-index: 1; transition: transform 0.3s;"></i>
                     <span style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); transition: left 0.5s;"></span>
                 </a>
             </div>
@@ -393,22 +391,22 @@
 
     <!--===== BERITA TERBARU AREA STARTS =======-->
     @if(isset($latestArticles) && $latestArticles->count() > 0)
-    <section class="vl-blg sp2" style="background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%); padding: 80px 0;">
+    <section class="vl-blg sp2" style="background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%); padding: clamp(4rem, 6vw, 5rem) 0;">
         <div class="container">
             <div class="vl-section-title-1 mb-60 text-center">
-                <h5 class="subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="color: #28a745; font-weight: 600; letter-spacing: 1px; margin-bottom: 15px;">
-                    <i class="fa-solid fa-newspaper" style="margin-right: 8px;"></i>Informasi Terkini
+                <h5 class="subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="color: #28a745; font-weight: 600; letter-spacing: 0.0625rem; margin-bottom: 0.9375rem;">
+                    <i class="fa-solid fa-newspaper" style="margin-right: 0.5rem;"></i>Informasi Terkini
                 </h5>
-                <h2 class="title text-anime-style-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="font-size: 42px; font-weight: 700; color: #2c3e50; margin-bottom: 20px;">Berita & Artikel Terbaru</h2>
-                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="max-width: 800px; margin: 0 auto; font-size: 16px; color: #6c757d; line-height: 1.8;">
+                <h2 class="title text-anime-style-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="font-size: clamp(1.75rem, 4vw, 2.625rem); font-weight: 700; color: #2c3e50; margin-bottom: 1.25rem;">Berita & Artikel Terbaru</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="max-width: 90%; margin: 0 auto; font-size: clamp(0.875rem, 1.6vw, 1rem); color: #6c757d; line-height: 1.8;">
                     Dapatkan informasi terkini seputar kegiatan, program, dan perkembangan Pondok Pesantren Nurul Islam melalui berita dan artikel terbaru.
                 </p>
             </div>
             <div class="row">
                 @foreach($latestArticles as $article)
                 <div class="col-lg-4 col-md-6 mb-40" data-aos="fade-up" data-aos-duration="800" data-aos-delay="{{ $loop->index * 100 }}">
-                    <div class="vl-blog-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 40px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'">
-                        <div class="vl-blog-thumb" style="position: relative; overflow: hidden; height: 250px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <div class="vl-blog-card" style="background: white; border-radius: clamp(0.9375rem, 2vw, 1rem); overflow: hidden; box-shadow: 0 0.25rem 1.25rem rgba(0,0,0,0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-0.5rem)'; this.style.boxShadow='0 0.75rem 2.5rem rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0.25rem 1.25rem rgba(0,0,0,0.08)'">
+                        <div class="vl-blog-thumb" style="position: relative; overflow: hidden; height: clamp(12.5rem, 20vw, 15.625rem); background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
                             <a href="{{ route('articles.show', $article->slug) }}" style="display: block; width: 100%; height: 100%; position: relative;">
                                 @if($article->featured_image)
                                     <img src="{{ asset('storage/' . $article->featured_image) }}" alt="{{ $article->title }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onerror="this.onerror=null; this.src='{{ asset('img/blog/vl-blog-1.1.png') }}';" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
@@ -418,36 +416,36 @@
                                 <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);"></div>
                             </a>
                         </div>
-                        <div class="vl-blog-content" style="padding: 30px; flex: 1; display: flex; flex-direction: column;">
-                            <div class="vl-blog-meta" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #f0f0f0;">
-                                <span style="display: inline-flex; align-items: center; gap: 6px; color: #6c757d; font-size: 13px;">
-                                    <i class="fa-solid fa-calendar" style="color: #28a745; font-size: 12px;"></i>
+                        <div class="vl-blog-content" style="padding: clamp(1.5rem, 3vw, 1.875rem); flex: 1; display: flex; flex-direction: column;">
+                            <div class="vl-blog-meta" style="display: flex; flex-wrap: wrap; gap: 0.9375rem; margin-bottom: 0.9375rem; padding-bottom: 0.9375rem; border-bottom: 1px solid #f0f0f0;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.375rem; color: #6c757d; font-size: clamp(0.75rem, 1.4vw, 0.8125rem);">
+                                    <i class="fa-solid fa-calendar" style="color: #28a745; font-size: clamp(0.6875rem, 1.2vw, 0.75rem);"></i>
                                     <strong style="font-weight: 600;">{{ $article->published_at ? $article->published_at->format('d M Y') : $article->created_at->format('d M Y') }}</strong>
                                 </span>
                                 @if($article->author)
-                                <span style="display: inline-flex; align-items: center; gap: 6px; color: #6c757d; font-size: 13px;">
-                                    <i class="fa-solid fa-user" style="color: #007bff; font-size: 12px;"></i>
+                                <span style="display: inline-flex; align-items: center; gap: 0.375rem; color: #6c757d; font-size: clamp(0.75rem, 1.4vw, 0.8125rem);">
+                                    <i class="fa-solid fa-user" style="color: #007bff; font-size: clamp(0.6875rem, 1.2vw, 0.75rem);"></i>
                                     <strong style="font-weight: 600;">{{ $article->author }}</strong>
                                 </span>
                                 @endif
                             </div>
-                            <h3 class="vl-blog-title" style="margin-bottom: 15px; flex: 1;">
-                                <a href="{{ route('articles.show', $article->slug) }}" style="color: #2c3e50; text-decoration: none; font-size: 20px; font-weight: 700; line-height: 1.4; transition: color 0.3s; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;" onmouseover="this.style.color='#28a745'" onmouseout="this.style.color='#2c3e50'">
+                            <h3 class="vl-blog-title" style="margin-bottom: 0.9375rem; flex: 1;">
+                                <a href="{{ route('articles.show', $article->slug) }}" style="color: #2c3e50; text-decoration: none; font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 700; line-height: 1.4; transition: color 0.3s; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;" onmouseover="this.style.color='#28a745'" onmouseout="this.style.color='#2c3e50'">
                                     {{ $article->title }}
                                 </a>
                             </h3>
                             @if($article->excerpt)
-                            <p style="color: #6c757d; font-size: 14px; line-height: 1.7; margin-bottom: 20px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; flex: 1;">
+                            <p style="color: #6c757d; font-size: clamp(0.8125rem, 1.5vw, 0.875rem); line-height: 1.7; margin-bottom: 1.25rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; flex: 1;">
                                 {{ Str::limit($article->excerpt, 150) }}
                             </p>
                             @else
-                            <p style="color: #6c757d; font-size: 14px; line-height: 1.7; margin-bottom: 20px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; flex: 1;">
+                            <p style="color: #6c757d; font-size: clamp(0.8125rem, 1.5vw, 0.875rem); line-height: 1.7; margin-bottom: 1.25rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; flex: 1;">
                                 {{ Str::limit(strip_tags($article->content), 150) }}
                             </p>
                             @endif
                             <div class="vl-blog-btn" style="margin-top: auto;">
-                                <a href="{{ route('articles.show', $article->slug) }}" class="header-btn1" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; transition: all 0.3s; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 6px 20px rgba(40, 167, 69, 0.4)'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 4px 15px rgba(40, 167, 69, 0.3)'">
-                                    Baca Selengkapnya <i class="fa-solid fa-arrow-right" style="font-size: 12px;"></i>
+                                <a href="{{ route('articles.show', $article->slug) }}" class="header-btn1" style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: clamp(0.8125rem, 1.5vw, 0.875rem); transition: all 0.3s; box-shadow: 0 0.25rem 0.9375rem rgba(40, 167, 69, 0.3);" onmouseover="this.style.transform='translateX(0.3125rem)'; this.style.boxShadow='0 0.375rem 1.25rem rgba(40, 167, 69, 0.4)'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 0.25rem 0.9375rem rgba(40, 167, 69, 0.3)'">
+                                    Baca Selengkapnya <i class="fa-solid fa-arrow-right" style="font-size: clamp(0.6875rem, 1.2vw, 0.75rem);"></i>
                                 </a>
                             </div>
                         </div>
@@ -456,7 +454,7 @@
                 @endforeach
             </div>
             <div class="text-center mt-50">
-                <a href="{{ route('articles.index') }}" class="header-btn1" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(40, 167, 69, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(40, 167, 69, 0.3)'">
+                <a href="{{ route('articles.index') }}" class="header-btn1" style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; padding: clamp(0.9375rem, 2vw, 1.125rem) clamp(1.5rem, 3vw, 1.875rem); border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: clamp(0.875rem, 1.6vw, 1rem); transition: all 0.3s; box-shadow: 0 0.25rem 0.9375rem rgba(40, 167, 69, 0.3);" onmouseover="this.style.transform='translateY(-0.125rem)'; this.style.boxShadow='0 0.375rem 1.25rem rgba(40, 167, 69, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0.25rem 0.9375rem rgba(40, 167, 69, 0.3)'">
                     Lihat Semua Berita <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
@@ -528,77 +526,77 @@
 
     <!--===== EVENT AREA STARTS =======-->
     @if(isset($latestEvents) && $latestEvents->count() > 0)
-    <section class="vl-blg sp2" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 80px 0; position: relative; overflow: hidden;">
+    <section class="vl-blg sp2" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: clamp(4rem, 6vw, 5rem) 0; position: relative; overflow: hidden;">
         <!-- Background Pattern -->
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.1; background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
         
         <div class="container" style="position: relative; z-index: 1;">
             <div class="vl-section-title-1 mb-60 text-center">
-                <h5 class="subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="color: rgba(255,255,255,0.9); font-weight: 600; letter-spacing: 1px; margin-bottom: 15px;">
-                    <i class="fa-solid fa-calendar-check" style="margin-right: 8px;"></i>Event & Kegiatan
+                <h5 class="subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="color: rgba(255,255,255,0.9); font-weight: 600; letter-spacing: 0.0625rem; margin-bottom: 0.9375rem;">
+                    <i class="fa-solid fa-calendar-check" style="margin-right: 0.5rem;"></i>Event & Kegiatan
                 </h5>
-                <h2 class="title text-anime-style-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="font-size: 42px; font-weight: 700; color: white; margin-bottom: 20px;">Kegiatan Terbaru</h2>
-                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="max-width: 800px; margin: 0 auto; font-size: 16px; color: rgba(255,255,255,0.9); line-height: 1.8;">
+                <h2 class="title text-anime-style-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="font-size: clamp(1.75rem, 4vw, 2.625rem); font-weight: 700; color: white; margin-bottom: 1.25rem;">Kegiatan Terbaru</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="max-width: 90%; margin: 0 auto; font-size: clamp(0.875rem, 1.6vw, 1rem); color: rgba(255,255,255,0.9); line-height: 1.8;">
                     Ikuti berbagai kegiatan dan event menarik yang diselenggarakan oleh Pondok Pesantren Nurul Islam.
                 </p>
             </div>
             <div class="row">
                 @foreach($latestEvents as $event)
                 <div class="col-lg-4 col-md-6 mb-40" data-aos="fade-up" data-aos-duration="800" data-aos-delay="{{ $loop->index * 100 }}">
-                    <div class="vl-event-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.2); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 50px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.2)'">
+                    <div class="vl-event-card" style="background: white; border-radius: clamp(0.9375rem, 2vw, 1rem); overflow: hidden; box-shadow: 0 0.5rem 1.875rem rgba(0,0,0,0.2); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-0.5rem)'; this.style.boxShadow='0 0.9375rem 3.125rem rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0.5rem 1.875rem rgba(0,0,0,0.2)'">
                         @if($event->featured_image)
-                        <div class="vl-event-thumb" style="position: relative; overflow: hidden; height: 220px;">
+                        <div class="vl-event-thumb" style="position: relative; overflow: hidden; height: clamp(11rem, 18vw, 13.75rem);">
                             <img src="{{ asset('storage/' . $event->featured_image) }}" alt="{{ $event->title }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onerror="this.onerror=null; this.src='{{ asset('img/blog/vl-blog-1.1.png') }}';" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-                            <div style="position: absolute; top: 15px; left: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 8px 16px; border-radius: 8px; font-weight: 700; font-size: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                                <i class="fa-solid fa-calendar" style="margin-right: 5px;"></i>{{ $event->event_date->format('d M Y') }}
+                            <div style="position: absolute; top: 0.9375rem; left: 0.9375rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; font-weight: 700; font-size: clamp(0.8125rem, 1.5vw, 0.875rem); box-shadow: 0 0.25rem 0.9375rem rgba(0,0,0,0.2);">
+                                <i class="fa-solid fa-calendar" style="margin-right: 0.3125rem;"></i>{{ $event->event_date->format('d M Y') }}
                             </div>
                             @if($event->isUpcoming())
-                            <div style="position: absolute; top: 15px; right: 15px; background: #28a745; color: white; padding: 6px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase;">
+                            <div style="position: absolute; top: 0.9375rem; right: 0.9375rem; background: #28a745; color: white; padding: 0.375rem 0.75rem; border-radius: clamp(1rem, 2vw, 1.25rem); font-size: clamp(0.625rem, 1vw, 0.6875rem); font-weight: 600; text-transform: uppercase;">
                                 Upcoming
                             </div>
                             @endif
                         </div>
                         @else
-                        <div class="vl-event-thumb" style="position: relative; overflow: hidden; height: 220px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
-                            <i class="fa-solid fa-calendar-days" style="font-size: 60px; color: rgba(255,255,255,0.3);"></i>
-                            <div style="position: absolute; top: 15px; left: 15px; background: rgba(255,255,255,0.95); color: #667eea; padding: 8px 16px; border-radius: 8px; font-weight: 700; font-size: 14px;">
-                                <i class="fa-solid fa-calendar" style="margin-right: 5px;"></i>{{ $event->event_date->format('d M Y') }}
+                        <div class="vl-event-thumb" style="position: relative; overflow: hidden; height: clamp(11rem, 18vw, 13.75rem); background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
+                            <i class="fa-solid fa-calendar-days" style="font-size: clamp(3rem, 6vw, 3.75rem); color: rgba(255,255,255,0.3);"></i>
+                            <div style="position: absolute; top: 0.9375rem; left: 0.9375rem; background: rgba(255,255,255,0.95); color: #667eea; padding: 0.5rem 1rem; border-radius: 0.5rem; font-weight: 700; font-size: clamp(0.8125rem, 1.5vw, 0.875rem);">
+                                <i class="fa-solid fa-calendar" style="margin-right: 0.3125rem;"></i>{{ $event->event_date->format('d M Y') }}
                             </div>
                             @if($event->isUpcoming())
-                            <div style="position: absolute; top: 15px; right: 15px; background: #28a745; color: white; padding: 6px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase;">
+                            <div style="position: absolute; top: 0.9375rem; right: 0.9375rem; background: #28a745; color: white; padding: 0.375rem 0.75rem; border-radius: clamp(1rem, 2vw, 1.25rem); font-size: clamp(0.625rem, 1vw, 0.6875rem); font-weight: 600; text-transform: uppercase;">
                                 Upcoming
                             </div>
                             @endif
                         </div>
                         @endif
-                        <div class="vl-event-content" style="padding: 30px; flex: 1; display: flex; flex-direction: column;">
-                            <h3 class="vl-event-title" style="margin-bottom: 15px; flex: 1;">
-                                <a href="#" style="color: #2c3e50; text-decoration: none; font-size: 22px; font-weight: 700; line-height: 1.4; transition: color 0.3s; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;" onmouseover="this.style.color='#667eea'" onmouseout="this.style.color='#2c3e50'">
+                        <div class="vl-event-content" style="padding: clamp(1.5rem, 3vw, 1.875rem); flex: 1; display: flex; flex-direction: column;">
+                            <h3 class="vl-event-title" style="margin-bottom: 0.9375rem; flex: 1;">
+                                <a href="#" style="color: #2c3e50; text-decoration: none; font-size: clamp(1.125rem, 2.3vw, 1.375rem); font-weight: 700; line-height: 1.4; transition: color 0.3s; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;" onmouseover="this.style.color='#667eea'" onmouseout="this.style.color='#2c3e50'">
                                     {{ $event->title }}
                                 </a>
                             </h3>
                             @if($event->description)
-                            <p style="color: #6c757d; font-size: 14px; line-height: 1.7; margin-bottom: 20px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; flex: 1;">
+                            <p style="color: #6c757d; font-size: clamp(0.8125rem, 1.5vw, 0.875rem); line-height: 1.7; margin-bottom: 1.25rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; flex: 1;">
                                 {{ Str::limit($event->description, 120) }}
                             </p>
                             @endif
-                            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; padding-top: 15px; border-top: 1px solid #f0f0f0;">
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.625rem; margin-bottom: 1.25rem; padding-top: 0.9375rem; border-top: 1px solid #f0f0f0;">
                                 @if($event->location)
-                                <span style="display: inline-flex; align-items: center; gap: 6px; color: #6c757d; font-size: 13px;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.375rem; color: #6c757d; font-size: clamp(0.75rem, 1.4vw, 0.8125rem);">
                                     <i class="fa-solid fa-location-dot" style="color: #dc3545;"></i>
                                     <strong>{{ Str::limit($event->location, 25) }}</strong>
                                 </span>
                                 @endif
                                 @if($event->organizer)
-                                <span style="display: inline-flex; align-items: center; gap: 6px; color: #6c757d; font-size: 13px;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.375rem; color: #6c757d; font-size: clamp(0.75rem, 1.4vw, 0.8125rem);">
                                     <i class="fa-solid fa-user-group" style="color: #007bff;"></i>
                                     <strong>{{ Str::limit($event->organizer, 25) }}</strong>
                                 </span>
                                 @endif
                             </div>
                             <div class="vl-event-btn" style="margin-top: auto;">
-                                <a href="#" class="header-btn1" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; transition: all 0.3s; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3); width: 100%; justify-content: center;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(102, 126, 234, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(102, 126, 234, 0.3)'">
-                                    Detail Event <i class="fa-solid fa-arrow-right" style="font-size: 12px;"></i>
+                                <a href="#" class="header-btn1" style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: clamp(0.8125rem, 1.5vw, 0.875rem); transition: all 0.3s; box-shadow: 0 0.25rem 0.9375rem rgba(102, 126, 234, 0.3); width: 100%; justify-content: center;" onmouseover="this.style.transform='translateY(-0.125rem)'; this.style.boxShadow='0 0.375rem 1.25rem rgba(102, 126, 234, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0.25rem 0.9375rem rgba(102, 126, 234, 0.3)'">
+                                    Detail Event <i class="fa-solid fa-arrow-right" style="font-size: clamp(0.6875rem, 1.2vw, 0.75rem);"></i>
                                 </a>
                             </div>
                         </div>
@@ -608,7 +606,7 @@
             </div>
             @if($latestEvents->count() > 0)
             <div class="text-center mt-50">
-                <a href="#" class="header-btn1" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #667eea; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s; box-shadow: 0 4px 15px rgba(255,255,255,0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(255,255,255,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(255,255,255,0.3)'">
+                <a href="#" class="header-btn1" style="display: inline-flex; align-items: center; gap: 0.5rem; background: white; color: #667eea; padding: clamp(0.9375rem, 2vw, 1.125rem) clamp(1.5rem, 3vw, 1.875rem); border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: clamp(0.875rem, 1.6vw, 1rem); transition: all 0.3s; box-shadow: 0 0.25rem 0.9375rem rgba(255,255,255,0.3);" onmouseover="this.style.transform='translateY(-0.125rem)'; this.style.boxShadow='0 0.375rem 1.25rem rgba(255,255,255,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0.25rem 0.9375rem rgba(255,255,255,0.3)'">
                     Lihat Semua Event <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
@@ -622,18 +620,20 @@
 <style>
     /* Hero Slideshow Fixed Height - 1920x1080px */
     .vl-banner {
-        height: 1080px;
+        height: clamp(50vh, 56.25vw, 67.5rem);
+        min-height: clamp(31.25rem, 50vh, 37.5rem);
         overflow: hidden;
     }
     
     .slider-active-1 {
-        height: 1080px;
+        height: clamp(50vh, 56.25vw, 67.5rem);
+        min-height: clamp(31.25rem, 50vh, 37.5rem);
     }
     
     .vl-hero-slider {
-        height: 1080px !important;
-        min-height: 1080px !important;
-        max-height: 1080px !important;
+        height: clamp(50vh, 56.25vw, 67.5rem) !important;
+        min-height: clamp(31.25rem, 50vh, 37.5rem) !important;
+        max-height: 67.5rem !important;
         display: flex !important;
         align-items: center;
         position: relative;
@@ -667,8 +667,8 @@
         transform: translate(-50%, -50%);
         width: 100vw;
         height: 56.25vw; /* 16:9 aspect ratio */
-        min-height: 1080px;
-        min-width: 1920px; /* 16:9 aspect ratio */
+        min-height: 67.5rem;
+        min-width: 120vw; /* 16:9 aspect ratio */
         pointer-events: none;
     }
     
@@ -676,18 +676,18 @@
     @media (max-width: 1920px) {
         .vl-banner {
             height: 56.25vw; /* 16:9 aspect ratio */
-            min-height: 600px;
+            min-height: clamp(31.25rem, 50vh, 37.5rem);
         }
         
         .slider-active-1 {
             height: 56.25vw;
-            min-height: 600px;
+            min-height: clamp(31.25rem, 50vh, 37.5rem);
         }
         
         .vl-hero-slider {
             height: 56.25vw !important;
-            min-height: 600px !important;
-            max-height: 1080px !important;
+            min-height: clamp(31.25rem, 50vh, 37.5rem) !important;
+            max-height: 67.5rem !important;
         }
         
         .hero-youtube-bg iframe {
@@ -698,17 +698,17 @@
     @media (max-width: 768px) {
         .vl-banner {
             height: 60vh;
-            min-height: 500px;
+            min-height: clamp(25rem, 50vh, 31.25rem);
         }
         
         .slider-active-1 {
             height: 60vh;
-            min-height: 500px;
+            min-height: clamp(25rem, 50vh, 31.25rem);
         }
         
         .vl-hero-slider {
             height: 60vh !important;
-            min-height: 500px !important;
+            min-height: clamp(25rem, 50vh, 31.25rem) !important;
         }
     }
 </style>

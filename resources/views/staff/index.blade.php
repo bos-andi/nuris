@@ -41,9 +41,17 @@
             <h3 class="mb-30" style="color: var(--ztc-text-text-3); font-size: 28px; font-weight: 700; border-bottom: 3px solid var(--ztc-text-text-4); padding-bottom: 10px; display: inline-block;">
                 <i class="fa-solid fa-chalkboard-user me-2" style="color: var(--ztc-text-text-4);"></i>Data Guru
             </h3>
+            <div class="mb-4">
+                <div class="input-group" style="max-width: 500px;">
+                    <input type="text" id="searchGuru" class="form-control" placeholder="Cari data guru: nama, alamat, pendidikan, dll..." style="padding: 10px 15px; border: 1px solid #ddd; border-radius: 8px 0 0 8px; font-size: 16px;">
+                    <button class="btn" type="button" id="btnSearchGuru" style="background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: #fff; border: none; border-radius: 0 8px 8px 0; padding: 10px 20px; font-weight: 600;">
+                        <i class="fa-solid fa-search"></i> Cari
+                    </button>
+                </div>
+            </div>
             <div class="card" style="border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden;">
                 <div class="table-responsive" style="overflow-x: auto;">
-                    <table class="table table-hover mb-0" style="margin: 0; width: 100%; table-layout: auto;">
+                    <table class="table table-hover mb-0" id="guruTable" style="margin: 0; width: 100%; table-layout: auto;">
                         <thead style="background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: #fff;">
                             <tr>
                                 <th style="padding: 15px; font-weight: 600; border: none; text-align: center; vertical-align: middle;">No</th>
@@ -56,7 +64,7 @@
                                 <th style="padding: 15px; font-weight: 600; border: none; text-align: center; vertical-align: middle;">No. HP</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="guruTableBody">
                             @foreach($guru as $index => $s)
                             <tr style="border-bottom: 1px solid #eee;">
                                 <td style="padding: 15px; vertical-align: middle;">{{ $loop->iteration }}</td>
@@ -96,9 +104,17 @@
             <h3 class="mb-30" style="color: var(--ztc-text-text-3); font-size: 28px; font-weight: 700; border-bottom: 3px solid var(--ztc-text-text-4); padding-bottom: 10px; display: inline-block;">
                 <i class="fa-solid fa-users me-2" style="color: var(--ztc-text-text-4);"></i>Data Karyawan
             </h3>
+            <div class="mb-4">
+                <div class="input-group" style="max-width: 500px;">
+                    <input type="text" id="searchKaryawan" class="form-control" placeholder="Cari Karyawan..." style="padding: 10px 15px; border: 1px solid #ddd; border-radius: 8px 0 0 8px; font-size: 16px;">
+                    <button class="btn" type="button" id="btnSearchKaryawan" style="background: linear-gradient(135deg, #FBD459 0%, #F39C12 100%); color: #fff; border: none; border-radius: 0 8px 8px 0; padding: 10px 20px; font-weight: 600;">
+                        <i class="fa-solid fa-search"></i> Cari
+                    </button>
+                </div>
+            </div>
             <div class="card" style="border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden;">
                 <div class="table-responsive" style="overflow-x: auto;">
-                    <table class="table table-hover mb-0" style="margin: 0; width: 100%; table-layout: auto;">
+                    <table class="table table-hover mb-0" id="karyawanTable" style="margin: 0; width: 100%; table-layout: auto;">
                         <thead style="background: linear-gradient(135deg, #FBD459 0%, #F39C12 100%); color: #fff;">
                             <tr>
                                 <th style="padding: 15px; font-weight: 600; border: none; text-align: center; vertical-align: middle;">No</th>
@@ -111,7 +127,7 @@
                                 <th style="padding: 15px; font-weight: 600; border: none; text-align: center; vertical-align: middle;">No. HP</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="karyawanTableBody">
                             @foreach($karyawan as $index => $s)
                             <tr style="border-bottom: 1px solid #eee;">
                                 <td style="padding: 15px; vertical-align: middle;">{{ $loop->iteration }}</td>
@@ -178,6 +194,52 @@
         }
     }
 </style>
+
+<script>
+    // Search functionality for Data Guru
+    document.getElementById('searchGuru').addEventListener('keyup', function(e) {
+        if (e.key === 'Enter') {
+            performSearchGuru();
+        } else {
+            performSearchGuru();
+        }
+    });
+
+    document.getElementById('btnSearchGuru').addEventListener('click', function() {
+        performSearchGuru();
+    });
+
+    function performSearchGuru() {
+        const searchTerm = document.getElementById('searchGuru').value.toLowerCase();
+        const tableRows = document.querySelectorAll('#guruTableBody tr');
+        tableRows.forEach(row => {
+            const rowText = row.innerText.toLowerCase();
+            row.style.display = rowText.includes(searchTerm) ? '' : 'none';
+        });
+    }
+
+    // Search functionality for Data Karyawan
+    document.getElementById('searchKaryawan').addEventListener('keyup', function(e) {
+        if (e.key === 'Enter') {
+            performSearchKaryawan();
+        } else {
+            performSearchKaryawan();
+        }
+    });
+
+    document.getElementById('btnSearchKaryawan').addEventListener('click', function() {
+        performSearchKaryawan();
+    });
+
+    function performSearchKaryawan() {
+        const searchTerm = document.getElementById('searchKaryawan').value.toLowerCase();
+        const tableRows = document.querySelectorAll('#karyawanTableBody tr');
+        tableRows.forEach(row => {
+            const rowText = row.innerText.toLowerCase();
+            row.style.display = rowText.includes(searchTerm) ? '' : 'none';
+        });
+    }
+</script>
 
 @endsection
 

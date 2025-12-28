@@ -124,7 +124,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-gavel" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-gavel" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Kebijakan Strategis</h3>
@@ -135,7 +135,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-chart-line" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-chart-line" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Pengawasan & Evaluasi</h3>
@@ -146,7 +146,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-handshake" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-handshake" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Hubungan Eksternal</h3>

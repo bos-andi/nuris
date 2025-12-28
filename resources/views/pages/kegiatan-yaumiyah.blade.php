@@ -38,24 +38,24 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <div class="card" style="border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden;">
+                <div class="card" style="border-radius: 0.75rem; box-shadow: 0 0.25rem 1.25rem rgba(0,0,0,0.08); overflow: hidden;">
                     <div class="table-responsive">
                         <table class="table table-hover mb-0" style="margin: 0; width: 100%;">
                             <thead style="background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: #fff;">
                                 <tr>
-                                    <th style="padding: 15px; font-weight: 600; border: none; text-align: center; vertical-align: middle; width: 60px;">NO</th>
-                                    <th style="padding: 15px; font-weight: 600; border: none; text-align: center; vertical-align: middle; min-width: 150px;">WAKTU</th>
-                                    <th style="padding: 15px; font-weight: 600; border: none; text-align: center; vertical-align: middle;">KEGIATAN</th>
-                                    <th style="padding: 15px; font-weight: 600; border: none; text-align: center; vertical-align: middle; min-width: 200px;">KET.</th>
+                                    <th style="padding: 0.9375rem; font-weight: 600; border: none; text-align: center; vertical-align: middle; width: 60px;">NO</th>
+                                    <th style="padding: 0.9375rem; font-weight: 600; border: none; text-align: center; vertical-align: middle; min-width: 150px;">WAKTU</th>
+                                    <th style="padding: 0.9375rem; font-weight: 600; border: none; text-align: center; vertical-align: middle;">KEGIATAN</th>
+                                    <th style="padding: 0.9375rem; font-weight: 600; border: none; text-align: center; vertical-align: middle; min-width: 200px;">KET.</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($dailySchedules as $index => $schedule)
                                 <tr style="border-bottom: 1px solid #eee;">
-                                    <td style="padding: 15px; vertical-align: middle; text-align: center; font-weight: 600; color: var(--ztc-text-text-3);">{{ $loop->iteration }}</td>
-                                    <td style="padding: 15px; vertical-align: middle; text-align: center; font-weight: 600; color: var(--ztc-text-text-4);">{{ $schedule->time }}</td>
-                                    <td style="padding: 15px; vertical-align: middle;">{{ $schedule->activity }}</td>
-                                    <td style="padding: 15px; vertical-align: middle;">{{ $schedule->notes ?? '-' }}</td>
+                                    <td style="padding: 0.9375rem; vertical-align: middle; text-align: center; font-weight: 600; color: var(--ztc-text-text-3);">{{ $loop->iteration }}</td>
+                                    <td style="padding: 0.9375rem; vertical-align: middle; text-align: center; font-weight: 600; color: var(--ztc-text-text-4);">{{ $schedule->time }}</td>
+                                    <td style="padding: 0.9375rem; vertical-align: middle;">{{ $schedule->activity }}</td>
+                                    <td style="padding: 0.9375rem; vertical-align: middle;">{{ $schedule->notes ?? '-' }}</td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -83,24 +83,24 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <div class="card" style="border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden;">
+                <div class="card" style="border-radius: 0.75rem; box-shadow: 0 0.25rem 1.25rem rgba(0,0,0,0.08); overflow: hidden;">
                     <div class="table-responsive">
                         <table class="table table-hover mb-0" style="margin: 0; width: 100%;">
                             <thead style="background: linear-gradient(135deg, #FBD459 0%, #F39C12 100%); color: #fff;">
                                 <tr>
-                                    <th style="padding: 15px; font-weight: 600; border: none; text-align: center; vertical-align: middle; min-width: 120px;">HARI</th>
-                                    <th style="padding: 15px; font-weight: 600; border: none; text-align: center; vertical-align: middle; min-width: 150px;">WAKTU</th>
-                                    <th style="padding: 15px; font-weight: 600; border: none; text-align: center; vertical-align: middle;">KEGIATAN</th>
-                                    <th style="padding: 15px; font-weight: 600; border: none; text-align: center; vertical-align: middle; min-width: 200px;">KET.</th>
+                                    <th style="padding: 0.9375rem; font-weight: 600; border: none; text-align: center; vertical-align: middle; min-width: 120px;">HARI</th>
+                                    <th style="padding: 0.9375rem; font-weight: 600; border: none; text-align: center; vertical-align: middle; min-width: 150px;">WAKTU</th>
+                                    <th style="padding: 0.9375rem; font-weight: 600; border: none; text-align: center; vertical-align: middle;">KEGIATAN</th>
+                                    <th style="padding: 0.9375rem; font-weight: 600; border: none; text-align: center; vertical-align: middle; min-width: 200px;">KET.</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($weeklySchedules as $schedule)
                                 <tr style="border-bottom: 1px solid #eee;">
-                                    <td style="padding: 15px; vertical-align: middle; text-align: center; font-weight: 600; color: var(--ztc-text-text-3);">{{ $schedule->day }}</td>
-                                    <td style="padding: 15px; vertical-align: middle; text-align: center; font-weight: 600; color: var(--ztc-text-text-4);">{{ $schedule->time }}</td>
-                                    <td style="padding: 15px; vertical-align: middle;">{{ $schedule->activity }}</td>
-                                    <td style="padding: 15px; vertical-align: middle;">{{ $schedule->notes ?? '-' }}</td>
+                                    <td style="padding: 0.9375rem; vertical-align: middle; text-align: center; font-weight: 600; color: var(--ztc-text-text-3);">{{ $schedule->day }}</td>
+                                    <td style="padding: 0.9375rem; vertical-align: middle; text-align: center; font-weight: 600; color: var(--ztc-text-text-4);">{{ $schedule->time }}</td>
+                                    <td style="padding: 0.9375rem; vertical-align: middle;">{{ $schedule->activity }}</td>
+                                    <td style="padding: 0.9375rem; vertical-align: middle;">{{ $schedule->notes ?? '-' }}</td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -121,7 +121,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="text-center py-60">
-                    <i class="fa-solid fa-calendar" style="font-size: 80px; color: #ddd; margin-bottom: 20px;"></i>
+                    <i class="fa-solid fa-calendar" style="font-size: 80px; color: #ddd; margin-bottom: 1.25rem;"></i>
                     <h3>Belum Ada Jadwal</h3>
                     <p>Jadwal kegiatan yaumiyah akan segera ditambahkan.</p>
                 </div>

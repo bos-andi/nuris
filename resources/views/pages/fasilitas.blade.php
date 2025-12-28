@@ -68,9 +68,9 @@
                                 @if($facility->image)
                                     <img src="{{ asset('storage/' . $facility->image) }}" alt="{{ $facility->title }}" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px;">
                                 @elseif($facility->icon)
-                                    <span><i class="{{ $facility->icon }}" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                                    <span><i class="{{ $facility->icon }}" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                                 @else
-                                    <span><i class="fa-solid fa-building" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                                    <span><i class="fa-solid fa-building" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                                 @endif
                             </div>
                             <div class="vl-icon-content">
@@ -116,9 +116,9 @@
                             @if($facility->image)
                                 <img src="{{ asset('storage/' . $facility->image) }}" alt="{{ $facility->title }}" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px;">
                             @elseif($facility->icon)
-                                <span><i class="{{ $facility->icon }}" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                                <span><i class="{{ $facility->icon }}" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                             @else
-                                <span><i class="fa-solid fa-building" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                                <span><i class="fa-solid fa-building" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                             @endif
                         </div>
                         <div class="vl-icon-content">
@@ -149,7 +149,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="text-center py-60">
-                    <i class="fa-solid fa-building" style="font-size: 80px; color: #ddd; margin-bottom: 20px;"></i>
+                    <i class="fa-solid fa-building" style="font-size: 80px; color: #ddd; margin-bottom: 1.25rem;"></i>
                     <h3>Belum Ada Fasilitas</h3>
                     <p>Fasilitas akan segera ditambahkan.</p>
                 </div>
@@ -166,7 +166,7 @@
             <div class="col-lg-12">
                 <div class="vl-section-title-1 text-center">
                     <h2 class="title text-anime-style-3 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Komitmen Terhadap Kualitas</h2>
-                    <p class="pb-32" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="max-width: 900px; margin: 0 auto; font-size: 18px; line-height: 1.8;">
+                    <p class="pb-32" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="max-width: 900px; margin: 0 auto; font-size: clamp(0.875rem, 1.8vw, 1.125rem); line-height: 1.8;">
                         PP. Nurul Islam terus berkomitmen untuk meningkatkan dan mengembangkan fasilitas-fasilitas yang ada. Semua fasilitas dirawat secara berkala dan diperbarui sesuai dengan perkembangan zaman untuk memberikan pengalaman terbaik bagi seluruh santri dalam menuntut ilmu dan mengembangkan potensi mereka.
                     </p>
                 </div>

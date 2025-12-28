@@ -1,3 +1,6 @@
+@php
+    $baseUrl = request()->getSchemeAndHttpHost();
+@endphp
 <!-- ===================== HEADER TOP AREA START =====================-->
 <div class="vl-header-top d-none d-lg-block">
     <div class="container">
@@ -11,16 +14,16 @@
                 <div class="vl-header-top-icon">
                     <div class="vl-header-top-icbox">
                         <div class="top-icon">
-                            <span><img src="{{ asset('img/icons/vl-top-ic-1.1.svg') }}" alt=""></span>
+                            <span><img src="{{ $baseUrl }}/img/icons/vl-top-ic-1.1.svg" alt=""></span>
                         </div>
                         <div class="top-content">
-                            <a href="mailto:info@nuris.ac.id">info@nuris.ac.id</a>
+                            <a href="mailto:info@nuris.ac.id">admin@nuris.id</a>
                         </div>
                     </div>
 
                     <div class="vl-header-top-icbox">
                         <div class="top-icon">
-                            <span><img src="{{ asset('img/icons/vl-top-ic-1.2.svg') }}" alt=""></span>
+                            <span><img src="{{ $baseUrl }}/img/icons/vl-top-ic-1.2.svg" alt=""></span>
                         </div>
                         <div class="top-content">
                             <a href="tel:081234567890">(081) 234-567-890</a>
@@ -42,7 +45,7 @@
                 <div class="col-lg-12">
                     <div class="header-elements header-elements-1">
                         <div class="site-logo">
-                            <a href="{{ route('pages.index') }}"><img src="{{ asset('img/logo/nuris-logo.png') }}" alt="Logo PP. Nurul Islam" style="max-height: 60px;"></a>
+                            <a href="{{ route('pages.index') }}"><img src="{{ $baseUrl }}/img/logo/nuris-logo.png" alt="Logo PP. Nurul Islam" style="max-height: 50px;"></a>
                         </div>
                         <div class="main-menu">
                             <ul>
@@ -134,17 +137,10 @@
                                         <li><a href="{{ route('pages.display', 'takhossus-kader-dakwah') }}">Takhossus bi At-Takhsis (Kader Dakwah)</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="{{ route('articles.index') }}">Berita</a></li>
-                                <li><a href="#">Gallery <i class="fa-solid fa-angle-down"></i></a>
-                                    <ul class="dropdown-padding level-1-submenu">
-                                        <li><a href="{{ route('galleries.photos') }}">Gallery Foto</a></li>
-                                        <li><a href="{{ route('galleries.videos') }}">Gallery Video</a></li>
-                                    </ul>
-                                </li>
                             </ul>
                         </div>
                         <div class="btn-area">
-                            <a href="{{ route('pages.display', 'psb-2026') }}" class="header-btn1">PSB 2026 <span><i class="fa-solid fa-arrow-right"></i></span></a>
+                            <a href="{{ route('psb') }}" class="header-btn1">PSB 2026 <span><i class="fa-solid fa-arrow-right"></i></span></a>
                         </div>
                     </div>
                 </div>

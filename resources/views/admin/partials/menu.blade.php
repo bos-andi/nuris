@@ -33,7 +33,7 @@
 
             <li class="menu-item">
                 <a href="{{ route('admin.pages') }}" class="menu-link {{ request()->routeIs('admin.pages*') ? 'active' : '' }}">
-                    <span class="menu-icon"><i class="mgc_file_text_line"></i></span>
+                    <span class="menu-icon"><i class="mgc_document_line"></i></span>
                     <span class="menu-text">Halaman</span>
                 </a>
             </li>
@@ -47,7 +47,7 @@
 
             <li class="menu-item">
                 <a href="{{ route('admin.slideshows') }}" class="menu-link {{ request()->routeIs('admin.slideshows*') ? 'active' : '' }}">
-                    <span class="menu-icon"><i class="mgc_image_line"></i></span>
+                    <span class="menu-icon"><i class="mgc_film_line"></i></span>
                     <span class="menu-text">Slideshow</span>
                 </a>
             </li>
@@ -68,7 +68,7 @@
 
             <li class="menu-item">
                 <a href="{{ route('admin.galleries.index') }}" class="menu-link {{ request()->routeIs('admin.galleries*') ? 'active' : '' }}">
-                    <span class="menu-icon"><i class="mgc_image_line"></i></span>
+                    <span class="menu-icon"><i class="mgc_album_line"></i></span>
                     <span class="menu-text">Gallery</span>
                 </a>
             </li>
@@ -80,7 +80,7 @@
 
             <li class="menu-item">
                 <a href="{{ route('admin.articles') }}" class="menu-link {{ request()->routeIs('admin.articles*') ? 'active' : '' }}">
-                    <span class="menu-icon"><i class="mgc_newspaper_line"></i></span>
+                    <span class="menu-icon"><i class="mgc_news_line"></i></span>
                     <span class="menu-text">Berita & Artikel</span>
                 </a>
             </li>
@@ -99,35 +99,35 @@
 
             <li class="menu-item">
                 <a href="{{ route('admin.pengurus-yayasan') }}" class="menu-link {{ request()->routeIs('admin.pengurus-yayasan*') ? 'active' : '' }}">
-                    <span class="menu-icon"><i class="mgc_user_line"></i></span>
+                    <span class="menu-icon"><i class="mgc_group_line"></i></span>
                     <span class="menu-text">Pengurus Yayasan</span>
                 </a>
             </li>
 
             <li class="menu-item">
                 <a href="{{ route('admin.pengurus-pesantren') }}" class="menu-link {{ request()->routeIs('admin.pengurus-pesantren*') ? 'active' : '' }}">
-                    <span class="menu-icon"><i class="mgc_user_line"></i></span>
+                    <span class="menu-icon"><i class="mgc_user_2_line"></i></span>
                     <span class="menu-text">Pengurus Pesantren</span>
                 </a>
             </li>
 
             <li class="menu-item">
                 <a href="{{ route('admin.pengurus-dewan-pusat') }}" class="menu-link {{ request()->routeIs('admin.pengurus-dewan-pusat*') ? 'active' : '' }}">
-                    <span class="menu-icon"><i class="mgc_user_line"></i></span>
+                    <span class="menu-icon"><i class="mgc_user_1_line"></i></span>
                     <span class="menu-text">Pengurus Dewan Pusat</span>
                 </a>
             </li>
 
             <li class="menu-item">
                 <a href="{{ route('admin.pengurus-unit') }}" class="menu-link {{ request()->routeIs('admin.pengurus-unit*') ? 'active' : '' }}">
-                    <span class="menu-icon"><i class="mgc_user_line"></i></span>
+                    <span class="menu-icon"><i class="mgc_user_3_line"></i></span>
                     <span class="menu-text">Pengurus Unit</span>
                 </a>
             </li>
 
             <li class="menu-item">
                 <a href="{{ route('admin.staff') }}" class="menu-link {{ request()->routeIs('admin.staff*') ? 'active' : '' }}">
-                    <span class="menu-icon"><i class="mgc_user_3_line"></i></span>
+                    <span class="menu-icon"><i class="mgc_group_line"></i></span>
                     <span class="menu-text">Guru & Karyawan</span>
                 </a>
             </li>
@@ -139,14 +139,14 @@
 
             <li class="menu-item">
                 <a href="{{ route('admin.facilities') }}" class="menu-link {{ request()->routeIs('admin.facilities*') ? 'active' : '' }}">
-                    <span class="menu-icon"><i class="mgc_building_line"></i></span>
+                    <span class="menu-icon"><i class="mgc_tool_line"></i></span>
                     <span class="menu-text">Fasilitas</span>
                 </a>
             </li>
 
             <li class="menu-item">
                 <a href="{{ route('admin.schedules') }}" class="menu-link {{ request()->routeIs('admin.schedules*') ? 'active' : '' }}">
-                    <span class="menu-icon"><i class="mgc_calendar_2_line"></i></span>
+                    <span class="menu-icon"><i class="mgc_schedule_line"></i></span>
                     <span class="menu-text">Jadwal Yaumiyah</span>
                 </a>
             </li>
@@ -173,6 +173,7 @@
                 <ul class="sub-menu hidden">
                     <li class="menu-item">
                         <a href="javascript:void(0)" class="menu-link">
+                            <span class="menu-icon"><i class="mgc_user_2_line"></i></span>
                             <span class="menu-text">Daftar Pengguna</span>
                         </a>
                     </li>

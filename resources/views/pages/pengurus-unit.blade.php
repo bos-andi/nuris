@@ -43,7 +43,7 @@
         </div>
 
         @forelse($pengurusByUnit as $unit => $pengurusList)
-        <div class="row mb-60" style="background-color: #f8f9fa; padding: 40px 20px; border-radius: 10px;">
+        <div class="row mb-60" style="background-color: #f8f9fa; padding: clamp(2rem, 4vw, 2.5rem) 20px; border-radius: 10px;">
             <div class="col-lg-12">
                 <div class="vl-section-title-1 mb-40">
                     <h3 class="title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">{{ $loop->iteration }}. {{ $unit }}</h3>
@@ -252,7 +252,7 @@
         </div>
 
         <!-- MA -->
-        <div class="row mb-60" style="background-color: #f8f9fa; padding: 40px 20px; border-radius: 10px;">
+        <div class="row mb-60" style="background-color: #f8f9fa; padding: clamp(2rem, 4vw, 2.5rem) 20px; border-radius: 10px;">
             <div class="col-lg-12">
                 <div class="vl-section-title-1 mb-40">
                     <h3 class="title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">2. Madrasah Aliyah (MA)</h3>
@@ -411,7 +411,7 @@
         <!-- MTs -->
         <div class="row mb-60">
             <div class="col-lg-12">
-                <div class="vl-section-title-1 mb-40" style="background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
+                <div class="vl-section-title-1 mb-40" style="background-color: #f8f9fa; padding: 1.25rem; border-radius: 10px;">
                     <h3 class="title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">3. Madrasah Tsanawiyah (MTs)</h3>
                 </div>
             </div>
@@ -566,7 +566,7 @@
         </div>
 
         <!-- MTs 2 -->
-        <div class="row mb-60" style="background-color: #f8f9fa; padding: 40px 20px; border-radius: 10px;">
+        <div class="row mb-60" style="background-color: #f8f9fa; padding: clamp(2rem, 4vw, 2.5rem) 20px; border-radius: 10px;">
             <div class="col-lg-12">
                 <div class="vl-section-title-1 mb-40">
                     <h3 class="title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">4. Madrasah Tsanawiyah 2 (MTs 2)</h3>
@@ -725,7 +725,7 @@
         <!-- SMP UBQ -->
         <div class="row mb-60">
             <div class="col-lg-12">
-                <div class="vl-section-title-1 mb-40" style="background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
+                <div class="vl-section-title-1 mb-40" style="background-color: #f8f9fa; padding: 1.25rem; border-radius: 10px;">
                     <h3 class="title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">5. Sekolah Menengah Pertama Unggulan Berbasis Al-Qur'an (SMP UBQ)</h3>
                 </div>
             </div>
@@ -880,7 +880,7 @@
         </div>
 
         <!-- SMK UBP -->
-        <div class="row mb-60" style="background-color: #f8f9fa; padding: 40px 20px; border-radius: 10px;">
+        <div class="row mb-60" style="background-color: #f8f9fa; padding: clamp(2rem, 4vw, 2.5rem) 20px; border-radius: 10px;">
             <div class="col-lg-12">
                 <div class="vl-section-title-1 mb-40">
                     <h3 class="title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">6. Sekolah Menengah Kejuruan Unggulan Berbasis Pesantren (SMK UBP)</h3>
@@ -1051,7 +1051,7 @@
         <!-- MA 2 Ad-Dauliyah -->
         <div class="row mb-60">
             <div class="col-lg-12">
-                <div class="vl-section-title-1 mb-40" style="background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
+                <div class="vl-section-title-1 mb-40" style="background-color: #f8f9fa; padding: 1.25rem; border-radius: 10px;">
                     <h3 class="title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">7. Madrasah Aliyah 2 Ad-Dauliyah (MA 2 AD)</h3>
                 </div>
             </div>
@@ -1194,7 +1194,7 @@
         </div>
 
         <!-- SMA Global School -->
-        <div class="row mb-60" style="background-color: #f8f9fa; padding: 40px 20px; border-radius: 10px;">
+        <div class="row mb-60" style="background-color: #f8f9fa; padding: clamp(2rem, 4vw, 2.5rem) 20px; border-radius: 10px;">
             <div class="col-lg-12">
                 <div class="vl-section-title-1 mb-40">
                     <h3 class="title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">8. Sekolah Menengah Atas Global School (SMA GS)</h3>
@@ -1341,7 +1341,7 @@
         <!-- MDTA 1 -->
         <div class="row mb-60">
             <div class="col-lg-12">
-                <div class="vl-section-title-1 mb-40" style="background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
+                <div class="vl-section-title-1 mb-40" style="background-color: #f8f9fa; padding: 1.25rem; border-radius: 10px;">
                     <h3 class="title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">9. Madrasah Diniyah Takmiliyah Awaliyah (MDTA 1)</h3>
                 </div>
             </div>
@@ -1412,7 +1412,7 @@
         </div>
 
         <!-- MDTA 1 Nuris 2 -->
-        <div class="row mb-60" style="background-color: #f8f9fa; padding: 40px 20px; border-radius: 10px;">
+        <div class="row mb-60" style="background-color: #f8f9fa; padding: clamp(2rem, 4vw, 2.5rem) 20px; border-radius: 10px;">
             <div class="col-lg-12">
                 <div class="vl-section-title-1 mb-40">
                     <h3 class="title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">10. Madrasah Diniyah Takmiliyah Awaliyah (MDTA 1 Nuris 2)</h3>
@@ -1487,7 +1487,7 @@
         <!-- MDTA 2 Nuris 2 -->
         <div class="row mb-60">
             <div class="col-lg-12">
-                <div class="vl-section-title-1 mb-40" style="background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
+                <div class="vl-section-title-1 mb-40" style="background-color: #f8f9fa; padding: 1.25rem; border-radius: 10px;">
                     <h3 class="title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">11. Madrasah Diniyah Takmiliyah Awaliyah (MDTA 2 Nuris 2)</h3>
                 </div>
             </div>
@@ -1558,7 +1558,7 @@
         </div>
 
         <!-- MDTA 3 Nuris 2 -->
-        <div class="row mb-60" style="background-color: #f8f9fa; padding: 40px 20px; border-radius: 10px;">
+        <div class="row mb-60" style="background-color: #f8f9fa; padding: clamp(2rem, 4vw, 2.5rem) 20px; border-radius: 10px;">
             <div class="col-lg-12">
                 <div class="vl-section-title-1 mb-40">
                     <h3 class="title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">14. Madrasah Diniyah Takmiliyah Awaliyah 3 Nuris 2 (MDTA 3 Nuris 2)</h3>
@@ -1633,7 +1633,7 @@
         <!-- MDTW -->
         <div class="row mb-60">
             <div class="col-lg-12">
-                <div class="vl-section-title-1 mb-40" style="background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
+                <div class="vl-section-title-1 mb-40" style="background-color: #f8f9fa; padding: 1.25rem; border-radius: 10px;">
                     <h3 class="title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">12. Madrasah Diniyah Takmiliyah Wustho (MDTW)</h3>
                 </div>
             </div>
@@ -1704,7 +1704,7 @@
         </div>
 
         <!-- MDTW 2 -->
-        <div class="row mb-60" style="background-color: #f8f9fa; padding: 40px 20px; border-radius: 10px;">
+        <div class="row mb-60" style="background-color: #f8f9fa; padding: clamp(2rem, 4vw, 2.5rem) 20px; border-radius: 10px;">
             <div class="col-lg-12">
                 <div class="vl-section-title-1 mb-40">
                     <h3 class="title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">13. Madrasah Diniyah Takmiliyah Wustho 2 (MDTW 2)</h3>
@@ -1791,7 +1791,7 @@
         <!-- MDTW 2 Nuris 2 -->
         <div class="row mb-60">
             <div class="col-lg-12">
-                <div class="vl-section-title-1 mb-40" style="background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
+                <div class="vl-section-title-1 mb-40" style="background-color: #f8f9fa; padding: 1.25rem; border-radius: 10px;">
                     <h3 class="title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">15. Madrasah Diniyah Takmiliyah Wustha 2 Nuris 2 (MDTW 2 Nuris 2)</h3>
                 </div>
             </div>
@@ -1850,7 +1850,7 @@
         </div>
 
         <!-- MDTU + Program TbT -->
-        <div class="row mb-60" style="background-color: #f8f9fa; padding: 40px 20px; border-radius: 10px;">
+        <div class="row mb-60" style="background-color: #f8f9fa; padding: clamp(2rem, 4vw, 2.5rem) 20px; border-radius: 10px;">
             <div class="col-lg-12">
                 <div class="vl-section-title-1 mb-40">
                     <h3 class="title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">16. Madrasah Diniyah Takmiliyah Ulya (MDTU) + Program TbT</h3>
@@ -1940,7 +1940,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-school" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-school" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Pengelolaan Unit</h3>
@@ -1951,7 +1951,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-chalkboard-teacher" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-chalkboard-teacher" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Koordinasi Program</h3>
@@ -1962,7 +1962,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-sync-alt" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-sync-alt" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Sinergi Antar Unit</h3>

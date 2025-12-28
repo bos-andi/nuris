@@ -64,7 +64,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-10 col-md-12">
-                <div class="video-wrapper" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <div class="video-wrapper" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.1);">
                     <iframe 
                         src="https://www.youtube.com/embed/lvug0KfxZ0Q" 
                         frameborder="0" 
@@ -94,7 +94,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-stethoscope" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-stethoscope" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Konsultasi Medis</h3>
@@ -105,7 +105,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-pills" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-pills" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Apotek & Obat</h3>
@@ -116,7 +116,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-thermometer" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-thermometer" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Pemeriksaan Kesehatan</h3>
@@ -127,7 +127,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-bandage" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-bandage" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Pertolongan Pertama</h3>
@@ -138,7 +138,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-syringe" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-syringe" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Vaksinasi & Imunisasi</h3>
@@ -149,7 +149,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-heart-pulse" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-heart-pulse" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Kesehatan Mental</h3>
@@ -177,7 +177,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-bed" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-bed" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Ruang Perawatan</h3>
@@ -188,7 +188,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-kit-medical" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-kit-medical" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Peralatan Medis</h3>
@@ -199,7 +199,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-file-medical" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-file-medical" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Rekam Medis</h3>
@@ -210,7 +210,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-ambulance" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-ambulance" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Rujukan Medis</h3>
@@ -238,7 +238,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon mb-20">
-                        <span><i class="fa-solid fa-user-doctor" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-user-doctor" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Dokter</h3>
@@ -249,7 +249,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <div class="vl-about-icon mb-20">
-                        <span><i class="fa-solid fa-user-nurse" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-user-nurse" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Perawat</h3>
@@ -260,7 +260,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                     <div class="vl-about-icon mb-20">
-                        <span><i class="fa-solid fa-user-injured" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-user-injured" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Staf Medis</h3>
@@ -358,11 +358,11 @@
             <div class="col-lg-8">
                 <div class="vl-about-icon-box text-center" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon mb-30">
-                        <span><i class="fa-solid fa-phone" style="font-size: 60px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-phone" style="font-size: clamp(3rem, 6vw, 3.75rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title mb-20">Kontak Darurat 24 Jam</h3>
-                        <p style="font-size: 18px; line-height: 1.8; margin-bottom: 30px;">
+                        <p style="font-size: clamp(0.875rem, 1.8vw, 1.125rem); line-height: 1.8; margin-bottom: 30px;">
                             Untuk keperluan darurat medis, Nuris Medika siap melayani 24 jam. Jangan ragu untuk menghubungi kami jika Anda memerlukan bantuan medis segera.
                         </p>
                         <div class="row">
@@ -412,16 +412,16 @@
             <div class="col-lg-12">
                 <div class="vl-section-title-1 text-center">
                     <h2 class="title text-anime-style-3 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Komitmen Terhadap Kesehatan</h2>
-                    <p class="pb-32" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="max-width: 900px; margin: 0 auto; font-size: 18px; line-height: 1.8;">
+                    <p class="pb-32" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="max-width: 900px; margin: 0 auto; font-size: clamp(0.875rem, 1.8vw, 1.125rem); line-height: 1.8;">
                         Nuris Medika berkomitmen untuk memberikan pelayanan kesehatan terbaik dengan standar medis yang tinggi. Dengan tenaga medis yang profesional, fasilitas yang memadai, dan program kesehatan yang komprehensif, kami siap menjaga kesehatan dan kesejahteraan seluruh santri dan civitas akademika PP. Nurul Islam.
                     </p>
                     <div class="vl-about-icon-box text-center mt-40" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
                         <div class="vl-about-icon mb-20">
-                            <span><i class="fa-solid fa-heart" style="font-size: 60px; color: var(--ztc-text-text-4);"></i></span>
+                            <span><i class="fa-solid fa-heart" style="font-size: clamp(3rem, 6vw, 3.75rem); color: var(--ztc-text-text-4);"></i></span>
                         </div>
                         <div class="vl-icon-content">
                             <h3 class="title">Kesehatan adalah Prioritas Utama</h3>
-                            <p style="font-size: 16px; line-height: 1.8;">
+                            <p style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8;">
                                 Dengan pelayanan kesehatan yang profesional dan penuh perhatian, Nuris Medika hadir untuk mendukung proses pendidikan dan pengembangan santri dengan kondisi kesehatan yang optimal.
                             </p>
                         </div>

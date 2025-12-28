@@ -42,10 +42,10 @@
                     
                     <!-- 1. Pendidikan Berkarakter -->
                     <div class="mb-50">
-                        <h3 class="mb-30" style="color: var(--ztc-text-text-3); font-size: 28px; font-weight: 700; border-bottom: 3px solid var(--ztc-text-text-4); padding-bottom: 10px;">
+                        <h3 class="mb-30" style="color: var(--ztc-text-text-3); font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 700; border-bottom: 3px solid var(--ztc-text-text-4); padding-bottom: 10px;">
                             1. Pendidikan Berkarakter
                         </h3>
-                        <p class="mb-30" style="font-size: 16px; line-height: 1.8; color: var(--ztc-text-text-2);">
+                        <p class="mb-30" style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8; color: var(--ztc-text-text-2);">
                             PP. Nurul Islam Pungging Mojokerto menekankan pada pendidikan berkarakter yang mencakup:
                         </p>
                         
@@ -53,7 +53,7 @@
                             <div class="col-lg-4 col-md-6 mb-30">
                                 <div class="vl-about-icon-box" style="height: 100%;">
                                     <div class="vl-about-icon mb-20">
-                                        <span><i class="fa-solid fa-flag" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                                        <span><i class="fa-solid fa-flag" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                                     </div>
                                     <div class="vl-icon-content">
                                         <h4 class="title mb-20">a. Karakter Keindonesiaan</h4>
@@ -74,7 +74,7 @@
                             <div class="col-lg-4 col-md-6 mb-30">
                                 <div class="vl-about-icon-box" style="height: 100%;">
                                     <div class="vl-about-icon mb-20">
-                                        <span><i class="fa-solid fa-mosque" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                                        <span><i class="fa-solid fa-mosque" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                                     </div>
                                     <div class="vl-icon-content">
                                         <h4 class="title mb-20">b. Karakter Keislaman</h4>
@@ -93,7 +93,7 @@
                             <div class="col-lg-4 col-md-6 mb-30">
                                 <div class="vl-about-icon-box" style="height: 100%;">
                                     <div class="vl-about-icon mb-20">
-                                        <span><i class="fa-solid fa-shield-halved" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                                        <span><i class="fa-solid fa-shield-halved" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                                     </div>
                                     <div class="vl-icon-content">
                                         <h4 class="title mb-20">c. Membentuk Nilai Integritas</h4>
@@ -115,11 +115,11 @@
                     </div>
 
                     <!-- 2. Instrumen Pendidikan Karakter -->
-                    <div class="mb-50" style="background-color: #f8f9fa; padding: 40px; border-radius: 12px;">
-                        <h3 class="mb-30" style="color: var(--ztc-text-text-3); font-size: 28px; font-weight: 700; border-bottom: 3px solid var(--ztc-text-text-4); padding-bottom: 10px;">
+                    <div class="mb-50" style="background-color: #f8f9fa; padding: clamp(2rem, 4vw, 2.5rem); border-radius: 0.75rem;">
+                        <h3 class="mb-30" style="color: var(--ztc-text-text-3); font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 700; border-bottom: 3px solid var(--ztc-text-text-4); padding-bottom: 10px;">
                             2. Instrumen Pendidikan Karakter PP. Nurul Islam
                         </h3>
-                        <p class="mb-30" style="font-size: 16px; line-height: 1.8; color: var(--ztc-text-text-2);">
+                        <p class="mb-30" style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8; color: var(--ztc-text-text-2);">
                             PP. Nurul Islam menggunakan tujuh instrumen utama dalam pendidikan karakter:
                         </p>
                         
@@ -127,7 +127,7 @@
                             <div class="col-lg-6 col-md-6 mb-20">
                                 <div class="d-flex align-items-start mb-15">
                                     <div class="me-3">
-                                        <span style="display: inline-block; width: 40px; height: 40px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 50%; text-align: center; line-height: 40px; font-weight: bold;">a</span>
+                                        <span style="display: inline-block; width: clamp(2rem, 3vw, 2.5rem); height: clamp(2rem, 3vw, 2.5rem); background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 50%; text-align: center; line-height: clamp(2rem, 3vw, 2.5rem); font-weight: bold;">a</span>
                                     </div>
                                     <div>
                                         <h5 style="font-weight: 600; margin-bottom: 5px;">Maaddah</h5>
@@ -139,7 +139,7 @@
                             <div class="col-lg-6 col-md-6 mb-20">
                                 <div class="d-flex align-items-start mb-15">
                                     <div class="me-3">
-                                        <span style="display: inline-block; width: 40px; height: 40px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 50%; text-align: center; line-height: 40px; font-weight: bold;">b</span>
+                                        <span style="display: inline-block; width: clamp(2rem, 3vw, 2.5rem); height: clamp(2rem, 3vw, 2.5rem); background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 50%; text-align: center; line-height: clamp(2rem, 3vw, 2.5rem); font-weight: bold;">b</span>
                                     </div>
                                     <div>
                                         <h5 style="font-weight: 600; margin-bottom: 5px;">Thoriqoh</h5>
@@ -151,7 +151,7 @@
                             <div class="col-lg-6 col-md-6 mb-20">
                                 <div class="d-flex align-items-start mb-15">
                                     <div class="me-3">
-                                        <span style="display: inline-block; width: 40px; height: 40px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 50%; text-align: center; line-height: 40px; font-weight: bold;">c</span>
+                                        <span style="display: inline-block; width: clamp(2rem, 3vw, 2.5rem); height: clamp(2rem, 3vw, 2.5rem); background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 50%; text-align: center; line-height: clamp(2rem, 3vw, 2.5rem); font-weight: bold;">c</span>
                                     </div>
                                     <div>
                                         <h5 style="font-weight: 600; margin-bottom: 5px;">Mudarris</h5>
@@ -163,7 +163,7 @@
                             <div class="col-lg-6 col-md-6 mb-20">
                                 <div class="d-flex align-items-start mb-15">
                                     <div class="me-3">
-                                        <span style="display: inline-block; width: 40px; height: 40px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 50%; text-align: center; line-height: 40px; font-weight: bold;">d</span>
+                                        <span style="display: inline-block; width: clamp(2rem, 3vw, 2.5rem); height: clamp(2rem, 3vw, 2.5rem); background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 50%; text-align: center; line-height: clamp(2rem, 3vw, 2.5rem); font-weight: bold;">d</span>
                                     </div>
                                     <div>
                                         <h5 style="font-weight: 600; margin-bottom: 5px;">Ruhul Mudarris</h5>
@@ -175,7 +175,7 @@
                             <div class="col-lg-6 col-md-6 mb-20">
                                 <div class="d-flex align-items-start mb-15">
                                     <div class="me-3">
-                                        <span style="display: inline-block; width: 40px; height: 40px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 50%; text-align: center; line-height: 40px; font-weight: bold;">e</span>
+                                        <span style="display: inline-block; width: clamp(2rem, 3vw, 2.5rem); height: clamp(2rem, 3vw, 2.5rem); background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 50%; text-align: center; line-height: clamp(2rem, 3vw, 2.5rem); font-weight: bold;">e</span>
                                     </div>
                                     <div>
                                         <h5 style="font-weight: 600; margin-bottom: 5px;">Maal</h5>
@@ -187,7 +187,7 @@
                             <div class="col-lg-6 col-md-6 mb-20">
                                 <div class="d-flex align-items-start mb-15">
                                     <div class="me-3">
-                                        <span style="display: inline-block; width: 40px; height: 40px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 50%; text-align: center; line-height: 40px; font-weight: bold;">f</span>
+                                        <span style="display: inline-block; width: clamp(2rem, 3vw, 2.5rem); height: clamp(2rem, 3vw, 2.5rem); background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 50%; text-align: center; line-height: clamp(2rem, 3vw, 2.5rem); font-weight: bold;">f</span>
                                     </div>
                                     <div>
                                         <h5 style="font-weight: 600; margin-bottom: 5px;">Khidmah</h5>
@@ -199,7 +199,7 @@
                             <div class="col-lg-6 col-md-6 mb-20">
                                 <div class="d-flex align-items-start mb-15">
                                     <div class="me-3">
-                                        <span style="display: inline-block; width: 40px; height: 40px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 50%; text-align: center; line-height: 40px; font-weight: bold;">g</span>
+                                        <span style="display: inline-block; width: clamp(2rem, 3vw, 2.5rem); height: clamp(2rem, 3vw, 2.5rem); background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 50%; text-align: center; line-height: clamp(2rem, 3vw, 2.5rem); font-weight: bold;">g</span>
                                     </div>
                                     <div>
                                         <h5 style="font-weight: 600; margin-bottom: 5px;">Du'a ul walid wal ummah</h5>
@@ -209,8 +209,8 @@
                             </div>
                         </div>
                         
-                        <div class="mt-30" style="background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; padding: 20px; border-radius: 8px;">
-                            <p style="margin: 0; font-size: 16px; line-height: 1.8; font-weight: 500;">
+                        <div class="mt-30" style="background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; padding: 1.25rem; border-radius: 0.5rem;">
+                            <p style="margin: 0; font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8; font-weight: 500;">
                                 Ketujuh instrumen ini menjadi alasan terciptanya 'Aadah (budaya disiplin) di PP Nurul Islam.
                             </p>
                         </div>
@@ -218,18 +218,18 @@
 
                     <!-- 3. Pola Kegiatan Belajar Mengajar -->
                     <div class="mb-50">
-                        <h3 class="mb-30" style="color: var(--ztc-text-text-3); font-size: 28px; font-weight: 700; border-bottom: 3px solid var(--ztc-text-text-4); padding-bottom: 10px;">
+                        <h3 class="mb-30" style="color: var(--ztc-text-text-3); font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 700; border-bottom: 3px solid var(--ztc-text-text-4); padding-bottom: 10px;">
                             3. Pola Kegiatan Belajar Mengajar
                         </h3>
-                        <p class="mb-30" style="font-size: 16px; line-height: 1.8; color: var(--ztc-text-text-2);">
+                        <p class="mb-30" style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8; color: var(--ztc-text-text-2);">
                             Menggabungkan tiga model pembelajaran terintegrasi (Kokurikuler, intrakurikuler, dan ekstrakurikuler) dengan pola KBM yang mencakup:
                         </p>
                         
                         <div class="row">
                             <div class="col-lg-4 col-md-6 mb-30">
-                                <div class="vl-about-icon-box text-center" style="height: 100%; padding: 30px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 12px;">
+                                <div class="vl-about-icon-box text-center" style="height: 100%; padding: clamp(1.5rem, 3vw, 1.875rem); background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 0.75rem;">
                                     <div class="vl-about-icon mb-20">
-                                        <span><i class="fa-solid fa-brain" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                                        <span><i class="fa-solid fa-brain" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                                     </div>
                                     <div class="vl-icon-content">
                                         <h4 class="title mb-20">a. Olah Rasio</h4>
@@ -239,9 +239,9 @@
                             </div>
                             
                             <div class="col-lg-4 col-md-6 mb-30">
-                                <div class="vl-about-icon-box text-center" style="height: 100%; padding: 30px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 12px;">
+                                <div class="vl-about-icon-box text-center" style="height: 100%; padding: clamp(1.5rem, 3vw, 1.875rem); background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 0.75rem;">
                                     <div class="vl-about-icon mb-20">
-                                        <span><i class="fa-solid fa-heart" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                                        <span><i class="fa-solid fa-heart" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                                     </div>
                                     <div class="vl-icon-content">
                                         <h4 class="title mb-20">b. Olah Rasa</h4>
@@ -251,9 +251,9 @@
                             </div>
                             
                             <div class="col-lg-4 col-md-6 mb-30">
-                                <div class="vl-about-icon-box text-center" style="height: 100%; padding: 30px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 12px;">
+                                <div class="vl-about-icon-box text-center" style="height: 100%; padding: clamp(1.5rem, 3vw, 1.875rem); background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 0.75rem;">
                                     <div class="vl-about-icon mb-20">
-                                        <span><i class="fa-solid fa-dumbbell" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                                        <span><i class="fa-solid fa-dumbbell" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                                     </div>
                                     <div class="vl-icon-content">
                                         <h4 class="title mb-20">c. Olah Raga</h4>
@@ -263,30 +263,30 @@
                             </div>
                         </div>
                         
-                        <div class="mt-30" style="background: linear-gradient(135deg, #FBD459 0%, #F39C12 100%); color: white; padding: 25px; border-radius: 12px; text-align: center;">
-                            <h4 style="font-weight: 700; margin-bottom: 15px; font-size: 22px;">Tujuan</h4>
-                            <p style="margin: 0; font-size: 18px; line-height: 1.8; font-weight: 500;">
+                        <div class="mt-30" style="background: linear-gradient(135deg, #FBD459 0%, #F39C12 100%); color: white; padding: 25px; border-radius: 0.75rem; text-align: center;">
+                            <h4 style="font-weight: 700; margin-bottom: 0.9375rem; font-size: clamp(1.125rem, 2.3vw, 1.375rem);">Tujuan</h4>
+                            <p style="margin: 0; font-size: clamp(0.875rem, 1.8vw, 1.125rem); line-height: 1.8; font-weight: 500;">
                                 Menghasilkan generasi yang <strong>Berilmu amaliah, Beramal Ilmiah dan Berakhlakul Karimah</strong>
                             </p>
                         </div>
                     </div>
 
                     <!-- 4. Sibghoh (karakter) Kegiatan Belajar Mengajar -->
-                    <div class="mb-50" style="background-color: #f8f9fa; padding: 40px; border-radius: 12px;">
-                        <h3 class="mb-30" style="color: var(--ztc-text-text-3); font-size: 28px; font-weight: 700; border-bottom: 3px solid var(--ztc-text-text-4); padding-bottom: 10px;">
+                    <div class="mb-50" style="background-color: #f8f9fa; padding: clamp(2rem, 4vw, 2.5rem); border-radius: 0.75rem;">
+                        <h3 class="mb-30" style="color: var(--ztc-text-text-3); font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 700; border-bottom: 3px solid var(--ztc-text-text-4); padding-bottom: 10px;">
                             4. Sibghoh (karakter) Kegiatan Belajar Mengajar
                         </h3>
                         
-                        <div class="mb-30" style="background: white; padding: 25px; border-radius: 8px; border-right: 5px solid var(--ztc-text-text-4);">
-                            <p style="font-size: 20px; font-weight: 600; color: var(--ztc-text-text-3); margin-bottom: 10px; font-family: 'Arial', sans-serif;">
+                        <div class="mb-30" style="background: white; padding: 25px; border-radius: 0.5rem; border-right: 5px solid var(--ztc-text-text-4);">
+                            <p style="font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 600; color: var(--ztc-text-text-3); margin-bottom: 10px; font-family: 'Arial', sans-serif;">
                                 المحافظة على القديم الصالح والأخذ بالجديد الأصلح
                             </p>
-                            <p style="font-size: 16px; line-height: 1.8; color: var(--ztc-text-text-2); margin: 0;">
+                            <p style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8; color: var(--ztc-text-text-2); margin: 0;">
                                 <strong>Mempertahankan tradisi lama yang baik dan mengambil yang baru yang lebih baik</strong>
                             </p>
                         </div>
                         
-                        <p class="mb-30" style="font-size: 16px; line-height: 1.8; color: var(--ztc-text-text-2);">
+                        <p class="mb-30" style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8; color: var(--ztc-text-text-2);">
                             Program <strong>Expert Class</strong> yang dikembangkan meliputi:
                         </p>
                         
@@ -294,7 +294,7 @@
                             <div class="col-lg-6 col-md-6 mb-20">
                                 <div class="d-flex align-items-start mb-15">
                                     <div class="me-3">
-                                        <span style="display: inline-block; width: 35px; height: 35px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 8px; text-align: center; line-height: 35px; font-weight: bold; font-size: 14px;">1</span>
+                                        <span style="display: inline-block; width: 35px; height: 35px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 0.5rem; text-align: center; line-height: 35px; font-weight: bold; font-size: clamp(0.8125rem, 1.5vw, 0.875rem);">1</span>
                                     </div>
                                     <div>
                                         <h5 style="font-weight: 600; margin-bottom: 5px; color: var(--ztc-text-text-3);">International Class Program</h5>
@@ -305,7 +305,7 @@
                             <div class="col-lg-6 col-md-6 mb-20">
                                 <div class="d-flex align-items-start mb-15">
                                     <div class="me-3">
-                                        <span style="display: inline-block; width: 35px; height: 35px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 8px; text-align: center; line-height: 35px; font-weight: bold; font-size: 14px;">2</span>
+                                        <span style="display: inline-block; width: 35px; height: 35px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 0.5rem; text-align: center; line-height: 35px; font-weight: bold; font-size: clamp(0.8125rem, 1.5vw, 0.875rem);">2</span>
                                     </div>
                                     <div>
                                         <h5 style="font-weight: 600; margin-bottom: 5px; color: var(--ztc-text-text-3);">Kutubut Turots Islami</h5>
@@ -316,7 +316,7 @@
                             <div class="col-lg-6 col-md-6 mb-20">
                                 <div class="d-flex align-items-start mb-15">
                                     <div class="me-3">
-                                        <span style="display: inline-block; width: 35px; height: 35px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 8px; text-align: center; line-height: 35px; font-weight: bold; font-size: 14px;">3</span>
+                                        <span style="display: inline-block; width: 35px; height: 35px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 0.5rem; text-align: center; line-height: 35px; font-weight: bold; font-size: clamp(0.8125rem, 1.5vw, 0.875rem);">3</span>
                                     </div>
                                     <div>
                                         <h5 style="font-weight: 600; margin-bottom: 5px; color: var(--ztc-text-text-3);">Dirosah Islamiyah</h5>
@@ -327,7 +327,7 @@
                             <div class="col-lg-6 col-md-6 mb-20">
                                 <div class="d-flex align-items-start mb-15">
                                     <div class="me-3">
-                                        <span style="display: inline-block; width: 35px; height: 35px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 8px; text-align: center; line-height: 35px; font-weight: bold; font-size: 14px;">4</span>
+                                        <span style="display: inline-block; width: 35px; height: 35px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 0.5rem; text-align: center; line-height: 35px; font-weight: bold; font-size: clamp(0.8125rem, 1.5vw, 0.875rem);">4</span>
                                     </div>
                                     <div>
                                         <h5 style="font-weight: 600; margin-bottom: 5px; color: var(--ztc-text-text-3);">Tahfizul Qur'an</h5>
@@ -338,7 +338,7 @@
                             <div class="col-lg-6 col-md-6 mb-20">
                                 <div class="d-flex align-items-start mb-15">
                                     <div class="me-3">
-                                        <span style="display: inline-block; width: 35px; height: 35px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 8px; text-align: center; line-height: 35px; font-weight: bold; font-size: 14px;">5</span>
+                                        <span style="display: inline-block; width: 35px; height: 35px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 0.5rem; text-align: center; line-height: 35px; font-weight: bold; font-size: clamp(0.8125rem, 1.5vw, 0.875rem);">5</span>
                                     </div>
                                     <div>
                                         <h5 style="font-weight: 600; margin-bottom: 5px; color: var(--ztc-text-text-3);">Math and Science / Vocation Class</h5>
@@ -349,7 +349,7 @@
                             <div class="col-lg-6 col-md-6 mb-20">
                                 <div class="d-flex align-items-start mb-15">
                                     <div class="me-3">
-                                        <span style="display: inline-block; width: 35px; height: 35px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 8px; text-align: center; line-height: 35px; font-weight: bold; font-size: 14px;">6</span>
+                                        <span style="display: inline-block; width: 35px; height: 35px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 0.5rem; text-align: center; line-height: 35px; font-weight: bold; font-size: clamp(0.8125rem, 1.5vw, 0.875rem);">6</span>
                                     </div>
                                     <div>
                                         <h5 style="font-weight: 600; margin-bottom: 5px; color: var(--ztc-text-text-3);">Social Class</h5>
@@ -360,7 +360,7 @@
                             <div class="col-lg-6 col-md-6 mb-20">
                                 <div class="d-flex align-items-start mb-15">
                                     <div class="me-3">
-                                        <span style="display: inline-block; width: 35px; height: 35px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 8px; text-align: center; line-height: 35px; font-weight: bold; font-size: 14px;">7</span>
+                                        <span style="display: inline-block; width: 35px; height: 35px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 0.5rem; text-align: center; line-height: 35px; font-weight: bold; font-size: clamp(0.8125rem, 1.5vw, 0.875rem);">7</span>
                                     </div>
                                     <div>
                                         <h5 style="font-weight: 600; margin-bottom: 5px; color: var(--ztc-text-text-3);">Bilingual Class</h5>
@@ -371,7 +371,7 @@
                             <div class="col-lg-6 col-md-6 mb-20">
                                 <div class="d-flex align-items-start mb-15">
                                     <div class="me-3">
-                                        <span style="display: inline-block; width: 35px; height: 35px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 8px; text-align: center; line-height: 35px; font-weight: bold; font-size: 14px;">8</span>
+                                        <span style="display: inline-block; width: 35px; height: 35px; background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); color: white; border-radius: 0.5rem; text-align: center; line-height: 35px; font-weight: bold; font-size: clamp(0.8125rem, 1.5vw, 0.875rem);">8</span>
                                     </div>
                                     <div>
                                         <h5 style="font-weight: 600; margin-bottom: 5px; color: var(--ztc-text-text-3);">Sport Class</h5>

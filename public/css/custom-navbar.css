@@ -2,23 +2,75 @@
 
 /* Container dinamis sesuai isi navbar */
 .navbar-dynamic-container {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
     max-width: 100%;
 }
 
 @media (min-width: 1200px) {
     .navbar-dynamic-container {
-        padding-left: 60px;
-        padding-right: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
 @media (min-width: 1400px) {
     .navbar-dynamic-container {
-        padding-left: 80px;
-        padding-right: 80px;
+        padding-left: 35px;
+        padding-right: 35px;
     }
+}
+
+/* ========== NAVBAR MENU RATA KANAN ========== */
+.homepage1-body .header-area.homepage1 .header-elements.header-elements-1 {
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Kecilkan navbar dan sesuaikan dengan tinggi logo (50px) */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li a {
+    padding-top: 22px !important;
+    padding-bottom: 22px !important;
+}
+
+/* Pastikan header-area juga memiliki padding yang sesuai dengan tinggi logo */
+.homepage1-body .header-area.homepage1 {
+    min-height: auto !important;
+    padding: 15px 0 !important;
+}
+
+/* Pastikan logo dan menu items vertikal center */
+.homepage1-body .header-area.homepage1 .header-elements .site-logo {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.homepage1-body .header-area.homepage1 .header-elements .site-logo img {
+    max-height: 50px !important;
+    height: auto !important;
+    width: auto !important;
+}
+
+.homepage1-body .header-area.homepage1 .header-elements .main-menu {
+    flex: 1 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    margin-left: 30px !important;
+}
+
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul {
+    justify-content: flex-end !important;
+    display: flex !important;
+    flex-wrap: wrap;
+}
+
+/* Pastikan submenu (dropdown) tetap menggunakan alignment default (rata kiri) */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding,
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu,
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-2-submenu {
+    text-align: left !important;
+    justify-content: flex-start !important;
+    display: block !important;
 }
 
 /* ========== OVERRIDE CSS TEMPLATE ASLI ========== */
@@ -47,7 +99,7 @@
     z-index: 9;
     transition: all 0.4s;
     border-radius: 5px;
-    padding: 15px;
+    padding: 0 !important;
     margin-top: 0;
 }
 
@@ -82,7 +134,7 @@
     z-index: 10;
     transition: all 0.4s;
     border-radius: 5px;
-    padding: 15px;
+    padding: 0 !important;
     pointer-events: none !important;
 }
 
@@ -143,7 +195,7 @@
     font-family: var(--ztc-family-font1);
     font-weight: var(--ztc-weight-medium);
     transition: all 0.4s;
-    padding: 8px;
+    padding: 8px 15px !important;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -205,7 +257,7 @@
     font-family: var(--ztc-family-font1);
     font-weight: var(--ztc-weight-medium);
     transition: all 0.4s;
-    padding: 8px;
+    padding: 8px 15px !important;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -397,15 +449,10 @@
 }
 
 /* ========== PROFIL PENGASUH HOMEPAGE LAYOUT ========== */
-/* Pastikan foto pengasuh tidak tumpang tindih dengan teks */
+/* Pastikan foto pengasuh sejajar di samping div tulisan */
 .vl-about-section .row {
-    margin-left: -15px;
-    margin-right: -15px;
-}
-
-.vl-about-section .row > [class*="col-"] {
-    padding-left: 15px;
-    padding-right: 15px;
+    display: flex;
+    align-items: flex-start;
 }
 
 .vl-about-large-thumb {
@@ -424,19 +471,47 @@
     transform: scale(1.02);
 }
 
-/* Pastikan konten tidak overflow */
-.vl-about-content {
-    padding-right: 20px;
+/* Override untuk pengasuh-photo-wrapper */
+.vl-about-large-thumb.pengasuh-photo-wrapper {
+    overflow: hidden !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.vl-about-large-thumb.pengasuh-photo-wrapper img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
+/* Pastikan konten sejajar dengan foto dan tidak overflow */
+.vl-about-section .vl-about-content {
+    padding-right: clamp(0.9375rem, 2vw, 1.25rem);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 991px) {
+    .vl-about-section .row {
+        flex-direction: column;
+    }
+    
     .vl-about-content {
         padding-right: 0;
-        margin-bottom: 30px;
+        padding-left: 0;
+        margin-bottom: clamp(1.5rem, 3vw, 1.875rem);
+        height: auto;
     }
     
     .vl-about-large-thumb {
-        margin-bottom: 30px;
+        margin-bottom: clamp(1.5rem, 3vw, 1.875rem);
+    }
+    
+    .vl-about-large-thumb.pengasuh-photo-wrapper {
+        height: auto;
     }
 }
 
@@ -726,6 +801,92 @@
     
     .vl-copyright {
         padding: 15px 0 !important;
+    }
+}
+
+/* ========== RESPONSIVE GLOBAL STYLES ========== */
+/* CSS Classes untuk semua halaman menggunakan unit relatif */
+.responsive-section-padding {
+    padding: clamp(3rem, 5vw, 5rem) 0;
+}
+
+.responsive-card-padding {
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.responsive-icon-size {
+    font-size: clamp(2rem, 4vw, 3.75rem);
+}
+
+.responsive-title-size {
+    font-size: clamp(1.75rem, 4vw, 2.625rem);
+}
+
+.responsive-subtitle-size {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.responsive-text-size {
+    font-size: clamp(0.875rem, 1.8vw, 1rem);
+}
+
+.responsive-button-padding {
+    padding: clamp(0.875rem, 2vw, 1.125rem) clamp(1.875rem, 4vw, 2.5rem);
+}
+
+.responsive-border-radius {
+    border-radius: clamp(0.9375rem, 2vw, 1.25rem);
+}
+
+.responsive-small-radius {
+    border-radius: clamp(0.5rem, 1vw, 0.625rem);
+}
+
+.responsive-box-shadow {
+    box-shadow: 0 clamp(0.3125rem, 1vw, 0.625rem) clamp(1.25rem, 2.5vw, 2.5rem) rgba(0,0,0,0.1);
+}
+
+/* Responsive spacing */
+.responsive-mb {
+    margin-bottom: clamp(1rem, 2vw, 1.875rem);
+}
+
+.responsive-mt {
+    margin-top: clamp(1rem, 2vw, 1.875rem);
+}
+
+/* Responsive font sizes */
+.responsive-h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.responsive-h2 {
+    font-size: clamp(1.75rem, 4vw, 2.625rem);
+}
+
+.responsive-h3 {
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+}
+
+.responsive-h4 {
+    font-size: clamp(1.25rem, 3vw, 1.875rem);
+}
+
+.responsive-h5 {
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+}
+
+.responsive-p {
+    font-size: clamp(0.875rem, 1.8vw, 1rem);
+}
+
+/* Responsive width/height untuk decorations */
+.responsive-bg-decoration {
+    width: clamp(15vw, 25vw, 25rem);
+    height: clamp(15vw, 25vw, 25rem);
+}
+
+/* Convert common px to rem (base 16px = 1rem) */
         margin-top: 20px !important;
     }
     

@@ -45,7 +45,7 @@
             <div class="col-lg-12">
                 <div class="vl-about-content text-center">
                     <div class="vl-section-title-1">
-                        <p class="pb-32" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="max-width: 900px; margin: 0 auto; font-size: 18px; line-height: 1.8;">
+                        <p class="pb-32" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="max-width: 900px; margin: 0 auto; font-size: clamp(0.875rem, 1.8vw, 1.125rem); line-height: 1.8;">
                             Logo Pondok Pesantren Nurul Islam Mojokerto dirancang dengan penuh makna dan filosofi yang mencerminkan identitas, visi, dan misi lembaga pendidikan Islam ini. Setiap elemen dalam logo memiliki makna yang mendalam dan saling berkaitan untuk menyampaikan pesan tentang komitmen PP. Nurul Islam dalam mendidik generasi muda yang unggul, berakhlak mulia, dan bermanfaat bagi umat.
                         </p>
                     </div>
@@ -71,7 +71,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #f8f9fa;">1</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #f8f9fa;">1</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Lingkaran</h3>
@@ -82,7 +82,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #f8f9fa;">2</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #f8f9fa;">2</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Warna Hijau</h3>
@@ -93,7 +93,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #f8f9fa;">3</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #f8f9fa;">3</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Bintang Tujuh (Pitu)</h3>
@@ -104,7 +104,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #f8f9fa;">4</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #f8f9fa;">4</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Bunga Melati</h3>
@@ -115,7 +115,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #f8f9fa;">5</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #f8f9fa;">5</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Lafadz الله diatas Bunga Melati</h3>
@@ -126,7 +126,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #f8f9fa;">6</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #f8f9fa;">6</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Buku</h3>
@@ -137,7 +137,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="900">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #f8f9fa;">7</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #f8f9fa;">7</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Lafadz نور الإسلام</h3>
@@ -148,7 +148,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1000">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #f8f9fa;">8</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #f8f9fa;">8</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Teks Kuning</h3>
@@ -159,7 +159,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1100">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #f8f9fa;">9</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #f8f9fa;">9</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Garis Putih</h3>
@@ -170,7 +170,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1200">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #f8f9fa;">10</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #f8f9fa;">10</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Kelopak Melati Biru</h3>
@@ -197,19 +197,19 @@
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="vl-about-content" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                    <p class="pb-32" style="font-size: 18px; line-height: 1.8; text-align: center;">
+                    <p class="pb-32" style="font-size: clamp(0.875rem, 1.8vw, 1.125rem); line-height: 1.8; text-align: center;">
                         Logo Pondok Pesantren Nurul Islam Mojokerto tidak hanya sekadar simbol visual, melainkan juga representasi dari nilai-nilai, visi, dan misi yang diemban oleh lembaga ini. Setiap elemen dalam logo dirancang dengan penuh pertimbangan untuk menyampaikan pesan tentang komitmen PP. Nurul Islam dalam mendidik generasi muda yang unggul, berakhlak mulia, dan bermanfaat bagi umat.
                     </p>
-                    <p class="pb-32" style="font-size: 18px; line-height: 1.8; text-align: center;">
+                    <p class="pb-32" style="font-size: clamp(0.875rem, 1.8vw, 1.125rem); line-height: 1.8; text-align: center;">
                         Melalui logo ini, PP. Nurul Islam ingin menyampaikan bahwa pendidikan yang diberikan tidak hanya fokus pada aspek akademik, tetapi juga pada pembentukan karakter, pengembangan potensi, dan penanaman nilai-nilai Islam yang rahmatan lil alamin. Logo ini menjadi identitas yang membedakan PP. Nurul Islam dari lembaga pendidikan lainnya, sekaligus menjadi pengingat akan tanggung jawab besar dalam mendidik generasi penerus bangsa.
                     </p>
                     <div class="vl-about-icon-box text-center mt-40" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
                         <div class="vl-about-icon mb-20">
-                            <span><i class="fa-solid fa-lightbulb" style="font-size: 60px; color: var(--ztc-text-text-4);"></i></span>
+                            <span><i class="fa-solid fa-lightbulb" style="font-size: clamp(3rem, 6vw, 3.75rem); color: var(--ztc-text-text-4);"></i></span>
                         </div>
                         <div class="vl-icon-content">
                             <h3 class="title mb-20">Kesatuan Makna</h3>
-                            <p style="font-size: 16px; line-height: 1.8;">
+                            <p style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8;">
                                 Semua elemen dalam logo saling berkaitan dan membentuk kesatuan makna yang utuh. Dari lingkaran yang menggambarkan dunia global, hingga kelopak melati biru yang melambangkan kelembutan, semua elemen bekerja sama untuk menyampaikan visi besar PP. Nurul Islam sebagai lembaga pendidikan yang mengedepankan keseimbangan antara ilmu, akhlak, dan pengabdian kepada umat.
                             </p>
                         </div>

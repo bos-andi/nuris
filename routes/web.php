@@ -31,14 +31,15 @@ Route::get('/gallery/{slug}', [GalleryController::class, 'show'])->name('galleri
 // Staff routes
 Route::get('/data-guru-karyawan', [PublicStaffController::class, 'index'])->name('staff.index');
 
+// PSB route (must be before dynamic routes)
+Route::get('/psb', [PagesController::class, 'psb'])->name('psb');
+Route::get('/psb-2026', [PagesController::class, 'psb'])->name('psb-2026');
+
 // Dynamic route - check if article or page (must be last)
 // This route handles both articles (by slug) and pages
-// We create the route with 'articles.show' name for article links
 Route::get('/{slug}', [PagesController::class, 'displayOrArticle'])->name('articles.show');
 
-// Alias route for pages.display - points to same method for backward compatibility
-// Note: This route will never be reached because the route above matches first,
-// but it allows route('pages.display', ...) to work for URL generation
+// Alias route for pages.display - for backward compatibility
 Route::get('/{page}', [PagesController::class, 'displayOrArticle'])->name('pages.display');
 
 // Admin routes - Auth

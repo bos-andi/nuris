@@ -26,9 +26,9 @@
 <!--===== PROFIL PENGASUH AREA STARTS =======-->
 <section class="vl-about-section sp2">
     <div class="container">
-        <div class="row">
+        <div class="row" style="align-items: flex-start;">
             <div class="col-lg-4 col-md-6 mb-30">
-                <div class="vl-about-large-thumb reveal pengasuh-photo-wrapper" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
+                <div class="vl-about-large-thumb reveal pengasuh-photo-wrapper" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300" style="height: 100%;">
                     @php
                         $photoPath = public_path('img/team/pengasuh-nuris.jpg');
                         $fallbackPath = public_path('img/team/pengasuh-nuris.png');
@@ -46,11 +46,11 @@
                 </div>
             </div>
             <div class="col-lg-8 col-md-6">
-                <div class="vl-about-content">
+                <div class="vl-about-content" style="height: 100%; display: flex; flex-direction: column;">
                     <div class="vl-section-title-1">
                         <h5 class="subtitle" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">Profil Pengasuh</h5>
                         <h2 class="title text-anime-style-3" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">Dr. KH. Ahmad Siddiq, S.E., M.M.</h2>
-                        <p class="pb-20" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300" style="font-size: 18px; color: var(--ztc-text-text-4); font-weight: 600;">
+                        <p class="pb-20" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300" style="font-size: clamp(0.875rem, 1.8vw, 1.125rem); color: var(--ztc-text-text-4); font-weight: 600;">
                             Pengasuh Pondok Pesantren Nurul Islam
                         </p>
                         <p class="pb-32" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
@@ -61,7 +61,7 @@
                         <!-- single icon box -->
                         <div class="vl-about-icon-box mb-30" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
                             <div class="vl-about-icon">
-                                <span><i class="fa-solid fa-calendar" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                                <span><i class="fa-solid fa-calendar" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                             </div>
                             <div class="vl-icon-content">
                                 <h3 class="title">Tanggal Lahir</h3>
@@ -71,7 +71,7 @@
                         <!-- single icon box -->
                         <div class="vl-about-icon-box mb-30" data-aos="fade-left" data-aos-duration="800" data-aos-delay="500">
                             <div class="vl-about-icon">
-                                <span><i class="fa-solid fa-graduation-cap" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                                <span><i class="fa-solid fa-graduation-cap" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                             </div>
                             <div class="vl-icon-content">
                                 <h3 class="title">Pendidikan</h3>
@@ -81,7 +81,7 @@
                         <!-- single icon box -->
                         <div class="vl-about-icon-box mb-30" data-aos="fade-left" data-aos-duration="800" data-aos-delay="600">
                             <div class="vl-about-icon">
-                                <span><i class="fa-solid fa-heart" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                                <span><i class="fa-solid fa-heart" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                             </div>
                             <div class="vl-icon-content">
                                 <h3 class="title">Dedikasi & Komitmen</h3>
@@ -110,10 +110,10 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="vl-about-content" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                    <p class="pb-20" style="font-size: 16px; line-height: 1.8;">
+                    <p class="pb-20" style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8;">
                         Dr. KH. Ahmad Siddiq, S.E., M.M. lahir pada <strong>1 Juli 1973</strong> di Kedali, Pucuk, Lamongan dari pasangan Bapak Warijan dan Ibu Sukaini. Beliau merupakan anak ketiga dari empat bersaudara. Kedua orang tua beliau meninggal saat beliau masih kecil. Alhasil, sang kakak tertua menjadi tulang punggung keluarga.
                     </p>
-                    <p class="pb-20" style="font-size: 16px; line-height: 1.8;">
+                    <p class="pb-20" style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8;">
                         Kiai Siddiq kecil dipondokkan oleh sang kakak tertua karena sang kakak mementingkan masa depan adik-adiknya. Beliau masih ingat kata-kata sang kakak yang membuatnya bertekad untuk menuntut ilmu di pesantren, <em>"Awakmu kudu mondok, nek gak mondok awakmu bakalan ngamen sakurip"</em> (Kamu wajib mondok, kalau tidak mondok kamu akan jadi pengamen seumur hidup).
                     </p>
                 </div>
@@ -139,7 +139,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-mosque" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-mosque" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Pondok Pesantren Langitan</h3>
@@ -154,7 +154,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-book-quran" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-book-quran" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Pondok Pesantren Sarang</h3>
@@ -169,7 +169,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-graduation-cap" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-graduation-cap" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Pondok Pesantren At-Tauhid</h3>
@@ -185,18 +185,18 @@
         <div class="row mt-40">
             <div class="col-lg-12">
                 <div class="vl-about-content" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
-                    <div style="background-color: #f8f9fa; padding: 30px; border-radius: 10px; border-left: 4px solid var(--ztc-text-text-4);">
+                    <div style="background-color: #f8f9fa; padding: clamp(1.5rem, 3vw, 1.875rem); border-radius: 10px; border-left: 4px solid var(--ztc-text-text-4);">
                         <h4 class="title mb-20" style="color: var(--ztc-text-text-4);">Aktivitas di Pondok Pesantren At-Tauhid</h4>
-                        <p class="mb-15" style="font-size: 16px; line-height: 1.8;">
+                        <p class="mb-15" style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8;">
                             Selain nyantri, beliau juga mengajar santri-santri yang lebih kecil setiap selesai salat subuh. Jumlah kitab yang beliau ajarkan ada 4 jenis, yaitu:
                         </p>
-                        <ul style="font-size: 16px; line-height: 1.8; padding-left: 20px;">
+                        <ul style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8; padding-left: 20px;">
                             <li><strong>Fathul Qarib</strong></li>
                             <li><strong>Bulughul Maram</strong></li>
                             <li><strong>Matan Jurumiyah</strong></li>
                             <li><strong>Nashaihul Ibad</strong></li>
                         </ul>
-                        <p class="mt-20" style="font-size: 16px; line-height: 1.8;">
+                        <p class="mt-20" style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8;">
                             Tak hanya itu, beliau juga ngabdi kepada KH. Tholhah sebagai pemomong anak-anak Sang Kiai yang masih berusia bayi. Hal ini terus dilakukan beliau hingga kuliah di perguruan tinggi.
                         </p>
                     </div>
@@ -221,14 +221,14 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="vl-about-content" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                    <p class="pb-20" style="font-size: 16px; line-height: 1.8;">
+                    <p class="pb-20" style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8;">
                         Tak terasa, Kiai Siddiq muda telah lulus pendidikan SLTA. Beliau memutuskan untuk meneruskan pendidikan di perguruan tinggi. Beliau kemudian memilih <strong>Universitas Airlangga jurusan Hubungan Internasional</strong> sebagai kelanjutan studi beliau. Luar biasa, beliau mampu lolos dari tes masuk kuliah jurusan Hubungan Internasional yang terkenal sulit. Beliau diterima dan bisa memasuki perkuliahan. Sebelum berangkat, beliau sowan terlebih dahulu kepada Sang Guru.
                     </p>
-                    <p class="pb-20" style="font-size: 16px; line-height: 1.8;">
+                    <p class="pb-20" style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8;">
                         Namun, rupanya <strong>KH. Mas Tholhah kurang merestui</strong> keputusan Kiai Siddiq muda tersebut. Hal ini segera ditangkap oleh Kiai Siddiq muda dan direspon cepat dengan pembatalan masuk kuliah di Universitas Airlangga jurusan Hubungan Internasional. Beliau kemudian memilih kuliah di <strong>Universitas Islam Sunan Giri Surabaya jurusan Manajemen</strong>. Untuk keputusan beliau ini, tampaknya KH. Mas Tholhah merestui.
                     </p>
-                    <div style="background-color: #ffffff; padding: 30px; border-radius: 10px; border-left: 4px solid var(--ztc-text-text-4); margin-top: 30px;">
-                        <p style="font-size: 16px; line-height: 1.8; font-style: italic; color: var(--ztc-text-text-3);">
+                    <div style="background-color: #ffffff; padding: clamp(1.5rem, 3vw, 1.875rem); border-radius: 10px; border-left: 4px solid var(--ztc-text-text-4); margin-top: 30px;">
+                        <p style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8; font-style: italic; color: var(--ztc-text-text-3);">
                             Berangkatlah Kiai Siddiq muda menuntut ilmu hingga mencapai jenjang S1. Tiap hari, beliau pulang-pergi dari pondok menuju kampus hanya dengan <strong>berjalan kaki sejauh 6 kilometer</strong>. Beliau melakukan ini tanpa pernah mengeluh karena beliau sadar, keberkahan dan kemanfaatan ilmu hanya dapat dicapai melalui proses yang panjang dan melelahkan terlebih dahulu.
                         </p>
                     </div>
@@ -254,7 +254,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-eye" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-eye" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Visi</h3>
@@ -265,7 +265,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-bullseye" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-bullseye" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Misi</h3>

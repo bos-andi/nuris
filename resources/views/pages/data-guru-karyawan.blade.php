@@ -294,7 +294,7 @@
         </div>
 
         <!-- Karyawan Operasional -->
-        <div class="row mb-60" style="background-color: #f8f9fa; padding: 40px 0; border-radius: 10px;">
+        <div class="row mb-60" style="background-color: #f8f9fa; padding: clamp(2rem, 4vw, 2.5rem) 0; border-radius: 10px;">
             <div class="col-lg-12">
                 <div class="vl-section-title-1 mb-40">
                     <h3 class="title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Karyawan Operasional</h3>
@@ -368,10 +368,10 @@
             <div class="col-lg-3 col-md-6 mb-30">
                 <div class="vl-about-icon-box text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon mb-20">
-                        <span><i class="fa-solid fa-chalkboard-teacher" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-chalkboard-teacher" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
-                        <h3 class="title" style="font-size: 48px; color: var(--ztc-text-text-4);">50+</h3>
+                        <h3 class="title" style="font-size: clamp(2rem, 5vw, 3rem); color: var(--ztc-text-text-4);">50+</h3>
                         <p>Guru</p>
                     </div>
                 </div>
@@ -379,10 +379,10 @@
             <div class="col-lg-3 col-md-6 mb-30">
                 <div class="vl-about-icon-box text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <div class="vl-about-icon mb-20">
-                        <span><i class="fa-solid fa-users" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-users" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
-                        <h3 class="title" style="font-size: 48px; color: var(--ztc-text-text-4);">30+</h3>
+                        <h3 class="title" style="font-size: clamp(2rem, 5vw, 3rem); color: var(--ztc-text-text-4);">30+</h3>
                         <p>Karyawan</p>
                     </div>
                 </div>
@@ -390,10 +390,10 @@
             <div class="col-lg-3 col-md-6 mb-30">
                 <div class="vl-about-icon-box text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                     <div class="vl-about-icon mb-20">
-                        <span><i class="fa-solid fa-graduation-cap" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-graduation-cap" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
-                        <h3 class="title" style="font-size: 48px; color: var(--ztc-text-text-4);">80+</h3>
+                        <h3 class="title" style="font-size: clamp(2rem, 5vw, 3rem); color: var(--ztc-text-text-4);">80+</h3>
                         <p>Total Tenaga</p>
                     </div>
                 </div>
@@ -401,10 +401,10 @@
             <div class="col-lg-3 col-md-6 mb-30">
                 <div class="vl-about-icon-box text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                     <div class="vl-about-icon mb-20">
-                        <span><i class="fa-solid fa-star" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-star" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
-                        <h3 class="title" style="font-size: 48px; color: var(--ztc-text-text-4);">90%</h3>
+                        <h3 class="title" style="font-size: clamp(2rem, 5vw, 3rem); color: var(--ztc-text-text-4);">90%</h3>
                         <p>Berpengalaman</p>
                     </div>
                 </div>

@@ -38,11 +38,11 @@
             <div class="col-lg-10">
                 <div class="vl-about-icon-box text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon mb-30">
-                        <span><i class="fa-solid fa-eye" style="font-size: 60px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-eye" style="font-size: clamp(3rem, 6vw, 3.75rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title mb-20">Sebagai Lembaga Pendidikan Kader yang Robbani</h3>
-                        <p style="font-size: 18px; line-height: 1.8;">
+                        <p style="font-size: clamp(0.875rem, 1.8vw, 1.125rem); line-height: 1.8;">
                             Sebagai lembaga pendidikan kader yang <strong>Robbani</strong>, berwawasan keilmuan, berdaya saing, <strong>ber-tafaqquhfiddin</strong> dan <strong>berakhlakulkarimah</strong>.
                         </p>
                     </div>
@@ -68,7 +68,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #ffffff;">1</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #ffffff;">1</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Pendidikan Komprehensif</h3>
@@ -79,7 +79,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #ffffff;">2</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #ffffff;">2</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Pembinaan & Pengaderan</h3>
@@ -90,7 +90,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #ffffff;">3</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #ffffff;">3</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Pendidikan Kepesantrenan</h3>
@@ -101,7 +101,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #ffffff;">4</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #ffffff;">4</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Olah Rasa, Rasio & Raga</h3>
@@ -112,7 +112,7 @@
             <div class="col-lg-12 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #ffffff;">5</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #ffffff;">5</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Kerjasama Kelembagaan</h3>
@@ -140,7 +140,7 @@
             <div class="col-lg-12 mb-40">
                 <div class="vl-about-content text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <h3 class="title mb-20">Tujuan Ideal Secara Umum</h3>
-                    <p style="font-size: 18px; line-height: 1.8; max-width: 1000px; margin: 0 auto;">
+                    <p style="font-size: clamp(0.875rem, 1.8vw, 1.125rem); line-height: 1.8; max-width: 90%; margin: 0 auto;">
                         Tujuan Ideal Pondok Pesantren Nurul Islam secara umum ialah untuk memenuhi kebutuhan Umat Islam terhadap kader dakwah yang mampu melakukan <strong>Amar Ma'ruf Nahi Munkar</strong> disemua aspek kehidupan (Ideologi, Politik, Ekonomi, Sosial, Budaya, Stabilitas, Ilmu Pengetahuan dan teknologi) sesuai dengan bidangnya.
                     </p>
                 </div>
@@ -157,7 +157,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #f8f9fa;">1</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #f8f9fa;">1</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Kader Berwawasan Sains & Teknologi</h3>
@@ -168,7 +168,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #f8f9fa;">2</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #f8f9fa;">2</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Kader/Ulama' yang Mumpuni</h3>
@@ -179,7 +179,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #f8f9fa;">3</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #f8f9fa;">3</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Penetapan Hukum Islam</h3>
@@ -190,7 +190,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #f8f9fa;">4</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #f8f9fa;">4</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Pemilihan Hukum yang Rajih</h3>
@@ -201,7 +201,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #f8f9fa;">5</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #f8f9fa;">5</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Fungsi Motivator & Inisiator</h3>
@@ -212,7 +212,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #f8f9fa;">6</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #f8f9fa;">6</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Konsistensi Nilai Luhur</h3>
@@ -223,7 +223,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="900">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #f8f9fa;">7</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #f8f9fa;">7</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Pemberdayaan Masyarakat</h3>
@@ -234,7 +234,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1000">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #f8f9fa;">8</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #f8f9fa;">8</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Simpul Budaya</h3>
@@ -245,7 +245,7 @@
             <div class="col-lg-12 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1100">
                     <div class="vl-about-icon">
-                        <span style="font-size: 50px; color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: 70px; height: 70px; line-height: 70px; text-align: center; border-radius: 50%; background-color: #f8f9fa;">9</span>
+                        <span style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4); font-weight: bold; display: inline-block; width: clamp(3.5rem, 5vw, 4.375rem); height: clamp(3.5rem, 5vw, 4.375rem); line-height: clamp(3.5rem, 5vw, 4.375rem); text-align: center; border-radius: 50%; background-color: #f8f9fa;">9</span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Go-Internasional</h3>
@@ -273,42 +273,42 @@
             <div class="col-lg-10">
                 <div class="vl-about-icon-box text-center" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon mb-30">
-                        <span><i class="fa-solid fa-quote-left" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-quote-left" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
-                        <h3 class="title mb-30" style="font-size: 32px; font-style: italic; color: var(--ztc-text-text-4); line-height: 1.6;">
+                        <h3 class="title mb-30" style="font-size: clamp(1.75rem, 3.5vw, 2rem); font-style: italic; color: var(--ztc-text-text-4); line-height: 1.6;">
                             "Berilmu Amaliyah, Beramal Ilmiyah,<br>Berakhlaqul Karimah, Ahlusunnah Wal Jama'ah"
                         </h3>
                         <div class="row mt-40">
                             <div class="col-lg-6 col-md-6 mb-20">
                                 <div class="vl-about-icon-box text-left">
                                     <div class="vl-icon-content">
-                                        <h4 class="title mb-10" style="font-size: 18px;"><i class="fa-solid fa-check-circle" style="color: var(--ztc-text-text-4); margin-right: 10px;"></i>Berilmu Amaliyah</h4>
-                                        <p style="font-size: 16px; line-height: 1.8;">Ilmu yang dipelajari haruslah ilmu yang dapat diamalkan dalam kehidupan sehari-hari, bukan hanya teori semata.</p>
+                                        <h4 class="title mb-10" style="font-size: clamp(0.875rem, 1.8vw, 1.125rem);"><i class="fa-solid fa-check-circle" style="color: var(--ztc-text-text-4); margin-right: 0.625rem;"></i>Berilmu Amaliyah</h4>
+                                        <p style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8;">Ilmu yang dipelajari haruslah ilmu yang dapat diamalkan dalam kehidupan sehari-hari, bukan hanya teori semata.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 mb-20">
                                 <div class="vl-about-icon-box text-left">
                                     <div class="vl-icon-content">
-                                        <h4 class="title mb-10" style="font-size: 18px;"><i class="fa-solid fa-check-circle" style="color: var(--ztc-text-text-4); margin-right: 10px;"></i>Beramal Ilmiyah</h4>
-                                        <p style="font-size: 16px; line-height: 1.8;">Setiap amal yang dilakukan harus didasarkan pada ilmu yang benar, bukan sekedar ikut-ikutan atau tanpa dasar.</p>
+                                        <h4 class="title mb-10" style="font-size: clamp(0.875rem, 1.8vw, 1.125rem);"><i class="fa-solid fa-check-circle" style="color: var(--ztc-text-text-4); margin-right: 0.625rem;"></i>Beramal Ilmiyah</h4>
+                                        <p style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8;">Setiap amal yang dilakukan harus didasarkan pada ilmu yang benar, bukan sekedar ikut-ikutan atau tanpa dasar.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 mb-20">
                                 <div class="vl-about-icon-box text-left">
                                     <div class="vl-icon-content">
-                                        <h4 class="title mb-10" style="font-size: 18px;"><i class="fa-solid fa-check-circle" style="color: var(--ztc-text-text-4); margin-right: 10px;"></i>Berakhlaqul Karimah</h4>
-                                        <p style="font-size: 16px; line-height: 1.8;">Selalu menjaga dan mengamalkan akhlak yang mulia dalam setiap aspek kehidupan, baik dalam berilmu maupun beramal.</p>
+                                        <h4 class="title mb-10" style="font-size: clamp(0.875rem, 1.8vw, 1.125rem);"><i class="fa-solid fa-check-circle" style="color: var(--ztc-text-text-4); margin-right: 0.625rem;"></i>Berakhlaqul Karimah</h4>
+                                        <p style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8;">Selalu menjaga dan mengamalkan akhlak yang mulia dalam setiap aspek kehidupan, baik dalam berilmu maupun beramal.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 mb-20">
                                 <div class="vl-about-icon-box text-left">
                                     <div class="vl-icon-content">
-                                        <h4 class="title mb-10" style="font-size: 18px;"><i class="fa-solid fa-check-circle" style="color: var(--ztc-text-text-4); margin-right: 10px;"></i>Ahlusunnah Wal Jama'ah</h4>
-                                        <p style="font-size: 16px; line-height: 1.8;">Berpegang teguh pada ajaran Ahlusunnah Wal Jama'ah sebagai manhaj dalam memahami dan mengamalkan ajaran Islam.</p>
+                                        <h4 class="title mb-10" style="font-size: clamp(0.875rem, 1.8vw, 1.125rem);"><i class="fa-solid fa-check-circle" style="color: var(--ztc-text-text-4); margin-right: 0.625rem;"></i>Ahlusunnah Wal Jama'ah</h4>
+                                        <p style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8;">Berpegang teguh pada ajaran Ahlusunnah Wal Jama'ah sebagai manhaj dalam memahami dan mengamalkan ajaran Islam.</p>
                                     </div>
                                 </div>
                             </div>

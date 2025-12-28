@@ -90,6 +90,14 @@ class PagesController extends Controller
         ]);
     }
 
+    public function psb()
+    {
+        $siteName = \App\Models\SiteSetting::get('site_name', 'PP. Nurul Islam');
+        return view('pages.psb-2026', [
+            'title' => 'PSB 2026 - Penerimaan Santri Baru - ' . $siteName
+        ]);
+    }
+
     public function displayOrArticle($slug)
     {
         // First, check if slug matches a published article

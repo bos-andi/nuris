@@ -42,8 +42,8 @@
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 mb-30">
-                <div class="vl-about-large-thumb reveal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300" style="border-radius: 20px; overflow: hidden; box-shadow: 0 15px 50px rgba(0,0,0,0.2); position: relative; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 10px;">
-                    <div style="position: relative; width: 100%; padding-bottom: 75%; overflow: hidden; border-radius: 12px;">
+                <div class="vl-about-large-thumb reveal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300" style="border-radius: clamp(1rem, 2vw, 1.25rem); overflow: hidden; box-shadow: 0 0.9375rem 3.125rem rgba(0,0,0,0.2); position: relative; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 0.625rem;">
+                    <div style="position: relative; width: 100%; padding-bottom: 75%; overflow: hidden; border-radius: 0.75rem;">
                         <img class="w-100" src="{{ asset('img/about/nuris-gedung.jpg') }}" alt="Gedung Pondok Pesantren Nurul Islam" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);" onerror="this.onerror=null; this.src='{{ asset('img/about/vl-about-1.1.png') }}';" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
                     </div>
                 </div>
@@ -68,7 +68,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-graduation-cap" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-graduation-cap" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Pendidikan</h3>
@@ -79,7 +79,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-megaphone" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-megaphone" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Dakwah</h3>
@@ -90,7 +90,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-store" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-store" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Ekonomi</h3>
@@ -101,7 +101,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-heart-pulse" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-heart-pulse" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Kesehatan</h3>
@@ -112,7 +112,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-handshake" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-handshake" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Sosial</h3>
@@ -147,74 +147,74 @@
                         <div class="vl-about-grid" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
                             <div class="vl-about-icon-box mb-20">
                                 <div class="vl-about-icon">
-                                    <span><i class="fa-solid fa-university" style="font-size: 25px; color: var(--ztc-text-text-4);"></i></span>
+                                    <span><i class="fa-solid fa-university" style="font-size: clamp(1.25rem, 2.6vw, 1.5625rem); color: var(--ztc-text-text-4);"></i></span>
                                 </div>
                                 <div class="vl-icon-content">
-                                    <h4 class="title" style="font-size: 16px;">1. STAI Nurul Islam</h4>
+                                    <h4 class="title" style="font-size: clamp(0.875rem, 1.6vw, 1rem);">1. STAI Nurul Islam</h4>
                                 </div>
                             </div>
                             <div class="vl-about-icon-box mb-20">
                                 <div class="vl-about-icon">
-                                    <span><i class="fa-solid fa-school" style="font-size: 25px; color: var(--ztc-text-text-4);"></i></span>
+                                    <span><i class="fa-solid fa-school" style="font-size: clamp(1.25rem, 2.6vw, 1.5625rem); color: var(--ztc-text-text-4);"></i></span>
                                 </div>
                                 <div class="vl-icon-content">
-                                    <h4 class="title" style="font-size: 16px;">2. MTs 1 Nurul Islam</h4>
+                                    <h4 class="title" style="font-size: clamp(0.875rem, 1.6vw, 1rem);">2. MTs 1 Nurul Islam</h4>
                                 </div>
                             </div>
                             <div class="vl-about-icon-box mb-20">
                                 <div class="vl-about-icon">
-                                    <span><i class="fa-solid fa-school" style="font-size: 25px; color: var(--ztc-text-text-4);"></i></span>
+                                    <span><i class="fa-solid fa-school" style="font-size: clamp(1.25rem, 2.6vw, 1.5625rem); color: var(--ztc-text-text-4);"></i></span>
                                 </div>
                                 <div class="vl-icon-content">
-                                    <h4 class="title" style="font-size: 16px;">3. MTs 2 Nurul Islam</h4>
+                                    <h4 class="title" style="font-size: clamp(0.875rem, 1.6vw, 1rem);">3. MTs 2 Nurul Islam</h4>
                                 </div>
                             </div>
                             <div class="vl-about-icon-box mb-20">
                                 <div class="vl-about-icon">
-                                    <span><i class="fa-solid fa-school" style="font-size: 25px; color: var(--ztc-text-text-4);"></i></span>
+                                    <span><i class="fa-solid fa-school" style="font-size: clamp(1.25rem, 2.6vw, 1.5625rem); color: var(--ztc-text-text-4);"></i></span>
                                 </div>
                                 <div class="vl-icon-content">
-                                    <h4 class="title" style="font-size: 16px;">4. SMP UBQ Nurul Islam</h4>
+                                    <h4 class="title" style="font-size: clamp(0.875rem, 1.6vw, 1rem);">4. SMP UBQ Nurul Islam</h4>
                                 </div>
                             </div>
                             <div class="vl-about-icon-box mb-20">
                                 <div class="vl-about-icon">
-                                    <span><i class="fa-solid fa-school" style="font-size: 25px; color: var(--ztc-text-text-4);"></i></span>
+                                    <span><i class="fa-solid fa-school" style="font-size: clamp(1.25rem, 2.6vw, 1.5625rem); color: var(--ztc-text-text-4);"></i></span>
                                 </div>
                                 <div class="vl-icon-content">
-                                    <h4 class="title" style="font-size: 16px;">5. SMP 2 Trans-Sains Nurul Islam</h4>
+                                    <h4 class="title" style="font-size: clamp(0.875rem, 1.6vw, 1rem);">5. SMP 2 Trans-Sains Nurul Islam</h4>
                                 </div>
                             </div>
                             <div class="vl-about-icon-box mb-20">
                                 <div class="vl-about-icon">
-                                    <span><i class="fa-solid fa-graduation-cap" style="font-size: 25px; color: var(--ztc-text-text-4);"></i></span>
+                                    <span><i class="fa-solid fa-graduation-cap" style="font-size: clamp(1.25rem, 2.6vw, 1.5625rem); color: var(--ztc-text-text-4);"></i></span>
                                 </div>
                                 <div class="vl-icon-content">
-                                    <h4 class="title" style="font-size: 16px;">6. MA 1 Nurul Islam</h4>
+                                    <h4 class="title" style="font-size: clamp(0.875rem, 1.6vw, 1rem);">6. MA 1 Nurul Islam</h4>
                                 </div>
                             </div>
                             <div class="vl-about-icon-box mb-20">
                                 <div class="vl-about-icon">
-                                    <span><i class="fa-solid fa-graduation-cap" style="font-size: 25px; color: var(--ztc-text-text-4);"></i></span>
+                                    <span><i class="fa-solid fa-graduation-cap" style="font-size: clamp(1.25rem, 2.6vw, 1.5625rem); color: var(--ztc-text-text-4);"></i></span>
                                 </div>
                                 <div class="vl-icon-content">
-                                    <h4 class="title" style="font-size: 16px;">7. MA 2 Ad-Dauliyah Nurul Islam</h4>
+                                    <h4 class="title" style="font-size: clamp(0.875rem, 1.6vw, 1rem);">7. MA 2 Ad-Dauliyah Nurul Islam</h4>
                                 </div>
                             </div>
                             <div class="vl-about-icon-box mb-20">
                                 <div class="vl-about-icon">
-                                    <span><i class="fa-solid fa-graduation-cap" style="font-size: 25px; color: var(--ztc-text-text-4);"></i></span>
+                                    <span><i class="fa-solid fa-graduation-cap" style="font-size: clamp(1.25rem, 2.6vw, 1.5625rem); color: var(--ztc-text-text-4);"></i></span>
                                 </div>
                                 <div class="vl-icon-content">
-                                    <h4 class="title" style="font-size: 16px;">8. SMK UBP Nurul Islam</h4>
+                                    <h4 class="title" style="font-size: clamp(0.875rem, 1.6vw, 1rem);">8. SMK UBP Nurul Islam</h4>
                                 </div>
                             </div>
                             <div class="vl-about-icon-box mb-20">
                                 <div class="vl-about-icon">
-                                    <span><i class="fa-solid fa-graduation-cap" style="font-size: 25px; color: var(--ztc-text-text-4);"></i></span>
+                                    <span><i class="fa-solid fa-graduation-cap" style="font-size: clamp(1.25rem, 2.6vw, 1.5625rem); color: var(--ztc-text-text-4);"></i></span>
                                 </div>
                                 <div class="vl-icon-content">
-                                    <h4 class="title" style="font-size: 16px;">9. SMA Global School Nurul Islam</h4>
+                                    <h4 class="title" style="font-size: clamp(0.875rem, 1.6vw, 1rem);">9. SMA Global School Nurul Islam</h4>
                                 </div>
                             </div>
                         </div>
@@ -228,66 +228,66 @@
                         <div class="vl-about-grid" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
                             <div class="vl-about-icon-box mb-20">
                                 <div class="vl-about-icon">
-                                    <span><i class="fa-solid fa-mosque" style="font-size: 25px; color: var(--ztc-text-text-4);"></i></span>
+                                    <span><i class="fa-solid fa-mosque" style="font-size: clamp(1.25rem, 2.6vw, 1.5625rem); color: var(--ztc-text-text-4);"></i></span>
                                 </div>
                                 <div class="vl-icon-content">
-                                    <h4 class="title" style="font-size: 16px;">10. MDTA Nurul Islam 1</h4>
+                                    <h4 class="title" style="font-size: clamp(0.875rem, 1.6vw, 1rem);">10. MDTA Nurul Islam 1</h4>
                                 </div>
                             </div>
                             <div class="vl-about-icon-box mb-20">
                                 <div class="vl-about-icon">
-                                    <span><i class="fa-solid fa-mosque" style="font-size: 25px; color: var(--ztc-text-text-4);"></i></span>
+                                    <span><i class="fa-solid fa-mosque" style="font-size: clamp(1.25rem, 2.6vw, 1.5625rem); color: var(--ztc-text-text-4);"></i></span>
                                 </div>
                                 <div class="vl-icon-content">
-                                    <h4 class="title" style="font-size: 16px;">11. MDTA 1 Nurul Islam 2</h4>
+                                    <h4 class="title" style="font-size: clamp(0.875rem, 1.6vw, 1rem);">11. MDTA 1 Nurul Islam 2</h4>
                                 </div>
                             </div>
                             <div class="vl-about-icon-box mb-20">
                                 <div class="vl-about-icon">
-                                    <span><i class="fa-solid fa-mosque" style="font-size: 25px; color: var(--ztc-text-text-4);"></i></span>
+                                    <span><i class="fa-solid fa-mosque" style="font-size: clamp(1.25rem, 2.6vw, 1.5625rem); color: var(--ztc-text-text-4);"></i></span>
                                 </div>
                                 <div class="vl-icon-content">
-                                    <h4 class="title" style="font-size: 16px;">12. MDTA 2 Nurul Islam 2</h4>
+                                    <h4 class="title" style="font-size: clamp(0.875rem, 1.6vw, 1rem);">12. MDTA 2 Nurul Islam 2</h4>
                                 </div>
                             </div>
                             <div class="vl-about-icon-box mb-20">
                                 <div class="vl-about-icon">
-                                    <span><i class="fa-solid fa-mosque" style="font-size: 25px; color: var(--ztc-text-text-4);"></i></span>
+                                    <span><i class="fa-solid fa-mosque" style="font-size: clamp(1.25rem, 2.6vw, 1.5625rem); color: var(--ztc-text-text-4);"></i></span>
                                 </div>
                                 <div class="vl-icon-content">
-                                    <h4 class="title" style="font-size: 16px;">13. MDTA 3 Nurul Islam 2</h4>
+                                    <h4 class="title" style="font-size: clamp(0.875rem, 1.6vw, 1rem);">13. MDTA 3 Nurul Islam 2</h4>
                                 </div>
                             </div>
                             <div class="vl-about-icon-box mb-20">
                                 <div class="vl-about-icon">
-                                    <span><i class="fa-solid fa-mosque" style="font-size: 25px; color: var(--ztc-text-text-4);"></i></span>
+                                    <span><i class="fa-solid fa-mosque" style="font-size: clamp(1.25rem, 2.6vw, 1.5625rem); color: var(--ztc-text-text-4);"></i></span>
                                 </div>
                                 <div class="vl-icon-content">
-                                    <h4 class="title" style="font-size: 16px;">14. MDTW Nurul Islam 1</h4>
+                                    <h4 class="title" style="font-size: clamp(0.875rem, 1.6vw, 1rem);">14. MDTW Nurul Islam 1</h4>
                                 </div>
                             </div>
                             <div class="vl-about-icon-box mb-20">
                                 <div class="vl-about-icon">
-                                    <span><i class="fa-solid fa-mosque" style="font-size: 25px; color: var(--ztc-text-text-4);"></i></span>
+                                    <span><i class="fa-solid fa-mosque" style="font-size: clamp(1.25rem, 2.6vw, 1.5625rem); color: var(--ztc-text-text-4);"></i></span>
                                 </div>
                                 <div class="vl-icon-content">
-                                    <h4 class="title" style="font-size: 16px;">15. MDTW 1 Nurul Islam 2</h4>
+                                    <h4 class="title" style="font-size: clamp(0.875rem, 1.6vw, 1rem);">15. MDTW 1 Nurul Islam 2</h4>
                                 </div>
                             </div>
                             <div class="vl-about-icon-box mb-20">
                                 <div class="vl-about-icon">
-                                    <span><i class="fa-solid fa-mosque" style="font-size: 25px; color: var(--ztc-text-text-4);"></i></span>
+                                    <span><i class="fa-solid fa-mosque" style="font-size: clamp(1.25rem, 2.6vw, 1.5625rem); color: var(--ztc-text-text-4);"></i></span>
                                 </div>
                                 <div class="vl-icon-content">
-                                    <h4 class="title" style="font-size: 16px;">16. MDTW 2 Nurul Islam 2</h4>
+                                    <h4 class="title" style="font-size: clamp(0.875rem, 1.6vw, 1rem);">16. MDTW 2 Nurul Islam 2</h4>
                                 </div>
                             </div>
                             <div class="vl-about-icon-box mb-20">
                                 <div class="vl-about-icon">
-                                    <span><i class="fa-solid fa-mosque" style="font-size: 25px; color: var(--ztc-text-text-4);"></i></span>
+                                    <span><i class="fa-solid fa-mosque" style="font-size: clamp(1.25rem, 2.6vw, 1.5625rem); color: var(--ztc-text-text-4);"></i></span>
                                 </div>
                                 <div class="vl-icon-content">
-                                    <h4 class="title" style="font-size: 16px;">17. MDTU Nurul Islam</h4>
+                                    <h4 class="title" style="font-size: clamp(0.875rem, 1.6vw, 1rem);">17. MDTU Nurul Islam</h4>
                                 </div>
                             </div>
                         </div>
@@ -314,17 +314,17 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon mb-20">
-                        <span><i class="fa-solid fa-location-dot" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-location-dot" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Pondok Pesantren Nurul Islam 1</h3>
                         <p class="mb-20"><strong>Lokasi:</strong> Desa Jabontegal, Kecamatan Pungging, Kabupaten Mojokerto</p>
-                        <h4 class="title mb-15" style="font-size: 18px;">Unit Pendidikan:</h4>
+                        <h4 class="title mb-15" style="font-size: clamp(0.875rem, 1.8vw, 1.125rem);">Unit Pendidikan:</h4>
                         <ul style="list-style: none; padding-left: 0;">
-                            <li style="margin-bottom: 8px;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 8px;"></i> MTs Nurul Islam</li>
-                            <li style="margin-bottom: 8px;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 8px;"></i> SMK UBP Nurul Islam</li>
-                            <li style="margin-bottom: 8px;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 8px;"></i> MDTA Nurul Islam 1</li>
-                            <li style="margin-bottom: 8px;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 8px;"></i> MDTW Nurul Islam 1</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 0.5rem;"></i> MTs Nurul Islam</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 0.5rem;"></i> SMK UBP Nurul Islam</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 0.5rem;"></i> MDTA Nurul Islam 1</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 0.5rem;"></i> MDTW Nurul Islam 1</li>
                         </ul>
                     </div>
                 </div>
@@ -332,23 +332,23 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon mb-20">
-                        <span><i class="fa-solid fa-location-dot" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-location-dot" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Pondok Pesantren Nurul Islam 2</h3>
                         <p class="mb-20"><strong>Lokasi:</strong> Desa Tunggalpager, Kecamatan Pungging, Kabupaten Mojokerto</p>
-                        <h4 class="title mb-15" style="font-size: 18px;">Unit Pendidikan:</h4>
+                        <h4 class="title mb-15" style="font-size: clamp(0.875rem, 1.8vw, 1.125rem);">Unit Pendidikan:</h4>
                         <ul style="list-style: none; padding-left: 0;">
-                            <li style="margin-bottom: 8px;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 8px;"></i> SMP UBQ Nurul Islam</li>
-                            <li style="margin-bottom: 8px;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 8px;"></i> MTs 2 Nurul Islam</li>
-                            <li style="margin-bottom: 8px;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 8px;"></i> SMP 2 Trans-Sains Nurul Islam</li>
-                            <li style="margin-bottom: 8px;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 8px;"></i> MA 1 Nurul Islam</li>
-                            <li style="margin-bottom: 8px;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 8px;"></i> MA 2 Ad-Dauliyah Nurul Islam</li>
-                            <li style="margin-bottom: 8px;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 8px;"></i> SMA Global School Nurul Islam</li>
-                            <li style="margin-bottom: 8px;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 8px;"></i> MDTA 1 Nurul Islam 2</li>
-                            <li style="margin-bottom: 8px;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 8px;"></i> MDTA 2 Nurul Islam 2</li>
-                            <li style="margin-bottom: 8px;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 8px;"></i> MDTW 1 Nurul Islam 2</li>
-                            <li style="margin-bottom: 8px;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 8px;"></i> MDTW 2 Nurul Islam 2</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 0.5rem;"></i> SMP UBQ Nurul Islam</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 0.5rem;"></i> MTs 2 Nurul Islam</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 0.5rem;"></i> SMP 2 Trans-Sains Nurul Islam</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 0.5rem;"></i> MA 1 Nurul Islam</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 0.5rem;"></i> MA 2 Ad-Dauliyah Nurul Islam</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 0.5rem;"></i> SMA Global School Nurul Islam</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 0.5rem;"></i> MDTA 1 Nurul Islam 2</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 0.5rem;"></i> MDTA 2 Nurul Islam 2</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 0.5rem;"></i> MDTW 1 Nurul Islam 2</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="color: var(--ztc-text-text-4); margin-right: 0.5rem;"></i> MDTW 2 Nurul Islam 2</li>
                         </ul>
                     </div>
                 </div>
@@ -373,7 +373,7 @@
             <div class="col-lg-12">
                 <div class="vl-about-content">
                     <div class="vl-section-title-1">
-                        <p class="pb-32 text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="max-width: 1000px; margin: 0 auto; font-size: 18px; line-height: 1.8;">
+                        <p class="pb-32 text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="max-width: 90%; margin: 0 auto; font-size: clamp(0.875rem, 1.8vw, 1.125rem); line-height: 1.8;">
                             Dalam jangka panjang, Yayasan Pondok Pesantren Nurul Islam Mojokerto akan menjelma menjadi lembaga yang menggarap beberapa bidang hajat hidup Masyarakat selain Pendidikan, dakwah dan sosial, meliputi:
                         </p>
                     </div>
@@ -384,7 +384,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon mb-20">
-                        <span><i class="fa-solid fa-hospital" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-hospital" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Rumah Sakit</h3>
@@ -395,7 +395,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <div class="vl-about-icon mb-20">
-                        <span><i class="fa-solid fa-industry" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-industry" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Manufaktur & Produksi</h3>
@@ -406,7 +406,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                     <div class="vl-about-icon mb-20">
-                        <span><i class="fa-solid fa-store" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-store" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Ritel & Agrobisnis</h3>
@@ -417,7 +417,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                     <div class="vl-about-icon mb-20">
-                        <span><i class="fa-solid fa-landmark" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-landmark" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Perbankan</h3>
@@ -428,7 +428,7 @@
             <div class="col-lg-6 col-md-6 mb-30">
                 <div class="vl-about-icon-box text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                     <div class="vl-about-icon mb-20">
-                        <span><i class="fa-solid fa-handshake" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-handshake" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Kerjasama & Komunikasi</h3>
@@ -441,15 +441,15 @@
             <div class="col-lg-12">
                 <div class="vl-about-icon-box text-center" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="800">
                     <div class="vl-about-icon mb-20">
-                        <span><i class="fa-solid fa-star" style="font-size: 60px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-star" style="font-size: clamp(3rem, 6vw, 3.75rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title mb-20">Cita-Cita Mulia</h3>
-                        <p style="font-size: 18px; line-height: 1.8; font-style: italic; color: var(--ztc-text-text-4);">
+                        <p style="font-size: clamp(0.875rem, 1.8vw, 1.125rem); line-height: 1.8; font-style: italic; color: var(--ztc-text-text-4);">
                             "li I'lai kalimatillah wa 'izzul Islam wal Muslimin"<br>
                             (Meninggikan Kalimah Allah dan memulyakan Islam dan Umat Islam)
                         </p>
-                        <p class="mt-30" style="font-size: 16px; line-height: 1.8;">
+                        <p class="mt-30" style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8;">
                             Beberapa garapan industri sebagaimana di atas akan dapat diwujudkan dalam rentang waktu yang terjangkau karena menjadi kebutuhan internal yang mendesak dan diproyeksikan menjadi pelaku ekonomi aktif dalam kancah perekonomian makro nasional.
                         </p>
                     </div>

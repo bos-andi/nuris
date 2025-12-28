@@ -64,7 +64,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-10 col-md-12">
-                <div class="video-wrapper" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <div class="video-wrapper" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.1);">
                     <iframe 
                         src="https://www.youtube.com/embed/TL50BiF-YIM" 
                         frameborder="0" 
@@ -94,7 +94,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-utensils" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-utensils" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Makanan & Minuman</h3>
@@ -105,7 +105,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-book" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-book" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Alat Tulis & Buku</h3>
@@ -116,7 +116,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-shirt" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-shirt" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Pakaian & Perlengkapan</h3>
@@ -127,7 +127,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-soap" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-soap" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Kebutuhan Harian</h3>
@@ -138,7 +138,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-tag" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-tag" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Harga Terjangkau</h3>
@@ -149,7 +149,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-handshake" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-handshake" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Pelayanan Ramah</h3>
@@ -177,11 +177,11 @@
             <div class="col-lg-8">
                 <div class="vl-about-icon-box text-center" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon mb-30">
-                        <span><i class="fa-solid fa-store" style="font-size: 60px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-store" style="font-size: clamp(3rem, 6vw, 3.75rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title mb-20">Kontak Nuris Mart</h3>
-                        <p style="font-size: 18px; line-height: 1.8; margin-bottom: 30px;">
+                        <p style="font-size: clamp(0.875rem, 1.8vw, 1.125rem); line-height: 1.8; margin-bottom: 30px;">
                             Untuk informasi lebih lanjut tentang produk dan layanan, silakan hubungi tim Nuris Mart.
                         </p>
                         <div class="row">
@@ -223,7 +223,7 @@
             <div class="col-lg-12">
                 <div class="vl-section-title-1 text-center">
                     <h2 class="title text-anime-style-3 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Komitmen Terhadap Perdagangan Halal</h2>
-                    <p class="pb-32" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="max-width: 900px; margin: 0 auto; font-size: 18px; line-height: 1.8;">
+                    <p class="pb-32" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="max-width: 900px; margin: 0 auto; font-size: clamp(0.875rem, 1.8vw, 1.125rem); line-height: 1.8;">
                         Nuris Mart berkomitmen untuk menyediakan produk-produk berkualitas dengan harga yang terjangkau serta memberikan pelayanan yang ramah dan profesional. Dengan prinsip jual beli yang halal dan transparan, kami hadir untuk memenuhi kebutuhan sehari-hari santri dan civitas akademika PP. Nurul Islam.
                     </p>
                 </div>

@@ -64,7 +64,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-10 col-md-12">
-                <div class="video-wrapper" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <div class="video-wrapper" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.1);">
                     <iframe 
                         src="https://www.youtube.com/embed/-KNtCaUNoKE" 
                         frameborder="0" 
@@ -93,19 +93,19 @@
         <div class="row justify-content-center">
             <div class="col-lg-10 col-md-12">
                 <div class="vl-about-content" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                    <div class="narasi-content" style="background-color: #ffffff; padding: 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); line-height: 1.8; font-size: 16px; color: #333;">
-                        <p style="margin-bottom: 20px;">
+                    <div class="narasi-content" style="background-color: #ffffff; padding: clamp(2rem, 4vw, 2.5rem); border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); line-height: 1.8; font-size: clamp(0.875rem, 1.6vw, 1rem); color: #333;">
+                        <p style="margin-bottom: 1.25rem;">
                             <strong>Narasi dari Video:</strong>
                         </p>
                         <div class="transcript-text" style="text-align: justify;">
                             <!-- Narasi/transkrip video akan ditampilkan di sini -->
-                            <p style="margin-bottom: 15px;">
+                            <p style="margin-bottom: 0.9375rem;">
                                 [Silakan tambahkan narasi atau transkrip dari video YouTube di sini. Anda dapat menggunakan alat transkripsi online untuk mengonversi audio video menjadi teks, kemudian tempelkan hasil transkripnya di bagian ini.]
                             </p>
-                            <p style="margin-bottom: 15px;">
+                            <p style="margin-bottom: 0.9375rem;">
                                 Untuk mendapatkan transkrip video, Anda dapat menggunakan berbagai alat transkripsi online seperti UniScribe, Transcriptingly, atau Mapify yang dapat mengonversi audio dari video YouTube menjadi teks secara otomatis.
                             </p>
-                            <p style="margin-bottom: 15px;">
+                            <p style="margin-bottom: 0.9375rem;">
                                 Setelah mendapatkan transkrip, silakan ganti teks placeholder ini dengan narasi atau transkrip yang sebenarnya dari video tersebut.
                             </p>
                         </div>
@@ -132,7 +132,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-video" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-video" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Produksi Video</h3>
@@ -143,7 +143,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-camera" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-camera" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Dokumentasi Foto</h3>
@@ -154,7 +154,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-bullhorn" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-bullhorn" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Publikasi & Media Sosial</h3>
@@ -165,7 +165,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-pen-nib" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-pen-nib" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Desain Grafis</h3>
@@ -176,7 +176,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-microphone" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-microphone" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Siaran & Podcast</h3>
@@ -187,7 +187,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-newspaper" style="font-size: 50px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-newspaper" style="font-size: clamp(2.5rem, 5.2vw, 3.125rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Konten Artikel</h3>
@@ -256,11 +256,11 @@
             <div class="col-lg-8">
                 <div class="vl-about-icon-box text-center" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon mb-30">
-                        <span><i class="fa-solid fa-envelope" style="font-size: 60px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-envelope" style="font-size: clamp(3rem, 6vw, 3.75rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title mb-20">Kontak Nuris Media</h3>
-                        <p style="font-size: 18px; line-height: 1.8; margin-bottom: 30px;">
+                        <p style="font-size: clamp(0.875rem, 1.8vw, 1.125rem); line-height: 1.8; margin-bottom: 30px;">
                             Untuk informasi lebih lanjut tentang layanan media, dokumentasi, atau kerjasama media, silakan hubungi tim Nuris Media.
                         </p>
                         <div class="row">
@@ -307,16 +307,16 @@
             <div class="col-lg-12">
                 <div class="vl-section-title-1 text-center">
                     <h2 class="title text-anime-style-3 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Komitmen Terhadap Media & Komunikasi</h2>
-                    <p class="pb-32" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="max-width: 900px; margin: 0 auto; font-size: 18px; line-height: 1.8;">
+                    <p class="pb-32" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="max-width: 900px; margin: 0 auto; font-size: clamp(0.875rem, 1.8vw, 1.125rem); line-height: 1.8;">
                         Nuris Media berkomitmen untuk menjadi jembatan komunikasi yang efektif antara Pondok Pesantren Nurul Islam dengan masyarakat luas. Melalui konten media yang berkualitas, dokumentasi yang profesional, dan komunikasi yang transparan, kami berupaya menyebarluaskan nilai-nilai keislaman, kependidikan, dan kebaikan kepada seluruh masyarakat.
                     </p>
                     <div class="vl-about-icon-box text-center mt-40" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
                         <div class="vl-about-icon mb-20">
-                            <span><i class="fa-solid fa-broadcast-tower" style="font-size: 60px; color: var(--ztc-text-text-4);"></i></span>
+                            <span><i class="fa-solid fa-broadcast-tower" style="font-size: clamp(3rem, 6vw, 3.75rem); color: var(--ztc-text-text-4);"></i></span>
                         </div>
                         <div class="vl-icon-content">
                             <h3 class="title">Media untuk Kebaikan</h3>
-                            <p style="font-size: 16px; line-height: 1.8;">
+                            <p style="font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8;">
                                 Dengan memanfaatkan kekuatan media modern, Nuris Media hadir untuk menyebarkan informasi positif, inspirasi, dan nilai-nilai luhur yang dapat memberikan manfaat bagi masyarakat luas.
                             </p>
                         </div>

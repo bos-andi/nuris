@@ -91,7 +91,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-gavel" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-gavel" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Kebijakan Strategis</h3>
@@ -102,7 +102,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-eye" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-eye" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Pengawasan & Evaluasi</h3>
@@ -113,7 +113,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-handshake" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-handshake" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Hubungan Eksternal</h3>
@@ -124,7 +124,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-chart-line" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-chart-line" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Pengembangan Strategis</h3>
@@ -135,7 +135,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-shield-halved" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-shield-halved" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Akuntabilitas & Transparansi</h3>
@@ -146,7 +146,7 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-icon-box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
                     <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-globe" style="font-size: 40px; color: var(--ztc-text-text-4);"></i></span>
+                        <span><i class="fa-solid fa-globe" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--ztc-text-text-4);"></i></span>
                     </div>
                     <div class="vl-icon-content">
                         <h3 class="title">Ekspansi & Go-Internasional</h3>
@@ -173,10 +173,10 @@
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="vl-about-content text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 30px;">
+                    <p style="font-size: clamp(0.875rem, 1.8vw, 1.125rem); line-height: 1.8; margin-bottom: 30px;">
                         Dewan Pengurus Pusat PP. Nurul Islam berkomitmen untuk terus mengawal dan mengembangkan yayasan menuju pencapaian visi sebagai lembaga pendidikan kader yang Robbani, berwawasan keilmuan, berdaya saing, ber-tafaqquhfiddin dan berakhlakulkarimah.
                     </p>
-                    <p style="font-size: 18px; line-height: 1.8;">
+                    <p style="font-size: clamp(0.875rem, 1.8vw, 1.125rem); line-height: 1.8;">
                         Dengan semangat "li I'lai kalimatillah wa 'izzul Islam wal Muslimin" (meninggikan Kalimah Allah dan memulyakan Islam dan Umat Islam), Dewan Pengurus Pusat senantiasa bekerja keras untuk mewujudkan cita-cita mulia tersebut melalui pengembangan di semua bidang garapan yayasan.
                     </p>
                 </div>

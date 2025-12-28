@@ -1,7 +1,8 @@
 <!--===== CSS LINK =======-->
 @php
-    // Gunakan URL dari request saat ini untuk asset
-    $baseUrl = request()->getSchemeAndHttpHost();
+    // Pastikan baseUrl tersedia, gunakan fallback jika tidak ada
+    $baseUrl = $baseUrl ?? request()->getSchemeAndHttpHost();
+    $baseUrl = rtrim($baseUrl, '/');
 @endphp
 <link rel="stylesheet" href="{{ $baseUrl }}/css/plugins/bootstrap.min.css">
 <link rel="stylesheet" href="{{ $baseUrl }}/css/plugins/aos.css">
