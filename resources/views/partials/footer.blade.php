@@ -4,9 +4,9 @@
     $baseUrl = request()->getSchemeAndHttpHost();
     $siteName = \App\Models\SiteSetting::get('site_name', 'PP. Nurul Islam');
     $siteDescription = \App\Models\SiteSetting::get('site_description', 'Pondok Pesantren Nurul Islam Mojokerto - Mendidik generasi unggul dengan nilai-nilai Islam yang rahmatan lil alamin');
-    $siteEmail = \App\Models\SiteSetting::get('site_email', 'info@nuris.ac.id');
-    $sitePhone = \App\Models\SiteSetting::get('site_phone', '(081) 234-567-890');
-    $siteAddress = \App\Models\SiteSetting::get('site_address', 'Jl. Raya Mojokerto, Mojokerto, Jawa Timur');
+    $siteEmail = \App\Models\SiteSetting::get('site_email', 'admin@nuris.id');
+    $sitePhone = \App\Models\SiteSetting::get('site_phone', '082231942642');
+    $siteAddress = \App\Models\SiteSetting::get('site_address', 'Ds. Jabontegal, Kec. Pungging, Mojokerto, Jawa Timur');
 @endphp
 <footer class="vl-footer-bg-1" style="background: linear-gradient(135deg, #01715d 0%, #014d3f 100%); position: relative; overflow: hidden;">
     <!-- Background Pattern -->
@@ -26,12 +26,20 @@
                         <p style="margin: 0 0 4px 0; font-weight: 500;">Yayasan Pondok Pesantren Nurul Islam Pungging Mojokerto</p>
                         <p style="margin: 2px 0;">Dsn. Guwo Ds. Jabontegal Kec. Pungging</p>
                         <p style="margin: 2px 0 6px 0;">Kab. Mojokerto Kode Pos 61384</p>
-                        <p style="margin: 4px 0 2px 0; font-weight: 500;">Telp :</p>
-                        <p style="margin: 2px 0;">
-                            – <a href="tel:082231942642" style="color: rgba(255, 255, 255, 0.9); text-decoration: none;">0822 3194 2642</a> (Yusril Fahmi, S.Pd., M.Pd.)
+                        <p style="margin: 4px 0 2px 0; font-weight: 500;">WhatsApp :</p>
+                        <p style="margin: 2px 0; display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+                            <a href="https://wa.me/6282231942642?text=assalamu'alikum,%20saya%20ingin%20bertanya%20tantang%20ponpes%20nuris%20-%20mojokerto" target="_blank" rel="noopener noreferrer" style="color: rgba(255, 255, 255, 0.9); text-decoration: none; display: flex; align-items: center; gap: 6px; transition: all 0.3s;" onmouseover="this.style.color='#25D366'; this.style.transform='translateX(3px)'" onmouseout="this.style.color='rgba(255,255,255,0.9)'; this.style.transform='translateX(0)'">
+                                <i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 16px;"></i>
+                                <span>082231942642</span>
+                            </a>
+                            <span style="color: rgba(255, 255, 255, 0.7); font-size: 12px;">(Yusril Fahmi, S.Pd., M.Pd.)</span>
                         </p>
-                        <p style="margin: 2px 0 0 0;">
-                            – <a href="tel:082228177769" style="color: rgba(255, 255, 255, 0.9); text-decoration: none;">0822 2817 7769</a> (Lailatul Musyarofah, S.Pd.)
+                        <p style="margin: 2px 0 0 0; display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+                            <a href="https://wa.me/6282228177769?text=assalamu'alikum,%20saya%20ingin%20bertanya%20tantang%20ponpes%20nuris%20-%20mojokerto" target="_blank" rel="noopener noreferrer" style="color: rgba(255, 255, 255, 0.9); text-decoration: none; display: flex; align-items: center; gap: 6px; transition: all 0.3s;" onmouseover="this.style.color='#25D366'; this.style.transform='translateX(3px)'" onmouseout="this.style.color='rgba(255,255,255,0.9)'; this.style.transform='translateX(0)'">
+                                <i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 16px;"></i>
+                                <span>082228177769</span>
+                            </a>
+                            <span style="color: rgba(255, 255, 255, 0.7); font-size: 12px;">(Lailatul Musyarofah, S.Pd.)</span>
                         </p>
                     </div>
                     <div class="vl-footer-social-1" style="margin-top: 8px;">
@@ -178,7 +186,7 @@
                     </div>
 
                     <!-- Alamat -->
-                    <div class="vl-footer-icon-list" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 6px;">
+                    <div class="vl-footer-icon-list" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px;">
                         <div class="vl-footer-icon" style="flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.15); border-radius: 50%;">
                             <i class="fa-solid fa-location-dot" style="color: #fff; font-size: 12px;"></i>
                         </div>
@@ -187,14 +195,9 @@
                         </div>
                     </div>
 
-                    <!-- Telepon -->
-                    <div class="vl-footer-icon-list" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0;">
-                        <div class="vl-footer-icon" style="flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.15); border-radius: 50%;">
-                            <i class="fa-solid fa-phone" style="color: #fff; font-size: 12px;"></i>
-                        </div>
-                        <div class="vl-footer-text" style="flex: 1;">
-                            <a href="tel:{{ preg_replace('/[^0-9]/', '', $sitePhone) }}" style="color: rgba(255, 255, 255, 0.85); text-decoration: none; transition: all 0.3s; font-size: 13px; line-height: 1.4; display: block;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.85)'">{{ $sitePhone }}</a>
-                        </div>
+                    <!-- Google Maps -->
+                    <div style="margin-top: 12px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.613614110085!2d112.5799135757465!3d-7.507835674068401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e780ad07832777f%3A0xa85ce4ed001748f3!2sYayasan%20Pondok%20Pesantren%20Nurul%20Islam%20Mojokerto!5e0!3m2!1sen!2sid!4v1767019553178!5m2!1sen!2sid" width="100%" height="200" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>

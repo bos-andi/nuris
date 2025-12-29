@@ -298,6 +298,107 @@
     left: 0;
 }
 
+/* ========== STYLING UNTUK LEVEL 3 SUBMENU ========== */
+/* Level 3 submenu - HIDDEN by default */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-2-submenu li.has-level-3-menu > ul.dropdown-padding.level-3-submenu,
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-2-submenu li ul.dropdown-padding.level-3-submenu {
+    position: absolute !important;
+    left: 100% !important;
+    top: 0 !important;
+    margin-left: 5px;
+    margin-top: 0 !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    display: none !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    background: var(--ztc-text-text-1);
+    width: 225px;
+    z-index: 11;
+    transition: all 0.4s;
+    border-radius: 5px;
+    padding: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Tampilkan level 3 submenu HANYA saat hover pada item level 2 yang memiliki submenu */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-2-submenu li.has-level-3-menu:hover > ul.dropdown-padding.level-3-submenu {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+    transition: all 0.5s ease-in-out !important;
+    pointer-events: auto !important;
+}
+
+/* Pastikan level 3 submenu tetap muncul saat hover ke level 3 itu sendiri */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-2-submenu li.has-level-3-menu > ul.dropdown-padding.level-3-submenu:hover {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+    pointer-events: auto !important;
+}
+
+/* Tambahkan gap kecil untuk mencegah hilang saat hover dari level 2 ke level 3 */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-2-submenu li.has-level-3-menu > ul.dropdown-padding.level-3-submenu {
+    margin-left: 2px !important;
+    left: calc(100% + 2px) !important;
+}
+
+/* Styling untuk item level 3 */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-2-submenu li.has-level-3-menu > ul.dropdown-padding.level-3-submenu li {
+    display: block;
+}
+
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-2-submenu li.has-level-3-menu > ul.dropdown-padding.level-3-submenu li a {
+    font-family: var(--ztc-family-font1);
+    font-weight: var(--ztc-weight-medium);
+    transition: all 0.4s;
+    padding: 8px 15px !important;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    border-radius: 4px;
+    color: var(--ztc-text-text-2);
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-2-submenu li.has-level-3-menu > ul.dropdown-padding.level-3-submenu li a::after {
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 3px;
+    transition: all 0.4s;
+    z-index: -1;
+    left: -10px;
+    top: 20%;
+    border-radius: 4px;
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
+    background: var(--ztc-text-text-4);
+}
+
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-2-submenu li.has-level-3-menu > ul.dropdown-padding.level-3-submenu li a:hover {
+    padding-left: 25px;
+    color: var(--ztc-text-text-3) !important;
+}
+
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-2-submenu li.has-level-3-menu > ul.dropdown-padding.level-3-submenu li a:hover::after {
+    border-radius: 4px;
+    visibility: visible;
+    transition: all 0.4s;
+    opacity: 1;
+    left: 0;
+}
+
+/* Icon arrow untuk level 3 menu */
+.homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-2-submenu li.has-level-3-menu > a i.fa-angle-right {
+    float: right;
+    margin-top: 5px;
+}
+
 /* Icon arrow untuk level 2 menu */
 .homepage1-body .header-area.homepage1 .header-elements .main-menu ul li ul.dropdown-padding.level-1-submenu li.has-level-2-menu > a i.fa-angle-right {
     float: right;
@@ -410,8 +511,61 @@
     width: 200%;
     height: 200%;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
-    animation: pengasuh-rotate 20s linear infinite;
+    animation: none;
     pointer-events: none;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Aktifkan animasi hanya di halaman profil pengasuh */
+body.profil-pengasuh-page .pengasuh-photo-wrapper::before {
+    display: block !important;
+    animation: pengasuh-rotate 20s linear infinite !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Pastikan animasi tidak muncul di halaman beranda - dengan specificity tinggi */
+.homepage1-body:not(.profil-pengasuh-page) .pengasuh-photo-wrapper::before,
+.homepage-pengasuh-photo::before,
+.vl-about-large-thumb.homepage-pengasuh-photo.pengasuh-photo-wrapper::before,
+.homepage1-body .homepage-pengasuh-photo.pengasuh-photo-wrapper::before,
+.homepage1-body .vl-about-large-thumb.homepage-pengasuh-photo::before {
+    display: none !important;
+    animation: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    background: none !important;
+}
+
+/* Presisikan alignment foto di halaman beranda */
+.homepage-pengasuh-photo {
+    align-self: flex-start;
+    margin-top: 0;
+    display: flex;
+    align-items: flex-start;
+    visibility: visible !important;
+    transform: none !important;
+    overflow: visible !important;
+}
+
+.homepage-pengasuh-photo img {
+    transform: none !important;
+    visibility: visible !important;
+}
+
+/* Pastikan kolom foto dan teks sejajar dengan baik */
+.vl-about-section .row > .col-lg-4:first-child {
+    display: flex;
+    align-items: flex-start;
+}
+
+.vl-about-section .row > .col-lg-8:last-child {
+    display: flex;
+    align-items: flex-start;
 }
 
 @keyframes pengasuh-rotate {
@@ -887,6 +1041,8 @@
 }
 
 /* Convert common px to rem (base 16px = 1rem) */
+@media (max-width: 768px) {
+    .vl-footer-content {
         margin-top: 20px !important;
     }
     

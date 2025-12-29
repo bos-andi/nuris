@@ -48,9 +48,12 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::post('/login', [AuthController::class, 'login'])->name('login.post');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     
-    // Protected routes
-    Route::middleware('auth')->group(function () {
-        Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+        // Protected routes
+        Route::middleware('auth')->group(function () {
+            Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+            
+            // API for real-time visitor statistics
+            Route::get('/api/visitor-stats', [AdminController::class, 'getVisitorStats'])->name('api.visitor-stats');
         
         // Pages management
         Route::get('/pages', [AdminController::class, 'pages'])->name('pages');

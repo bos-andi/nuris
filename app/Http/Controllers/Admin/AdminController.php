@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Page;
+use App\Models\PageView;
 use Illuminate\Support\Str;
+use Carbon\Carbon;
 
 class AdminController extends Controller
 {
@@ -25,6 +27,11 @@ class AdminController extends Controller
             ->where('event_date', '>=', now())
             ->count();
         
+        // Visitor statistics
+        $totalViews = PageView::count();
+        $todayViews = PageView::today()->count();
+        $realtimeViews = PageView::realtime(5)->count(); // Last 5 minutes
+        
         return view('admin.dashboard', compact(
             'totalPages', 
             'activePages', 
@@ -32,8 +39,75 @@ class AdminController extends Controller
             'totalArticles',
             'publishedArticles',
             'totalEvents',
-            'upcomingEvents'
+            'upcomingEvents',
+            'totalViews',
+            'todayViews',
+            'realtimeViews'
         ));
+    }
+
+    public function getVisitorStats(Request $request)
+    {
+        $minutes = $request->get('minutes', 5);
+        
+        // Real-time stats (last N minutes)
+        $realtimeViews = PageView::realtime($minutes)->count();
+        $realtimeVisitors = PageView::realtime($minutes)
+            ->distinct('session_id')
+            ->count('session_id');
+        
+        // Device stats
+        $deviceStats = PageView::realtime($minutes)
+            ->selectRaw('device_type, COUNT(*) as count')
+            ->whereNotNull('device_type')
+            ->groupBy('device_type')
+            ->get()
+            ->pluck('count', 'device_type');
+        
+        // Browser stats
+        $browserStats = PageView::realtime($minutes)
+            ->selectRaw('browser, COUNT(*) as count')
+            ->whereNotNull('browser')
+            ->groupBy('browser')
+            ->orderBy('count', 'desc')
+            ->limit(5)
+            ->get()
+            ->pluck('count', 'browser');
+        
+        // OS stats
+        $osStats = PageView::realtime($minutes)
+            ->selectRaw('os, COUNT(*) as count')
+            ->whereNotNull('os')
+            ->groupBy('os')
+            ->orderBy('count', 'desc')
+            ->limit(5)
+            ->get()
+            ->pluck('count', 'os');
+        
+        // Top pages
+        $topPages = PageView::realtime($minutes)
+            ->selectRaw('url, page_title, COUNT(*) as views')
+            ->groupBy('url', 'page_title')
+            ->orderBy('views', 'desc')
+            ->limit(10)
+            ->get();
+        
+        // Recent visitors
+        $recentVisitors = PageView::realtime($minutes)
+            ->orderBy('viewed_at', 'desc')
+            ->limit(20)
+            ->get(['url', 'page_title', 'ip_address', 'device_type', 'browser', 'os', 'viewed_at']);
+        
+        return response()->json([
+            'realtime_views' => $realtimeViews,
+            'realtime_visitors' => $realtimeVisitors,
+            'device_stats' => $deviceStats,
+            'browser_stats' => $browserStats,
+            'os_stats' => $osStats,
+            'top_pages' => $topPages,
+            'recent_visitors' => $recentVisitors,
+            'updated_at' => now()->toDateTimeString(),
+        ]);
     }
 
     public function pages()

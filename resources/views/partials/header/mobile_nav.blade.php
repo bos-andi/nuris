@@ -17,7 +17,7 @@
 <div class="mobile-sidebar mobile-sidebar1">
             <div class="logosicon-area">
                 <div class="logos">
-                    <img src="{{ asset('img/logo/nuris-logo.png') }}" alt="Logo PP. Nurul Islam" style="max-height: 80px;">
+                    <img src="{{ asset('img/logo/logo-mobile.png') }}" alt="Logo PP. Nurul Islam" style="max-height: 80px;">
                 </div>
         <div class="menu-close">
             <i class="fa-solid fa-xmark"></i>
@@ -83,6 +83,23 @@
                             <li><a href="{{ route('pages.display', 'sma-global-school-nurul-islam') }}">SMA Global School Nurul Islam</a></li>
                         </ul>
                     </li>
+                    <li><a href="https://nuris.ac.id/" target="_blank" rel="noopener noreferrer">INSTITUT NURUL ISLAM</a>
+                        <ul class="sub-menu">
+                            <li><a href="https://nuris.ac.id/" target="_blank" rel="noopener noreferrer">Fakultas Tarbiyah</a>
+                                <ul class="sub-menu">
+                                    <li><a href="https://nuris.ac.id/" target="_blank" rel="noopener noreferrer">S1 Pendidikan Agama Islam</a></li>
+                                    <li><a href="https://nuris.ac.id/" target="_blank" rel="noopener noreferrer">S1 Pendidikan Bahasa Inggris</a></li>
+                                    <li><a href="https://nuris.ac.id/" target="_blank" rel="noopener noreferrer">S1 Pendidikan Matematika</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://nuris.ac.id/" target="_blank" rel="noopener noreferrer">Fakultas Ekonomi & Bisnis Islam</a>
+                                <ul class="sub-menu">
+                                    <li><a href="https://nuris.ac.id/" target="_blank" rel="noopener noreferrer">S1 Ekonomi Syari'ah</a></li>
+                                    <li><a href="https://nuris.ac.id/" target="_blank" rel="noopener noreferrer">S1 Perbankan Syari'ah</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
                     <li><a href="#">Madrasah Diniyah</a>
                         <ul class="sub-menu">
                             <li><a href="{{ route('pages.display', 'mdta-nurul-islam-1') }}">MDTA Nurul Islam 1</a></li>
@@ -144,7 +161,7 @@
                             <i class="fa-solid fa-envelope"></i>
                         </div>
                         <div class="contact-info-text">
-                            <a href="mailto:info@nuris.ac.id">info@nuris.ac.id</a>
+                            <a href="mailto:info@nuris.ac.id">admin@nuris.id</a>
                         </div>
                     </div>
 

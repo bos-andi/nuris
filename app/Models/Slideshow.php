@@ -17,11 +17,13 @@ class Slideshow extends Model
         'button_link',
         'order',
         'is_active',
+        'font_settings',
     ];
 
     protected $casts = [
         'is_active' => 'boolean',
         'order' => 'integer',
+        'font_settings' => 'array',
     ];
 
     /**

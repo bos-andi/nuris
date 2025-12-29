@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+@php
+    // Tambahkan class khusus untuk halaman profil pengasuh
+    echo '<script>document.body.classList.add("profil-pengasuh-page");</script>';
+@endphp
 
 <!--===== PAGE HEADER STARTS =======-->
 <section class="vl-page-header" style="background-image: url({{ asset('img/banner/nuris-hero-bg.jpg') }}); background-size: cover; background-position: center; background-repeat: no-repeat;">
@@ -30,14 +34,14 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="vl-about-large-thumb reveal pengasuh-photo-wrapper" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300" style="height: 100%;">
                     @php
-                        $photoPath = public_path('img/team/pengasuh-nuris.jpg');
-                        $fallbackPath = public_path('img/team/pengasuh-nuris.png');
+                        $photoPath = public_path('img/team/abah-yai.jpg');
+                        $fallbackPath = public_path('img/team/abah-yai.png');
                         $defaultPath = 'img/team/vl-team-inner-1.1.png';
                         
                         if (file_exists($photoPath)) {
-                            $finalPath = 'img/team/pengasuh-nuris.jpg';
+                            $finalPath = 'img/team/abah-yai.jpg';
                         } elseif (file_exists($fallbackPath)) {
-                            $finalPath = 'img/team/pengasuh-nuris.png';
+                            $finalPath = 'img/team/abah-yai.png';
                         } else {
                             $finalPath = $defaultPath;
                         }
@@ -94,7 +98,7 @@
         </div>
     </div>
 </section>
-<!--===== PROFIL PENGASUH AREA ENDS =======-->
+<!--===== PROFIL PENGASUH AREA ENDS =======--> 
 
 <!--===== KEHIDUPAN MASA MUDA AREA STARTS =======-->
 <section class="vl-about-section sp2" style="background-color: #f8f9fa;">

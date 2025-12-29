@@ -17,7 +17,6 @@
 
     @yield('content')
 
-    @include('partials.cta')
     @include('partials.footer')
     @include('partials.footer_scripts')
 </body>

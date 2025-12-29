@@ -60,12 +60,52 @@
                     <div class="row" style="width: 100%;">
                         <div class="col-lg-7">
                             <div class="vl-hero-section-title">
+                                @php
+                                    // Get font settings from slide, ensure it's an array
+                                    $fontSettings = is_array($slide->font_settings) ? $slide->font_settings : (is_string($slide->font_settings) ? json_decode($slide->font_settings, true) : []);
+                                    $titleFont = $fontSettings['title'] ?? [];
+                                    $subtitleFont = $fontSettings['subtitle'] ?? [];
+                                    $descriptionFont = $fontSettings['description'] ?? [];
+                                    
+                                    // Build inline styles for title - apply if any setting exists
+                                    $titleStyle = '';
+                                    if (!empty($titleFont) && (isset($titleFont['font_family']) || isset($titleFont['font_size']) || isset($titleFont['font_weight']) || isset($titleFont['font_style']) || isset($titleFont['color']) || isset($titleFont['text_align']))) {
+                                        if (isset($titleFont['font_family'])) $titleStyle .= 'font-family: ' . $titleFont['font_family'] . ' !important; ';
+                                        if (isset($titleFont['font_size'])) $titleStyle .= 'font-size: ' . $titleFont['font_size'] . ' !important; ';
+                                        if (isset($titleFont['font_weight'])) $titleStyle .= 'font-weight: ' . $titleFont['font_weight'] . ' !important; ';
+                                        if (isset($titleFont['font_style'])) $titleStyle .= 'font-style: ' . $titleFont['font_style'] . ' !important; ';
+                                        if (isset($titleFont['color'])) $titleStyle .= 'color: ' . $titleFont['color'] . ' !important; ';
+                                        if (isset($titleFont['text_align'])) $titleStyle .= 'text-align: ' . $titleFont['text_align'] . ' !important; ';
+                                    }
+                                    
+                                    // Build inline styles for subtitle - apply if any setting exists
+                                    $subtitleStyle = '';
+                                    if (!empty($subtitleFont) && (isset($subtitleFont['font_family']) || isset($subtitleFont['font_size']) || isset($subtitleFont['font_weight']) || isset($subtitleFont['font_style']) || isset($subtitleFont['color']) || isset($subtitleFont['text_align']))) {
+                                        if (isset($subtitleFont['font_family'])) $subtitleStyle .= 'font-family: ' . $subtitleFont['font_family'] . ' !important; ';
+                                        if (isset($subtitleFont['font_size'])) $subtitleStyle .= 'font-size: ' . $subtitleFont['font_size'] . ' !important; ';
+                                        if (isset($subtitleFont['font_weight'])) $subtitleStyle .= 'font-weight: ' . $subtitleFont['font_weight'] . ' !important; ';
+                                        if (isset($subtitleFont['font_style'])) $subtitleStyle .= 'font-style: ' . $subtitleFont['font_style'] . ' !important; ';
+                                        if (isset($subtitleFont['color'])) $subtitleStyle .= 'color: ' . $subtitleFont['color'] . ' !important; ';
+                                        if (isset($subtitleFont['text_align'])) $subtitleStyle .= 'text-align: ' . $subtitleFont['text_align'] . ' !important; ';
+                                    }
+                                    
+                                    // Build inline styles for description - apply if any setting exists
+                                    $descriptionStyle = '';
+                                    if (!empty($descriptionFont) && (isset($descriptionFont['font_family']) || isset($descriptionFont['font_size']) || isset($descriptionFont['font_weight']) || isset($descriptionFont['font_style']) || isset($descriptionFont['color']) || isset($descriptionFont['text_align']))) {
+                                        if (isset($descriptionFont['font_family'])) $descriptionStyle .= 'font-family: ' . $descriptionFont['font_family'] . ' !important; ';
+                                        if (isset($descriptionFont['font_size'])) $descriptionStyle .= 'font-size: ' . $descriptionFont['font_size'] . ' !important; ';
+                                        if (isset($descriptionFont['font_weight'])) $descriptionStyle .= 'font-weight: ' . $descriptionFont['font_weight'] . ' !important; ';
+                                        if (isset($descriptionFont['font_style'])) $descriptionStyle .= 'font-style: ' . $descriptionFont['font_style'] . ' !important; ';
+                                        if (isset($descriptionFont['color'])) $descriptionStyle .= 'color: ' . $descriptionFont['color'] . ' !important; ';
+                                        if (isset($descriptionFont['text_align'])) $descriptionStyle .= 'text-align: ' . $descriptionFont['text_align'] . ' !important; ';
+                                    }
+                                @endphp
                                 @if($slide->subtitle)
-                                <h5 class="vl-subtitle"> <span><img src="{{ asset('img/icons/vl-sub-title-icon.svg') }}" alt=""></span> {{ $slide->subtitle }}</h5>
+                                <h5 class="vl-subtitle" @if($subtitleStyle) style="{{ $subtitleStyle }}" @endif> <span><img src="{{ asset('img/icons/vl-sub-title-icon.svg') }}" alt=""></span> {{ $slide->subtitle }}</h5>
                                 @endif
-                                <h1 class="vl-title text-anime-style-3">{{ $slide->title }}</h1>
+                                <h1 class="vl-title text-anime-style-3" @if($titleStyle) style="{{ $titleStyle }}" @endif>{{ $slide->title }}</h1>
                                 @if($slide->description)
-                                <p>{{ $slide->description }}</p>
+                                <p @if($descriptionStyle) style="{{ $descriptionStyle }}" @endif>{{ $slide->description }}</p>
                                 @endif
                                 @if($slide->button_text && $slide->button_link)
                                 <div class="vl-hero-btn">
@@ -129,8 +169,59 @@
     <section class="vl-about-section sp2">
         <div class="container">
             <div class="row" style="align-items: flex-start;">
-                <div class="col-lg-4 col-md-6 mb-30" style="padding-left: 0.9375rem; padding-right: 1.875rem;">
-                    <div class="vl-about-large-thumb reveal pengasuh-photo-wrapper" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300" style="height: 100%;">
+                <div class="col-lg-4 col-md-6 mb-30" style="padding-left: 0.9375rem; padding-right: 1.875rem; display: flex; align-items: flex-start;">
+                    <div class="vl-about-large-thumb pengasuh-photo-wrapper homepage-pengasuh-photo" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300" style="height: 100%; width: 100%; position: relative; transform: none !important; visibility: visible !important;">
+                        <style>
+                            .homepage-pengasuh-photo::before {
+                                display: none !important;
+                                animation: none !important;
+                                opacity: 0 !important;
+                                visibility: hidden !important;
+                                width: 0 !important;
+                                height: 0 !important;
+                                background: none !important;
+                                content: "" !important;
+                            }
+                            .homepage-pengasuh-photo {
+                                transform: none !important;
+                                visibility: visible !important;
+                                overflow: visible !important;
+                            }
+                            .homepage-pengasuh-photo img {
+                                transform: none !important;
+                                visibility: visible !important;
+                            }
+                        </style>
+                        <script>
+                            // Prevent GSAP reveal animation on homepage pengasuh photo
+                            document.addEventListener('DOMContentLoaded', function() {
+                                const pengasuhPhoto = document.querySelector('.homepage-pengasuh-photo');
+                                if (pengasuhPhoto) {
+                                    // Remove reveal class if accidentally added
+                                    pengasuhPhoto.classList.remove('reveal');
+                                    // Force reset transform
+                                    pengasuhPhoto.style.transform = 'none';
+                                    pengasuhPhoto.style.visibility = 'visible';
+                                    const img = pengasuhPhoto.querySelector('img');
+                                    if (img) {
+                                        img.style.transform = 'none';
+                                        img.style.visibility = 'visible';
+                                    }
+                                }
+                            });
+                            // Also prevent after GSAP loads
+                            window.addEventListener('load', function() {
+                                const pengasuhPhoto = document.querySelector('.homepage-pengasuh-photo');
+                                if (pengasuhPhoto) {
+                                    pengasuhPhoto.style.transform = 'none';
+                                    pengasuhPhoto.style.visibility = 'visible';
+                                    const img = pengasuhPhoto.querySelector('img');
+                                    if (img) {
+                                        img.style.transform = 'none';
+                                    }
+                                }
+                            });
+                        </script>
                         @php
                             $baseUrl = request()->getSchemeAndHttpHost();
                             $photoPath = public_path('img/team/abah-yai.jpg');
@@ -168,7 +259,7 @@
                                 </div>
                                 <div class="vl-icon-content">
                                     <h3 class="title">Pendidikan & Pengalaman</h3>
-                                    <p>23 tahun menuntut ilmu di pesantren dan S1 Manajemen di Universitas Islam Sunan Giri Surabaya</p>
+                                    <p>23 tahun menuntut i  lmu di pesantren dan S1 Manajemen di Universitas Islam Sunan Giri Surabaya</p>
                                 </div>
                             </div>
                             <!-- single icon box -->

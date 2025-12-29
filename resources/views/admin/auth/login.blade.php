@@ -29,8 +29,8 @@
                         @csrf
                         <a href="{{ route('pages.index') }}" class="block mb-8 text-center">
                             <div class="flex items-center justify-center gap-3 mb-4">
-                                <div class="p-4 rounded-2xl" style="background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);">
-                                    <img src="{{ asset('img/logo/nuris-logo.png') }}" alt="Logo PP. Nurul Islam" class="h-12 w-auto">
+                                <div class="p-4 rounded-2xl">
+                                    <img src="{{ asset('img/logo/logo-mobile.png') }}" alt="Logo PP. Nurul Islam" class="h-12 w-auto">
                                 </div>
                             </div>
                             <h2 class="text-2xl font-bold" style="color: #16a34a; letter-spacing: -0.5px;">Admin PP. Nurul Islam</h2>

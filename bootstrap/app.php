@@ -17,6 +17,11 @@ return Application::configure(basePath: dirname(__DIR__))
             'role' => \App\Http\Middleware\CheckRole::class,
         ]);
         
+        // Add page view tracking middleware to web group
+        $middleware->web(append: [
+            \App\Http\Middleware\TrackPageView::class,
+        ]);
+        
         // Redirect unauthenticated users to admin login
         $middleware->redirectGuestsTo(fn (Request $request) => route('admin.login'));
         

@@ -33,6 +33,7 @@ class SlideshowController extends Controller
             'button_link' => 'nullable|string|max:255',
             'order' => 'nullable|integer|min:0',
             'is_active' => 'boolean',
+            'font_settings' => 'nullable|array',
         ]);
 
         // Handle background image upload (only for image type)
@@ -57,6 +58,27 @@ class SlideshowController extends Controller
         // Set title to null if empty
         if (empty($validated['title'])) {
             $validated['title'] = null;
+        }
+
+        // Handle font_settings
+        if ($request->has('font_settings')) {
+            $fontSettings = [];
+            $defaultSizes = ['title' => '48px', 'subtitle' => '24px', 'description' => '16px'];
+            foreach (['title', 'subtitle', 'description'] as $field) {
+                if ($request->has("font_settings.{$field}")) {
+                    $fontSettings[$field] = [
+                        'font_family' => $request->input("font_settings.{$field}.font_family", 'Arial'),
+                        'font_size' => $request->input("font_settings.{$field}.font_size", $defaultSizes[$field]),
+                        'font_weight' => $request->input("font_settings.{$field}.font_weight", 'normal'),
+                        'font_style' => $request->input("font_settings.{$field}.font_style", 'normal'),
+                        'color' => $request->input("font_settings.{$field}.color", '#000000'),
+                        'text_align' => $request->input("font_settings.{$field}.text_align", 'left'),
+                    ];
+                }
+            }
+            $validated['font_settings'] = !empty($fontSettings) ? $fontSettings : null;
+        } else {
+            $validated['font_settings'] = null;
         }
 
         Slideshow::create($validated);
@@ -85,6 +107,7 @@ class SlideshowController extends Controller
             'button_link' => 'nullable|string|max:255',
             'order' => 'nullable|integer|min:0',
             'is_active' => 'boolean',
+            'font_settings' => 'nullable|array',
         ]);
 
         // Handle background image upload (only for image type)
@@ -111,6 +134,27 @@ class SlideshowController extends Controller
         // Set title to null if empty
         if (empty($validated['title'])) {
             $validated['title'] = null;
+        }
+
+        // Handle font_settings
+        if ($request->has('font_settings')) {
+            $fontSettings = [];
+            $defaultSizes = ['title' => '48px', 'subtitle' => '24px', 'description' => '16px'];
+            foreach (['title', 'subtitle', 'description'] as $field) {
+                if ($request->has("font_settings.{$field}")) {
+                    $fontSettings[$field] = [
+                        'font_family' => $request->input("font_settings.{$field}.font_family", 'Arial'),
+                        'font_size' => $request->input("font_settings.{$field}.font_size", $defaultSizes[$field]),
+                        'font_weight' => $request->input("font_settings.{$field}.font_weight", 'normal'),
+                        'font_style' => $request->input("font_settings.{$field}.font_style", 'normal'),
+                        'color' => $request->input("font_settings.{$field}.color", '#000000'),
+                        'text_align' => $request->input("font_settings.{$field}.text_align", 'left'),
+                    ];
+                }
+            }
+            $validated['font_settings'] = !empty($fontSettings) ? $fontSettings : null;
+        } else {
+            $validated['font_settings'] = null;
         }
 
         $slideshow->update($validated);

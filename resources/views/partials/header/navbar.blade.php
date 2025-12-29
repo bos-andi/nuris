@@ -26,7 +26,7 @@
                             <span><img src="{{ $baseUrl }}/img/icons/vl-top-ic-1.2.svg" alt=""></span>
                         </div>
                         <div class="top-content">
-                            <a href="tel:081234567890">(081) 234-567-890</a>
+                            <a href="https://wa.me/6282231942642?text=assalamu'alikum,%20saya%20ingin%20bertanya%20tantang%20ponpes%20nuris%20-%20mojokerto">082231942642</a>
                         </div>
                     </div>
                 </div>
@@ -105,6 +105,23 @@
                                             <ul class="dropdown-padding level-2-submenu">
                                                 <li><a href="{{ route('pages.display', 'ma-2-ad-dauliyah-nurul-islam') }}">MA 2 Ad-Dauliyah Nurul Islam</a></li>
                                                 <li><a href="{{ route('pages.display', 'sma-global-school-nurul-islam') }}">SMA Global School Nurul Islam</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-level-2-menu"><a href="https://nuris.ac.id/" target="_blank" rel="noopener noreferrer">INSTITUT NURUL ISLAM <i class="fa-solid fa-angle-right"></i></a>
+                                            <ul class="dropdown-padding level-2-submenu">
+                                                <li class="has-level-3-menu"><a href="https://nuris.ac.id/" target="_blank" rel="noopener noreferrer">Fakultas Tarbiyah <i class="fa-solid fa-angle-right"></i></a>
+                                                    <ul class="dropdown-padding level-3-submenu">
+                                                        <li><a href="https://nuris.ac.id/" target="_blank" rel="noopener noreferrer">S1 Pendidikan Agama Islam</a></li>
+                                                        <li><a href="https://nuris.ac.id/" target="_blank" rel="noopener noreferrer">S1 Pendidikan Bahasa Inggris</a></li>
+                                                        <li><a href="https://nuris.ac.id/" target="_blank" rel="noopener noreferrer">S1 Pendidikan Matematika</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-level-3-menu"><a href="https://nuris.ac.id/" target="_blank" rel="noopener noreferrer">Fakultas Ekonomi & Bisnis Islam <i class="fa-solid fa-angle-right"></i></a>
+                                                    <ul class="dropdown-padding level-3-submenu">
+                                                        <li><a href="https://nuris.ac.id/" target="_blank" rel="noopener noreferrer">S1 Ekonomi Syari'ah</a></li>
+                                                        <li><a href="https://nuris.ac.id/" target="_blank" rel="noopener noreferrer">S1 Perbankan Syari'ah</a></li>
+                                                    </ul>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li class="has-level-2-menu"><a href="#">Madrasah Diniyah <i class="fa-solid fa-angle-right"></i></a>

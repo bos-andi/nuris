@@ -150,11 +150,105 @@
     .vl-hero-section-title .breadcrumb-item a:hover {
         color: #FBD459;
     }
+    
+    /* Remove dimming overlay on header image */
+    .vl-banner .vl-hero-bg:after {
+        display: none !important;
+    }
 </style>
 <!--===== HERO AREA ENDS =======-->
 
-<!--===== PERSYARATAN PENDAFTARAN STARTS =======-->
-<section class="vl-about-section sp2 psb-section-padding" id="persyaratan" style="background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%); position: relative; overflow: hidden;">
+<!--===== UNIT PENDIDIKAN STARTS =======-->
+<section class="vl-about-section sp2 psb-section-padding" id="unit">
+    <div class="container">
+        <div class="vl-section-title-1 mb-60 text-center">
+            <h5 class="subtitle psb-subtitle-size" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                <span><img src="{{ asset('img/icons/vl-sub-title-icon.svg') }}" alt=""></span> Pilihan Unit
+            </h5>
+            <h2 class="title text-anime-style-3 psb-title-size" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">Unit Pendidikan yang Tersedia</h2>
+            <p class="psb-text-size" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500" style="max-width: 90%; margin: 0 auto;">
+                Pondok Pesantren Nurul Islam menyediakan berbagai unit pendidikan formal untuk putra-putri Anda
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="vl-about-icon-box psb-card-padding" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="background: white; border-radius: 0.9375rem; height: 100%; box-shadow: 0 0.3125rem 1.25rem rgba(0,0,0,0.1); border-top: 0.25rem solid #01715d;">
+                    <div class="vl-about-icon">
+                        <span><i class="fa-solid fa-school psb-icon-size" style="color: #01715d;"></i></span>
+                    </div>
+                    <div class="vl-icon-content">
+                        <h3 class="title psb-subtitle-size" style="margin-bottom: 0.9375rem;">Jenjang SLTP</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0; color: #6c757d;">
+                            <li class="psb-text-size" style="margin-bottom: 0.5rem; padding-left: 1.25rem; position: relative;">
+                                <i class="fa-solid fa-check" style="position: absolute; left: 0; color: #01715d;"></i>
+                                MTs 1 Nurul Islam
+                            </li>
+                            <li class="psb-text-size" style="margin-bottom: 0.5rem; padding-left: 1.25rem; position: relative;">
+                                <i class="fa-solid fa-check" style="position: absolute; left: 0; color: #01715d;"></i>
+                                MTs 2 Nurul Islam
+                            </li>
+                            <li class="psb-text-size" style="margin-bottom: 0.5rem; padding-left: 1.25rem; position: relative;">
+                                <i class="fa-solid fa-check" style="position: absolute; left: 0; color: #01715d;"></i>
+                                SMP UBQ Nurul Islam
+                            </li>
+                            <li class="psb-text-size" style="margin-bottom: 0.5rem; padding-left: 1.25rem; position: relative;">
+                                <i class="fa-solid fa-check" style="position: absolute; left: 0; color: #01715d;"></i>
+                                SMP 2 Trans-Sains Nurul Islam
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="vl-about-icon-box psb-card-padding" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="background: white; border-radius: 0.9375rem; height: 100%; box-shadow: 0 0.3125rem 1.25rem rgba(0,0,0,0.1); border-top: 0.25rem solid #FBD459;">
+                    <div class="vl-about-icon">
+                        <span><i class="fa-solid fa-graduation-cap psb-icon-size" style="color: #FBD459;"></i></span>
+                    </div>
+                    <div class="vl-icon-content">
+                        <h3 class="title psb-subtitle-size" style="margin-bottom: 0.9375rem;">Jenjang SLTA Reguler</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0; color: #6c757d;">
+                            <li class="psb-text-size" style="margin-bottom: 0.5rem; padding-left: 1.25rem; position: relative;">
+                                <i class="fa-solid fa-check" style="position: absolute; left: 0; color: #FBD459;"></i>
+                                MA 1 Nurul Islam
+                            </li>
+                            <li class="psb-text-size" style="margin-bottom: 0.5rem; padding-left: 1.25rem; position: relative;">
+                                <i class="fa-solid fa-check" style="position: absolute; left: 0; color: #FBD459;"></i>
+                                SMK UBP Nurul Islam
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="vl-about-icon-box psb-card-padding" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500" style="background: white; border-radius: 0.9375rem; height: 100%; box-shadow: 0 0.3125rem 1.25rem rgba(0,0,0,0.1); border-top: 0.25rem solid #28a745;">
+                    <div class="vl-about-icon">
+                        <span><i class="fa-solid fa-globe psb-icon-size" style="color: #28a745;"></i></span>
+                    </div>
+                    <div class="vl-icon-content">
+                        <h3 class="title psb-subtitle-size" style="margin-bottom: 0.9375rem;">Jenjang SLTA Internasional</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0; color: #6c757d;">
+                            <li class="psb-text-size" style="margin-bottom: 0.5rem; padding-left: 1.25rem; position: relative;">
+                                <i class="fa-solid fa-check" style="position: absolute; left: 0; color: #28a745;"></i>
+                                MA 2 Ad-Dauliyah Nurul Islam
+                            </li>
+                            <li class="psb-text-size" style="margin-bottom: 0.5rem; padding-left: 1.25rem; position: relative;">
+                                <i class="fa-solid fa-check" style="position: absolute; left: 0; color: #28a745;"></i>
+                                SMA Global School Nurul Islam
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--===== UNIT PENDIDIKAN ENDS =======-->
+
+<!--===== TIMELINE GELOMBANG & PERSYARATAN STARTS =======-->
+<section class="vl-about-section sp2 psb-section-padding" id="timeline-persyaratan" style="background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%); position: relative; overflow: hidden;">
     <!-- Background Pattern -->
     <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: radial-gradient(circle at 20% 50%, rgba(1, 113, 93, 0.03) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(251, 212, 89, 0.03) 0%, transparent 50%); z-index: 0;"></div>
     
@@ -162,20 +256,20 @@
         <!-- Section Header -->
         <div class="vl-section-title-1 mb-60 text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
             <h5 class="subtitle psb-subtitle-size">
-                <span><img src="{{ asset('img/icons/vl-sub-title-icon.svg') }}" alt=""></span> Dokumen yang Diperlukan
+                <span><img src="{{ asset('img/icons/vl-sub-title-icon.svg') }}" alt=""></span> Informasi Penting
             </h5>
             <h2 class="title text-anime-style-3 psb-title-size" style="color: #01715d; font-weight: 700;">
-                Persyaratan Pendaftaran
+                Timeline Gelombang & Persyaratan
             </h2>
             <p class="psb-text-size" style="max-width: 90%; margin: 0 auto; color: #6c757d; margin-top: clamp(0.75rem, 1.5vw, 1rem);">
-                Siapkan dokumen-dokumen berikut untuk kelengkapan berkas pendaftaran
+                Informasi lengkap mengenai timeline gelombang pendaftaran dan persyaratan yang diperlukan
             </p>
         </div>
 
-        <!-- Requirements List Card -->
-        <div class="row justify-content-center">
-            <div class="col-lg-10 col-xl-9">
-                <div class="card" style="border: none; border-radius: clamp(1.25rem, 3vw, 1.875rem); box-shadow: 0 clamp(0.625rem, 2vw, 1.25rem) clamp(1.875rem, 4vw, 3.75rem) rgba(0, 0, 0, 0.08); overflow: hidden; background: #ffffff;" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+        <div class="row">
+            <!-- Kolom 1: Persyaratan -->
+            <div class="col-lg-6 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                <div class="card" style="border: none; border-radius: clamp(1.25rem, 3vw, 1.875rem); box-shadow: 0 clamp(0.625rem, 2vw, 1.25rem) clamp(1.875rem, 4vw, 3.75rem) rgba(0, 0, 0, 0.08); overflow: hidden; background: #ffffff; height: 100%;">
                     <div style="background: linear-gradient(135deg, #01715d 0%, #014d3f 100%); padding: clamp(1.5rem, 3vw, 2rem); position: relative; overflow: hidden;">
                         <!-- Decorative shapes -->
                         <div style="position: absolute; top: -50%; right: -10%; width: clamp(12rem, 30vw, 18rem); height: clamp(12rem, 30vw, 18rem); background: rgba(255, 255, 255, 0.05); border-radius: 50%;"></div>
@@ -184,45 +278,134 @@
                         <div style="position: relative; z-index: 1;">
                             <h3 style="color: #ffffff; font-weight: 700; font-size: clamp(1.25rem, 2.5vw, 1.75rem); margin: 0 0 clamp(0.5rem, 1vw, 0.75rem) 0; display: flex; align-items: center; gap: clamp(0.75rem, 1.5vw, 1rem);">
                                 <i class="fa-solid fa-file-circle-check" style="font-size: clamp(1.5rem, 3vw, 2rem);"></i>
-                                Dokumen yang Harus Disiapkan
+                                Persyaratan Pendaftaran
                             </h3>
                             <p style="color: rgba(255, 255, 255, 0.9); margin: 0; font-size: clamp(0.8125rem, 1.5vw, 0.9375rem);">
-                                Pastikan semua dokumen telah dilengkapi sebelum melakukan pendaftaran
+                                Dokumen yang harus disiapkan
                             </p>
                         </div>
                     </div>
                     
-                    <div style="padding: clamp(2rem, 4vw, 3.5rem);">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <ol style="list-style: none; padding: 0; margin: 0; counter-reset: requirement-counter;">
-                                    @php
-                                        $requirements = [
-                                            'Legalisir Ijazah 3 Lembar (jika sudah ada)',
-                                            'Fotokopi Rapor kelas 4-6 / 7-9 dilegalisir',
-                                            'Fotokopi NISN 3 Lembar',
-                                            'Fotokopi KK 3 Lembar',
-                                            'Fotokopi Akta Kelahiran 3 Lembar',
-                                            'Fotokopi KTP Orang Tua 3 Lembar',
-                                            'Pas Foto Hitam Putih 3x4 - 3 Lembar',
-                                            'Fotokopi KIP 3 Lembar (bagi yang punya)',
-                                            'Materai 10.000',
-                                            'Semua berkas dimasukkan map kancing (warna sesuai kode unit)',
-                                        ];
-                                    @endphp
+                    <div style="padding: clamp(1.5rem, 3vw, 2.5rem); max-height: 600px; overflow-y: auto;">
+                        <ol style="list-style: none; padding: 0; margin: 0; counter-reset: requirement-counter;">
+                            @php
+                                $requirements = [
+                                    'Legalisir Ijazah 3 Lembar (jika sudah ada)',
+                                    'Fotokopi Rapor kelas 4-6 / 7-9 dilegalisir',
+                                    'Fotokopi NISN 3 Lembar',
+                                    'Fotokopi KK 3 Lembar',
+                                    'Fotokopi Akta Kelahiran 3 Lembar',
+                                    'Fotokopi KTP Orang Tua 3 Lembar',
+                                    'Pas Foto Hitam Putih 3x4 - 3 Lembar',
+                                    'Fotokopi KIP 3 Lembar (bagi yang punya)',
+                                    'Materai 10.000',
+                                    'Semua berkas dimasukkan map kancing (warna sesuai kode unit)',
+                                ];
+                            @endphp
+                            
+                            @foreach($requirements as $index => $requirement)
+                            <li style="counter-increment: requirement-counter; margin-bottom: clamp(0.875rem, 1.5vw, 1rem); padding: clamp(0.75rem, 1.2vw, 0.875rem) clamp(0.875rem, 1.5vw, 1rem); background: #f8f9fa; border-left: 0.25rem solid #01715d; border-radius: clamp(0.5rem, 1vw, 0.625rem); transition: all 0.3s ease; position: relative; padding-left: clamp(3rem, 6vw, 3.5rem);" onmouseover="this.style.background='#f0f7f6'; this.style.transform='translateX(0.5rem)'; this.style.boxShadow='0 0.25rem 0.75rem rgba(1, 113, 93, 0.1)';" onmouseout="this.style.background='#f8f9fa'; this.style.transform='translateX(0)'; this.style.boxShadow='none';">
+                                <span style="position: absolute; left: clamp(0.875rem, 1.5vw, 1rem); top: clamp(0.75rem, 1.2vw, 0.875rem); width: clamp(1.75rem, 3.5vw, 2.25rem); height: clamp(1.75rem, 3.5vw, 2.25rem); background: linear-gradient(135deg, #01715d 0%, #014d3f 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 700; font-size: clamp(0.75rem, 1.5vw, 0.875rem); box-shadow: 0 clamp(0.125rem, 0.4vw, 0.25rem) clamp(0.375rem, 0.8vw, 0.5rem) rgba(1, 113, 93, 0.2);">
+                                    {{ $index + 1 }}
+                                </span>
+                                <span style="color: #2c3e50; font-size: clamp(0.8125rem, 1.5vw, 0.9375rem); line-height: 1.6; display: block;">
+                                    {{ $requirement }}
+                                </span>
+                            </li>
+                            @endforeach
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kolom 2: Timeline Gelombang -->
+            <div class="col-lg-6 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                <div class="card" style="border: none; border-radius: clamp(1.25rem, 3vw, 1.875rem); box-shadow: 0 clamp(0.625rem, 2vw, 1.25rem) clamp(1.875rem, 4vw, 3.75rem) rgba(0, 0, 0, 0.08); overflow: hidden; background: #ffffff; height: 100%;">
+                    <div style="background: linear-gradient(135deg, #FBD459 0%, #F39C12 100%); padding: clamp(1.5rem, 3vw, 2rem); position: relative; overflow: hidden;">
+                        <div style="position: relative; z-index: 1;">
+                            <h3 style="color: #ffffff; font-weight: 700; font-size: clamp(1.25rem, 2.5vw, 1.75rem); margin: 0 0 clamp(0.5rem, 1vw, 0.75rem) 0; display: flex; align-items: center; gap: clamp(0.75rem, 1.5vw, 1rem);">
+                                <i class="fa-solid fa-calendar-days" style="font-size: clamp(1.5rem, 3vw, 2rem);"></i>
+                                Timeline Gelombang
+                            </h3>
+                            <p style="color: rgba(255, 255, 255, 0.9); margin: 0; font-size: clamp(0.8125rem, 1.5vw, 0.9375rem);">
+                                Jadwal pendaftaran per gelombang
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div style="padding: clamp(1.5rem, 3vw, 2.5rem); max-height: 600px; overflow-y: auto;">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0" style="margin: 0; font-size: clamp(0.75rem, 1.3vw, 0.875rem);">
+                                <thead style="background: linear-gradient(135deg, #01715d 0%, #014d3f 100%); color: #fff;">
+                                    <tr>
+                                        <th style="padding: clamp(0.75rem, 1.5vw, 1rem); font-weight: 700; border: none; text-align: center; vertical-align: middle; font-size: clamp(0.75rem, 1.3vw, 0.875rem); width: 8%;">NO</th>
+                                        <th style="padding: clamp(0.75rem, 1.5vw, 1rem); font-weight: 700; border: none; text-align: center; vertical-align: middle; font-size: clamp(0.75rem, 1.3vw, 0.875rem); width: 25%;">WAKTU</th>
+                                        <th style="padding: clamp(0.75rem, 1.5vw, 1rem); font-weight: 700; border: none; text-align: center; vertical-align: middle; font-size: clamp(0.75rem, 1.3vw, 0.875rem); width: 42%;">KEGIATAN</th>
+                                        <th style="padding: clamp(0.75rem, 1.5vw, 1rem); font-weight: 700; border: none; text-align: center; vertical-align: middle; font-size: clamp(0.75rem, 1.3vw, 0.875rem); width: 25%;">GELOMBANG</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Gelombang I -->
+                                    <tr style="background-color: #ffffff;">
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); text-align: center; vertical-align: middle; font-weight: 700; color: #2c3e50; border-bottom: 1px solid #e9ecef; font-size: clamp(0.75rem, 1.3vw, 0.875rem);">1</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #2c3e50; border-bottom: 1px solid #e9ecef; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">1 Jan - 7 Mar 2026</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #2c3e50; border-bottom: 1px solid #e9ecef; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">Pendaftaran & Seleksi</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #6c757d; border-bottom: 1px solid #e9ecef; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">Gelombang I</td>
+                                    </tr>
+                                    <tr style="background-color: #ffffff;">
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); text-align: center; vertical-align: middle; font-weight: 700; color: #2c3e50; border-bottom: 1px solid #e9ecef; font-size: clamp(0.75rem, 1.3vw, 0.875rem);">2</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #2c3e50; border-bottom: 1px solid #e9ecef; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">7-8 Mar 2026</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #2c3e50; border-bottom: 1px solid #e9ecef; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">Tes Masuk</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #6c757d; border-bottom: 1px solid #e9ecef; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">Gelombang I</td>
+                                    </tr>
+                                    <tr style="background-color: #e9ecef;">
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); text-align: center; vertical-align: middle; font-weight: 700; color: #2c3e50; border-bottom: 1px solid #dee2e6; font-size: clamp(0.75rem, 1.3vw, 0.875rem);">3</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #2c3e50; border-bottom: 1px solid #dee2e6; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">8 Mar - 18 Apr 2026</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #2c3e50; border-bottom: 1px solid #dee2e6; font-size: clamp(0.7rem, 1.2vw, 0.8125rem); font-weight: 600;">Daftar Ulang</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #6c757d; border-bottom: 1px solid #dee2e6; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">Gelombang I</td>
+                                    </tr>
                                     
-                                    @foreach($requirements as $index => $requirement)
-                                    <li style="counter-increment: requirement-counter; margin-bottom: clamp(1rem, 2vw, 1.25rem); padding: clamp(0.875rem, 1.5vw, 1.125rem) clamp(1rem, 2vw, 1.25rem); background: #f8f9fa; border-left: 0.25rem solid #01715d; border-radius: clamp(0.5rem, 1vw, 0.625rem); transition: all 0.3s ease; position: relative; padding-left: clamp(3.5rem, 7vw, 4.5rem);" onmouseover="this.style.background='#f0f7f6'; this.style.transform='translateX(0.5rem)'; this.style.boxShadow='0 0.25rem 0.75rem rgba(1, 113, 93, 0.1)';" onmouseout="this.style.background='#f8f9fa'; this.style.transform='translateX(0)'; this.style.boxShadow='none';">
-                                        <span style="position: absolute; left: clamp(1rem, 2vw, 1.25rem); top: clamp(0.875rem, 1.5vw, 1.125rem); width: clamp(2rem, 4vw, 2.5rem); height: clamp(2rem, 4vw, 2.5rem); background: linear-gradient(135deg, #01715d 0%, #014d3f 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 700; font-size: clamp(0.875rem, 1.8vw, 1rem); box-shadow: 0 clamp(0.125rem, 0.4vw, 0.25rem) clamp(0.375rem, 0.8vw, 0.5rem) rgba(1, 113, 93, 0.2);">
-                                            {{ $index + 1 }}
-                                        </span>
-                                        <span style="color: #2c3e50; font-size: clamp(0.875rem, 1.8vw, 1rem); line-height: 1.6; display: block;">
-                                            {{ $requirement }}
-                                        </span>
-                                    </li>
-                                    @endforeach
-                                </ol>
-                            </div>
+                                    <!-- Gelombang II -->
+                                    <tr style="background-color: #ffffff;">
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); text-align: center; vertical-align: middle; font-weight: 700; color: #2c3e50; border-bottom: 1px solid #e9ecef; font-size: clamp(0.75rem, 1.3vw, 0.875rem);">4</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #2c3e50; border-bottom: 1px solid #e9ecef; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">8 Mar - 29 Apr 2026</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #2c3e50; border-bottom: 1px solid #e9ecef; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">Pendaftaran & Seleksi</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #6c757d; border-bottom: 1px solid #e9ecef; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">Gelombang II</td>
+                                    </tr>
+                                    <tr style="background-color: #ffffff;">
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); text-align: center; vertical-align: middle; font-weight: 700; color: #2c3e50; border-bottom: 1px solid #e9ecef; font-size: clamp(0.75rem, 1.3vw, 0.875rem);">5</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #2c3e50; border-bottom: 1px solid #e9ecef; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">29-30 Apr 2026</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #2c3e50; border-bottom: 1px solid #e9ecef; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">Tes Masuk</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #6c757d; border-bottom: 1px solid #e9ecef; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">Gelombang II</td>
+                                    </tr>
+                                    <tr style="background-color: #e9ecef;">
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); text-align: center; vertical-align: middle; font-weight: 700; color: #2c3e50; border-bottom: 1px solid #dee2e6; font-size: clamp(0.75rem, 1.3vw, 0.875rem);">6</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #2c3e50; border-bottom: 1px solid #dee2e6; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">30 Apr - 13 Jun 2026</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #2c3e50; border-bottom: 1px solid #dee2e6; font-size: clamp(0.7rem, 1.2vw, 0.8125rem); font-weight: 600;">Daftar Ulang</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #6c757d; border-bottom: 1px solid #dee2e6; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">Gelombang II<br><small style="color: #dc3545; font-weight: 600;">+Rp. 500.000</small></td>
+                                    </tr>
+                                    
+                                    <!-- Gelombang III -->
+                                    <tr style="background-color: #ffffff;">
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); text-align: center; vertical-align: middle; font-weight: 700; color: #2c3e50; border-bottom: 1px solid #e9ecef; font-size: clamp(0.75rem, 1.3vw, 0.875rem);">7</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #2c3e50; border-bottom: 1px solid #e9ecef; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">1 Mei - 13 Jun 2026</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #2c3e50; border-bottom: 1px solid #e9ecef; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">Pendaftaran & Seleksi</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #6c757d; border-bottom: 1px solid #e9ecef; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">Gelombang III</td>
+                                    </tr>
+                                    <tr style="background-color: #ffffff;">
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); text-align: center; vertical-align: middle; font-weight: 700; color: #2c3e50; border-bottom: 1px solid #e9ecef; font-size: clamp(0.75rem, 1.3vw, 0.875rem);">8</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #2c3e50; border-bottom: 1px solid #e9ecef; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">13-14 Jun 2026</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #2c3e50; border-bottom: 1px solid #e9ecef; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">Tes Masuk</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #6c757d; border-bottom: 1px solid #e9ecef; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">Gelombang III</td>
+                                    </tr>
+                                    <tr style="background-color: #e9ecef;">
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); text-align: center; vertical-align: middle; font-weight: 700; color: #2c3e50; border-bottom: none; font-size: clamp(0.75rem, 1.3vw, 0.875rem);">9</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #2c3e50; border-bottom: none; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">14-30 Jun 2026</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #2c3e50; border-bottom: none; font-size: clamp(0.7rem, 1.2vw, 0.8125rem); font-weight: 600;">Daftar Ulang</td>
+                                        <td style="padding: clamp(0.75rem, 1.5vw, 1rem); vertical-align: middle; color: #6c757d; border-bottom: none; font-size: clamp(0.7rem, 1.2vw, 0.8125rem);">Gelombang III<br><small style="color: #dc3545; font-weight: 600;">+Rp. 750.000</small></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -230,9 +413,114 @@
         </div>
     </div>
 </section>
-<!--===== PERSYARATAN PENDAFTARAN ENDS =======-->
+<!--===== TIMELINE GELOMBANG & PERSYARATAN ENDS =======-->
 
-<!--===== JADWAL PENDAFTARAN STARTS =======-->
+<!--===== ALUR PENDAFTARAN STARTS =======-->
+<section class="vl-about-section sp2 psb-section-padding" style="background: linear-gradient(to bottom, #e8f5f3 0%, #ffffff 50%); position: relative;" id="prosedur">
+    <!-- Background Pattern -->
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 50%; background-image: repeating-linear-gradient(45deg, rgba(1, 113, 93, 0.03) 0px, rgba(1, 113, 93, 0.03) 10px, transparent 10px, transparent 20px); z-index: 0;"></div>
+    
+    <div class="container" style="position: relative; z-index: 1;">
+        <!-- Title Banner -->
+        <div class="text-center mb-60" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <div style="background: linear-gradient(135deg, #FBD459 0%, #F39C12 100%); border-radius: clamp(1.25rem, 3vw, 1.875rem); padding: clamp(1.25rem, 2.5vw, 1.875rem); display: inline-block; box-shadow: 0 clamp(0.3125rem, 1vw, 0.625rem) clamp(1.25rem, 2.5vw, 2.5rem) rgba(251, 212, 89, 0.3);">
+                <h2 class="psb-title-size" style="color: #ffffff; margin: 0; font-weight: 700; text-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.2);">Alur Pendaftaran</h2>
+            </div>
+        </div>
+
+        <!-- Content Card -->
+        <div class="card" style="background: #ffffff; border-radius: clamp(1.25rem, 3vw, 1.875rem); border: 0.1875rem solid #FBD459; box-shadow: 0 clamp(0.625rem, 2vw, 1.25rem) clamp(1.875rem, 4vw, 3.75rem) rgba(0, 0, 0, 0.1); padding: clamp(2rem, 4vw, 3rem);" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+            <div class="row">
+                @php
+                    $steps = [
+                        [
+                            'number' => 1,
+                            'title' => 'Screening Santri',
+                            'description' => 'Wawancara Calon Santri dan Calon Wali Santri',
+                            'icon' => 'fa-search'
+                        ],
+                        [
+                            'number' => 2,
+                            'title' => 'Membeli Formulir',
+                            'description' => 'Membeli dikantor sekretariat PSB PP. Nurul Islam Mojokerto',
+                            'icon' => 'fa-file-invoice'
+                        ],
+                        [
+                            'number' => 3,
+                            'title' => 'Mengisi Formulir',
+                            'description' => 'Serta melengkapi seluruh persyaratan yang telah ditentukan Panitia PSB',
+                            'icon' => 'fa-file-pen'
+                        ],
+                        [
+                            'number' => 4,
+                            'title' => 'Melakukan Pendaftaran',
+                            'description' => 'Menyerahkan Berkas & Mengisi Surat Pernyataan dan Membayar Mahar',
+                            'icon' => 'fa-clipboard-check'
+                        ],
+                        [
+                            'number' => 5,
+                            'title' => 'Tes Expert Classes',
+                            'description' => 'Mengerjakan tes expert classes berbasis komputer',
+                            'icon' => 'fa-laptop'
+                        ],
+                        [
+                            'number' => 6,
+                            'title' => 'Penandatanganan Pakta Integritas',
+                            'description' => 'Mengisi Surat Pernyataan Kesanggupan Mematuhi Seluruh Aturan Pesantren',
+                            'icon' => 'fa-signature'
+                        ],
+                        [
+                            'number' => 7,
+                            'title' => 'Daftar Ulang',
+                            'description' => 'Melakukan pelunasan dan menerima kain seragam',
+                            'icon' => 'fa-money-bill-wave'
+                        ],
+                        [
+                            'number' => 8,
+                            'title' => 'Santri Masuk',
+                            'description' => 'Sesuai Pengumuman Resmi berupa Surat Edaran dari Pondok',
+                            'icon' => 'fa-check-circle'
+                        ],
+                    ];
+                @endphp
+                
+                @foreach($steps as $index => $step)
+                <div class="col-lg-12 mb-4" style="position: relative;" data-aos="fade-up" data-aos-duration="800" data-aos-delay="{{ 500 + ($index * 100) }}">
+                    @if($index < count($steps) - 1)
+                    <!-- Arrow -->
+                    <div style="position: absolute; left: 50%; top: 100%; transform: translateX(-50%); z-index: 2; display: flex; align-items: center; justify-content: center; width: clamp(2.5rem, 5vw, 3.5rem); height: clamp(2.5rem, 5vw, 3.5rem); background: #FBD459; border-radius: 50%; margin-top: clamp(0.5rem, 1vw, 0.75rem);">
+                        <i class="fa-solid fa-arrow-down" style="color: #2c3e50; font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 700;"></i>
+                    </div>
+                    @endif
+                    
+                    <div style="display: flex; align-items: center; gap: clamp(1rem, 2.5vw, 1.5rem);">
+                        <!-- Step Banner -->
+                        <div style="flex: 1; position: relative;">
+                            <div style="background: linear-gradient(135deg, #FBD459 0%, #F39C12 100%); border-radius: clamp(0.625rem, 1.5vw, 0.9375rem) clamp(0.625rem, 1.5vw, 0.9375rem) 0 0; padding: clamp(0.75rem, 1.5vw, 1rem) clamp(1rem, 2vw, 1.5rem); position: relative; clip-path: polygon(0 0, calc(100% - clamp(1.5rem, 3vw, 2rem)) 0, 100% 100%, 0 100%);">
+                                <div style="display: flex; align-items: center; gap: clamp(0.75rem, 1.5vw, 1rem);">
+                                    <span style="color: #ffffff; font-weight: 700; font-size: clamp(1.25rem, 2.5vw, 1.5rem); line-height: 1;">{{ $step['number'] }}.</span>
+                                    <h3 style="color: #ffffff; font-weight: 700; font-size: clamp(1rem, 2vw, 1.25rem); margin: 0; line-height: 1.3;">{{ $step['title'] }}</h3>
+                                </div>
+                            </div>
+                            <div style="background: #ffffff; padding: clamp(0.875rem, 1.5vw, 1.125rem) clamp(1rem, 2vw, 1.5rem); border-radius: 0 0 clamp(0.625rem, 1.5vw, 0.9375rem) clamp(0.625rem, 1.5vw, 0.9375rem); border: 0.125rem solid #FBD459; border-top: none;">
+                                <p style="color: #2c3e50; margin: 0; font-size: clamp(0.8125rem, 1.5vw, 0.9375rem); line-height: 1.6;">{{ $step['description'] }}</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Icon Circle -->
+                        <div style="flex-shrink: 0; width: clamp(4rem, 8vw, 5.5rem); height: clamp(4rem, 8vw, 5.5rem); background: #ffffff; border: 0.1875rem solid #FBD459; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 clamp(0.25rem, 0.8vw, 0.5rem) clamp(0.625rem, 1.5vw, 1.25rem) rgba(251, 212, 89, 0.3);">
+                            <i class="fa-solid {{ $step['icon'] }}" style="color: #FBD459; font-size: clamp(1.5rem, 3vw, 2rem);"></i>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</section>
+<!--===== ALUR PENDAFTARAN ENDS =======-->
+
+<!--===== TIMELINE PENDAFTARAN STARTS =======-->
 <section class="vl-about-section sp2 psb-section-padding" style="background-color: #f8f9fa;" id="jadwal">
     <div class="container">
         <div class="vl-section-title-1 mb-60 text-center">
@@ -529,267 +817,162 @@
 </section>
 <!--===== BIAYA PENDAFTARAN ENDS =======-->
 
-<!--===== PROSEDUR PENDAFTARAN STARTS =======-->
-<section class="vl-about-section sp2 psb-section-padding" style="background: linear-gradient(to bottom, #e8f5f3 0%, #ffffff 50%); position: relative;" id="prosedur">
-    <!-- Background Pattern -->
-    <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 50%; background-image: repeating-linear-gradient(45deg, rgba(1, 113, 93, 0.03) 0px, rgba(1, 113, 93, 0.03) 10px, transparent 10px, transparent 20px); z-index: 0;"></div>
-    
-    <div class="container" style="position: relative; z-index: 1;">
-        <!-- Title Banner -->
-        <div class="text-center mb-60" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-            <div style="background: linear-gradient(135deg, #FBD459 0%, #F39C12 100%); border-radius: clamp(1.25rem, 3vw, 1.875rem); padding: clamp(1.25rem, 2.5vw, 1.875rem); display: inline-block; box-shadow: 0 clamp(0.3125rem, 1vw, 0.625rem) clamp(1.25rem, 2.5vw, 2.5rem) rgba(251, 212, 89, 0.3);">
-                <h2 class="psb-title-size" style="color: #ffffff; margin: 0; font-weight: 700; text-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.2);">Alur Pendaftaran</h2>
-            </div>
-        </div>
-
-        <!-- Content Card -->
-        <div class="card" style="background: #ffffff; border-radius: clamp(1.25rem, 3vw, 1.875rem); border: 0.1875rem solid #FBD459; box-shadow: 0 clamp(0.625rem, 2vw, 1.25rem) clamp(1.875rem, 4vw, 3.75rem) rgba(0, 0, 0, 0.1); padding: clamp(2rem, 4vw, 3rem);" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-            <div class="row">
-                @php
-                    $steps = [
-                        [
-                            'number' => 1,
-                            'title' => 'Screening Santri',
-                            'description' => 'Wawancara Calon Santri dan Calon Wali Santri',
-                            'icon' => 'fa-search'
-                        ],
-                        [
-                            'number' => 2,
-                            'title' => 'Membeli Formulir',
-                            'description' => 'Membeli dikantor sekretariat PSB PP. Nurul Islam Mojokerto',
-                            'icon' => 'fa-file-invoice'
-                        ],
-                        [
-                            'number' => 3,
-                            'title' => 'Mengisi Formulir',
-                            'description' => 'Serta melengkapi seluruh persyaratan yang telah ditentukan Panitia PSB',
-                            'icon' => 'fa-file-pen'
-                        ],
-                        [
-                            'number' => 4,
-                            'title' => 'Melakukan Pendaftaran',
-                            'description' => 'Menyerahkan Berkas & Mengisi Surat Pernyataan dan Membayar Mahar',
-                            'icon' => 'fa-clipboard-check'
-                        ],
-                        [
-                            'number' => 5,
-                            'title' => 'Tes Expert Classes',
-                            'description' => 'Mengerjakan tes expert classes berbasis komputer',
-                            'icon' => 'fa-laptop'
-                        ],
-                        [
-                            'number' => 6,
-                            'title' => 'Penandatanganan Pakta Integritas',
-                            'description' => 'Mengisi Surat Pernyataan Kesanggupan Mematuhi Seluruh Aturan Pesantren',
-                            'icon' => 'fa-signature'
-                        ],
-                        [
-                            'number' => 7,
-                            'title' => 'Daftar Ulang',
-                            'description' => 'Melakukan pelunasan dan menerima kain seragam',
-                            'icon' => 'fa-money-bill-wave'
-                        ],
-                        [
-                            'number' => 8,
-                            'title' => 'Santri Masuk',
-                            'description' => 'Sesuai Pengumuman Resmi berupa Surat Edaran dari Pondok',
-                            'icon' => 'fa-check-circle'
-                        ],
-                    ];
-                @endphp
-                
-                @foreach($steps as $index => $step)
-                <div class="col-lg-12 mb-4" style="position: relative;" data-aos="fade-up" data-aos-duration="800" data-aos-delay="{{ 500 + ($index * 100) }}">
-                    @if($index < count($steps) - 1)
-                    <!-- Arrow -->
-                    <div style="position: absolute; left: 50%; top: 100%; transform: translateX(-50%); z-index: 2; display: flex; align-items: center; justify-content: center; width: clamp(2.5rem, 5vw, 3.5rem); height: clamp(2.5rem, 5vw, 3.5rem); background: #FBD459; border-radius: 50%; margin-top: clamp(0.5rem, 1vw, 0.75rem);">
-                        <i class="fa-solid fa-arrow-down" style="color: #2c3e50; font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 700;"></i>
-                    </div>
-                    @endif
-                    
-                    <div style="display: flex; align-items: center; gap: clamp(1rem, 2.5vw, 1.5rem);">
-                        <!-- Step Banner -->
-                        <div style="flex: 1; position: relative;">
-                            <div style="background: linear-gradient(135deg, #FBD459 0%, #F39C12 100%); border-radius: clamp(0.625rem, 1.5vw, 0.9375rem) clamp(0.625rem, 1.5vw, 0.9375rem) 0 0; padding: clamp(0.75rem, 1.5vw, 1rem) clamp(1rem, 2vw, 1.5rem); position: relative; clip-path: polygon(0 0, calc(100% - clamp(1.5rem, 3vw, 2rem)) 0, 100% 100%, 0 100%);">
-                                <div style="display: flex; align-items: center; gap: clamp(0.75rem, 1.5vw, 1rem);">
-                                    <span style="color: #ffffff; font-weight: 700; font-size: clamp(1.25rem, 2.5vw, 1.5rem); line-height: 1;">{{ $step['number'] }}.</span>
-                                    <h3 style="color: #ffffff; font-weight: 700; font-size: clamp(1rem, 2vw, 1.25rem); margin: 0; line-height: 1.3;">{{ $step['title'] }}</h3>
-                                </div>
-                            </div>
-                            <div style="background: #ffffff; padding: clamp(0.875rem, 1.5vw, 1.125rem) clamp(1rem, 2vw, 1.5rem); border-radius: 0 0 clamp(0.625rem, 1.5vw, 0.9375rem) clamp(0.625rem, 1.5vw, 0.9375rem); border: 0.125rem solid #FBD459; border-top: none;">
-                                <p style="color: #2c3e50; margin: 0; font-size: clamp(0.8125rem, 1.5vw, 0.9375rem); line-height: 1.6;">{{ $step['description'] }}</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Icon Circle -->
-                        <div style="flex-shrink: 0; width: clamp(4rem, 8vw, 5.5rem); height: clamp(4rem, 8vw, 5.5rem); background: #ffffff; border: 0.1875rem solid #FBD459; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 clamp(0.25rem, 0.8vw, 0.5rem) clamp(0.625rem, 1.5vw, 1.25rem) rgba(251, 212, 89, 0.3);">
-                            <i class="fa-solid {{ $step['icon'] }}" style="color: #FBD459; font-size: clamp(1.5rem, 3vw, 2rem);"></i>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
-</section>
-<!--===== PROSEDUR PENDAFTARAN ENDS =======-->
-
-<!--===== UNIT PENDIDIKAN STARTS =======-->
-<section class="vl-about-section sp2 psb-section-padding" id="unit">
-    <div class="container">
-        <div class="vl-section-title-1 mb-60 text-center">
-            <h5 class="subtitle psb-subtitle-size" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                <span><img src="{{ asset('img/icons/vl-sub-title-icon.svg') }}" alt=""></span> Pilihan Unit
-            </h5>
-            <h2 class="title text-anime-style-3 psb-title-size" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">Unit Pendidikan yang Tersedia</h2>
-            <p class="psb-text-size" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500" style="max-width: 90%; margin: 0 auto;">
-                Pondok Pesantren Nurul Islam menyediakan berbagai unit pendidikan formal untuk putra-putri Anda
-            </p>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-30">
-                <div class="vl-about-icon-box psb-card-padding" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="background: white; border-radius: 0.9375rem; height: 100%; box-shadow: 0 0.3125rem 1.25rem rgba(0,0,0,0.1); border-top: 0.25rem solid #01715d;">
-                    <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-school psb-icon-size" style="color: #01715d;"></i></span>
-                    </div>
-                    <div class="vl-icon-content">
-                        <h3 class="title psb-subtitle-size" style="margin-bottom: 0.9375rem;">Jenjang SLTP</h3>
-                        <ul style="list-style: none; padding: 0; margin: 0; color: #6c757d;">
-                            <li class="psb-text-size" style="margin-bottom: 0.5rem; padding-left: 1.25rem; position: relative;">
-                                <i class="fa-solid fa-check" style="position: absolute; left: 0; color: #01715d;"></i>
-                                MTs 1 Nurul Islam
-                            </li>
-                            <li class="psb-text-size" style="margin-bottom: 0.5rem; padding-left: 1.25rem; position: relative;">
-                                <i class="fa-solid fa-check" style="position: absolute; left: 0; color: #01715d;"></i>
-                                MTs 2 Nurul Islam
-                            </li>
-                            <li class="psb-text-size" style="margin-bottom: 0.5rem; padding-left: 1.25rem; position: relative;">
-                                <i class="fa-solid fa-check" style="position: absolute; left: 0; color: #01715d;"></i>
-                                SMP UBQ Nurul Islam
-                            </li>
-                            <li class="psb-text-size" style="margin-bottom: 0.5rem; padding-left: 1.25rem; position: relative;">
-                                <i class="fa-solid fa-check" style="position: absolute; left: 0; color: #01715d;"></i>
-                                SMP 2 Trans-Sains Nurul Islam
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-30">
-                <div class="vl-about-icon-box psb-card-padding" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="background: white; border-radius: 0.9375rem; height: 100%; box-shadow: 0 0.3125rem 1.25rem rgba(0,0,0,0.1); border-top: 0.25rem solid #FBD459;">
-                    <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-graduation-cap psb-icon-size" style="color: #FBD459;"></i></span>
-                    </div>
-                    <div class="vl-icon-content">
-                        <h3 class="title psb-subtitle-size" style="margin-bottom: 0.9375rem;">Jenjang SLTA Reguler</h3>
-                        <ul style="list-style: none; padding: 0; margin: 0; color: #6c757d;">
-                            <li class="psb-text-size" style="margin-bottom: 0.5rem; padding-left: 1.25rem; position: relative;">
-                                <i class="fa-solid fa-check" style="position: absolute; left: 0; color: #FBD459;"></i>
-                                MA 1 Nurul Islam
-                            </li>
-                            <li class="psb-text-size" style="margin-bottom: 0.5rem; padding-left: 1.25rem; position: relative;">
-                                <i class="fa-solid fa-check" style="position: absolute; left: 0; color: #FBD459;"></i>
-                                SMK UBP Nurul Islam
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-30">
-                <div class="vl-about-icon-box psb-card-padding" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500" style="background: white; border-radius: 0.9375rem; height: 100%; box-shadow: 0 0.3125rem 1.25rem rgba(0,0,0,0.1); border-top: 0.25rem solid #28a745;">
-                    <div class="vl-about-icon">
-                        <span><i class="fa-solid fa-globe psb-icon-size" style="color: #28a745;"></i></span>
-                    </div>
-                    <div class="vl-icon-content">
-                        <h3 class="title psb-subtitle-size" style="margin-bottom: 0.9375rem;">Jenjang SLTA Internasional</h3>
-                        <ul style="list-style: none; padding: 0; margin: 0; color: #6c757d;">
-                            <li class="psb-text-size" style="margin-bottom: 0.5rem; padding-left: 1.25rem; position: relative;">
-                                <i class="fa-solid fa-check" style="position: absolute; left: 0; color: #28a745;"></i>
-                                MA 2 Ad-Dauliyah Nurul Islam
-                            </li>
-                            <li class="psb-text-size" style="margin-bottom: 0.5rem; padding-left: 1.25rem; position: relative;">
-                                <i class="fa-solid fa-check" style="position: absolute; left: 0; color: #28a745;"></i>
-                                SMA Global School Nurul Islam
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--===== UNIT PENDIDIKAN ENDS =======-->
-
 <!--===== KONTAK PSB STARTS =======-->
-<section class="vl-about-section sp2 psb-section-padding" style="background: linear-gradient(135deg, #01715d 0%, #014d3f 100%); position: relative; overflow: hidden;" id="kontak">
-    <div class="container" style="position: relative; z-index: 1;">
-        <div class="vl-section-title-1 mb-60 text-center">
-            <h5 class="subtitle psb-subtitle-size" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="color: rgba(255, 255, 255, 0.9);">
-                <span><img src="{{ asset('img/icons/vl-sub-title-icon.svg') }}" alt="" style="filter: brightness(0) invert(1);"></span> Hubungi Kami
+<style>
+    /* Pastikan 3 kolom sejajar di laptop/komputer */
+    #kontak .row {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: space-between !important;
+    }
+    
+    /* Desktop dan Laptop - 3 kolom sejajar dengan margin kecil */
+    @media (min-width: 992px) {
+        #kontak .col-lg-4 {
+            width: calc(33.333333% - 0.67%) !important;
+            flex: 0 0 calc(33.333333% - 0.67%) !important;
+            max-width: calc(33.333333% - 0.67%) !important;
+        }
+    }
+    
+    /* Tablet - 3 kolom sejajar dengan margin kecil */
+    @media (min-width: 768px) and (max-width: 991px) {
+        #kontak .col-md-4 {
+            width: calc(33.333333% - 0.67%) !important;
+            flex: 0 0 calc(33.333333% - 0.67%) !important;
+            max-width: calc(33.333333% - 0.67%) !important;
+        }
+    }
+    
+    /* Mobile - 1 kolom */
+    @media (max-width: 767px) {
+        #kontak .row {
+            flex-direction: column !important;
+        }
+        #kontak .col-sm-12 {
+            width: 100% !important;
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+            margin-bottom: 2rem;
+        }
+    }
+    
+    @media (min-width: 992px) and (max-width: 1199px) {
+        #kontak .container {
+            max-width: 95% !important;
+        }
+    }
+    @media (min-width: 1200px) {
+        #kontak .container {
+            max-width: 85% !important;
+        }
+    }
+    .whatsapp-contact-link {
+        cursor: pointer !important;
+    }
+    .whatsapp-contact-link:hover {
+        animation: pulse 1s ease-in-out infinite;
+    }
+    @keyframes pulse {
+        0%, 100% {
+            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+        }
+        50% {
+            box-shadow: 0 0 0 0.5rem rgba(37, 211, 102, 0);
+        }
+    }
+</style>
+<section class="vl-about-section sp2 psb-section-padding" style="background: linear-gradient(135deg, #01715d 0%, #014d3f 100%); position: relative; overflow: hidden; padding: 5% 0;" id="kontak">
+    <!-- Decorative Background Elements -->
+    <div style="position: absolute; top: -10%; right: -5%; width: 30%; height: 30%; background: rgba(251, 212, 89, 0.05); border-radius: 50%; filter: blur(3rem);"></div>
+    <div style="position: absolute; bottom: -10%; left: -5%; width: 25%; height: 25%; background: rgba(255, 255, 255, 0.03); border-radius: 50%; filter: blur(3rem);"></div>
+    
+    <div class="container" style="position: relative; z-index: 1; max-width: 90%; width: 100%;">
+        <div class="vl-section-title-1 mb-60 text-center" style="margin-bottom: 4%;">
+            <h5 class="subtitle psb-subtitle-size" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="color: #FBD459; font-weight: 700; text-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3);">
+                <span><img src="{{ asset('img/icons/vl-sub-title-icon.svg') }}" alt="" style="filter: brightness(0) saturate(100%) invert(77%) sepia(67%) saturate(1234%) hue-rotate(1deg) brightness(102%) contrast(98%);"></span> Hubungi Kami
             </h5>
-            <h2 class="title text-anime-style-3 psb-title-size" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="color: #ffffff;">Informasi & Kontak PSB</h2>
-            <p class="psb-text-size" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500" style="max-width: 90%; margin: 0 auto; color: rgba(255, 255, 255, 0.9);">
+            <h2 class="title text-anime-style-3 psb-title-size" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="color: #ffffff; font-weight: 700; text-shadow: 0 0.125rem 0.75rem rgba(0, 0, 0, 0.3);">Informasi & Kontak PSB</h2>
+            <p class="psb-text-size" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500" style="max-width: 80%; margin: 1.5% auto 0; color: rgba(255, 255, 255, 0.95); line-height: 1.6;">
                 Untuk informasi lebih lanjut mengenai pendaftaran, silakan hubungi panitia PSB
             </p>
         </div>
 
-        <div class="row" style="display: flex; align-items: stretch;">
-            <div class="col-lg-4 col-md-6 mb-30" style="display: flex;">
-                <div class="vl-about-icon-box text-center psb-card-padding" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(0.625rem); border-radius: 1.25rem; width: 100%; display: flex; flex-direction: column; border: 0.125rem solid rgba(255, 255, 255, 0.2);">
-                    <div class="vl-about-icon" style="flex-shrink: 0;">
-                        <span><i class="fa-solid fa-phone psb-icon-size" style="color: #FBD459;"></i></span>
+        <div class="row" style="display: flex; align-items: stretch; gap: 1%; margin: 0;">
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-30" style="display: flex; padding: 0 0.5%; margin-bottom: 1.5rem;">
+                <div class="vl-about-icon-box text-center psb-card-padding" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(1rem); border-radius: 1.5rem; width: 100%; display: flex; flex-direction: column; border: 0.125rem solid rgba(255, 255, 255, 0.25); box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15); transition: all 0.3s ease; padding: 5% 4%;" onmouseover="this.style.transform='translateY(-0.5rem)'; this.style.boxShadow='0 0.75rem 2.5rem rgba(0, 0, 0, 0.2)'; this.style.borderColor='rgba(251, 212, 89, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0.5rem 2rem rgba(0, 0, 0, 0.15)'; this.style.borderColor='rgba(255, 255, 255, 0.25)';">
+                    <div class="vl-about-icon" style="flex-shrink: 0; margin-bottom: 3%;">
+                        <span style="display: inline-block; width: 4.5rem; height: 4.5rem; background: linear-gradient(135deg, rgba(251, 212, 89, 0.2) 0%, rgba(251, 212, 89, 0.1) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 0.125rem solid rgba(251, 212, 89, 0.3);">
+                            <i class="fa-brands fa-whatsapp psb-icon-size" style="color: #FBD459; font-size: 2.5rem;"></i>
+                        </span>
                     </div>
                     <div class="vl-icon-content" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
-                        <h3 class="title psb-subtitle-size" style="margin-bottom: clamp(1rem, 2vw, 1.25rem); color: #ffffff;">Telepon</h3>
-                        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
-                            <p class="psb-text-size" style="color: rgba(255, 255, 255, 0.9); font-weight: 600; margin-bottom: clamp(0.375rem, 0.8vw, 0.625rem);">
-                                0822 3194 2642
-                            </p>
-                            <p class="psb-text-size" style="color: rgba(255, 255, 255, 0.8); margin: 0 0 clamp(0.75rem, 1.5vw, 0.9375rem) 0; font-size: clamp(0.75rem, 1.4vw, 0.875rem);">
-                                Yusril Fahmi, S.Pd., M.Pd.
-                            </p>
-                            <p class="psb-text-size" style="color: rgba(255, 255, 255, 0.9); font-weight: 600; margin-bottom: clamp(0.375rem, 0.8vw, 0.625rem);">
-                                0822 2817 7769
-                            </p>
-                            <p class="psb-text-size" style="color: rgba(255, 255, 255, 0.8); margin: 0; font-size: clamp(0.75rem, 1.4vw, 0.875rem);">
-                                Lailatul Musyarofah, S.Pd.
-                            </p>
+                        <h3 class="title psb-subtitle-size" style="margin-bottom: 4%; color: #ffffff; font-weight: 700; font-size: 1.25rem;">Contact Person</h3>
+                        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 3%;">
+                            @php
+                                $contacts = [
+                                    ['phone' => '081234953728', 'display' => '0812-3495-3728', 'name' => 'Ust. M. Syafi\'un Nuroyn, S.Pd.'],
+                                    ['phone' => '085855756629', 'display' => '0858-5575-6629', 'name' => 'Ust. Salman Al Farizi, S.Ak. M.E'],
+                                    ['phone' => '082228177769', 'display' => '0822-2817-7769', 'name' => 'Ustdh. Lailatul Musyarofah, S.Pd.'],
+                                ];
+                                $whatsappMessage = urlencode('Saya Ingin Bertanya Tentang Informasi Penerimaan Santri Baru Nuris');
+                            @endphp
+                            
+                            @foreach($contacts as $contact)
+                            <div style="text-align: left; position: relative;">
+                                @php
+                                    // Format nomor untuk WhatsApp: 62 + nomor tanpa 0 di depan
+                                    $whatsappNumber = '62' . substr($contact['phone'], 1);
+                                @endphp
+                                <a href="https://wa.me/{{ $whatsappNumber }}?text={{ $whatsappMessage }}" target="_blank" class="whatsapp-contact-link" style="display: inline-flex; align-items: center; gap: 0.75rem; color: rgba(255, 255, 255, 0.95); font-weight: 600; text-decoration: none; transition: all 0.3s ease; padding: 0.75rem 1rem; border-radius: 0.75rem; background: rgba(37, 211, 102, 0.1); border: 0.125rem solid rgba(37, 211, 102, 0.3); cursor: pointer; position: relative; width: 100%;" onmouseover="this.style.color='#ffffff'; this.style.backgroundColor='rgba(37, 211, 102, 0.2)'; this.style.borderColor='rgba(37, 211, 102, 0.5)'; this.style.transform='translateX(0.5rem)';" onmouseout="this.style.color='rgba(255, 255, 255, 0.95)'; this.style.backgroundColor='rgba(37, 211, 102, 0.1)'; this.style.borderColor='rgba(37, 211, 102, 0.3)'; this.style.transform='translateX(0)';">
+                                    <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem; color: #25D366; flex-shrink: 0;"></i>
+                                    <span class="psb-text-size" style="font-size: 0.9375rem; flex: 1;">{{ $contact['display'] }}</span>
+                                    <span style="display: inline-flex; align-items: center; gap: 0.25rem; background: rgba(37, 211, 102, 0.2); padding: 0.25rem 0.5rem; border-radius: 0.375rem; font-size: 0.6875rem; color: #25D366; font-weight: 600; white-space: nowrap;">
+                                        <i class="fa-solid fa-hand-pointer" style="font-size: 0.625rem;"></i> Klik
+                                    </span>
+                                </a>
+                                <p class="psb-text-size" style="color: rgba(255, 255, 255, 0.85); margin: 0.5rem 0 0 3rem; font-size: 0.8125rem; font-style: italic; line-height: 1.4;">
+                                    {{ $contact['name'] }}
+                                </p>
+                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 mb-30" style="display: flex;">
-                <div class="vl-about-icon-box text-center psb-card-padding" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(0.625rem); border-radius: 1.25rem; width: 100%; display: flex; flex-direction: column; border: 0.125rem solid rgba(255, 255, 255, 0.2);">
-                    <div class="vl-about-icon" style="flex-shrink: 0;">
-                        <span><i class="fa-solid fa-location-dot psb-icon-size" style="color: #FBD459;"></i></span>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-30" style="display: flex; padding: 0 0.5%; margin-bottom: 1.5rem;">
+                <div class="vl-about-icon-box text-center psb-card-padding" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(1rem); border-radius: 1.5rem; width: 100%; display: flex; flex-direction: column; border: 0.125rem solid rgba(255, 255, 255, 0.25); box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15); transition: all 0.3s ease; padding: 5% 4%;" onmouseover="this.style.transform='translateY(-0.5rem)'; this.style.boxShadow='0 0.75rem 2.5rem rgba(0, 0, 0, 0.2)'; this.style.borderColor='rgba(251, 212, 89, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0.5rem 2rem rgba(0, 0, 0, 0.15)'; this.style.borderColor='rgba(255, 255, 255, 0.25)';">
+                    <div class="vl-about-icon" style="flex-shrink: 0; margin-bottom: 3%;">
+                        <span style="display: inline-block; width: 4.5rem; height: 4.5rem; background: linear-gradient(135deg, rgba(251, 212, 89, 0.2) 0%, rgba(251, 212, 89, 0.1) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 0.125rem solid rgba(251, 212, 89, 0.3);">
+                            <i class="fa-solid fa-location-dot psb-icon-size" style="color: #FBD459; font-size: 2.5rem;"></i>
+                        </span>
                     </div>
                     <div class="vl-icon-content" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
-                        <h3 class="title psb-subtitle-size" style="margin-bottom: clamp(1rem, 2vw, 1.25rem); color: #ffffff;">Alamat</h3>
+                        <h3 class="title psb-subtitle-size" style="margin-bottom: 4%; color: #ffffff; font-weight: 700; font-size: 1.25rem;">Alamat</h3>
                         <div style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
-                            <p class="psb-text-size" style="color: rgba(255, 255, 255, 0.9); line-height: 1.8; margin: 0;">
+                            <p class="psb-text-size" style="color: rgba(255, 255, 255, 0.95); line-height: 1.8; margin: 0; text-align: left; font-size: 0.9375rem;">
+                                Kantor Sekretariat PSB di PP. Nurul Islam 1 (Induk)<br><br>
                                 Dsn. Guwo Ds. Jabontegal<br>
                                 Kec. Pungging<br>
-                                Kab. Mojokerto<br>
-                                Kode Pos 61384
+                                Kab. Mojokerto
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 mb-30" style="display: flex;">
-                <div class="vl-about-icon-box text-center psb-card-padding" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(0.625rem); border-radius: 1.25rem; width: 100%; display: flex; flex-direction: column; border: 0.125rem solid rgba(255, 255, 255, 0.2);">
-                    <div class="vl-about-icon" style="flex-shrink: 0;">
-                        <span><i class="fa-solid fa-clock psb-icon-size" style="color: #FBD459;"></i></span>
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-30" style="display: flex; padding: 0 0.5%; margin-bottom: 1.5rem;">
+                <div class="vl-about-icon-box text-center psb-card-padding" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500" style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(1rem); border-radius: 1.5rem; width: 100%; display: flex; flex-direction: column; border: 0.125rem solid rgba(255, 255, 255, 0.25); box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15); transition: all 0.3s ease; padding: 5% 4%;" onmouseover="this.style.transform='translateY(-0.5rem)'; this.style.boxShadow='0 0.75rem 2.5rem rgba(0, 0, 0, 0.2)'; this.style.borderColor='rgba(251, 212, 89, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0.5rem 2rem rgba(0, 0, 0, 0.15)'; this.style.borderColor='rgba(255, 255, 255, 0.25)';">
+                    <div class="vl-about-icon" style="flex-shrink: 0; margin-bottom: 3%;">
+                        <span style="display: inline-block; width: 4.5rem; height: 4.5rem; background: linear-gradient(135deg, rgba(251, 212, 89, 0.2) 0%, rgba(251, 212, 89, 0.1) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 0.125rem solid rgba(251, 212, 89, 0.3);">
+                            <i class="fa-solid fa-clock psb-icon-size" style="color: #FBD459; font-size: 2.5rem;"></i>
+                        </span>
                     </div>
                     <div class="vl-icon-content" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
-                        <h3 class="title psb-subtitle-size" style="margin-bottom: clamp(1rem, 2vw, 1.25rem); color: #ffffff;">Jam Pelayanan</h3>
+                        <h3 class="title psb-subtitle-size" style="margin-bottom: 4%; color: #ffffff; font-weight: 700; font-size: 1.25rem;">Jam Pelayanan</h3>
                         <div style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
-                            <p class="psb-text-size" style="color: rgba(255, 255, 255, 0.9); line-height: 1.8; margin: 0;">
+                            <p class="psb-text-size" style="color: rgba(255, 255, 255, 0.95); line-height: 1.8; margin: 0; font-size: 0.9375rem;">
                                 Senin - Jumat<br>
                                 08:00 - 16:00 WIB<br><br>
                                 Sabtu<br>
@@ -803,121 +986,5 @@
     </div>
 </section>
 <!--===== KONTAK PSB ENDS =======-->
-
-<!--===== FORM PENDAFTARAN STARTS =======-->
-<section class="vl-about-section sp2 psb-section-padding" id="pendaftaran">
-    <div class="container">
-        <div class="vl-section-title-1 mb-60 text-center">
-            <h5 class="subtitle psb-subtitle-size" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                <span><img src="{{ asset('img/icons/vl-sub-title-icon.svg') }}" alt=""></span> Formulir Pendaftaran
-            </h5>
-            <h2 class="title text-anime-style-3 psb-title-size" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">Daftar Sekarang</h2>
-            <p class="psb-text-size" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500" style="max-width: 90%; margin: 0 auto;">
-                Isi formulir di bawah ini untuk memulai proses pendaftaran. Tim kami akan segera menghubungi Anda.
-            </p>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <div class="vl-about-content psb-card-padding" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="background: white; border-radius: 1.25rem; box-shadow: 0 0.625rem 2.5rem rgba(0,0,0,0.1);">
-                    <form id="psb-form" style="max-width: 100%;">
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="nama" class="psb-text-size" style="font-weight: 600; color: #2c3e50; margin-bottom: 0.5rem; display: block;">Nama Lengkap Calon Santri <span style="color: red;">*</span></label>
-                                <input type="text" id="nama" name="nama" class="form-control psb-text-size" required style="padding: 0.75rem 0.9375rem; border: 0.125rem solid #e0e0e0; border-radius: 0.5rem; transition: all 0.3s; width: 100%;" placeholder="Masukkan nama lengkap">
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="tempat_lahir" class="psb-text-size" style="font-weight: 600; color: #2c3e50; margin-bottom: 0.5rem; display: block;">Tempat, Tanggal Lahir <span style="color: red;">*</span></label>
-                                <input type="text" id="tempat_lahir" name="tempat_lahir" class="form-control psb-text-size" required style="padding: 0.75rem 0.9375rem; border: 0.125rem solid #e0e0e0; border-radius: 0.5rem; transition: all 0.3s; width: 100%;" placeholder="Contoh: Mojokerto, 15 Januari 2010">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="jenis_kelamin" class="psb-text-size" style="font-weight: 600; color: #2c3e50; margin-bottom: 0.5rem; display: block;">Jenis Kelamin <span style="color: red;">*</span></label>
-                                <select id="jenis_kelamin" name="jenis_kelamin" class="form-control psb-text-size" required style="padding: 0.75rem 0.9375rem; border: 0.125rem solid #e0e0e0; border-radius: 0.5rem; width: 100%;">
-                                    <option value="">Pilih Jenis Kelamin</option>
-                                    <option value="Laki-laki">Laki-laki</option>
-                                    <option value="Perempuan">Perempuan</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="unit_pendidikan" class="psb-text-size" style="font-weight: 600; color: #2c3e50; margin-bottom: 0.5rem; display: block;">Unit Pendidikan yang Dipilih <span style="color: red;">*</span></label>
-                                <select id="unit_pendidikan" name="unit_pendidikan" class="form-control psb-text-size" required style="padding: 0.75rem 0.9375rem; border: 0.125rem solid #e0e0e0; border-radius: 0.5rem; width: 100%;">
-                                    <option value="">Pilih Unit Pendidikan</option>
-                                    <option value="MTs 1 Nurul Islam">MTs 1 Nurul Islam</option>
-                                    <option value="MTs 2 Nurul Islam">MTs 2 Nurul Islam</option>
-                                    <option value="SMP UBQ Nurul Islam">SMP UBQ Nurul Islam</option>
-                                    <option value="SMP 2 Trans-Sains Nurul Islam">SMP 2 Trans-Sains Nurul Islam</option>
-                                    <option value="MA 1 Nurul Islam">MA 1 Nurul Islam</option>
-                                    <option value="MA 2 Ad-Dauliyah Nurul Islam">MA 2 Ad-Dauliyah Nurul Islam</option>
-                                    <option value="SMK UBP Nurul Islam">SMK UBP Nurul Islam</option>
-                                    <option value="SMA Global School Nurul Islam">SMA Global School Nurul Islam</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="nama_ortu" class="psb-text-size" style="font-weight: 600; color: #2c3e50; margin-bottom: 0.5rem; display: block;">Nama Orang Tua/Wali <span style="color: red;">*</span></label>
-                                <input type="text" id="nama_ortu" name="nama_ortu" class="form-control psb-text-size" required style="padding: 0.75rem 0.9375rem; border: 0.125rem solid #e0e0e0; border-radius: 0.5rem; transition: all 0.3s; width: 100%;" placeholder="Nama lengkap orang tua/wali">
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="no_hp" class="psb-text-size" style="font-weight: 600; color: #2c3e50; margin-bottom: 0.5rem; display: block;">No. HP/WhatsApp <span style="color: red;">*</span></label>
-                                <input type="tel" id="no_hp" name="no_hp" class="form-control psb-text-size" required style="padding: 0.75rem 0.9375rem; border: 0.125rem solid #e0e0e0; border-radius: 0.5rem; transition: all 0.3s; width: 100%;" placeholder="08xxxxxxxxxx">
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="alamat" class="psb-text-size" style="font-weight: 600; color: #2c3e50; margin-bottom: 0.5rem; display: block;">Alamat Lengkap <span style="color: red;">*</span></label>
-                            <textarea id="alamat" name="alamat" class="form-control psb-text-size" rows="3" required style="padding: 0.75rem 0.9375rem; border: 0.125rem solid #e0e0e0; border-radius: 0.5rem; transition: all 0.3s; width: 100%;" placeholder="Alamat lengkap tempat tinggal"></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="catatan" class="psb-text-size" style="font-weight: 600; color: #2c3e50; margin-bottom: 0.5rem; display: block;">Catatan/Keterangan Tambahan</label>
-                            <textarea id="catatan" name="catatan" class="form-control psb-text-size" rows="3" style="padding: 0.75rem 0.9375rem; border: 0.125rem solid #e0e0e0; border-radius: 0.5rem; transition: all 0.3s; width: 100%;" placeholder="Catatan atau keterangan tambahan (opsional)"></textarea>
-                        </div>
-                        <div class="text-center mt-4">
-                            <button type="submit" class="header-btn1 psb-button-padding psb-text-size" style="background: linear-gradient(135deg, #01715d 0%, #014d3f 100%); color: white; border: none; border-radius: 3.125rem; font-weight: 700; cursor: pointer; transition: all 0.3s; box-shadow: 0 0.625rem 1.875rem rgba(1, 113, 93, 0.3); display: inline-block;" onmouseover="this.style.transform='translateY(-0.125rem)'; this.style.boxShadow='0 0.9375rem 2.5rem rgba(1, 113, 93, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0.625rem 1.875rem rgba(1, 113, 93, 0.3)'">
-                                Kirim Pendaftaran <span><i class="fa-solid fa-paper-plane"></i></span>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--===== FORM PENDAFTARAN ENDS =======-->
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('psb-form');
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData);
-            
-            // Create WhatsApp message
-            const message = `Halo, saya ingin mendaftarkan putra/putri saya untuk PSB 2026:\n\n` +
-                          `Nama: ${data.nama}\n` +
-                          `Tempat, Tgl Lahir: ${data.tempat_lahir}\n` +
-                          `Jenis Kelamin: ${data.jenis_kelamin}\n` +
-                          `Unit Pendidikan: ${data.unit_pendidikan}\n` +
-                          `Nama Orang Tua/Wali: ${data.nama_ortu}\n` +
-                          `No. HP: ${data.no_hp}\n` +
-                          `Alamat: ${data.alamat}\n` +
-                          (data.catatan ? `Catatan: ${data.catatan}\n` : '');
-            
-            // Open WhatsApp
-            const phoneNumber = '6282231942642'; // Format: 62 (kode negara) + nomor tanpa 0
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, '_blank');
-            
-            // Show success message
-            alert('Formulir akan dibuka di WhatsApp. Silakan kirim pesan untuk melanjutkan pendaftaran.');
-        });
-    }
-});
-</script>
 
 @endsection
