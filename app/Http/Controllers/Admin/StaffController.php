@@ -48,7 +48,7 @@ class StaffController extends Controller
 
         // Handle foto upload
         if ($request->hasFile('foto')) {
-            $validated['foto'] = $request->file('foto')->store('staff', 'public');
+            $validated['foto'] = \App\Helpers\ImageHelper::resizeWithGD($request->file('foto'), 'staff', 400, 533, 85);
         }
 
         // Handle checkbox boolean
@@ -98,7 +98,7 @@ class StaffController extends Controller
             if ($staff->foto) {
                 Storage::disk('public')->delete($staff->foto);
             }
-            $validated['foto'] = $request->file('foto')->store('staff', 'public');
+            $validated['foto'] = \App\Helpers\ImageHelper::resizeWithGD($request->file('foto'), 'staff', 400, 533, 85);
         }
 
         // Handle checkbox boolean

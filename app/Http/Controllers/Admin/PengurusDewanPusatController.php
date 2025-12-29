@@ -33,7 +33,7 @@ class PengurusDewanPusatController extends Controller
         ]);
 
         if ($request->hasFile('foto')) {
-            $validated['foto'] = $request->file('foto')->store('pengurus-dewan-pusat', 'public');
+            $validated['foto'] = \App\Helpers\ImageHelper::resizeWithGD($request->file('foto'), 'pengurus-dewan-pusat', 400, 533, 85);
         }
 
         $validated['is_active'] = $request->has('is_active') ? true : false;
@@ -72,7 +72,7 @@ class PengurusDewanPusatController extends Controller
             if ($pengurus->foto) {
                 Storage::disk('public')->delete($pengurus->foto);
             }
-            $validated['foto'] = $request->file('foto')->store('pengurus-dewan-pusat', 'public');
+            $validated['foto'] = \App\Helpers\ImageHelper::resizeWithGD($request->file('foto'), 'pengurus-dewan-pusat', 400, 533, 85);
         } else {
             unset($validated['foto']);
         }

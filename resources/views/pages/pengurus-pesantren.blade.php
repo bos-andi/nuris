@@ -44,14 +44,14 @@
         <div class="row">
             @forelse($pengurusUtama as $index => $pengurus)
             <div class="col-lg-4 col-md-6 mb-30">
-                <div class="vl-team-parent" data-aos="fade-up" data-aos-duration="800" data-aos-delay="{{ ($index + 1) * 100 + 200 }}">
-                    <div class="vl-team-thumb">
-                        <img class="w-100" src="{{ $pengurus->foto ? asset('storage/' . $pengurus->foto) : asset('img/team/vl-team-inner-1.1.png') }}" alt="{{ $pengurus->nama }}">
+                <div class="vl-team-parent" data-aos="fade-up" data-aos-duration="800" data-aos-delay="{{ ($index + 1) * 100 + 200 }}" style="background: white; border-radius: clamp(0.9375rem, 2vw, 1.25rem); overflow: hidden; box-shadow: 0 clamp(0.3125rem, 1vw, 0.625rem) clamp(0.9375rem, 2vw, 1.875rem) rgba(0,0,0,0.1); transition: all 0.3s ease; max-width: clamp(18.75rem, 25vw, 21.875rem); margin: 0 auto;" onmouseover="this.style.transform='translateY(-0.5rem)'; this.style.boxShadow='0 clamp(0.625rem, 2vw, 1.25rem) clamp(1.875rem, 4vw, 3.75rem) rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 clamp(0.3125rem, 1vw, 0.625rem) clamp(0.9375rem, 2vw, 1.875rem) rgba(0,0,0,0.1)'">
+                    <div class="vl-team-thumb" style="position: relative; width: 100%; padding-bottom: 133.33%; overflow: hidden; background: #f8f9fa;">
+                        <img class="w-100" src="{{ $pengurus->foto ? asset('storage/' . $pengurus->foto) : asset('img/team/vl-team-inner-1.1.png') }}" alt="{{ $pengurus->nama }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                     </div>
-                    <div class="vl-team-content text-center">
-                        <h3 class="title">{{ $pengurus->jabatan }}</h3>
-                        <p class="mb-10">{{ $pengurus->nama }}</p>
-                        <span>{{ $pengurus->jabatan_lengkap ?? $pengurus->jabatan . ' PP. Nurul Islam' }}</span>
+                    <div class="vl-team-content text-center" style="padding: clamp(1.25rem, 2.5vw, 1.5rem);">
+                        <h3 class="title" style="font-size: clamp(1rem, 2vw, 1.125rem); font-weight: 700; color: #2c3e50; margin-bottom: 0.5rem;">{{ $pengurus->jabatan }}</h3>
+                        <p class="mb-10" style="font-size: clamp(0.9375rem, 1.8vw, 1rem); font-weight: 600; color: #01715d; margin-bottom: 0.5rem;">{{ $pengurus->nama }}</p>
+                        <span style="font-size: clamp(0.8125rem, 1.5vw, 0.875rem); color: #6c757d;">{{ $pengurus->jabatan_lengkap ?? $pengurus->jabatan . ' PP. Nurul Islam' }}</span>
                     </div>
                 </div>
             </div>
@@ -73,14 +73,14 @@
         <div class="row">
             @foreach($pengurusList as $index => $pengurus)
             <div class="col-lg-6 col-md-6 mb-30">
-                <div class="vl-team-parent" data-aos="fade-up" data-aos-duration="800" data-aos-delay="{{ ($index + 1) * 100 + 300 }}">
-                    <div class="vl-team-thumb">
-                        <img class="w-100" src="{{ $pengurus->foto ? asset('storage/' . $pengurus->foto) : asset('img/team/vl-team-inner-1.1.png') }}" alt="{{ $pengurus->nama }}">
+                <div class="vl-team-parent" data-aos="fade-up" data-aos-duration="800" data-aos-delay="{{ ($index + 1) * 100 + 300 }}" style="background: white; border-radius: clamp(0.9375rem, 2vw, 1.25rem); overflow: hidden; box-shadow: 0 clamp(0.3125rem, 1vw, 0.625rem) clamp(0.9375rem, 2vw, 1.875rem) rgba(0,0,0,0.1); transition: all 0.3s ease; max-width: clamp(18.75rem, 35vw, 25rem); margin: 0 auto;" onmouseover="this.style.transform='translateY(-0.5rem)'; this.style.boxShadow='0 clamp(0.625rem, 2vw, 1.25rem) clamp(1.875rem, 4vw, 3.75rem) rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 clamp(0.3125rem, 1vw, 0.625rem) clamp(0.9375rem, 2vw, 1.875rem) rgba(0,0,0,0.1)'">
+                    <div class="vl-team-thumb" style="position: relative; width: 100%; padding-bottom: 133.33%; overflow: hidden; background: #f8f9fa;">
+                        <img class="w-100" src="{{ $pengurus->foto ? asset('storage/' . $pengurus->foto) : asset('img/team/vl-team-inner-1.1.png') }}" alt="{{ $pengurus->nama }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                     </div>
-                    <div class="vl-team-content text-center">
-                        <h3 class="title">{{ $pengurus->jabatan }}</h3>
-                        <p class="mb-10">{{ $pengurus->nama }}</p>
-                        <span>{{ $pengurus->jabatan_lengkap ?? $pengurus->jabatan }}</span>
+                    <div class="vl-team-content text-center" style="padding: clamp(1.25rem, 2.5vw, 1.5rem);">
+                        <h3 class="title" style="font-size: clamp(1rem, 2vw, 1.125rem); font-weight: 700; color: #2c3e50; margin-bottom: 0.5rem;">{{ $pengurus->jabatan }}</h3>
+                        <p class="mb-10" style="font-size: clamp(0.9375rem, 1.8vw, 1rem); font-weight: 600; color: #01715d; margin-bottom: 0.5rem;">{{ $pengurus->nama }}</p>
+                        <span style="font-size: clamp(0.8125rem, 1.5vw, 0.875rem); color: #6c757d;">{{ $pengurus->jabatan_lengkap ?? $pengurus->jabatan }}</span>
                     </div>
                 </div>
             </div>

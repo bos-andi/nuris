@@ -201,11 +201,11 @@
         <div class="container" style="position: relative; z-index: 1;">
             <!-- Section Header -->
             <div class="vl-section-title-1 mb-60 text-center">
-                <h5 class="subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="color: rgba(255, 255, 255, 0.9);">
-                    <span><img src="{{ asset('img/icons/vl-sub-title-icon.svg') }}" alt="" style="filter: brightness(0) invert(1);"></span> Tentang Kami
+                <h5 class="subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="color: #FBD459; font-weight: 600; letter-spacing: 0.125rem; margin-bottom: 0.9375rem; background: rgba(251, 212, 89, 0.15); padding: clamp(0.75rem, 1.5vw, 0.9375rem) clamp(1.5rem, 3vw, 2rem); border-radius: clamp(2rem, 4vw, 3.125rem); display: inline-block; backdrop-filter: blur(0.625rem); border: 0.125rem solid rgba(251, 212, 89, 0.3);">
+                    <span><img src="{{ asset('img/icons/vl-sub-title-icon.svg') }}" alt="" style="filter: brightness(0) saturate(100%) invert(70%) sepia(91%) saturate(1568%) hue-rotate(2deg) brightness(105%) contrast(101%); margin-right: 0.5rem;"></span> Tentang Kami
                 </h5>
-                <h2 class="title text-anime-style-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="color: #ffffff;">Pondok Pesantren Nurul Islam</h2>
-                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="500" style="max-width: 90%; margin: 0 auto; color: rgba(255, 255, 255, 0.9);">
+                <h2 class="title text-anime-style-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="color: #ffffff; font-size: clamp(1.75rem, 4vw, 2.625rem); font-weight: 700; text-shadow: 0 0.125rem 0.625rem rgba(0,0,0,0.3); margin-bottom: 1.25rem;">Pondok Pesantren Nurul Islam</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="500" style="max-width: 90%; margin: 0 auto; color: rgba(255, 255, 255, 0.95); font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8;">
                     Lembaga pendidikan Islam yang berkomitmen untuk mendidik generasi unggul dengan nilai-nilai Islam yang rahmatan lil alamin
                 </p>
             </div>
@@ -328,30 +328,6 @@
                             <img class="w-100" src="{{ $pengurus->foto ? asset('storage/' . $pengurus->foto) : asset('img/team/vl-team-inner-1.1.png') }}" alt="{{ $pengurus->nama }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
                             <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, transparent 0%, rgba(102, 126, 234, 0.1) 100%);"></div>
                         </div>
-                        <div class="vl-team-social" style="position: absolute; top: 1.25rem; right: 1.25rem; z-index: 2;">
-                            <ul style="display: flex; gap: 0.625rem; list-style: none; padding: 0; margin: 0;">
-                                <li>
-                                    <a href="#" style="display: flex; align-items: center; justify-content: center; width: clamp(2rem, 3vw, 2.5rem); height: clamp(2rem, 3vw, 2.5rem); background: rgba(255,255,255,0.95); color: #1877f2; border-radius: 50%; text-decoration: none; transition: all 0.3s; box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.15);" onmouseover="this.style.background='#1877f2'; this.style.color='white'; this.style.transform='scale(1.1)'" onmouseout="this.style.background='rgba(255,255,255,0.95)'; this.style.color='#1877f2'; this.style.transform='scale(1)'">
-                                        <i class="fa-brands fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" style="display: flex; align-items: center; justify-content: center; width: clamp(2rem, 3vw, 2.5rem); height: clamp(2rem, 3vw, 2.5rem); background: rgba(255,255,255,0.95); color: #e4405f; border-radius: 50%; text-decoration: none; transition: all 0.3s; box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.15);" onmouseover="this.style.background='#e4405f'; this.style.color='white'; this.style.transform='scale(1.1)'" onmouseout="this.style.background='rgba(255,255,255,0.95)'; this.style.color='#e4405f'; this.style.transform='scale(1)'">
-                                        <i class="fa-brands fa-instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" style="display: flex; align-items: center; justify-content: center; width: clamp(2rem, 3vw, 2.5rem); height: clamp(2rem, 3vw, 2.5rem); background: rgba(255,255,255,0.95); color: #1da1f2; border-radius: 50%; text-decoration: none; transition: all 0.3s; box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.15);" onmouseover="this.style.background='#1da1f2'; this.style.color='white'; this.style.transform='scale(1.1)'" onmouseout="this.style.background='rgba(255,255,255,0.95)'; this.style.color='#1da1f2'; this.style.transform='scale(1)'">
-                                        <i class="fa-brands fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" style="display: flex; align-items: center; justify-content: center; width: clamp(2rem, 3vw, 2.5rem); height: clamp(2rem, 3vw, 2.5rem); background: rgba(255,255,255,0.95); color: #0077b5; border-radius: 50%; text-decoration: none; transition: all 0.3s; box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.15);" onmouseover="this.style.background='#0077b5'; this.style.color='white'; this.style.transform='scale(1.1)'" onmouseout="this.style.background='rgba(255,255,255,0.95)'; this.style.color='#0077b5'; this.style.transform='scale(1)'">
-                                        <i class="fa-brands fa-linkedin"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                         <div class="vl-team-content text-center" style="padding: clamp(1.5rem, 3vw, 1.875rem) 1.25rem; background: white;">
                             <a href="{{ route('pages.display', 'pengurus-yayasan') }}" class="title" style="color: #2c3e50; text-decoration: none; font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 700; line-height: 1.4; margin-bottom: 0.5rem; display: block; transition: color 0.3s;" onmouseover="this.style.color='#667eea'" onmouseout="this.style.color='#2c3e50'">
                                 {{ $pengurus->nama }}
@@ -388,6 +364,94 @@
         </div>
     </section>
     <!--===== PENGURUS YAYASAN AREA ENDS =======-->
+
+    <!--===== STATISTIK PESANTREN AREA STARTS =======-->
+    <section class="vl-about-section sp2 stats-section" style="background: linear-gradient(135deg, #01715d 0%, #014d3f 100%); padding: clamp(5rem, 8vw, 6.25rem) 0; position: relative; overflow: hidden;">
+        <!-- Background Overlay -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('{{ asset('img/banner/nuris-hero-bg.jpg') }}') center center; background-size: cover; opacity: 0.2; z-index: 0;"></div>
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(1, 113, 93, 0.95) 0%, rgba(1, 77, 63, 0.95) 100%); z-index: 1;"></div>
+        
+        <!-- Background Decoration -->
+        <div style="position: absolute; top: -6.25rem; right: -6.25rem; width: clamp(20vw, 30vw, 25rem); height: clamp(20vw, 30vw, 25rem); background: rgba(251, 212, 89, 0.1); border-radius: 50%; z-index: 2;"></div>
+        <div style="position: absolute; bottom: -9.375rem; left: -9.375rem; width: clamp(25vw, 35vw, 31.25rem); height: clamp(25vw, 35vw, 31.25rem); background: rgba(251, 212, 89, 0.08); border-radius: 50%; z-index: 2;"></div>
+        
+        <div class="container" style="position: relative; z-index: 3;">
+            <div class="vl-section-title-1 mb-60 text-center">
+                <h5 class="subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" style="color: #FBD459; font-weight: 600; letter-spacing: 0.125rem; margin-bottom: 0.9375rem; background: rgba(251, 212, 89, 0.15); padding: clamp(0.75rem, 1.5vw, 0.9375rem) clamp(1.5rem, 3vw, 2rem); border-radius: clamp(2rem, 4vw, 3.125rem); display: inline-block; backdrop-filter: blur(0.625rem); border: 0.125rem solid rgba(251, 212, 89, 0.3);">
+                    <span><img src="{{ asset('img/icons/vl-sub-title-icon.svg') }}" alt="" style="filter: brightness(0) saturate(100%) invert(70%) sepia(91%) saturate(1568%) hue-rotate(2deg) brightness(105%) contrast(101%); margin-right: 0.5rem;"></span> Statistik Pesantren
+                </h5>
+                <h2 class="title text-anime-style-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="color: #ffffff; font-size: clamp(1.75rem, 4vw, 2.625rem); font-weight: 700; text-shadow: 0 0.125rem 0.625rem rgba(0,0,0,0.3); margin-bottom: 1.25rem;">
+                    Data Statistik PP. Nurul Islam
+                </h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="500" style="max-width: 90%; margin: 0 auto; color: rgba(255, 255, 255, 0.95); font-size: clamp(0.875rem, 1.6vw, 1rem); line-height: 1.8; margin-top: clamp(0.75rem, 1.5vw, 1rem);">
+                    Perkembangan dan pencapaian Pondok Pesantren Nurul Islam dalam membina generasi unggul
+                </p>
+            </div>
+            
+            <div class="row">
+                @php
+                    $statistics = [
+                        [
+                            'number' => 9492,
+                            'label' => 'Jumlah Santri',
+                            'icon' => 'fa-user-graduate',
+                            'suffix' => '',
+                            'delay' => 300
+                        ],
+                        [
+                            'number' => 975,
+                            'label' => 'Pendidik dan Tenaga Kependidikan',
+                            'icon' => 'fa-chalkboard-user',
+                            'suffix' => '',
+                            'delay' => 400
+                        ],
+                        [
+                            'number' => 258,
+                            'label' => 'Jumlah Pegawai',
+                            'icon' => 'fa-users',
+                            'suffix' => '',
+                            'delay' => 500
+                        ],
+                        [
+                            'number' => 3,
+                            'label' => 'Unit Khidmah',
+                            'icon' => 'fa-building',
+                            'suffix' => '',
+                            'delay' => 600
+                        ],
+                    ];
+                @endphp
+                
+                @foreach($statistics as $stat)
+                <div class="col-lg-3 col-md-6 mb-30" data-aos="fade-up" data-aos-duration="800" data-aos-delay="{{ $stat['delay'] }}">
+                    <div class="statistic-card" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(0.625rem); border: 0.125rem solid rgba(255, 255, 255, 0.2); border-radius: clamp(1rem, 2vw, 1.25rem); padding: clamp(2rem, 4vw, 3rem); text-align: center; height: 100%; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;" onmouseover="this.style.background='rgba(255, 255, 255, 0.15)'; this.style.transform='translateY(-0.5rem)'; this.style.boxShadow='0 clamp(0.625rem, 2vw, 1.25rem) clamp(1.875rem, 4vw, 3.75rem) rgba(0, 0, 0, 0.3)'; this.style.borderColor='rgba(251, 212, 89, 0.5)';" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(255, 255, 255, 0.2)';">
+                        <!-- Decorative circle -->
+                        <div style="position: absolute; top: -2rem; right: -2rem; width: clamp(6rem, 12vw, 8rem); height: clamp(6rem, 12vw, 8rem); background: rgba(251, 212, 89, 0.1); border-radius: 50%; z-index: 0;"></div>
+                        
+                        <div style="position: relative; z-index: 1;">
+                            <div style="margin-bottom: clamp(1.5rem, 3vw, 2rem);">
+                                <div style="width: clamp(4rem, 8vw, 5rem); height: clamp(4rem, 8vw, 5rem); background: rgba(251, 212, 89, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; border: 0.1875rem solid rgba(251, 212, 89, 0.3);">
+                                    <i class="fa-solid {{ $stat['icon'] }}" style="color: #FBD459; font-size: clamp(1.75rem, 3.5vw, 2.25rem);"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="statistic-number" style="margin-bottom: clamp(1rem, 2vw, 1.25rem);">
+                                <span class="counter-value" data-target="{{ $stat['number'] }}" style="color: #ffffff; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; line-height: 1.2; text-shadow: 0 0.125rem 0.625rem rgba(0,0,0,0.2); display: block;">0</span>
+                            </div>
+                            
+                            <div class="statistic-label" style="margin-top: clamp(0.75rem, 1.5vw, 1rem);">
+                                <h4 style="color: rgba(255, 255, 255, 0.95); font-size: clamp(0.9375rem, 1.8vw, 1.125rem); font-weight: 600; line-height: 1.4; margin: 0; text-shadow: 0 0.0625rem 0.3125rem rgba(0,0,0,0.2);">
+                                    {{ $stat['label'] }}
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+    <!--===== STATISTIK PESANTREN AREA ENDS =======-->
 
     <!--===== BERITA TERBARU AREA STARTS =======-->
     @if(isset($latestArticles) && $latestArticles->count() > 0)
@@ -903,6 +967,71 @@
                     }
                 }, 1500);
             }, 500);
+        }
+    });
+</script>
+@endpush
+
+@push('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Function to format number with thousand separators
+        function formatNumber(num) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        // Counter animation function
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16); // 60fps
+            const counterElement = element;
+            
+            const timer = setInterval(function() {
+                start += increment;
+                if (start >= target) {
+                    counterElement.textContent = formatNumber(target);
+                    clearInterval(timer);
+                } else {
+                    counterElement.textContent = formatNumber(Math.floor(start));
+                }
+            }, 16);
+        }
+
+        // Intersection Observer for counter animation
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px'
+        };
+
+        const counterObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counterElements = entry.target.querySelectorAll('.counter-value');
+                    counterElements.forEach(counter => {
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        if (!counter.hasAttribute('data-animated')) {
+                            counter.setAttribute('data-animated', 'true');
+                            animateCounter(counter, target, 2000);
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe the statistics section
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            counterObserver.observe(statsSection);
+        }
+
+        // Fallback: if IntersectionObserver is not supported, animate on load
+        if (!window.IntersectionObserver) {
+            setTimeout(function() {
+                document.querySelectorAll('.counter-value').forEach(counter => {
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    animateCounter(counter, target, 2000);
+                });
+            }, 1000);
         }
     });
 </script>

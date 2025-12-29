@@ -34,7 +34,7 @@ class PengurusYayasanController extends Controller
 
         // Handle foto upload
         if ($request->hasFile('foto')) {
-            $validated['foto'] = $request->file('foto')->store('pengurus-yayasan', 'public');
+            $validated['foto'] = \App\Helpers\ImageHelper::resizeWithGD($request->file('foto'), 'pengurus-yayasan', 400, 533, 85);
         }
 
         // Handle checkbox boolean
@@ -77,7 +77,7 @@ class PengurusYayasanController extends Controller
             if ($pengurus->foto) {
                 Storage::disk('public')->delete($pengurus->foto);
             }
-            $validated['foto'] = $request->file('foto')->store('pengurus-yayasan', 'public');
+            $validated['foto'] = \App\Helpers\ImageHelper::resizeWithGD($request->file('foto'), 'pengurus-yayasan', 400, 533, 85);
         } else {
             // Keep existing foto if no new foto uploaded
             unset($validated['foto']);
