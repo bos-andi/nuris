@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 22 Des 2025 pada 06.54
+-- Waktu pembuatan: 01 Jan 2026 pada 10.24
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -323,7 +323,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (27, '2025_12_22_021846_add_image_to_unit_khidmahs_table', 17),
 (28, '2025_12_22_030807_create_gallery_items_table', 18),
 (29, '2025_12_22_035720_create_program_unggulans_table', 19),
-(30, '2025_12_22_053743_create_system_updates_table', 20);
+(30, '2025_12_22_053743_create_system_updates_table', 20),
+(31, '2025_12_29_003640_add_font_settings_to_slideshows_table', 21),
+(32, '2025_12_29_151103_create_page_views_table', 22);
 
 -- --------------------------------------------------------
 
@@ -340,6 +342,32 @@ CREATE TABLE `pages` (
   `meta_description` text DEFAULT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT 1,
   `order` int(11) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `page_views`
+--
+
+CREATE TABLE `page_views` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `url` varchar(255) NOT NULL,
+  `page_title` varchar(255) DEFAULT NULL,
+  `ip_address` varchar(45) NOT NULL,
+  `user_agent` varchar(255) DEFAULT NULL,
+  `device_type` varchar(255) DEFAULT NULL,
+  `browser` varchar(255) DEFAULT NULL,
+  `browser_version` varchar(255) DEFAULT NULL,
+  `os` varchar(255) DEFAULT NULL,
+  `os_version` varchar(255) DEFAULT NULL,
+  `country` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `referrer` varchar(255) DEFAULT NULL,
+  `session_id` varchar(255) DEFAULT NULL,
+  `viewed_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -394,6 +422,16 @@ CREATE TABLE `pengurus_pesantrens` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data untuk tabel `pengurus_pesantrens`
+--
+
+INSERT INTO `pengurus_pesantrens` (`id`, `nama`, `jabatan`, `jabatan_lengkap`, `foto`, `kategori`, `order`, `is_active`, `created_at`, `updated_at`) VALUES
+(1, 'MUHAMMAD IFAN NUR RAMADHANI', 'Staf Yayasan', NULL, 'pengurus-pesantren/gL5xBKdPfGd9IDB82UIAMVam4sfMSMd7vKH27WGJ.jpg', 'Staf', 0, 1, '2025-12-26 07:44:02', '2025-12-26 07:44:02'),
+(2, 'Hamba Allah', 'test', 'pengurus', 'pengurus-pesantren/TiMxaZfdy40UtXo2HdB2XR8v2eUTNZg2ST6tU1Am.jpg', 'staf', 1, 1, '2025-12-28 16:45:48', '2025-12-28 16:45:48'),
+(3, 'NUHAMMAD ANDI', 'test', NULL, NULL, NULL, 0, 1, '2025-12-28 16:46:49', '2025-12-28 16:46:49'),
+(4, 'NUHAMMAD ANDI', 'test', NULL, 'pengurus-pesantren/6951c54d2ebf2_1766966605.png', NULL, 0, 1, '2025-12-28 17:03:25', '2025-12-28 17:03:25');
+
 -- --------------------------------------------------------
 
 --
@@ -437,7 +475,8 @@ CREATE TABLE `pengurus_yayasans` (
 --
 
 INSERT INTO `pengurus_yayasans` (`id`, `nama`, `jabatan`, `jabatan_lengkap`, `foto`, `kategori`, `order`, `is_active`, `created_at`, `updated_at`) VALUES
-(1, 'Dr. KH. Ahmad Siddiq, SE., MM.', 'Ketua', 'Ketua Yayasan Nurul Islam', NULL, 'Utama', 1, 1, '2025-12-20 00:27:19', '2025-12-20 00:27:19');
+(1, 'Dr. KH. Ahmad Siddiq, SE., MM.', 'Ketua', 'Ketua Yayasan Nurul Islam', NULL, 'Utama', 1, 1, '2025-12-20 00:27:19', '2025-12-20 00:27:19'),
+(2, 'Hamba Allah', 'test', 'pengurus', 'pengurus-yayasan/6951c58a00444_1766966666.png', 'Utama', 0, 1, '2025-12-28 17:04:26', '2025-12-28 17:04:26');
 
 -- --------------------------------------------------------
 
@@ -548,7 +587,9 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('RJB9g0vh80aPoqqOVwZMV9OsVts9VakoLHCKNrfQ', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoidFJCZDY3WU9xaHVsN01zemM5Um5JMkJjWElFNTlmQlJPTWt1MlVtaCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7czo1OiJyb3V0ZSI7czoxMToicGFnZXMuaW5kZXgiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1766382780);
+('hD111Ocr4ZnacWfLBpgxiCuXDMqKoYX6bCiz8OAF', NULL, '192.168.100.6', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiQVZGN1RHcHlhd1V5NWd0U29iU3VCakhIUHBPNGVFRVJITzFrMnpJTSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDA6Imh0dHA6Ly8xOTIuMTY4LjEwMC4yNDA6ODIxMi9udXJpcy9wdWJsaWMiO3M6NToicm91dGUiO3M6MTE6InBhZ2VzLmluZGV4Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1767105736),
+('KzVI5IFJ3HPcnWR7bMXSSpgcqGtUDL3RuchCeVsi', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoieG9DQk9hRmEwVnVWS21sUVZJb2lveUlaY3RQdk9kZGJGdDQzSlo2QyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzM6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hZG1pbi9sb2dpbiI7czo1OiJyb3V0ZSI7czoxMToiYWRtaW4ubG9naW4iO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1767086367),
+('np3Frp2eYPx938FDdcIWqulltyxG9qtPmVuAlD67', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiVHdaM1J0QThVc1NVTWwySzNhS3J3aTU3Mm5FVnM2Y1U4NVBnZHVjVyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7czo1OiJyb3V0ZSI7czoxMToicGFnZXMuaW5kZXgiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1766999844);
 
 -- --------------------------------------------------------
 
@@ -571,7 +612,7 @@ CREATE TABLE `site_settings` (
 INSERT INTO `site_settings` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
 (1, 'site_name', 'PP. Nurul Islam', '2025-12-19 23:30:35', '2025-12-19 23:30:35'),
 (2, 'site_description', 'Pondok Pesantren Nurul Islam Mojokerto - Mendidik generasi unggul dengan nilai-nilai Islam yang rahmatan lil alamin', '2025-12-19 23:30:35', '2025-12-19 23:30:35'),
-(3, 'hero_logo', NULL, '2025-12-19 23:30:35', '2025-12-19 23:30:35'),
+(3, 'hero_logo', 'site-settings/afiVVOveVlbd4kRAw8JN6huWxeV8kjzNch67F7AV.png', '2025-12-19 23:30:35', '2025-12-25 22:45:18'),
 (4, 'favicon', 'storage/site-settings/Z9LaDWNrOOtJqIwo51KFV4FHAnUVv30GiY3mxUb3.png', '2025-12-19 23:30:35', '2025-12-20 06:26:52'),
 (5, 'og_image', NULL, '2025-12-19 23:30:35', '2025-12-19 23:30:35'),
 (6, 'og_title', 'PP. Nurul Islam - Pondok Pesantren Nurul Islam Mojokerto', '2025-12-19 23:30:35', '2025-12-19 23:30:35'),
@@ -590,6 +631,7 @@ CREATE TABLE `slideshows` (
   `title` varchar(255) DEFAULT NULL,
   `subtitle` varchar(255) DEFAULT NULL,
   `description` text DEFAULT NULL,
+  `font_settings` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`font_settings`)),
   `background_image` varchar(255) DEFAULT NULL,
   `video_url` varchar(255) DEFAULT NULL,
   `slide_type` enum('image','video') NOT NULL DEFAULT 'image',
@@ -605,11 +647,11 @@ CREATE TABLE `slideshows` (
 -- Dumping data untuk tabel `slideshows`
 --
 
-INSERT INTO `slideshows` (`id`, `title`, `subtitle`, `description`, `background_image`, `video_url`, `slide_type`, `button_text`, `button_link`, `order`, `is_active`, `created_at`, `updated_at`) VALUES
-(1, 'Pondok Pesantren Nuris', 'Nuris', 'Nuris', 'slideshows/U0aWNUOQRS1JGaDVdB8QC0XAmXvBGRdVb0ZMubRF.jpg', NULL, 'image', NULL, NULL, 2, 1, '2025-12-20 06:48:26', '2025-12-20 07:04:11'),
-(2, 'Pondok Pesantren Nuirs', 'Official Website Ponpen Nuris', 'Nurul Islam', 'slideshows/gIbD0rmo7yxiJ5SNOqpT6kW9pJA5i4uSbYlh1Ee2.jpg', NULL, 'image', NULL, NULL, 3, 1, '2025-12-20 06:50:55', '2025-12-20 07:02:10'),
-(3, 'Pondok Pesantren Nuris', 'Ponpes Nuris', 'Mencetak Generasi Unggul', 'slideshows/YnUoL0cfQUsWnSjZTwGB4RR5cT9IK5ocUl2N8PQJ.jpg', NULL, 'image', NULL, NULL, 1, 1, '2025-12-20 06:57:48', '2025-12-20 07:03:59'),
-(4, NULL, NULL, NULL, NULL, 'https://youtu.be/3AXgX-36-Ag', 'video', NULL, NULL, 4, 1, '2025-12-21 05:46:30', '2025-12-21 06:02:28');
+INSERT INTO `slideshows` (`id`, `title`, `subtitle`, `description`, `font_settings`, `background_image`, `video_url`, `slide_type`, `button_text`, `button_link`, `order`, `is_active`, `created_at`, `updated_at`) VALUES
+(1, 'Pondok Pesantren Nuris', 'Nuris', 'Nuris', '{\"title\":{\"font_family\":\"Montserrat\",\"font_size\":\"48px\",\"font_weight\":\"normal\",\"font_style\":\"normal\",\"color\":\"#000000\",\"text_align\":\"left\"},\"subtitle\":{\"font_family\":\"Montserrat\",\"font_size\":\"24px\",\"font_weight\":\"normal\",\"font_style\":\"normal\",\"color\":\"#000000\",\"text_align\":\"left\"},\"description\":{\"font_family\":\"Montserrat\",\"font_size\":\"16px\",\"font_weight\":\"normal\",\"font_style\":\"normal\",\"color\":\"#000000\",\"text_align\":\"left\"}}', 'slideshows/U0aWNUOQRS1JGaDVdB8QC0XAmXvBGRdVb0ZMubRF.jpg', NULL, 'image', NULL, NULL, 2, 1, '2025-12-20 06:48:26', '2025-12-29 06:10:55'),
+(2, 'Pondok Pesantren Nuirs', 'Official Website Ponpen Nuris', 'Nurul Islam', NULL, 'slideshows/gIbD0rmo7yxiJ5SNOqpT6kW9pJA5i4uSbYlh1Ee2.jpg', NULL, 'image', NULL, NULL, 3, 1, '2025-12-20 06:50:55', '2025-12-20 07:02:10'),
+(3, 'Pondok Pesantren Nurul Islam Pungging', 'official Website', 'Selamat Datang di official website PONDOK PESANTREN NURUL ISLAM MOJOKERTO', '{\"title\":{\"font_family\":\"Montserrat\",\"font_size\":\"56px\",\"font_weight\":\"normal\",\"font_style\":\"normal\",\"color\":\"#ffffff\",\"text_align\":\"left\"},\"subtitle\":{\"font_family\":\"Montserrat\",\"font_size\":\"36px\",\"font_weight\":\"normal\",\"font_style\":\"normal\",\"color\":\"#ffffff\",\"text_align\":\"left\"},\"description\":{\"font_family\":\"Arial\",\"font_size\":\"16px\",\"font_weight\":\"normal\",\"font_style\":\"normal\",\"color\":\"#ffffff\",\"text_align\":\"left\"}}', 'slideshows/YnUoL0cfQUsWnSjZTwGB4RR5cT9IK5ocUl2N8PQJ.jpg', NULL, 'image', NULL, NULL, 1, 1, '2025-12-20 06:57:48', '2025-12-29 08:48:37'),
+(4, NULL, NULL, NULL, NULL, NULL, 'https://youtu.be/3AXgX-36-Ag', 'video', NULL, NULL, 4, 1, '2025-12-21 05:46:30', '2025-12-21 06:02:28');
 
 -- --------------------------------------------------------
 
@@ -1508,7 +1550,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `role`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Super Admin', 'ndiandie@gmail.com', 'superadmin', NULL, '$2y$12$ze/X3gaSU1IuUezVKDlInOzA/P2Fcz3PShjwTp44XH9p/Ysea1G/C', NULL, '2025-12-16 02:53:56', '2025-12-16 02:53:56'),
-(2, 'Admin', 'admin@nuris.id', 'admin', NULL, '$2y$12$VUxUgHPtmGAtF20XHsJb7ODfOsE1k6VHc8j5N9KlFCVZn1d9UXUE2', NULL, '2025-12-16 02:53:56', '2025-12-16 02:53:56'),
+(2, 'Admin', 'admin@nuris.id', 'admin', NULL, '$2y$12$VUxUgHPtmGAtF20XHsJb7ODfOsE1k6VHc8j5N9KlFCVZn1d9UXUE2', 'BYlZJ2LFAlxIkwrMAZ9n3AuFohWyraALMwGFlBk8FUXg2FCK8olyhPOvjmhP', '2025-12-16 02:53:56', '2025-12-16 02:53:56'),
 (3, 'User', 'user@nuris.id', 'user', NULL, '$2y$12$h2mk0RzpQumVmAbTDAg63.K3HBWioIWwTo/VTcmzzy3rLjJxgIJGq', NULL, '2025-12-16 02:53:56', '2025-12-16 02:53:56');
 
 --
@@ -1601,6 +1643,16 @@ ALTER TABLE `migrations`
 ALTER TABLE `pages`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `pages_slug_unique` (`slug`);
+
+--
+-- Indeks untuk tabel `page_views`
+--
+ALTER TABLE `page_views`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `page_views_url_index` (`url`),
+  ADD KEY `page_views_ip_address_index` (`ip_address`),
+  ADD KEY `page_views_session_id_index` (`session_id`),
+  ADD KEY `page_views_viewed_at_index` (`viewed_at`);
 
 --
 -- Indeks untuk tabel `password_reset_tokens`
@@ -1750,12 +1802,18 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT untuk tabel `pages`
 --
 ALTER TABLE `pages`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `page_views`
+--
+ALTER TABLE `page_views`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
@@ -1768,7 +1826,7 @@ ALTER TABLE `pengurus_dewan_pusats`
 -- AUTO_INCREMENT untuk tabel `pengurus_pesantrens`
 --
 ALTER TABLE `pengurus_pesantrens`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `pengurus_units`
@@ -1780,7 +1838,7 @@ ALTER TABLE `pengurus_units`
 -- AUTO_INCREMENT untuk tabel `pengurus_yayasans`
 --
 ALTER TABLE `pengurus_yayasans`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `program_unggulans`
