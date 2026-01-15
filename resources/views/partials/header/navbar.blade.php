@@ -157,7 +157,7 @@
                             </ul>
                         </div>
                         <div class="btn-area">
-                            <a href="{{ route('psb') }}" class="header-btn1">PSB 2026 <span><i class="fa-solid fa-arrow-right"></i></span></a>
+                            <a href="https://psb.nuris.or.id" target="_blank" rel="noopener noreferrer" class="header-btn1">PSB 2026 <span><i class="fa-solid fa-arrow-right"></i></span></a>
                         </div>
                     </div>
                 </div>

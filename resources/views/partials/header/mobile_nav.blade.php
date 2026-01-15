@@ -141,7 +141,7 @@
 
         <div class="allmobilesection">
             <!-- btn -->
-            <a href="{{ route('pages.display', 'psb-2026') }}" class="header-mobile-btn1">PSB 2026 <span><i class="fa-solid fa-arrow-right"></i></span></a>
+            <a href="https://psb.nuris.or.id" target="_blank" rel="noopener noreferrer" class="header-mobile-btn1">PSB 2026 <span><i class="fa-solid fa-arrow-right"></i></span></a>
 
             <div class="vl-mobile-contact1">
                 <h3 class="title">Kontak Info</h3>
