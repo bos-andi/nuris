@@ -61,7 +61,6 @@
                                 <th style="padding: 15px; font-weight: 600; border: none; text-align: center; vertical-align: middle;">Tempat Tanggal Lahir</th>
                                 <th style="padding: 15px; font-weight: 600; border: none; text-align: center; vertical-align: middle; min-width: 250px;">Alamat</th>
                                 <th style="padding: 15px; font-weight: 600; border: none; text-align: center; vertical-align: middle;">Pendidikan Terakhir</th>
-                                <th style="padding: 15px; font-weight: 600; border: none; text-align: center; vertical-align: middle;">No. HP</th>
                             </tr>
                         </thead>
                         <tbody id="guruTableBody">
@@ -82,13 +81,6 @@
                                 <td style="padding: 15px; vertical-align: middle;">{{ $s->tempat_tanggal_lahir ?? '-' }}</td>
                                 <td style="padding: 15px; vertical-align: middle; max-width: 300px; word-wrap: break-word; white-space: normal;">{{ $s->alamat ?? '-' }}</td>
                                 <td style="padding: 15px; vertical-align: middle;">{{ $s->pendidikan_terakhir ?? '-' }}</td>
-                                <td style="padding: 15px; vertical-align: middle;">
-                                    @if($s->no_hp)
-                                        <a href="tel:{{ $s->no_hp }}" style="color: var(--ztc-text-text-4); text-decoration: none;">{{ $s->no_hp }}</a>
-                                    @else
-                                        -
-                                    @endif
-                                </td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -124,7 +116,6 @@
                                 <th style="padding: 15px; font-weight: 600; border: none; text-align: center; vertical-align: middle;">Tempat Tanggal Lahir</th>
                                 <th style="padding: 15px; font-weight: 600; border: none; text-align: center; vertical-align: middle; min-width: 250px;">Alamat</th>
                                 <th style="padding: 15px; font-weight: 600; border: none; text-align: center; vertical-align: middle;">Pendidikan Terakhir</th>
-                                <th style="padding: 15px; font-weight: 600; border: none; text-align: center; vertical-align: middle;">No. HP</th>
                             </tr>
                         </thead>
                         <tbody id="karyawanTableBody">
@@ -145,13 +136,6 @@
                                 <td style="padding: 15px; vertical-align: middle;">{{ $s->tempat_tanggal_lahir ?? '-' }}</td>
                                 <td style="padding: 15px; vertical-align: middle; max-width: 300px; word-wrap: break-word; white-space: normal;">{{ $s->alamat ?? '-' }}</td>
                                 <td style="padding: 15px; vertical-align: middle;">{{ $s->pendidikan_terakhir ?? '-' }}</td>
-                                <td style="padding: 15px; vertical-align: middle;">
-                                    @if($s->no_hp)
-                                        <a href="tel:{{ $s->no_hp }}" style="color: var(--ztc-text-text-4); text-decoration: none;">{{ $s->no_hp }}</a>
-                                    @else
-                                        -
-                                    @endif
-                                </td>
                             </tr>
                             @endforeach
                         </tbody>
