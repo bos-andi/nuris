@@ -89,6 +89,12 @@
 
 <!--=====STRUCTURED DATA (JSON-LD) FOR GOOGLE SEARCH=======-->
 @php
+    // Ensure logo URL is absolute and accessible
+    $organizationLogoUrl = $logoUrl;
+    if (!filter_var($organizationLogoUrl, FILTER_VALIDATE_URL)) {
+        $organizationLogoUrl = $baseUrl . '/' . ltrim($organizationLogoUrl, '/');
+    }
+    
     $structuredData1 = [
         '@context' => 'https://schema.org',
         '@type' => 'EducationalOrganization',
@@ -96,8 +102,12 @@
         'alternateName' => 'PP. Nurul Islam',
         'description' => $siteDescription,
         'url' => $ogUrl,
-        'logo' => $logoUrl,
-        'image' => $logoUrl,
+        'logo' => [
+            '@type' => 'ImageObject',
+            'url' => $organizationLogoUrl,
+            'contentUrl' => $organizationLogoUrl
+        ],
+        'image' => $organizationLogoUrl,
         'sameAs' => [],
         'address' => [
             '@type' => 'PostalAddress',
@@ -116,10 +126,31 @@
         '@context' => 'https://schema.org',
         '@type' => 'Organization',
         'name' => $siteName,
+        'alternateName' => 'PP. Nurul Islam',
         'url' => $ogUrl,
-        'logo' => $logoUrl,
-        'image' => $logoUrl,
+        'logo' => [
+            '@type' => 'ImageObject',
+            'url' => $organizationLogoUrl,
+            'contentUrl' => $organizationLogoUrl
+        ],
+        'image' => $organizationLogoUrl,
         'description' => $siteDescription
+    ];
+    
+    // Add Website schema for better SEO
+    $structuredData3 = [
+        '@context' => 'https://schema.org',
+        '@type' => 'WebSite',
+        'name' => $siteName,
+        'url' => $ogUrl,
+        'publisher' => [
+            '@type' => 'Organization',
+            'name' => $siteName,
+            'logo' => [
+                '@type' => 'ImageObject',
+                'url' => $organizationLogoUrl
+            ]
+        ]
     ];
 @endphp
 <script type="application/ld+json">
@@ -128,4 +159,8 @@
 
 <script type="application/ld+json">
 {!! json_encode($structuredData2, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
+</script>
+
+<script type="application/ld+json">
+{!! json_encode($structuredData3, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
 </script>
