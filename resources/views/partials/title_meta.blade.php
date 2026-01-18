@@ -38,8 +38,10 @@
 <title>{{ $title ?? $siteName }}</title>
 
 <!--=====FAB ICON & APPLE TOUCH ICON=======-->
+<!-- Primary favicon for Google Search -->
+<link rel="icon" type="image/x-icon" href="{{ $faviconUrl }}">
 <link rel="shortcut icon" href="{{ $faviconUrl }}" type="image/x-icon">
-<link rel="icon" href="{{ $faviconUrl }}" type="image/x-icon">
+<link rel="icon" href="{{ $faviconUrl }}" type="image/png">
 <link rel="apple-touch-icon" href="{{ $logoUrl }}">
 <link rel="apple-touch-icon" sizes="57x57" href="{{ $logoUrl }}">
 <link rel="apple-touch-icon" sizes="60x60" href="{{ $logoUrl }}">
@@ -111,9 +113,14 @@
         'sameAs' => [],
         'address' => [
             '@type' => 'PostalAddress',
+            'streetAddress' => 'Jl. Raya Jabontegal, Jabontegal',
             'addressLocality' => 'Mojokerto',
             'addressRegion' => 'Jawa Timur',
-            'addressCountry' => 'ID'
+            'postalCode' => '61355',
+            'addressCountry' => [
+                '@type' => 'Country',
+                'name' => 'ID'
+            ]
         ],
         'potentialAction' => [
             '@type' => 'SearchAction',
