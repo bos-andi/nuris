@@ -20,6 +20,9 @@ use App\Http\Controllers\StaffController as PublicStaffController;
 // Public routes
 Route::get('/', [PagesController::class, 'index'])->name('pages.index');
 
+// Sitemap route
+Route::get('/sitemap.xml', [\App\Http\Controllers\SitemapController::class, 'index'])->name('sitemap');
+
 // Articles routes
 Route::get('/berita', [ArticleController::class, 'index'])->name('articles.index');
 

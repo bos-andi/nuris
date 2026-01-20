@@ -165,6 +165,30 @@
     </div>
     <!--===== HERO AREA ENDS =======-->
 
+    <!--===== IDENTITAS RESMI AREA STARTS =======-->
+    <section class="vl-about-section sp2" style="background-color: #f8f9fa; padding-top: 60px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center mb-4">
+                        <h1 class="vl-section-title" style="font-size: 2.5rem; font-weight: 700; color: #01715d; margin-bottom: 1.5rem;">
+                            Website Resmi PP Nurul Islam Mojokerto
+                        </h1>
+                        <div class="vl-section-content" style="max-width: 900px; margin: 0 auto; text-align: justify;">
+                            <p style="font-size: 1.125rem; line-height: 1.8; color: #333; margin-bottom: 1rem;">
+                                <strong>Website Resmi PP Nurul Islam Mojokerto</strong> merupakan sumber informasi resmi Pondok Pesantren Nurul Islam (Nuris) Mojokerto. Melalui website ini, kami menyediakan informasi lengkap mengenai profil pesantren, program pendidikan, berita dan kegiatan, serta berbagai informasi penting lainnya bagi masyarakat.
+                            </p>
+                            <p style="font-size: 1.125rem; line-height: 1.8; color: #333;">
+                                Pondok Pesantren Nurul Islam Mojokerto adalah lembaga pendidikan Islam yang berkomitmen untuk mendidik generasi unggul dengan nilai-nilai Islam yang rahmatan lil alamin. Kami menyediakan pendidikan berkualitas dari tingkat dasar hingga perguruan tinggi, dengan berbagai unit pendidikan yang tersebar di Mojokerto dan sekitarnya.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--===== IDENTITAS RESMI AREA ENDS =======-->
+
     <!--===== PROFIL PENGASUH AREA STARTS =======-->
     <section class="vl-about-section sp2">
         <div class="container">

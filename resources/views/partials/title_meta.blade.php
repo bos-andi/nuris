@@ -3,14 +3,28 @@
 @php
     // Gunakan URL dari request saat ini untuk asset
     $baseUrl = request()->getSchemeAndHttpHost();
-    $siteName = \App\Models\SiteSetting::get('site_name', 'PP. Nurul Islam');
-    $siteDescription = \App\Models\SiteSetting::get('site_description', 'Pondok Pesantren Nurul Islam Mojokerto');
+    
+    // SEO Default Values - Website Resmi PP Nurul Islam Mojokerto
+    $siteName = 'PP Nurul Islam Mojokerto';
+    $officialWebsiteText = 'Website Resmi PP Nurul Islam Mojokerto';
+    $siteDescription = 'Website Resmi PP Nurul Islam Mojokerto. Informasi resmi Pondok Pesantren Nurul Islam Mojokerto, meliputi profil, pendidikan, berita, dan kegiatan pesantren.';
+    
+    // Get settings from database
     $favicon = \App\Models\SiteSetting::get('favicon', 'img/logo/nuris-favicon.png');
     $heroLogo = \App\Models\SiteSetting::get('hero_logo');
-    $ogTitle = \App\Models\SiteSetting::get('og_title', $siteName . ' - Pondok Pesantren Nurul Islam Mojokerto');
-    $ogDescription = \App\Models\SiteSetting::get('og_description', $siteDescription);
     $ogImage = \App\Models\SiteSetting::get('og_image');
-    $ogUrl = \App\Models\SiteSetting::get('og_url', $baseUrl);
+    
+    // Determine canonical URL - Always use https://nuris.or.id
+    $canonicalUrl = 'https://nuris.or.id' . request()->getPathInfo();
+    if (request()->getQueryString()) {
+        $canonicalUrl .= '?' . request()->getQueryString();
+    }
+    
+    // OG Values
+    $ogUrl = 'https://nuris.or.id';
+    $ogTitle = $officialWebsiteText;
+    $ogDescription = $officialWebsiteText . ' – sumber informasi resmi Pondok Pesantren Nurul Islam Mojokerto.';
+    
     $twitterCard = \App\Models\SiteSetting::get('twitter_card', 'summary_large_image');
     
     // Determine logo URL for structured data and favicon
@@ -34,8 +48,16 @@
     } else {
         $faviconUrl = $baseUrl . '/img/logo/nuris-favicon.png';
     }
+    
+    // Page-specific title (for non-homepage)
+    $pageTitle = isset($title) ? $title . ' | Nuris' : null;
+    $finalTitle = $pageTitle ? $officialWebsiteText . ' | ' . $pageTitle : ($officialWebsiteText . ' | Nuris');
 @endphp
-<title>{{ $title ?? $siteName }}</title>
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ $canonicalUrl }}">
+
+<title>{{ $finalTitle }}</title>
 
 <!--=====FAB ICON & APPLE TOUCH ICON=======-->
 <!-- Primary favicon for Google Search -->
@@ -58,15 +80,18 @@
 
 <!--=====META TAGS=======-->
 <meta name="description" content="{{ $siteDescription }}">
-<meta name="keywords" content="Pondok Pesantren, Nurul Islam, Mojokerto, Pendidikan Islam, Pesantren">
+<meta name="keywords" content="Website Resmi PP Nurul Islam Mojokerto, Pondok Pesantren Nurul Islam, Nuris Mojokerto, Pendidikan Islam, Pesantren Mojokerto">
 <meta name="theme-color" content="#1a472a">
+<meta name="author" content="PP Nurul Islam Mojokerto">
+<meta name="robots" content="index, follow">
 
 <!--=====OPEN GRAPH / FACEBOOK=======-->
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ $ogTitle }}">
 <meta property="og:description" content="{{ $ogDescription }}">
-<meta property="og:url" content="{{ $ogUrl }}">
-<meta property="og:site_name" content="{{ $siteName }}">
+<meta property="og:url" content="{{ $ogUrl }}{{ request()->getPathInfo() }}">
+<meta property="og:site_name" content="{{ $officialWebsiteText }}">
+<meta property="og:locale" content="id_ID">
 @if($logoUrl)
     <meta property="og:image" content="{{ $logoUrl }}">
     <meta property="og:image:width" content="512">
@@ -94,15 +119,17 @@
     // Ensure logo URL is absolute and accessible
     $organizationLogoUrl = $logoUrl;
     if (!filter_var($organizationLogoUrl, FILTER_VALIDATE_URL)) {
-        $organizationLogoUrl = $baseUrl . '/' . ltrim($organizationLogoUrl, '/');
+        $organizationLogoUrl = 'https://nuris.or.id/' . ltrim(str_replace($baseUrl, '', $organizationLogoUrl), '/');
     }
     
+    // Organization Schema - Primary
     $structuredData1 = [
         '@context' => 'https://schema.org',
-        '@type' => 'EducationalOrganization',
-        'name' => $siteName,
-        'alternateName' => 'PP. Nurul Islam',
-        'description' => $siteDescription,
+        '@type' => 'Organization',
+        'name' => 'PP Nurul Islam Mojokerto',
+        'alternateName' => 'Nuris Mojokerto',
+        'legalName' => 'Pondok Pesantren Nurul Islam Mojokerto',
+        'description' => $officialWebsiteText,
         'url' => $ogUrl,
         'logo' => [
             '@type' => 'ImageObject',
@@ -110,7 +137,7 @@
             'contentUrl' => $organizationLogoUrl
         ],
         'image' => $organizationLogoUrl,
-        'sameAs' => [],
+        'sameAs' => [], // Add social media URLs here when available
         'address' => [
             '@type' => 'PostalAddress',
             'streetAddress' => 'Jl. Raya Jabontegal, Jabontegal',
@@ -121,19 +148,42 @@
                 '@type' => 'Country',
                 'name' => 'ID'
             ]
+        ]
+    ];
+    
+    // WebSite Schema with SearchAction
+    $structuredData2 = [
+        '@context' => 'https://schema.org',
+        '@type' => 'WebSite',
+        'name' => $officialWebsiteText,
+        'url' => $ogUrl,
+        'description' => $siteDescription,
+        'publisher' => [
+            '@type' => 'Organization',
+            'name' => 'PP Nurul Islam Mojokerto',
+            'logo' => [
+                '@type' => 'ImageObject',
+                'url' => $organizationLogoUrl
+            ]
         ],
         'potentialAction' => [
             '@type' => 'SearchAction',
-            'target' => $ogUrl . '/search?q={search_term_string}',
+            'target' => [
+                '@type' => 'EntryPoint',
+                'urlTemplate' => $ogUrl . '/search?q={search_term_string}'
+            ],
             'query-input' => 'required name=search_term_string'
         ]
     ];
     
-    $structuredData2 = [
+    // EducationalOrganization Schema
+    $structuredData3 = [
         '@context' => 'https://schema.org',
-        '@type' => 'Organization',
-        'name' => $siteName,
-        'alternateName' => 'PP. Nurul Islam',
+        '@type' => 'EducationalOrganization',
+        'name' => 'PP Nurul Islam Mojokerto',
+        'alternateName' => 'Nuris Mojokerto',
+        'legalName' => 'Pondok Pesantren Nurul Islam Mojokerto',
+        'description' => $officialWebsiteText,
         'url' => $ogUrl,
         'logo' => [
             '@type' => 'ImageObject',
@@ -141,21 +191,15 @@
             'contentUrl' => $organizationLogoUrl
         ],
         'image' => $organizationLogoUrl,
-        'description' => $siteDescription
-    ];
-    
-    // Add Website schema for better SEO
-    $structuredData3 = [
-        '@context' => 'https://schema.org',
-        '@type' => 'WebSite',
-        'name' => $siteName,
-        'url' => $ogUrl,
-        'publisher' => [
-            '@type' => 'Organization',
-            'name' => $siteName,
-            'logo' => [
-                '@type' => 'ImageObject',
-                'url' => $organizationLogoUrl
+        'address' => [
+            '@type' => 'PostalAddress',
+            'streetAddress' => 'Jl. Raya Jabontegal, Jabontegal',
+            'addressLocality' => 'Mojokerto',
+            'addressRegion' => 'Jawa Timur',
+            'postalCode' => '61355',
+            'addressCountry' => [
+                '@type' => 'Country',
+                'name' => 'ID'
             ]
         ]
     ];
