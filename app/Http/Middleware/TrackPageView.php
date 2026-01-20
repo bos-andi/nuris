@@ -19,9 +19,11 @@ class TrackPageView
     {
         $response = $next($request);
 
-        // Skip tracking for admin routes, API routes, AJAX requests, and non-200 responses
+        // Skip tracking for admin routes, API routes, AJAX requests, sitemap, robots, and non-200 responses
         if ($request->is('admin/*') || 
             $request->is('api/*') || 
+            $request->is('sitemap.xml') ||
+            $request->is('robots.txt') ||
             $request->ajax() || 
             $request->wantsJson() ||
             $response->getStatusCode() !== 200 ||
