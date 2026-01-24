@@ -21,7 +21,14 @@
     }
     
     // Check if this is an article page
+    // Only use article meta tags if:
+    // 1. Article variable exists AND is Article instance
+    // 2. NOT on homepage (route is not '/')
+    // 3. NOT on articles index page (route is not '/berita')
     $article = isset($article) ? $article : null;
+    $isHomepage = request()->getPathInfo() === '/' || request()->getPathInfo() === '';
+    $isArticlesIndex = request()->getPathInfo() === '/berita';
+    $isArticlePage = $article && $article instanceof \App\Models\Article && !$isHomepage && !$isArticlesIndex;
     
     // OG Values - Default
     $ogUrl = 'https://nuris.or.id' . request()->getPathInfo();
@@ -29,8 +36,8 @@
     $ogDescription = $officialWebsiteText . ' – sumber informasi resmi Pondok Pesantren Nurul Islam Mojokerto.';
     $ogImageUrl = null;
     
-    // If article exists, use article data for OG
-    if ($article && $article instanceof \App\Models\Article) {
+    // If article exists and this is an article detail page, use article data for OG
+    if ($isArticlePage) {
         $ogTitle = $article->title . ' | ' . $siteName;
         $ogUrl = 'https://nuris.or.id' . request()->getPathInfo();
         
@@ -81,8 +88,8 @@
     }
     
     // Page-specific title (for non-homepage)
-    // If article exists, use article title
-    if ($article && $article instanceof \App\Models\Article) {
+    // If article exists and this is an article detail page, use article title
+    if ($isArticlePage) {
         $pageTitle = $article->title;
         $finalTitle = $pageTitle . ' | ' . $siteName;
     } else {
@@ -116,7 +123,7 @@
 <link rel="manifest" href="{{ $baseUrl }}/site.webmanifest">
 
 <!--=====META TAGS=======-->
-@if($article && $article instanceof \App\Models\Article)
+@if($isArticlePage)
     @if($article->meta_description)
         <meta name="description" content="{{ $article->meta_description }}">
     @elseif($article->excerpt)
@@ -134,13 +141,13 @@
 <meta name="robots" content="index, follow">
 
 <!--=====OPEN GRAPH / FACEBOOK=======-->
-<meta property="og:type" content="{{ $article ? 'article' : 'website' }}">
+<meta property="og:type" content="{{ $isArticlePage ? 'article' : 'website' }}">
 <meta property="og:title" content="{{ $ogTitle }}">
 <meta property="og:description" content="{{ $ogDescription }}">
 <meta property="og:url" content="{{ $ogUrl }}">
 <meta property="og:site_name" content="{{ $officialWebsiteText }}">
 <meta property="og:locale" content="id_ID">
-@if($article)
+@if($isArticlePage)
     @if($article->author)
         <meta property="article:author" content="{{ $article->author }}">
     @endif
@@ -156,16 +163,19 @@
         @endforeach
     @endif
 @endif
-@if($ogImageUrl)
+@if($ogImageUrl && $isArticlePage)
+    {{-- Use article featured image for article pages --}}
     <meta property="og:image" content="{{ $ogImageUrl }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/jpeg">
-@elseif($ogImage)
+@elseif($ogImage && !$isArticlePage)
+    {{-- Use custom OG image for non-article pages --}}
     <meta property="og:image" content="{{ $baseUrl }}/storage/{{ $ogImage }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 @elseif($logoUrl)
+    {{-- Default: Use logo for homepage and other pages --}}
     <meta property="og:image" content="{{ $logoUrl }}">
     <meta property="og:image:width" content="512">
     <meta property="og:image:height" content="512">
@@ -175,11 +185,14 @@
 <meta name="twitter:card" content="{{ $twitterCard }}">
 <meta name="twitter:title" content="{{ $ogTitle }}">
 <meta name="twitter:description" content="{{ $ogDescription }}">
-@if($ogImageUrl)
+@if($ogImageUrl && $isArticlePage)
+    {{-- Use article featured image for article pages --}}
     <meta name="twitter:image" content="{{ $ogImageUrl }}">
-@elseif($ogImage)
+@elseif($ogImage && !$isArticlePage)
+    {{-- Use custom OG image for non-article pages --}}
     <meta name="twitter:image" content="{{ $baseUrl }}/storage/{{ $ogImage }}">
 @elseif($logoUrl)
+    {{-- Default: Use logo for homepage and other pages --}}
     <meta name="twitter:image" content="{{ $logoUrl }}">
 @endif
 
@@ -273,9 +286,9 @@
         ]
     ];
     
-    // Article Schema (if article exists)
+    // Article Schema (if article exists and this is article detail page)
     $articleSchema = null;
-    if ($article && $article instanceof \App\Models\Article) {
+    if ($isArticlePage) {
         $articleImageUrl = null;
         if ($article->featured_image) {
             $imagePath = $article->featured_image;
