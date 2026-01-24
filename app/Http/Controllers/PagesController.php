@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Article;
+use App\Models\Category;
+use App\Models\Tag;
 use App\Models\Gallery;
 use App\Models\Slideshow;
 use App\Models\Facility;
@@ -101,7 +103,8 @@ class PagesController extends Controller
     public function displayOrArticle($slug)
     {
         // First, check if slug matches a published article
-        $article = Article::where('slug', $slug)
+        $article = Article::with('categoryModel', 'tags')
+            ->where('slug', $slug)
             ->where('is_published', true)
             ->where(function($query) {
                 $query->whereNull('published_at')
@@ -120,7 +123,18 @@ class PagesController extends Controller
                 ->limit(3)
                 ->get();
 
-            return view('articles.show', compact('article', 'relatedArticles'));
+            // Get latest articles for sidebar
+            $latestArticles = Article::published()
+                ->where('id', '!=', $article->id)
+                ->orderByRaw('COALESCE(published_at, created_at) DESC')
+                ->limit(5)
+                ->get();
+
+            // Get categories and tags for sidebar
+            $categories = Category::active()->withCount('articles')->orderBy('order')->orderBy('name')->get();
+            $tags = Tag::active()->withCount('articles')->orderBy('order')->orderBy('name')->get();
+
+            return view('articles.show', compact('article', 'relatedArticles', 'latestArticles', 'categories', 'tags'));
         }
 
         // If not an article, try to display as page

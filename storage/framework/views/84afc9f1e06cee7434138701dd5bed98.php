@@ -1,7 +1,7 @@
 <div class="app-menu">
-    <a href="{{ route('admin.dashboard') }}" class="logo-box flex items-center gap-2 px-2">
-        <img src="{{ asset('img/logo/nuris-logo.png') }}" class="h-8 w-auto dark:hidden" alt="Logo Nuris" style="max-height: 32px; object-fit: contain;">
-        <img src="{{ asset('img/logo/nuris-logo.png') }}" class="h-8 w-auto hidden dark:block" alt="Logo Nuris" style="max-height: 32px; object-fit: contain;">
+    <a href="<?php echo e(route('admin.dashboard')); ?>" class="logo-box flex items-center gap-2 px-2">
+        <img src="<?php echo e(asset('img/logo/nuris-logo.png')); ?>" class="h-8 w-auto dark:hidden" alt="Logo Nuris" style="max-height: 32px; object-fit: contain;">
+        <img src="<?php echo e(asset('img/logo/nuris-logo.png')); ?>" class="h-8 w-auto hidden dark:block" alt="Logo Nuris" style="max-height: 32px; object-fit: contain;">
         <span class="text-base font-semibold text-gray-800 dark:text-gray-200 whitespace-nowrap">Admin Nuris</span>
     </a>
 
@@ -20,7 +20,7 @@
         <ul class="menu" data-fc-type="accordion">
             <!-- Dashboard -->
             <li class="menu-item">
-                <a href="{{ route('admin.dashboard') }}" class="menu-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
+                <a href="<?php echo e(route('admin.dashboard')); ?>" class="menu-link <?php echo e(request()->routeIs('admin.dashboard') ? 'active' : ''); ?>">
                     <span class="menu-icon"><i class="mgc_home_3_line"></i></span>
                     <span class="menu-text">Dashboard</span>
                 </a>
@@ -32,42 +32,42 @@
             </li>
 
             <li class="menu-item">
-                <a href="{{ route('admin.pages') }}" class="menu-link {{ request()->routeIs('admin.pages*') ? 'active' : '' }}">
+                <a href="<?php echo e(route('admin.pages')); ?>" class="menu-link <?php echo e(request()->routeIs('admin.pages*') ? 'active' : ''); ?>">
                     <span class="menu-icon"><i class="mgc_document_line"></i></span>
                     <span class="menu-text">Halaman</span>
                 </a>
             </li>
 
             <li class="menu-item">
-                <a href="{{ route('admin.menus') }}" class="menu-link {{ request()->routeIs('admin.menus*') ? 'active' : '' }}">
+                <a href="<?php echo e(route('admin.menus')); ?>" class="menu-link <?php echo e(request()->routeIs('admin.menus*') ? 'active' : ''); ?>">
                     <span class="menu-icon"><i class="mgc_menu_line"></i></span>
                     <span class="menu-text">Menu Website</span>
                 </a>
             </li>
 
             <li class="menu-item">
-                <a href="{{ route('admin.slideshows') }}" class="menu-link {{ request()->routeIs('admin.slideshows*') ? 'active' : '' }}">
+                <a href="<?php echo e(route('admin.slideshows')); ?>" class="menu-link <?php echo e(request()->routeIs('admin.slideshows*') ? 'active' : ''); ?>">
                     <span class="menu-icon"><i class="mgc_film_line"></i></span>
                     <span class="menu-text">Slideshow</span>
                 </a>
             </li>
 
             <li class="menu-item">
-                <a href="{{ route('admin.unit-khidmah.index') }}" class="menu-link {{ request()->routeIs('admin.unit-khidmah*') ? 'active' : '' }}">
+                <a href="<?php echo e(route('admin.unit-khidmah.index')); ?>" class="menu-link <?php echo e(request()->routeIs('admin.unit-khidmah*') ? 'active' : ''); ?>">
                     <span class="menu-icon"><i class="mgc_building_2_line"></i></span>
                     <span class="menu-text">Unit Khidmah</span>
                 </a>
             </li>
 
             <li class="menu-item">
-                <a href="{{ route('admin.program-unggulan.index') }}" class="menu-link {{ request()->routeIs('admin.program-unggulan*') ? 'active' : '' }}">
+                <a href="<?php echo e(route('admin.program-unggulan.index')); ?>" class="menu-link <?php echo e(request()->routeIs('admin.program-unggulan*') ? 'active' : ''); ?>">
                     <span class="menu-icon"><i class="mgc_star_line"></i></span>
                     <span class="menu-text">Program Unggulan</span>
                 </a>
             </li>
 
             <li class="menu-item">
-                <a href="{{ route('admin.galleries.index') }}" class="menu-link {{ request()->routeIs('admin.galleries*') ? 'active' : '' }}">
+                <a href="<?php echo e(route('admin.galleries.index')); ?>" class="menu-link <?php echo e(request()->routeIs('admin.galleries*') ? 'active' : ''); ?>">
                     <span class="menu-icon"><i class="mgc_album_line"></i></span>
                     <span class="menu-text">Gallery</span>
                 </a>
@@ -79,28 +79,28 @@
             </li>
 
             <li class="menu-item">
-                <a href="{{ route('admin.articles') }}" class="menu-link {{ request()->routeIs('admin.articles*') ? 'active' : '' }}">
+                <a href="<?php echo e(route('admin.articles')); ?>" class="menu-link <?php echo e(request()->routeIs('admin.articles*') ? 'active' : ''); ?>">
                     <span class="menu-icon"><i class="mgc_news_line"></i></span>
                     <span class="menu-text">Berita & Artikel</span>
                 </a>
             </li>
 
             <li class="menu-item">
-                <a href="{{ route('admin.categories.index') }}" class="menu-link {{ request()->routeIs('admin.categories*') ? 'active' : '' }}">
+                <a href="<?php echo e(route('admin.categories.index')); ?>" class="menu-link <?php echo e(request()->routeIs('admin.categories*') ? 'active' : ''); ?>">
                     <span class="menu-icon"><i class="mgc_tag_line"></i></span>
                     <span class="menu-text">Kategori</span>
                 </a>
             </li>
 
             <li class="menu-item">
-                <a href="{{ route('admin.tags.index') }}" class="menu-link {{ request()->routeIs('admin.tags*') ? 'active' : '' }}">
+                <a href="<?php echo e(route('admin.tags.index')); ?>" class="menu-link <?php echo e(request()->routeIs('admin.tags*') ? 'active' : ''); ?>">
                     <span class="menu-icon"><i class="mgc_bookmark_line"></i></span>
                     <span class="menu-text">Tag</span>
                 </a>
             </li>
 
             <li class="menu-item">
-                <a href="{{ route('admin.events') }}" class="menu-link {{ request()->routeIs('admin.events*') ? 'active' : '' }}">
+                <a href="<?php echo e(route('admin.events')); ?>" class="menu-link <?php echo e(request()->routeIs('admin.events*') ? 'active' : ''); ?>">
                     <span class="menu-icon"><i class="mgc_calendar_line"></i></span>
                     <span class="menu-text">Event & Kegiatan</span>
                 </a>
@@ -112,35 +112,35 @@
             </li>
 
             <li class="menu-item">
-                <a href="{{ route('admin.pengurus-yayasan') }}" class="menu-link {{ request()->routeIs('admin.pengurus-yayasan*') ? 'active' : '' }}">
+                <a href="<?php echo e(route('admin.pengurus-yayasan')); ?>" class="menu-link <?php echo e(request()->routeIs('admin.pengurus-yayasan*') ? 'active' : ''); ?>">
                     <span class="menu-icon"><i class="mgc_group_line"></i></span>
                     <span class="menu-text">Pengurus Yayasan</span>
                 </a>
             </li>
 
             <li class="menu-item">
-                <a href="{{ route('admin.pengurus-pesantren') }}" class="menu-link {{ request()->routeIs('admin.pengurus-pesantren*') ? 'active' : '' }}">
+                <a href="<?php echo e(route('admin.pengurus-pesantren')); ?>" class="menu-link <?php echo e(request()->routeIs('admin.pengurus-pesantren*') ? 'active' : ''); ?>">
                     <span class="menu-icon"><i class="mgc_user_2_line"></i></span>
                     <span class="menu-text">Pengurus Pesantren</span>
                 </a>
             </li>
 
             <li class="menu-item">
-                <a href="{{ route('admin.pengurus-dewan-pusat') }}" class="menu-link {{ request()->routeIs('admin.pengurus-dewan-pusat*') ? 'active' : '' }}">
+                <a href="<?php echo e(route('admin.pengurus-dewan-pusat')); ?>" class="menu-link <?php echo e(request()->routeIs('admin.pengurus-dewan-pusat*') ? 'active' : ''); ?>">
                     <span class="menu-icon"><i class="mgc_user_1_line"></i></span>
                     <span class="menu-text">Pengurus Dewan Pusat</span>
                 </a>
             </li>
 
             <li class="menu-item">
-                <a href="{{ route('admin.pengurus-unit') }}" class="menu-link {{ request()->routeIs('admin.pengurus-unit*') ? 'active' : '' }}">
+                <a href="<?php echo e(route('admin.pengurus-unit')); ?>" class="menu-link <?php echo e(request()->routeIs('admin.pengurus-unit*') ? 'active' : ''); ?>">
                     <span class="menu-icon"><i class="mgc_user_3_line"></i></span>
                     <span class="menu-text">Pengurus Unit</span>
                 </a>
             </li>
 
             <li class="menu-item">
-                <a href="{{ route('admin.staff') }}" class="menu-link {{ request()->routeIs('admin.staff*') ? 'active' : '' }}">
+                <a href="<?php echo e(route('admin.staff')); ?>" class="menu-link <?php echo e(request()->routeIs('admin.staff*') ? 'active' : ''); ?>">
                     <span class="menu-icon"><i class="mgc_group_line"></i></span>
                     <span class="menu-text">Guru & Karyawan</span>
                 </a>
@@ -152,27 +152,27 @@
             </li>
 
             <li class="menu-item">
-                <a href="{{ route('admin.facilities') }}" class="menu-link {{ request()->routeIs('admin.facilities*') ? 'active' : '' }}">
+                <a href="<?php echo e(route('admin.facilities')); ?>" class="menu-link <?php echo e(request()->routeIs('admin.facilities*') ? 'active' : ''); ?>">
                     <span class="menu-icon"><i class="mgc_tool_line"></i></span>
                     <span class="menu-text">Fasilitas</span>
                 </a>
             </li>
 
             <li class="menu-item">
-                <a href="{{ route('admin.schedules') }}" class="menu-link {{ request()->routeIs('admin.schedules*') ? 'active' : '' }}">
+                <a href="<?php echo e(route('admin.schedules')); ?>" class="menu-link <?php echo e(request()->routeIs('admin.schedules*') ? 'active' : ''); ?>">
                     <span class="menu-icon"><i class="mgc_schedule_line"></i></span>
                     <span class="menu-text">Jadwal Yaumiyah</span>
                 </a>
             </li>
 
             <!-- Pengaturan -->
-            @if(auth()->user()->role == 'superadmin' || auth()->user()->role == 'admin')
+            <?php if(auth()->user()->role == 'superadmin' || auth()->user()->role == 'admin'): ?>
             <li class="menu-title">
                 <span>Pengaturan</span>
             </li>
 
             <li class="menu-item">
-                <a href="{{ route('admin.site-settings') }}" class="menu-link {{ request()->routeIs('admin.site-settings*') ? 'active' : '' }}">
+                <a href="<?php echo e(route('admin.site-settings')); ?>" class="menu-link <?php echo e(request()->routeIs('admin.site-settings*') ? 'active' : ''); ?>">
                     <span class="menu-icon"><i class="mgc_settings_3_line"></i></span>
                     <span class="menu-text">Pengaturan Situs</span>
                 </a>
@@ -193,11 +193,11 @@
                     </li>
                 </ul>
             </li>
-            @endif
+            <?php endif; ?>
 
             <!-- Lihat Website -->
             <li class="menu-item mt-auto">
-                <a href="{{ route('pages.index') }}" target="_blank" class="menu-link">
+                <a href="<?php echo e(route('pages.index')); ?>" target="_blank" class="menu-link">
                     <span class="menu-icon"><i class="mgc_external_link_line"></i></span>
                     <span class="menu-text">Lihat Website</span>
                 </a>
@@ -206,3 +206,4 @@
     </div>
 </div>
 
+<?php /**PATH C:\xampp8.212\htdocs\nuris\resources\views/admin/partials/menu.blade.php ENDPATH**/ ?>

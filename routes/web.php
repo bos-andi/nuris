@@ -34,8 +34,12 @@ Route::get('/gallery/{slug}', [GalleryController::class, 'show'])->name('galleri
 // Staff routes
 Route::get('/data-guru-karyawan', [PublicStaffController::class, 'index'])->name('staff.index');
 
-// PSB route (must be before dynamic routes)
-Route::get('/psb', [PagesController::class, 'psb'])->name('psb');
+// PSB route - redirect to psb.nuris.or.id
+Route::get('/psb', function () {
+    return redirect('https://psb.nuris.or.id', 301);
+})->name('psb');
+
+// PSB 2026 route (keep for backward compatibility)
 Route::get('/psb-2026', [PagesController::class, 'psb'])->name('psb-2026');
 
 // Dynamic route - check if article or page (must be last)
@@ -79,9 +83,16 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/articles', [AdminArticleController::class, 'index'])->name('articles');
         Route::get('/articles/create', [AdminArticleController::class, 'create'])->name('articles.create');
         Route::post('/articles', [AdminArticleController::class, 'store'])->name('articles.store');
+        Route::post('/articles/upload-image', [AdminArticleController::class, 'uploadImage'])->name('articles.upload-image');
         Route::get('/articles/{id}/edit', [AdminArticleController::class, 'edit'])->name('articles.edit');
         Route::put('/articles/{id}', [AdminArticleController::class, 'update'])->name('articles.update');
         Route::get('/articles/{id}/delete', [AdminArticleController::class, 'delete'])->name('articles.delete');
+        
+        // Categories management
+        Route::resource('categories', \App\Http\Controllers\Admin\CategoryController::class);
+        
+        // Tags management
+        Route::resource('tags', \App\Http\Controllers\Admin\TagController::class);
         
         // Events management
         Route::get('/events', [AdminEventController::class, 'index'])->name('events');

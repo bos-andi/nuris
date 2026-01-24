@@ -6,7 +6,7 @@
         $siteName = \App\Models\SiteSetting::get('site_name', 'PP. Nurul Islam');
         $pageTitle = isset($title) ? $title : $siteName;
     @endphp
-    @include('partials.title_meta', ['title' => $pageTitle])
+    @include('partials.title_meta', ['title' => $pageTitle, 'article' => isset($article) ? $article : null])
     @include('partials.head_css')
 </head>
 

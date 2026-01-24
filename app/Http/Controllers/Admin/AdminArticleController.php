@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Article;
+use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 
@@ -18,7 +20,9 @@ class AdminArticleController extends Controller
 
     public function create()
     {
-        return view('admin.articles.create');
+        $categories = Category::active()->orderBy('order')->orderBy('name')->get();
+        $tags = Tag::active()->orderBy('order')->orderBy('name')->get();
+        return view('admin.articles.create', compact('categories', 'tags'));
     }
 
     public function store(Request $request)
@@ -31,6 +35,9 @@ class AdminArticleController extends Controller
             'featured_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'author' => 'nullable|string|max:255',
             'category' => 'nullable|string|max:255',
+            'category_id' => 'nullable|exists:categories,id',
+            'tags' => 'nullable|array',
+            'tags.*' => 'exists:tags,id',
             'is_published' => 'boolean',
             'published_at' => 'nullable|date',
             'meta_title' => 'nullable|string|max:255',
@@ -63,6 +70,11 @@ class AdminArticleController extends Controller
 
         $article = Article::create($validated);
 
+        // Sync tags
+        if ($request->has('tags')) {
+            $article->tags()->sync($request->tags);
+        }
+
         // Log for debugging
         \Log::info('Article created', [
             'id' => $article->id,
@@ -83,8 +95,10 @@ class AdminArticleController extends Controller
 
     public function edit($id)
     {
-        $article = Article::findOrFail($id);
-        return view('admin.articles.edit', compact('article'));
+        $article = Article::with('tags')->findOrFail($id);
+        $categories = Category::active()->orderBy('order')->orderBy('name')->get();
+        $tags = Tag::active()->orderBy('order')->orderBy('name')->get();
+        return view('admin.articles.edit', compact('article', 'categories', 'tags'));
     }
 
     public function update(Request $request, $id)
@@ -99,6 +113,9 @@ class AdminArticleController extends Controller
             'featured_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'author' => 'nullable|string|max:255',
             'category' => 'nullable|string|max:255',
+            'category_id' => 'nullable|exists:categories,id',
+            'tags' => 'nullable|array',
+            'tags.*' => 'exists:tags,id',
             'is_published' => 'boolean',
             'published_at' => 'nullable|date',
             'meta_title' => 'nullable|string|max:255',
@@ -137,6 +154,13 @@ class AdminArticleController extends Controller
 
         $article->update($validated);
 
+        // Sync tags
+        if ($request->has('tags')) {
+            $article->tags()->sync($request->tags);
+        } else {
+            $article->tags()->detach();
+        }
+
         return redirect()->route('admin.articles')->with('success', 'Artikel berhasil diperbarui. ' . ($validated['is_published'] ? 'Artikel telah dipublikasikan.' : 'Artikel disimpan sebagai draft.'));
     }
 
@@ -152,5 +176,28 @@ class AdminArticleController extends Controller
         $article->delete();
 
         return redirect()->route('admin.articles')->with('success', 'Artikel berhasil dihapus.');
+    }
+
+    /**
+     * Handle image upload from CKEditor
+     */
+    public function uploadImage(Request $request)
+    {
+        $request->validate([
+            'upload' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:5120', // 5MB max
+        ]);
+
+        if ($request->hasFile('upload')) {
+            $file = $request->file('upload');
+            $filename = time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
+            $path = $file->storeAs('articles/content', $filename, 'public');
+            $url = asset('storage/' . $path);
+
+            return response()->json([
+                'url' => $url
+            ]);
+        }
+
+        return response()->json(['error' => 'Upload failed'], 400);
     }
 }

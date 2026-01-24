@@ -281,8 +281,20 @@
 @push('scripts')
 <script>
     function updateVisitorStats() {
-        fetch('{{ route("admin.api.visitor-stats") }}?minutes=5')
-            .then(response => response.json())
+        fetch('{{ route("admin.api.visitor-stats") }}?minutes=5', {
+            method: 'GET',
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'Accept': 'application/json',
+            },
+            credentials: 'same-origin'
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
                 // Update real-time views
                 document.getElementById('realtime-views').textContent = data.realtime_views;
@@ -378,6 +390,13 @@
             })
             .catch(error => {
                 console.error('Error fetching visitor stats:', error);
+                // Show error message in all stats sections
+                ['device-stats', 'browser-stats', 'os-stats', 'top-pages', 'recent-visitors'].forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) {
+                        el.innerHTML = '<div class="text-sm text-red-500 dark:text-red-400 text-center py-4">Error memuat data. Silakan refresh halaman.</div>';
+                    }
+                });
             });
     }
     

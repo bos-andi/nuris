@@ -15,6 +15,7 @@ class Article extends Model
         'featured_image',
         'author',
         'category',
+        'category_id',
         'views',
         'is_published',
         'published_at',
@@ -60,5 +61,21 @@ class Article extends Model
                 $q->whereNull('published_at')
                   ->orWhere('published_at', '<=', now());
             });
+    }
+
+    /**
+     * Get the category that owns the article.
+     */
+    public function categoryModel()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
+
+    /**
+     * Get the tags for the article.
+     */
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class, 'article_tag');
     }
 }

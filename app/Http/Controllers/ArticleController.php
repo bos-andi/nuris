@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use App\Http\Controllers\PagesController;
 
@@ -19,17 +21,24 @@ class ArticleController extends Controller
             ->orderByRaw('COALESCE(published_at, created_at) DESC')
             ->paginate(9);
 
+        // Get categories and tags for sidebar
+        $categories = Category::active()->withCount('articles')->orderBy('order')->orderBy('name')->get();
+        $tags = Tag::active()->withCount('articles')->orderBy('order')->orderBy('name')->get();
+
         // Debug: Log query result
         \Log::info('Articles index query', [
             'count' => $articles->count(),
             'total' => $articles->total(),
         ]);
 
-        return view('articles.index', compact('articles'));
+        return view('articles.index', compact('articles', 'categories', 'tags'));
     }
 
     public function show(Article $article)
     {
+        // Load article with relationships
+        $article->load('categoryModel', 'tags');
+        
         // Check if article is published
         if (!$article->is_published) {
             abort(404);
@@ -50,13 +59,25 @@ class ArticleController extends Controller
             ->limit(3)
             ->get();
 
-        return view('articles.show', compact('article', 'relatedArticles'));
+        // Get latest articles for sidebar
+        $latestArticles = Article::published()
+            ->where('id', '!=', $article->id)
+            ->orderByRaw('COALESCE(published_at, created_at) DESC')
+            ->limit(5)
+            ->get();
+
+        // Get categories and tags for sidebar
+        $categories = Category::active()->withCount('articles')->orderBy('order')->orderBy('name')->get();
+        $tags = Tag::active()->withCount('articles')->orderBy('order')->orderBy('name')->get();
+
+        return view('articles.show', compact('article', 'relatedArticles', 'latestArticles', 'categories', 'tags'));
     }
 
     public function showBySlug($slug)
     {
         // Check if slug matches a published article
-        $article = Article::where('slug', $slug)
+        $article = Article::with('categoryModel', 'tags')
+            ->where('slug', $slug)
             ->where('is_published', true)
             ->where(function($query) {
                 $query->whereNull('published_at')
@@ -79,6 +100,17 @@ class ArticleController extends Controller
             ->limit(3)
             ->get();
 
-        return view('articles.show', compact('article', 'relatedArticles'));
+        // Get latest articles for sidebar
+        $latestArticles = Article::published()
+            ->where('id', '!=', $article->id)
+            ->orderByRaw('COALESCE(published_at, created_at) DESC')
+            ->limit(5)
+            ->get();
+
+        // Get categories and tags for sidebar
+        $categories = Category::active()->withCount('articles')->orderBy('order')->orderBy('name')->get();
+        $tags = Tag::active()->withCount('articles')->orderBy('order')->orderBy('name')->get();
+
+        return view('articles.show', compact('article', 'relatedArticles', 'latestArticles', 'categories', 'tags'));
     }
 }

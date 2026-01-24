@@ -20,10 +20,41 @@
         $canonicalUrl .= '?' . request()->getQueryString();
     }
     
-    // OG Values
-    $ogUrl = 'https://nuris.or.id';
+    // Check if this is an article page
+    $article = isset($article) ? $article : null;
+    
+    // OG Values - Default
+    $ogUrl = 'https://nuris.or.id' . request()->getPathInfo();
     $ogTitle = $officialWebsiteText;
     $ogDescription = $officialWebsiteText . ' – sumber informasi resmi Pondok Pesantren Nurul Islam Mojokerto.';
+    $ogImageUrl = null;
+    
+    // If article exists, use article data for OG
+    if ($article && $article instanceof \App\Models\Article) {
+        $ogTitle = $article->title . ' | ' . $siteName;
+        $ogUrl = 'https://nuris.or.id' . request()->getPathInfo();
+        
+        // Use excerpt if available, otherwise use truncated content
+        if ($article->excerpt) {
+            $ogDescription = strip_tags($article->excerpt);
+        } elseif ($article->meta_description) {
+            $ogDescription = $article->meta_description;
+        } else {
+            $ogDescription = \Illuminate\Support\Str::limit(strip_tags($article->content), 160);
+        }
+        
+        // Use featured image if available
+        if ($article->featured_image) {
+            $imagePath = $article->featured_image;
+            if (strpos($imagePath, 'storage/') === 0) {
+                $ogImageUrl = 'https://nuris.or.id/' . $imagePath;
+            } elseif (strpos($imagePath, 'http') === 0) {
+                $ogImageUrl = $imagePath;
+            } else {
+                $ogImageUrl = 'https://nuris.or.id/storage/' . $imagePath;
+            }
+        }
+    }
     
     $twitterCard = \App\Models\SiteSetting::get('twitter_card', 'summary_large_image');
     
@@ -50,8 +81,14 @@
     }
     
     // Page-specific title (for non-homepage)
-    $pageTitle = isset($title) ? $title . ' | Nuris' : null;
-    $finalTitle = $pageTitle ? $officialWebsiteText . ' | ' . $pageTitle : ($officialWebsiteText . ' | Nuris');
+    // If article exists, use article title
+    if ($article && $article instanceof \App\Models\Article) {
+        $pageTitle = $article->title;
+        $finalTitle = $pageTitle . ' | ' . $siteName;
+    } else {
+        $pageTitle = isset($title) ? $title . ' | Nuris' : null;
+        $finalTitle = $pageTitle ? $officialWebsiteText . ' | ' . $pageTitle : ($officialWebsiteText . ' | Nuris');
+    }
 @endphp
 
 <!-- Canonical URL -->
@@ -79,39 +116,71 @@
 <link rel="manifest" href="{{ $baseUrl }}/site.webmanifest">
 
 <!--=====META TAGS=======-->
-<meta name="description" content="{{ $siteDescription }}">
-<meta name="keywords" content="Website Resmi PP Nurul Islam Mojokerto, Pondok Pesantren Nurul Islam, Nuris Mojokerto, Pendidikan Islam, Pesantren Mojokerto">
+@if($article && $article instanceof \App\Models\Article)
+    @if($article->meta_description)
+        <meta name="description" content="{{ $article->meta_description }}">
+    @elseif($article->excerpt)
+        <meta name="description" content="{{ strip_tags($article->excerpt) }}">
+    @else
+        <meta name="description" content="{{ \Illuminate\Support\Str::limit(strip_tags($article->content), 160) }}">
+    @endif
+    <meta name="keywords" content="{{ $article->categoryModel ? $article->categoryModel->name . ', ' : '' }}{{ $article->tags->pluck('name')->implode(', ') }}, Website Resmi PP Nurul Islam Mojokerto, Pondok Pesantren Nurul Islam, Nuris Mojokerto">
+@else
+    <meta name="description" content="{{ $siteDescription }}">
+    <meta name="keywords" content="Website Resmi PP Nurul Islam Mojokerto, Pondok Pesantren Nurul Islam, Nuris Mojokerto, Pendidikan Islam, Pesantren Mojokerto">
+@endif
 <meta name="theme-color" content="#1a472a">
 <meta name="author" content="PP Nurul Islam Mojokerto">
 <meta name="robots" content="index, follow">
 
 <!--=====OPEN GRAPH / FACEBOOK=======-->
-<meta property="og:type" content="website">
+<meta property="og:type" content="{{ $article ? 'article' : 'website' }}">
 <meta property="og:title" content="{{ $ogTitle }}">
 <meta property="og:description" content="{{ $ogDescription }}">
-<meta property="og:url" content="{{ $ogUrl }}{{ request()->getPathInfo() }}">
+<meta property="og:url" content="{{ $ogUrl }}">
 <meta property="og:site_name" content="{{ $officialWebsiteText }}">
 <meta property="og:locale" content="id_ID">
-@if($logoUrl)
-    <meta property="og:image" content="{{ $logoUrl }}">
-    <meta property="og:image:width" content="512">
-    <meta property="og:image:height" content="512">
+@if($article)
+    @if($article->author)
+        <meta property="article:author" content="{{ $article->author }}">
+    @endif
+    @if($article->published_at)
+        <meta property="article:published_time" content="{{ $article->published_at->toIso8601String() }}">
+    @endif
+    @if($article->categoryModel)
+        <meta property="article:section" content="{{ $article->categoryModel->name }}">
+    @endif
+    @if($article->tags->count() > 0)
+        @foreach($article->tags as $tag)
+            <meta property="article:tag" content="{{ $tag->name }}">
+        @endforeach
+    @endif
 @endif
-@if($ogImage)
+@if($ogImageUrl)
+    <meta property="og:image" content="{{ $ogImageUrl }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+@elseif($ogImage)
     <meta property="og:image" content="{{ $baseUrl }}/storage/{{ $ogImage }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+@elseif($logoUrl)
+    <meta property="og:image" content="{{ $logoUrl }}">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
 @endif
 
 <!--=====TWITTER CARD=======-->
 <meta name="twitter:card" content="{{ $twitterCard }}">
 <meta name="twitter:title" content="{{ $ogTitle }}">
 <meta name="twitter:description" content="{{ $ogDescription }}">
-@if($logoUrl)
-    <meta name="twitter:image" content="{{ $logoUrl }}">
-@endif
-@if($ogImage)
+@if($ogImageUrl)
+    <meta name="twitter:image" content="{{ $ogImageUrl }}">
+@elseif($ogImage)
     <meta name="twitter:image" content="{{ $baseUrl }}/storage/{{ $ogImage }}">
+@elseif($logoUrl)
+    <meta name="twitter:image" content="{{ $logoUrl }}">
 @endif
 
 <!--=====STRUCTURED DATA (JSON-LD) FOR GOOGLE SEARCH=======-->
@@ -203,6 +272,64 @@
             ]
         ]
     ];
+    
+    // Article Schema (if article exists)
+    $articleSchema = null;
+    if ($article && $article instanceof \App\Models\Article) {
+        $articleImageUrl = null;
+        if ($article->featured_image) {
+            $imagePath = $article->featured_image;
+            if (strpos($imagePath, 'storage/') === 0) {
+                $articleImageUrl = 'https://nuris.or.id/' . $imagePath;
+            } elseif (strpos($imagePath, 'http') === 0) {
+                $articleImageUrl = $imagePath;
+            } else {
+                $articleImageUrl = 'https://nuris.or.id/storage/' . $imagePath;
+            }
+        } else {
+            $articleImageUrl = $organizationLogoUrl;
+        }
+        
+        $articleSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'NewsArticle',
+            'headline' => $article->title,
+            'description' => $article->excerpt ? strip_tags($article->excerpt) : \Illuminate\Support\Str::limit(strip_tags($article->content), 200),
+            'image' => [
+                '@type' => 'ImageObject',
+                'url' => $articleImageUrl,
+                'contentUrl' => $articleImageUrl
+            ],
+            'datePublished' => $article->published_at ? $article->published_at->toIso8601String() : $article->created_at->toIso8601String(),
+            'dateModified' => $article->updated_at->toIso8601String(),
+            'author' => [
+                '@type' => 'Organization',
+                'name' => $article->author ?: 'PP Nurul Islam Mojokerto',
+                'url' => 'https://nuris.or.id'
+            ],
+            'publisher' => [
+                '@type' => 'Organization',
+                'name' => 'PP Nurul Islam Mojokerto',
+                'logo' => [
+                    '@type' => 'ImageObject',
+                    'url' => $organizationLogoUrl
+                ]
+            ],
+            'mainEntityOfPage' => [
+                '@type' => 'WebPage',
+                '@id' => 'https://nuris.or.id/' . $article->slug
+            ],
+            'url' => 'https://nuris.or.id/' . $article->slug
+        ];
+        
+        if ($article->categoryModel) {
+            $articleSchema['articleSection'] = $article->categoryModel->name;
+        }
+        
+        if ($article->tags->count() > 0) {
+            $articleSchema['keywords'] = $article->tags->pluck('name')->implode(', ');
+        }
+    }
 @endphp
 <script type="application/ld+json">
 {!! json_encode($structuredData1, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
@@ -215,3 +342,9 @@
 <script type="application/ld+json">
 {!! json_encode($structuredData3, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
 </script>
+
+@if($articleSchema)
+<script type="application/ld+json">
+{!! json_encode($articleSchema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
+</script>
+@endif
